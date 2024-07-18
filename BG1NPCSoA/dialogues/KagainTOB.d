@@ -1,6 +1,6 @@
 EXTEND_TOP FATESP 6 #4
-  IF ~!Dead("7XKAGA")
-!InMyArea("7XKAGA")
+  IF ~!Dead("KAGAIN")
+!InMyArea("KAGAIN")
 Global("KagainSummonedToB","GLOBAL",0)~ THEN
    REPLY @0
     DO ~CreateVisualEffect("SPPORTAL",[1999.1218])
@@ -8,7 +8,7 @@ Wait(2)
 CreateCreature("7XCRE71",[1999.1218],0)
 SetGlobal("KagainSummonedToB","GLOBAL",1) 
 SmallWait(10) 
-ActionOverride("7XKAGA",StartDialogNoSet([PC]))~ GOTO 8
+ActionOverride("KAGAIN",StartDialogNoSet([PC]))~ GOTO 8
 END
 
 BEGIN ~7Xkag25P~
@@ -154,27 +154,27 @@ END
 
 
 EXTEND_BOTTOM SARVOLO 9
-IF ~InParty("7Xkaga")~ THEN REPLY @38 GOTO KAGAVolo
+IF ~InParty("KAGAIN")~ THEN REPLY @38 GOTO KAGAVolo
 END
 
 CHAIN SARVOLO KAGAVolo
 @39
 =
 @40
-== 7Xkag25J IF ~InParty("7Xkaga")~ THEN @41
+== 7Xkag25J IF ~InParty("KAGAIN")~ THEN @41
 EXTERN SARVOLO 9
 
 INTERJECT_COPY_TRANS3 FINMEL01 10 kagainFINMEL01-10
-  == 7Xkag25J  IF ~InParty("7Xkaga") !StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @42
-  == IF_FILE_EXISTS 7XGar25J IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID) InParty("7Xkaga") !StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @43
-  == MINSC25J IF ~InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID) InParty("7Xkaga") !StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @44
-  == FINMEL01 IF ~InParty("7Xkaga") !StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @45
+  == 7Xkag25J  IF ~InParty("KAGAIN") !StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN @42
+  == IF_FILE_EXISTS 7XGar25J IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID) InParty("KAGAIN") !StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN @43
+  == MINSC25J IF ~InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID) InParty("KAGAIN") !StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN @44
+  == FINMEL01 IF ~InParty("KAGAIN") !StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN @45
 END
 
 INTERJECT_COPY_TRANS FINSOL01 27 kagainFINSOL01-27
-  == 7Xkag25J  IF ~InParty("7Xkaga") !StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @46
+  == 7Xkag25J  IF ~InParty("KAGAIN") !StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN @46
 END
 
 INTERJECT_COPY_TRANS SARVIE01 2 kagainSARVIE01-2
-  == 7Xkag25J  IF ~InParty("7Xkaga") !StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @47
+  == 7Xkag25J  IF ~InParty("KAGAIN") !StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN @47
 END

@@ -216,7 +216,7 @@ END
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-CHAIN IF WEIGHT #-10~CombatCounter(0)InParty("Minsc")HPPercentLT("Minsc",45)InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+CHAIN IF WEIGHT #-10~CombatCounter(0)InParty("Minsc")HPPercentLT("Minsc",45)InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 !StateCheck("Minsc",CD_STATE_NOTVALID)!See([ENEMY])Global("BranMinscHurt","GLOBAL",1)~ THEN ~BMINSC~ BranMinscHurt1
 @76 DO ~SetGlobal("BranMinscHurt","GLOBAL",2)~
 == BMINSC @77 
@@ -232,8 +232,8 @@ CHAIN ~BMINSC~ BranMinscHurt2
 EXIT
 
 CHAIN IF ~Global("BranwenKeldorn","GLOBAL",0)
-InParty("Keldorn")IsValidForPartyDialog("Keldorn")InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+InParty("Keldorn")IsValidForPartyDialog("Keldorn")InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 ~ THEN 7XBRANB KeldornBranwen
 @84
 DO ~SetGlobal("BranwenKeldorn","GLOBAL",1)~
@@ -247,8 +247,8 @@ DO ~SetGlobal("BranwenKeldorn","GLOBAL",1)~
 EXIT
 
 CHAIN IF ~Global("BranwenHaerTalk","GLOBAL",0)
-InParty("Haerdalis")IsValidForPartyDialog("Haerdalis")InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN 7XBRANB BRANHaer1
+InParty("Haerdalis")IsValidForPartyDialog("Haerdalis")InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN 7XBRANB BRANHaer1
 @90
 =
 @91 
@@ -280,8 +280,8 @@ EXIT
 
 CHAIN
   IF ~Global("VALYGABRAN","GLOBAL",0)
-  InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+  InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 InParty("Valygar")IsValidForPartyDialog("Valygar")
   CombatCounter(0)~ THEN BVALYGA BranValy1
   @105
@@ -318,8 +318,8 @@ DO ~SetGlobal("VALYGABRAN","GLOBAL",1)~
 
 CHAIN
   IF ~Global("BranNalia","GLOBAL",0)
-  InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)InParty("Nalia")IsValidForPartyDialog("Nalia")
+  InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)InParty("Nalia")IsValidForPartyDialog("Nalia")
   CombatCounter(0)~ THEN BNALIA NaliaBranwen1
   @122
 =
@@ -344,8 +344,8 @@ DO ~SetGlobal("BranNalia","GLOBAL",1)~
 EXIT
 
 CHAIN IF
-~InParty("7XBRAN")InParty("Jan")
-See("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+~InParty("BRANWEN")InParty("Jan")
+See("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 !StateCheck("Jan",CD_STATE_NOTVALID)Global("BranJan","GLOBAL",0)~ THEN BJAN TURNIPTALK
  @132
 DO ~SetGlobal("BranJan","GLOBAL",1)~
@@ -363,14 +363,14 @@ DO ~SetGlobal("BranJan","GLOBAL",1)~
 == BJAN @140
 EXIT
 
-CHAIN IF ~InParty("edwin") Global("Branwen_Edwin","GLOBAL",0)!See([ENEMY]) InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)See("edwin")!StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN 7XBRANB Edwin1Chain
+CHAIN IF ~InParty("edwin") Global("Branwen_Edwin","GLOBAL",0)!See([ENEMY]) InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)See("edwin")!StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN 7XBRANB Edwin1Chain
 @141 DO ~SetGlobal("Branwen_Edwin","GLOBAL",1)~
 == BEDWIN @142
 =
 @143
 =
 @144
-== IF_FILE_EXISTS B7XYES IF ~InParty("7XYES") InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @145
+== IF_FILE_EXISTS B7XYES IF ~InParty("YESLICK") InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN @145
 == 7XBRANB @146 
 =
 @147
@@ -383,7 +383,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Yoshimo")
-See("Yoshimo")InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+See("Yoshimo")InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)Global("BranYoshi","GLOBAL",0)~ THEN 7XBRANB YoshimoBranBanter
 @152 
 DO ~SetGlobal("BranYoshi","GLOBAL",1)~ 
@@ -404,7 +404,7 @@ DO ~SetGlobal("BranYoshi","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("Korgan")InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+IF ~InParty("Korgan")InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 See("Korgan")!StateCheck("Korgan",CD_STATE_NOTVALID)!See([ENEMY])CombatCounter(0)Global("BranKorgan","GLOBAL",0)~ THEN 7XBRANB BRANKorgan1
 @165 DO ~SetGlobal("BranKorgan","GLOBAL",1)~
 == BKORGAN @166
@@ -423,9 +423,9 @@ See("Korgan")!StateCheck("Korgan",CD_STATE_NOTVALID)!See([ENEMY])CombatCounter(0
 EXIT
 
 CHAIN
-IF ~InParty("7XBRAN")
-See("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)!StateCheck("Aerie",CD_STATE_NOTVALID)
+IF ~InParty("BRANWEN")
+See("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)!StateCheck("Aerie",CD_STATE_NOTVALID)
 Global("AerieBranwenTalk","GLOBAL",0)~ THEN BAERIE AerieBranwen
 @178
 =
@@ -457,7 +457,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Minsc")
-See("Minsc")InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+See("Minsc")InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 !StateCheck("Minsc",CD_STATE_NOTVALID)Global("BranMinsc","GLOBAL",0)~ THEN 7XBRANB MinscTalk1
 @192
 =
@@ -470,7 +470,7 @@ EXIT
 
 CHAIN
 IF ~TimeOfDay("DAY")InParty("Cernd")
-See("Cernd")InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+See("Cernd")InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 !StateCheck("Cernd",CD_STATE_NOTVALID)
 Global("CerndBranwenTalk","GLOBAL",0)~ THEN BCERND CerndBranwenTalk
 @197
@@ -496,7 +496,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Cernd")
-See("Cernd")InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+See("Cernd")InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 !StateCheck("Cernd",CD_STATE_NOTVALID)
 Global("CerndBranwenTalk","GLOBAL",1)~ THEN 7XBRANB CerndTalk
 @207 
@@ -540,8 +540,8 @@ DO ~SetGlobal("CerndBranwenTalk","GLOBAL",2)~
 == 7XBRANB @231
 EXIT
 
-CHAIN IF ~InParty("Jaheira")InParty("7XBRAN")See("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)!StateCheck("Jaheira",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("Jaheira")InParty("BRANWEN")See("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)!StateCheck("Jaheira",CD_STATE_NOTVALID)
 Global("BranJah","GLOBAL",0)~ THEN BJAHEIR JahBanter
 @232
 =
@@ -569,7 +569,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Viconia")
-See("Viconia")InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+See("Viconia")InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 !StateCheck("Viconia",CD_STATE_NOTVALID)
 Global("BranVic","GLOBAL",0)~ THEN 7XBRANB ViconiaBRAN
 @248 
@@ -590,7 +590,7 @@ EXIT
 CHAIN IF ~InParty("Anomen")
 See("Anomen")
 !StateCheck("Anomen",CD_STATE_NOTVALID)
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 Global("BranAno","GLOBAL",0)~ THEN BANOMEN AnomenBanter
 @257 
 == 7XBRANB @258
@@ -613,7 +613,7 @@ DO ~SetGlobal("BranAno","GLOBAL",1)~
 EXIT
 
 CHAIN IF
-~InParty("Mazzy")InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+~InParty("Mazzy")InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 IsValidForPartyDialog("Mazzy")
 Global("BranMazzy","GLOBAL",0)~
 THEN BMAZZY MazzyBran1
@@ -629,8 +629,8 @@ THEN BMAZZY MazzyBran1
 EXIT
 
 CHAIN
-IF ~InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+IF ~InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 !StateCheck("Aerie",CD_STATE_NOTVALID)InParty("Aerie")
 Global("AerieBranwenTalk","GLOBAL",1)~ THEN 7XBRANB AerieBranwen2
 @277 DO ~SetGlobal("AerieBranwenTalk","GLOBAL",2)~
@@ -649,7 +649,7 @@ Global("AerieBranwenTalk","GLOBAL",1)~ THEN 7XBRANB AerieBranwen2
 EXIT
 
 CHAIN
-IF ~InParty("Minsc")InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+IF ~InParty("Minsc")InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 !StateCheck("Minsc",CD_STATE_NOTVALID)Global("BranMinsc","GLOBAL",1)~ THEN BMINSC MinscTalk2
 @286 
 DO ~SetGlobal("BranMinsc","GLOBAL",2)~
@@ -667,8 +667,8 @@ DO ~SetGlobal("BranMinsc","GLOBAL",2)~
 EXIT
 
 CHAIN IF ~Global("BranwenKeldorn","GLOBAL",1)
-InParty("Keldorn")IsValidForPartyDialog("Keldorn")InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN BKELDOR KeldornBranwen
+InParty("Keldorn")IsValidForPartyDialog("Keldorn")InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN BKELDOR KeldornBranwen
 @295
 =
 @296 
@@ -688,7 +688,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Viconia")
-See("Viconia")InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+See("Viconia")InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 !StateCheck("Viconia",CD_STATE_NOTVALID)
 Global("BranVic","GLOBAL",1)~ THEN BVICONI ViconiaBRAN2
 @305 
@@ -713,7 +713,7 @@ EXIT
 
 
 CHAIN IF
-~InParty("Mazzy")InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+~InParty("Mazzy")InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 See("Mazzy")IsValidForPartyDialog("Mazzy")
 Global("BranMazzy","GLOBAL",1)~
 THEN BMAZZY MazzyBran2
@@ -734,8 +734,8 @@ THEN BMAZZY MazzyBran2
 EXIT
 
 
-CHAIN IF ~InParty("Jaheira")InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("Jaheira")InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 !StateCheck("Jaheira",CD_STATE_NOTVALID)Global("BranJah","GLOBAL",1)~ THEN 7XBRANB JahBanter2
 @327  DO ~SetGlobal("BranJah","GLOBAL",2)~
 == BJAHEIR @328
@@ -746,8 +746,8 @@ EXIT
 
 CHAIN
   IF ~Global("BranNalia","GLOBAL",1)
-  InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)InParty("Nalia")IsValidForPartyDialog("Nalia")
+  InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)InParty("Nalia")IsValidForPartyDialog("Nalia")
   CombatCounter(0)~ THEN 7XBRANB NaliaBranwen2
   @332
 DO ~SetGlobal("BranNalia","GLOBAL",2)~
@@ -773,7 +773,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Yoshimo")
-See("Yoshimo")InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+See("Yoshimo")InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)Global("BranYoshi","GLOBAL",1)~ THEN BYOSHIM YoshimoBranBanter2
 @342 
 DO ~SetGlobal("BranYoshi","GLOBAL",2)~ 
@@ -808,7 +808,7 @@ EXIT
 
 CHAIN IF ~InParty("Anomen")
 !StateCheck("Anomen",CD_STATE_NOTVALID)
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 Global("BranAno","GLOBAL",1)~ THEN ~BANOMEN~ AnomenBanter2
 @362 DO ~SetGlobal("BranAno","GLOBAL",2)~
 == 7XBRANB @363
@@ -834,7 +834,7 @@ EXIT
 CHAIN IF ~InParty("Anomen")
 See("Anomen")
 !StateCheck("Anomen",CD_STATE_NOTVALID)
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 Global("BranAno","GLOBAL",2)~ THEN ~7XBRANB~ AnomenBanter3
 @376 DO ~SetGlobal("BranAno","GLOBAL",3)~
 == BANOMEN @377
@@ -853,8 +853,8 @@ EXIT
 
 CHAIN
   IF ~Global("BranNalia","GLOBAL",2)
-  InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)InParty("Nalia")IsValidForPartyDialog("Nalia")
+  InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)InParty("Nalia")IsValidForPartyDialog("Nalia")
   CombatCounter(0)~ THEN 7XBRANB NaliaBranwen3
   @386
 DO ~SetGlobal("BranNalia","GLOBAL",3)~
@@ -879,7 +879,7 @@ EXIT
 
 
 CHAIN
-IF ~InParty("Viconia")InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+IF ~InParty("Viconia")InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 !StateCheck("Viconia",CD_STATE_NOTVALID)
 Global("BranVic","GLOBAL",2)~ THEN BVICONI ViconiaBRAN3
 @398
@@ -898,8 +898,8 @@ DO ~SetGlobal("BranVic","GLOBAL",3)~
 == BVICONI @313
 EXIT
 
-CHAIN IF ~InParty("Jaheira")InParty("7XBRAN")InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("Jaheira")InParty("BRANWEN")InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 !StateCheck("Jaheira",CD_STATE_NOTVALID)Global("BranJah","GLOBAL",2)~ THEN 7XBRANB JahBanter3
 @407  DO ~SetGlobal("BranJah","GLOBAL",3)~
 == BJAHEIR @408
@@ -913,9 +913,9 @@ EXIT
 
 
 CHAIN
-IF ~InParty("7XBRAN")
-See("7XBRAN")
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)!StateCheck("Aerie",CD_STATE_NOTVALID)InParty("Aerie")
+IF ~InParty("BRANWEN")
+See("BRANWEN")
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)!StateCheck("Aerie",CD_STATE_NOTVALID)InParty("Aerie")
 Global("AerieBranwenTalk","GLOBAL",2)~ THEN 7XBRANB AerieBranwen3
 @413 DO ~SetGlobal("AerieBranwenTalk","GLOBAL",3)~
 == BAERIE @414
@@ -937,7 +937,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Viconia")
-See("Viconia")!StateCheck("7XBRAN",CD_STATE_NOTVALID)InParty("7XBRAN")
+See("Viconia")!StateCheck("BRANWEN",CD_STATE_NOTVALID)InParty("BRANWEN")
 !StateCheck("Viconia",CD_STATE_NOTVALID)
 Global("BranVic","GLOBAL",3)~ THEN ~7XBRANB~ ViconiaBRAN4
 @421

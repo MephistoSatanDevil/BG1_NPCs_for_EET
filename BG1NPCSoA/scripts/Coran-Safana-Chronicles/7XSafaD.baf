@@ -1,5 +1,5 @@
 IF
-InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 RealGlobalTimerExpired("SafanaPCTalkTimer","GLOBAL") 

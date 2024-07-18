@@ -1,6 +1,6 @@
 EXTEND_TOP FATESP 6 #4
-  IF ~!Dead("7XALORA")
-!InMyArea("7XALORA")
+  IF ~!Dead("ALORA")
+!InMyArea("ALORA")
 Global("AloraSummonedToB","GLOBAL",0)~ THEN
    REPLY @0
     DO ~CreateVisualEffect("SPPORTAL",[1999.1218])
@@ -137,8 +137,8 @@ END
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-CHAIN IF ~InParty("Edwin") See("7XALORA") !StateCheck("Edwin",CD_STATE_NOTVALID) 
-InParty("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("Edwin") See("ALORA") !StateCheck("Edwin",CD_STATE_NOTVALID) 
+InParty("ALORA") !StateCheck("ALORA",CD_STATE_NOTVALID)
 Global("AloraEd","GLOBAL",2) CombatCounter(0)~ THEN B7XAlo25 EddyAlora4
 @31 DO ~SetGlobal("AloraEd","GLOBAL",3)~
 == BEDWIN25 @32

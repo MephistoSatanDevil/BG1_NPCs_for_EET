@@ -1,13 +1,13 @@
 BEGIN ~YDWARF1~
 
-IF ~NumTimesTalkedTo(0)Name("7XYES",LastTalkedToBy)~ THEN BEGIN Orothiar1-1
+IF ~NumTimesTalkedTo(0)Name("YESLICK",LastTalkedToBy)~ THEN BEGIN Orothiar1-1
 SAY @0
 IF ~~ THEN EXTERN ~7XYESJ~ Orothiar2
 END
 
 
-IF ~NumTimesTalkedTo(0)InParty("7XYES")
-!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN BEGIN Orothiar1
+IF ~NumTimesTalkedTo(0)InParty("YESLICK")
+!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN BEGIN Orothiar1
 SAY @0
 IF ~~ THEN EXTERN ~7XYESJ~ Orothiar2
 END
@@ -49,7 +49,7 @@ IF ~~ THEN DO~SetGlobal("YDWARF1","GLOBAL",2)
 EscapeAreaMove("ARBGX4",852,344,6)~EXIT
 END
 
-IF ~Global("YDWARF1","GLOBAL",2)ISGabber("7XYES")~ THEN BEGIN Clansmen1
+IF ~Global("YDWARF1","GLOBAL",2)ISGabber("YESLICK")~ THEN BEGIN Clansmen1
 SAY @11
 =
 @12

@@ -89,7 +89,7 @@ END
 
 // Human Flesh
 IF
-!StateCheck("7XXZAR",CD_STATE_NOTVALID)InParty("7XXZAR")
+!StateCheck("XZAR",CD_STATE_NOTVALID)InParty("XZAR")
 !StateCheck(Player1,CD_STATE_NOTVALID)
 OR(2)
 PartyHasItem("leat21") 
@@ -104,7 +104,7 @@ END
 // Illithid Lair
 IF
 !StateCheck(Player1,CD_STATE_NOTVALID)
-!StateCheck("7XXZAR",CD_STATE_NOTVALID)InParty("7XXZAR")
+!StateCheck("XZAR",CD_STATE_NOTVALID)InParty("XZAR")
 AreaCheck("AR0711")
   Global("XzarAR0711","AR0711",0)
   CombatCounter(0)
@@ -116,7 +116,7 @@ END
 
 IF
 !StateCheck(Player1,CD_STATE_NOTVALID)
-InParty("7XXZAR")!StateCheck("7XXZAR",CD_STATE_NOTVALID)
+InParty("XZAR")!StateCheck("XZAR",CD_STATE_NOTVALID)
 AreaCheck("AR0711")
   Global("XzarAR0711","AR0711",1)
   CombatCounter(0)
@@ -131,7 +131,7 @@ END
 // Spellhold
 IF
 !StateCheck(Player1,CD_STATE_NOTVALID)
-!StateCheck("7XXZAR",CD_STATE_NOTVALID)InParty("7XXZAR")
+!StateCheck("XZAR",CD_STATE_NOTVALID)InParty("XZAR")
 AreaCheck("AR1515")
   Global("XzarAR1515","AR1515",0)
   CombatCounter(0)
@@ -143,7 +143,7 @@ END
 
 IF
 !StateCheck(Player1,CD_STATE_NOTVALID)
-InParty("7XXZAR")!StateCheck("7XXZAR",CD_STATE_NOTVALID)
+InParty("XZAR")!StateCheck("XZAR",CD_STATE_NOTVALID)
 AreaCheck("AR1515")
   Global("XzarAR1515","AR1515",1)
   CombatCounter(0)
@@ -158,7 +158,7 @@ END
 // HaperLair
 IF
 !StateCheck(Player1,CD_STATE_NOTVALID)
-!StateCheck("7XXZAR",CD_STATE_NOTVALID)InParty("7XXZAR")
+!StateCheck("XZAR",CD_STATE_NOTVALID)InParty("XZAR")
 AreaCheck("AR0308")
   Global("XzarAR0308","AR0308",0)
   CombatCounter(0)
@@ -170,7 +170,7 @@ END
 
 IF
 !StateCheck(Player1,CD_STATE_NOTVALID)
-InParty("7XXZAR")!StateCheck("7XXZAR",CD_STATE_NOTVALID)
+InParty("XZAR")!StateCheck("XZAR",CD_STATE_NOTVALID)
 AreaCheck("AR0308")
   Global("XzarAR0308","AR0308",1)
   CombatCounter(0)
@@ -185,7 +185,7 @@ END
 // Promenade
 IF
 !StateCheck(Player1,CD_STATE_NOTVALID)
-!StateCheck("7XXZAR",CD_STATE_NOTVALID)InParty("7XXZAR")
+!StateCheck("XZAR",CD_STATE_NOTVALID)InParty("XZAR")
 AreaCheck("AR0700")
   Global("XzarAR0700","AR0700",0)
   CombatCounter(0)
@@ -197,7 +197,7 @@ END
 
 IF
 !StateCheck(Player1,CD_STATE_NOTVALID)
-InParty("7XXZAR")!StateCheck("7XXZAR",CD_STATE_NOTVALID)
+InParty("XZAR")!StateCheck("XZAR",CD_STATE_NOTVALID)
 AreaCheck("AR0700")
   Global("XzarAR0700","AR0700",1)
   CombatCounter(0)
@@ -212,7 +212,7 @@ END
 // Underdark
 IF
 !StateCheck(Player1,CD_STATE_NOTVALID)
-!StateCheck("7XXZAR",CD_STATE_NOTVALID)InParty("7XXZAR")
+!StateCheck("XZAR",CD_STATE_NOTVALID)InParty("XZAR")
 AreaCheck("AR2100")
   Global("XzarAR2100","AR2100",0)
   CombatCounter(0)
@@ -224,7 +224,7 @@ END
 
 IF
 !StateCheck(Player1,CD_STATE_NOTVALID)
-InParty("7XXZAR")!StateCheck("7XXZAR",CD_STATE_NOTVALID)
+InParty("XZAR")!StateCheck("XZAR",CD_STATE_NOTVALID)
 AreaCheck("AR2100")
   Global("XzarAR2100","AR2100",1)
   CombatCounter(0)
@@ -239,7 +239,7 @@ END
 // Graveyard
 IF
 !StateCheck(Player1,CD_STATE_NOTVALID)
-!StateCheck("7XXZAR",CD_STATE_NOTVALID)InParty("7XXZAR")
+!StateCheck("XZAR",CD_STATE_NOTVALID)InParty("XZAR")
 AreaCheck("ar0800")
   Global("XzarAR0800","AR0800",0)
   CombatCounter(0)
@@ -251,7 +251,7 @@ END
 
 IF
 !StateCheck(Player1,CD_STATE_NOTVALID)
-InParty("7XXZAR")!StateCheck("7XXZAR",CD_STATE_NOTVALID)
+InParty("XZAR")!StateCheck("XZAR",CD_STATE_NOTVALID)
 AreaCheck("AR0800")
   Global("XzarAR0800","AR0800",1)
   CombatCounter(0)
@@ -264,7 +264,7 @@ END
 
 // Bridge
 IF
-!StateCheck("7XXZAR",CD_STATE_NOTVALID)InParty("7XXZAR")
+!StateCheck("XZAR",CD_STATE_NOTVALID)InParty("XZAR")
 AreaCheck("AR0500")
   Global("XzarAR0500","AR0500",0)
   CombatCounter(0)
@@ -276,7 +276,7 @@ END
 
 IF
 !StateCheck(Player1,CD_STATE_NOTVALID)
-InParty("7XXZAR")!StateCheck("7XXZAR",CD_STATE_NOTVALID)
+InParty("XZAR")!StateCheck("XZAR",CD_STATE_NOTVALID)
 AreaCheck("AR0500")
   Global("XzarAR0500","AR0500",1)
   CombatCounter(0)
@@ -290,7 +290,7 @@ END
 // AR0502
 IF
 !StateCheck(Player1,CD_STATE_NOTVALID)
-!StateCheck("7XXZAR",CD_STATE_NOTVALID)InParty("7XXZAR")
+!StateCheck("XZAR",CD_STATE_NOTVALID)InParty("XZAR")
 AreaCheck("ar0502")
   Global("Xzarar0502","AR0502",0)
   CombatCounter(0)

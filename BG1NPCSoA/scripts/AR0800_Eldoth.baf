@@ -1,11 +1,30 @@
 IF
-TimeOfDay(NIGHT)
-Global("EldothExists","AR0800",0)
-!StateCheck("7XSKI",CD_STATE_NOTVALID)InParty("7XSKI")
-
+	TimeOfDay(NIGHT)
+	Global("EldothExists","AR0800",0)
+	!StateCheck("SKIE",CD_STATE_NOTVALID)
+	InParty("SKIE")
+	BeenInParty("ELDOTH")
+	!StateCheck("ELDOTH",STATE_REALLY_DEAD)
 THEN
-RESPONSE #100
-SetGlobal("EldothExists","AR0800",1)
-CreateCreature("7XCRE6",[1523.1449],13)
-Continue() 
+	RESPONSE #100
+		SetGlobal("EldothExists","AR0800",1)
+		MoveGlobal("AR0800","ELDOTH",[1523.1449])
+		ActionOverride("ELDOTH",Face(13))
+		ActionOverride("ELDOTH",SetDialog("7XELDOT"))
+		Continue() 
+END
+
+IF
+	TimeOfDay(NIGHT)
+	Global("EldothExists","AR0800",0)
+	!StateCheck("SKIE",CD_STATE_NOTVALID)
+	InParty("SKIE")
+	OR(2)
+		!BeenInParty("ELDOTH")
+		StateCheck("ELDOTH",STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		SetGlobal("EldothExists","AR0800",1)
+		CreateCreature("7XCRE6",[1523.1449],13)
+		Continue() 
 END

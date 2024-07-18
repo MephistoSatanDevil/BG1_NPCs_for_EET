@@ -1,6 +1,6 @@
 BEGIN ~B7XGar~
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
 See("HaerDalis")
 CombatCounter(0)
 InParty("HaerDalis")!StateCheck("HaerDalis",CD_STATE_NOTVALID)
@@ -18,9 +18,9 @@ Global("GarrHaerDalis","GLOBAL",0)~ THEN ~B7XGar~ HaerDalisGarrick1
 EXIT
 
 CHAIN IF ~InParty("Imoen2")!StateCheck("Imoen2",CD_STATE_NOTVALID)
-See("7XGAR")
+See("GARRICK")
 CombatCounter(0)
-InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
+InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
 Global("GarrImoen","GLOBAL",0)~ THEN ~BIMOEN2~ ImoenGarrick1
 @18  DO ~SetGlobal("GarrImoen","GLOBAL",1)~
 == B7XGar @19
@@ -41,9 +41,9 @@ Global("GarrImoen","GLOBAL",0)~ THEN ~BIMOEN2~ ImoenGarrick1
 =@34
 EXIT
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
 InParty("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID) 
-See("7XGAR")
+See("GARRICK")
 CombatCounter(0)
 Global("GarrickDornTalk","LOCALS",0)~ THEN IF_FILE_EXISTS BDORN GarrickDornBanter1
 @42  DO ~SetGlobal("GarrickDornTalk","LOCALS",1)~
@@ -54,7 +54,7 @@ Global("GarrickDornTalk","LOCALS",0)~ THEN IF_FILE_EXISTS BDORN GarrickDornBante
 == B7XGar @47
 EXIT
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
 InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) 
 See("Anomen")
 CombatCounter(0)
@@ -72,9 +72,9 @@ Global("GarrickAnomenTalk","LOCALS",0)~ THEN ~B7XGar~ GarrickAnomenBanter1
 == B7XGar @58
 EXIT
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
 InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID) 
-See("7XGAR")
+See("GARRICK")
 CombatCounter(0)
 Global("GarrickNeeraTalk","LOCALS",0)~ THEN IF_FILE_EXISTS ~BNEERA~ GarrickNeeraBanter1
 @59  DO ~SetGlobal("GarrickNeeraTalk","LOCALS",1)~
@@ -84,9 +84,9 @@ Global("GarrickNeeraTalk","LOCALS",0)~ THEN IF_FILE_EXISTS ~BNEERA~ GarrickNeera
 == BNEERA @63
 EXIT
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
 InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID) 
-See("7XGAR")
+See("GARRICK")
 CombatCounter(0)
 Global("GarrickCerndTalk","LOCALS",0)~ THEN ~BCERND~ GarrickCerndBanter1
 @64  DO ~SetGlobal("GarrickCerndTalk","LOCALS",1)~
@@ -96,9 +96,9 @@ Global("GarrickCerndTalk","LOCALS",0)~ THEN ~BCERND~ GarrickCerndBanter1
 == BCERND @68
 EXIT
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
 InParty("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID) 
-See("7XGAR")
+See("GARRICK")
 CombatCounter(0)
 Global("GarrickRasaadTalk","LOCALS",0)~ THEN IF_FILE_EXISTS ~BRASAAD~ GarrickRasaadBanter1
 @69  DO ~SetGlobal("GarrickRasaadTalk","LOCALS",1)~
@@ -106,9 +106,9 @@ Global("GarrickRasaadTalk","LOCALS",0)~ THEN IF_FILE_EXISTS ~BRASAAD~ GarrickRas
 == BRASAAD @71
 EXIT
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
 InParty("WIlson") !StateCheck("Wilson",CD_STATE_NOTVALID) 
-See("7XGAR")
+See("GARRICK")
 CombatCounter(0)
 Global("GarrickWilsonTalk","LOCALS",0)~ THEN IF_FILE_EXISTS ~BWILSON~ GarrickWilsonBanter1
 @91  DO ~SetGlobal("GarrickWilsonTalk","LOCALS",1)~
@@ -132,7 +132,7 @@ EXIT
 
 
 CHAIN
-IF ~Global("GarEdwin","GLOBAL",0)See("Edwin")InParty("Edwin")InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+IF ~Global("GarEdwin","GLOBAL",0)See("Edwin")InParty("Edwin")InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 !StateCheck("Edwin",CD_STATE_NOTVALID) CombatCounter(0)~ THEN B7XGar edwingarrick1
 @103 
 =
@@ -167,7 +167,7 @@ DO ~SetGlobal("GarEdwin","GLOBAL",1)~
 EXIT
 
 CHAIN IF ~InParty("Yoshimo")
-See("Yoshimo")InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+See("Yoshimo")InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("GarrickYos","GLOBAL",0)~ THEN B7XGar yoshimogarrick1
@@ -194,7 +194,7 @@ Global("GarrickYos","GLOBAL",0)~ THEN B7XGar yoshimogarrick1
 EXIT
 
 CHAIN IF ~InParty("Minsc")
-See("Minsc")InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+See("Minsc")InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 !StateCheck("Minsc",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("GarrickMin","GLOBAL",0)~ THEN B7XGar minsc1
@@ -221,7 +221,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Viconia")
-See("Viconia")InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+See("Viconia")InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 !StateCheck("Viconia",CD_STATE_NOTVALID)
 CombatCounter(0)
 !Global("GarrickNaliaRomance","GLOBAL",2)
@@ -241,7 +241,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Viconia")
-See("Viconia")InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+See("Viconia")InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 !StateCheck("Viconia",CD_STATE_NOTVALID)
 Global("GarrickNaliaRomance","GLOBAL",2)
 CombatCounter(0)
@@ -257,7 +257,7 @@ EXIT
 
 
 CHAIN
-IF ~Global("KelGar","GLOBAL",0)See("Keldorn")InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+IF ~Global("KelGar","GLOBAL",0)See("Keldorn")InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 InParty("Keldorn")!StateCheck("Keldorn",CD_STATE_NOTVALID)
 CombatCounter(0)~ THEN B7XGar keldorn1
 @160
@@ -296,7 +296,7 @@ DO ~SetGlobal("KelGar","GLOBAL",1)~
 @182
 EXIT
 
-CHAIN IF ~InParty("7XGAR")See("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("GARRICK")See("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 Global("GarrJan","GLOBAL",0)InParty("Jan")!StateCheck("Jan",CD_STATE_NOTVALID)
 CombatCounter(0)~ THEN BJAN JanStory
 @183  DO ~SetGlobal("GarrJan","GLOBAL",1)~
@@ -321,8 +321,8 @@ CombatCounter(0)~ THEN BJAN JanStory
 EXIT
 
 CHAIN IF~InParty("Mazzy")Global("GarMaz","GLOBAL",0)
-InParty("7XGAR")!StateCheck("Mazzy",CD_STATE_NOTVALID)
-See("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+InParty("GARRICK")!StateCheck("Mazzy",CD_STATE_NOTVALID)
+See("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 CombatCounter(0)~ THEN ~B7XGar~ GarrickMazzyBanter1
 @197
 =
@@ -344,7 +344,7 @@ EXIT
 
 
 CHAIN IF ~InParty("Minsc")
-See("Minsc")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+See("Minsc")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 !StateCheck("Minsc",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("GarrickMin","GLOBAL",1)~ THEN B7XGar minsc2
@@ -355,9 +355,9 @@ Global("GarrickMin","GLOBAL",1)~ THEN B7XGar minsc2
 EXIT
 
 CHAIN
-IF ~IsValidForPartyDialog("Mazzy")InParty("Mazzy")Global("GarMaz","GLOBAL",1)InParty("7XGAR")
-See("7XGAR")
-!StateCheck("7XGAR",CD_STATE_NOTVALID)
+IF ~IsValidForPartyDialog("Mazzy")InParty("Mazzy")Global("GarMaz","GLOBAL",1)InParty("GARRICK")
+See("GARRICK")
+!StateCheck("GARRICK",CD_STATE_NOTVALID)
 CombatCounter(0)~ THEN ~B7XGar~ GarrickMazzyBanter2
 @212
 DO ~SetGlobal("GarMaz","GLOBAL",2)~
@@ -369,9 +369,9 @@ DO ~SetGlobal("GarMaz","GLOBAL",2)~
 @217
 EXIT
 
-CHAIN IF ~InParty("7XGAR")
-See("7XGAR")InParty("Jan")!StateCheck("Jan",CD_STATE_NOTVALID)
-!StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("GARRICK")
+See("GARRICK")InParty("Jan")!StateCheck("Jan",CD_STATE_NOTVALID)
+!StateCheck("GARRICK",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("GarrJan","GLOBAL",1)~ THEN B7XGar JanGarrick2
 @218  DO ~SetGlobal("GarrJan","GLOBAL",2)~
@@ -388,8 +388,8 @@ Global("GarrJan","GLOBAL",1)~ THEN B7XGar JanGarrick2
 == BJAN @227
 EXIT
 
-CHAIN IF ~InParty("Yoshimo")InParty("7XGAR")
-See("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("Yoshimo")InParty("GARRICK")
+See("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 See("Yoshimo")!StateCheck("Yoshimo",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("GarrickYos","GLOBAL",1)~ THEN BYOSHIM yoshimogarrick2
@@ -402,8 +402,8 @@ Global("GarrickYos","GLOBAL",1)~ THEN BYOSHIM yoshimogarrick2
 EXIT
 
 CHAIN IF ~InParty("Minsc")
-See("Minsc")InParty("7XGAR")
-See("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+See("Minsc")InParty("GARRICK")
+See("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 !StateCheck("Minsc",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("GarrickMin","GLOBAL",2)~ THEN B7XGar minsc3
@@ -424,9 +424,9 @@ Global("GarrickMin","GLOBAL",2)~ THEN B7XGar minsc3
 EXIT
 
 
-CHAIN IF ~InParty("7XGAR")
-See("7XGAR")InParty("Jan")!StateCheck("Jan",CD_STATE_NOTVALID)
-!StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("GARRICK")
+See("GARRICK")InParty("Jan")!StateCheck("Jan",CD_STATE_NOTVALID)
+!StateCheck("GARRICK",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("GarrJan","GLOBAL",2)~ THEN ~BJAN~ JanGarrick3
 @244  DO ~SetGlobal("GarrJan","GLOBAL",3)~
@@ -443,8 +443,8 @@ Global("GarrJan","GLOBAL",2)~ THEN ~BJAN~ JanGarrick3
 EXIT
 
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
-See("7XGAR")
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
+See("GARRICK")
 CombatCounter(0)
 InParty("Aerie")!StateCheck("Aerie",CD_STATE_NOTVALID)
 Global("GarrAerie","GLOBAL",0)~ THEN ~BAERIE~ AerieGarrick1
@@ -455,7 +455,7 @@ Global("GarrAerie","GLOBAL",0)~ THEN ~BAERIE~ AerieGarrick1
 == BAERIE @257
 EXIT
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
 See("Aerie")
 CombatCounter(0)
 InParty("Aerie")!StateCheck("Aerie",CD_STATE_NOTVALID)
@@ -471,7 +471,7 @@ GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%)~ THEN ~B7XGar~ AerieGarrick2
 == BAERIE @17
 EXIT
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
 See("Korgan")
 CombatCounter(0)
 InParty("Korgan")!StateCheck("Korgan",CD_STATE_NOTVALID)
@@ -495,7 +495,7 @@ EXIT
 CHAIN IF ~InParty("Valygar")!StateCheck("Valygar",CD_STATE_NOTVALID)
 See("Valygar")
 CombatCounter(0)
-InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
+InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
 Global("GarrValygar","GLOBAL",0)~ THEN ~B7XGar~ ValygarGarrick1
 @272  DO ~SetGlobal("GarrValygar","GLOBAL",1)~
 == BVALYGA @273
@@ -506,9 +506,9 @@ Global("GarrValygar","GLOBAL",0)~ THEN ~B7XGar~ ValygarGarrick1
 == BVALYGA @278
 EXIT
 
-CHAIN IF WEIGHT #-20 ~AreaCheck("AR1302") InParty("7XGAR")
+CHAIN IF WEIGHT #-20 ~AreaCheck("AR1302") InParty("GARRICK")
 See("Nalia")InParty("Nalia")!StateCheck("Nalia",CD_STATE_NOTVALID)
-!StateCheck("7XGAR",CD_STATE_NOTVALID)
+!StateCheck("GARRICK",CD_STATE_NOTVALID)
 Global("GarrNaliaCastle","GLOBAL",1)~ THEN ~B7XGar~ NaliaGarrickCastle1
 @279  DO ~SetGlobal("GarrNaliaCastle","GLOBAL",2)~
 == BNALIA @280
@@ -535,8 +535,8 @@ EXIT
 
 
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
-See("7XGAR")
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
+See("GARRICK")
 CombatCounter(0)
 GlobalGT("NaliaKeepPlot","GLOBAL",0)
 InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)
@@ -551,8 +551,8 @@ Global("GarrNalia","GLOBAL",0)~ THEN ~BNALIA~ NaliaGarrick1
 == B7XGar @79
 EXIT
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
-See("7XGAR")
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
+See("GARRICK")
 CombatCounter(0)
 InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)
 Global("GarrNalia","GLOBAL",1)~ THEN ~BNALIA~ NaliaGarrick2
@@ -570,7 +570,7 @@ Global("GarrNalia","GLOBAL",1)~ THEN ~BNALIA~ NaliaGarrick2
 EXIT
 
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
 See("Nalia")
 CombatCounter(0)
 InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)
@@ -591,8 +591,8 @@ Global("GarrNalia","GLOBAL",2)~ THEN ~B7XGar~ NaliaGarrick3
 == B7XGar @310
 EXIT
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
-See("7XGAR")
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
+See("GARRICK")
 CombatCounter(0)
 InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)
 Global("GarrNalia","GLOBAL",3)
@@ -610,7 +610,7 @@ OR(2) AreaType(FOREST) AreaType(CITY)~ THEN ~BNALIA~ NaliaGarrick4
 EXIT
 
 // Romance
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
 See("Nalia")
 !AreaType(DUNGEON)
 CombatCounter(0)
@@ -636,7 +636,7 @@ Global("GarrNalia","GLOBAL",4) Global("GarrickNaliaRomance","GLOBAL",0)
 == BNALIA @336
 EXIT
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
 See("Nalia")
 !AreaType(DUNGEON)
 CombatCounter(0)
@@ -663,7 +663,7 @@ Global("GarrickNaliaRomance","GLOBAL",1) Global("GarrickNaliaRomanceTalk","GLOBA
 == BNALIA @355
 EXIT
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
 See("Nalia")
 !AreaType(DUNGEON)
 CombatCounter(0)
@@ -684,8 +684,8 @@ Global("GarrickNaliaRomanceTalk","GLOBAL",2)~ THEN ~B7XGar~ NaliaGarrick7
 == JANJ IF ~InParty("Jan") InMyArea("Jan") !StateCheck("Jan",CD_STATE_NOTVALID) InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @449
 == JANJ IF ~InParty("Jan") InMyArea("Jan") !StateCheck("Jan",CD_STATE_NOTVALID) OR(3) !InParty("Korgan") !InMyArea("Korgan") StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @450
 == BNALIA IF ~InParty("Jan") InMyArea("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN @451
-== 7XsharJ IF ~InParty("7XSHAR") InMyArea("7XSHAR") !StateCheck("7XSHAR",CD_STATE_NOTVALID)~ THEN @452
-== 7XkagaJ IF ~InParty("7Xkaga") InMyArea("7Xkaga") !StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @453
+== 7XsharJ IF ~InParty("SHARTEEL") InMyArea("SHARTEEL") !StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @452
+== 7XkagaJ IF ~InParty("KAGAIN") InMyArea("KAGAIN") !StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN @453
 == EDWINJ IF ~InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @454
 == BNALIA @367
 == B7XGar @368
@@ -695,8 +695,8 @@ Global("GarrickNaliaRomanceTalk","GLOBAL",2)~ THEN ~B7XGar~ NaliaGarrick7
 =@372
 EXIT
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
-See("7XGAR")
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
+See("GARRICK")
 !AreaType(DUNGEON)
 CombatCounter(0)
 InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)
@@ -715,7 +715,7 @@ Global("GarrickNaliaRomanceTalk","GLOBAL",3)~ THEN ~BNALIA~ NaliaGarrick8
 == B7XGar @410
 EXIT
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
 See("Nalia")
 !AreaType(DUNGEON)
 CombatCounter(0)
@@ -754,8 +754,8 @@ EXIT
 // Chapter 6 talk
 CHAIN IF WEIGHT #-5 ~Global("Chapter","GLOBAL",%bg2_chapter_6%)
 !Dead("c6bodhi")
-InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
-See("7XGAR")
+InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
+See("GARRICK")
 CombatCounter(0)
 InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)
 Global("GarrickNaliaRomance","GLOBAL",2)
@@ -770,8 +770,8 @@ Global("GarrickNaliaBodhiTalk","LOCALS",0)~ THEN ~BNALIA~ NaliaGarrickBodhi
 EXIT
 
 // Underdark Talk
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
-See("7XGAR")
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
+See("GARRICK")
 InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)
 AreaCheck("AR2200")
 Global("PlayerLooksLikeDrow","GLOBAL",1)
@@ -786,8 +786,8 @@ Global("GarrickNaliaUnderdarkTalk","GLOBAL",0)~ THEN ~BNALIA~ NaliaGarrickUnderd
 == BNALIA @379
 EXIT
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
-See("7XGAR")
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
+See("GARRICK")
 OR(3) AreaCheck("AR2200") AreaCheck("AR2202") AreaCheck("AR2203")
 InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)
 Global("PlayerLooksLikeDrow","GLOBAL",1)
@@ -804,8 +804,8 @@ Global("GarrickNaliaUnderdarkTalk","GLOBAL",1)~ THEN ~BNALIA~ NaliaGarrickUnderd
 EXIT
 
 // Underdark Exit Talk
-CHAIN IF WEIGHT #-2 ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
-See("7XGAR")
+CHAIN IF WEIGHT #-2 ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
+See("GARRICK")
 InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)
 AreaCheck("AR2500")
 Global("GarrickNaliaRomance","GLOBAL",2)

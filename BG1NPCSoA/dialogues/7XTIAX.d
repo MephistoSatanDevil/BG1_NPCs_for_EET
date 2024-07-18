@@ -111,7 +111,7 @@ END
 
 
 IF ~Global("TIAXInParty","LOCALS",2)
-!InParty("7XTIAX")~ THEN BEGIN RejoinTIAX
+!InParty("TIAX")~ THEN BEGIN RejoinTIAX
 SAY @45
 =
 @46
@@ -139,7 +139,7 @@ EXIT
 END
 
 IF ~Global("TIAXInParty","LOCALS",0)
-!InParty("7XTIAX")~ THEN BEGIN RejoinTIAX
+!InParty("TIAX")~ THEN BEGIN RejoinTIAX
 SAY @45
 =
 @54

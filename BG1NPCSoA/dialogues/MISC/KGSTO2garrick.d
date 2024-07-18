@@ -1,5 +1,5 @@
 APPEND ~KGSTO2~
-IF WEIGHT #-10 ~Global("Dalindra","GLOBAL",1)IsGabber("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN BEGIN DalindraGarrick1
+IF WEIGHT #-10 ~Global("Dalindra","GLOBAL",1)IsGabber("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN BEGIN DalindraGarrick1
 SAY @48
 =
 @49

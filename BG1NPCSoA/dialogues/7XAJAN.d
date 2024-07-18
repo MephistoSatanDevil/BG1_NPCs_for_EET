@@ -108,7 +108,7 @@ IF ~~ THEN DO ~SetGlobal("AJANTISRejected","LOCALS",0) LeaveParty() EscapeAreaMo
 END
 
 IF ~Global("AJANTISRejected","LOCALS",0)
-!InParty("7XAJAN")~ THEN BEGIN AjantisRejoinAJANTIS
+!InParty("AJANTIS")~ THEN BEGIN AjantisRejoinAJANTIS
 SAY @23
 ++ @24 GOTO AjantisNEWJ2
 IF ~~ THEN REPLY @33 EXIT
@@ -122,7 +122,7 @@ CHAIN
 IF ~CombatCounter(0) !See([ENEMY]) 
 InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)
 See("Imoen2")
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 Global("Ajantis_ImoenBanter","GLOBAL",0)~ THEN BIMOEN2 ajantisimoen1
 @34
 =
@@ -147,7 +147,7 @@ IF ~CombatCounter(0)
 InParty("jaheira")
 See("jaheira")
 !Dead("jaheira")!StateCheck("jaheira",CD_STATE_NOTVALID)
-!StateCheck("jaheira",CD_STATE_NOTVALID)!StateCheck("7XAJAN",CD_STATE_NOTVALID)InParty("7XAJAN")
+!StateCheck("jaheira",CD_STATE_NOTVALID)!StateCheck("AJANTIS",CD_STATE_NOTVALID)InParty("AJANTIS")
 Global("7XAJANJaheira","GLOBAL",0)~ THEN 7XAJANB 7XAJANJaheira1
 @45
 DO ~SetGlobal("7XAJANJaheira","GLOBAL",1)~
@@ -159,7 +159,7 @@ EXIT
 CHAIN
 IF ~CombatCounter(0) !See([ENEMY]) InParty("Viconia")
 See("Viconia") 
-!StateCheck("viconia",CD_STATE_NOTVALID)!StateCheck("7XAJAN",CD_STATE_NOTVALID)InParty("7XAJAN")
+!StateCheck("viconia",CD_STATE_NOTVALID)!StateCheck("AJANTIS",CD_STATE_NOTVALID)InParty("AJANTIS")
 Global("AjantisViconiaBanter","GLOBAL",0)~ THEN 7XAJANB ajantisviconia1
 @49 
 DO ~SetGlobal("AjantisViconiaBanter","GLOBAL",1)~ 
@@ -171,7 +171,7 @@ EXIT
 CHAIN
 IF ~InParty("Keldorn")
 See("Keldorn")
-!StateCheck("Keldorn",CD_STATE_NOTVALID)!StateCheck("7XAJAN",CD_STATE_NOTVALID)InParty("7XAJAN")
+!StateCheck("Keldorn",CD_STATE_NOTVALID)!StateCheck("AJANTIS",CD_STATE_NOTVALID)InParty("AJANTIS")
 Global("KeldornAjantisTalk","GLOBAL",0)~ THEN 7XAJANB AjantisKeldorn01
 @53
 DO ~SetGlobal("KeldornAjantisTalk","GLOBAL",1)~
@@ -184,7 +184,7 @@ EXIT
 
 CHAIN IF
 ~InParty("Korgan")
-IsValidForPartyDialog("Korgan")!StateCheck("7XAJAN",CD_STATE_NOTVALID)InParty("7XAJAN")
+IsValidForPartyDialog("Korgan")!StateCheck("AJANTIS",CD_STATE_NOTVALID)InParty("AJANTIS")
 Global("AjanKorg","GLOBAL",0)~
 THEN 7XAJANB AJantisKorganBanter1
 @58
@@ -204,9 +204,9 @@ THEN 7XAJANB AJantisKorganBanter1
 == 7XAJANB @70
 EXIT
 
-CHAIN IF ~Global("AjantisAnomen","GLOBAL",0)InParty("7XAJAN")
-See("7XAJAN")
-!StateCheck("7XAJAN",CD_STATE_NOTVALID)InParty("Anomen")!StateCheck("Anomen",CD_STATE_NOTVALID)~
+CHAIN IF ~Global("AjantisAnomen","GLOBAL",0)InParty("AJANTIS")
+See("AJANTIS")
+!StateCheck("AJANTIS",CD_STATE_NOTVALID)InParty("Anomen")!StateCheck("Anomen",CD_STATE_NOTVALID)~
 THEN BANOMEN Anomen7XAJANBanter1
 @71 DO ~SetGlobal("AjantisAnomen","GLOBAL",1)~
 == 7XAJANB @72
@@ -218,37 +218,37 @@ EXIT
 ////////////////////////////////////////////////////////////////////////////
 BEGIN ~7XAJANJ~
 
-CHAIN IF WEIGHT #-1 ~InParty("7XAJAN")IsValidForPartyDialog("7XAJAN")Global("AjantisACOLYTE","GLOBAL",0)~ THEN ACOLYTE3 Ajantis-ACOLYTE
+CHAIN IF WEIGHT #-1 ~InParty("AJANTIS")IsValidForPartyDialog("AJANTIS")Global("AjantisACOLYTE","GLOBAL",0)~ THEN ACOLYTE3 Ajantis-ACOLYTE
   @76
   == 7XAJANJ @77
   == ACOLYTE3 @78
 EXIT
 
-CHAIN IF WEIGHT #-1 ~InParty("7XAJAN")IsValidForPartyDialog("7XAJAN")Global("AjantisDEMSON","GLOBAL",0)~ THEN DEMSON Ajantis-DEMSON
+CHAIN IF WEIGHT #-1 ~InParty("AJANTIS")IsValidForPartyDialog("AJANTIS")Global("AjantisDEMSON","GLOBAL",0)~ THEN DEMSON Ajantis-DEMSON
   @79 DO ~SetGlobal("AjantisDEMSON","GLOBAL",1)~
   == 7XAJANJ @80
   == DEMSON @81
 EXIT
 
-CHAIN IF WEIGHT #-1 ~InParty("7XAJAN")IsValidForPartyDialog("7XAJAN")See("7XAJAN")Global("AjantisHEARTG1","GLOBAL",0)~ THEN HEARTG1 Ajantis-HEARTG1
+CHAIN IF WEIGHT #-1 ~InParty("AJANTIS")IsValidForPartyDialog("AJANTIS")See("AJANTIS")Global("AjantisHEARTG1","GLOBAL",0)~ THEN HEARTG1 Ajantis-HEARTG1
   @82
   == 7XAJANJ @83
 EXIT
 
-CHAIN IF WEIGHT #-1 ~InParty("7XAJAN")IsValidForPartyDialog("7XAJAN")See("7XAJAN")Global("AjantisHEARTG2","GLOBAL",0)~ THEN HEARTG2 Ajantis-HEARTG2
+CHAIN IF WEIGHT #-1 ~InParty("AJANTIS")IsValidForPartyDialog("AJANTIS")See("AJANTIS")Global("AjantisHEARTG2","GLOBAL",0)~ THEN HEARTG2 Ajantis-HEARTG2
   @84 DO ~SetGlobal("AjantisHEARTG2","GLOBAL",1)~
 == 7XAJANJ @85
 EXIT
 
 
-CHAIN IF WEIGHT #-1 ~InParty("7XAJAN")IsValidForPartyDialog("7XAJAN")See("7XAJAN")Global("AjantisHEARTG2","GLOBAL",1)~ THEN HEARTG2 Ajantis-HEARTG2-2
+CHAIN IF WEIGHT #-1 ~InParty("AJANTIS")IsValidForPartyDialog("AJANTIS")See("AJANTIS")Global("AjantisHEARTG2","GLOBAL",1)~ THEN HEARTG2 Ajantis-HEARTG2-2
   @86 DO ~ SetGlobal("AjantisHEARTG2","GLOBAL",0)~
 == 7XAJANJ @83
 EXIT
 
 
 
-CHAIN IF WEIGHT #-1 ~InParty("7XAJAN")IsValidForPartyDialog("7XAJAN")Global("AjantisMelvin","GLOBAL",0)~ THEN HMELVIN AjantisMelvin
+CHAIN IF WEIGHT #-1 ~InParty("AJANTIS")IsValidForPartyDialog("AJANTIS")Global("AjantisMelvin","GLOBAL",0)~ THEN HMELVIN AjantisMelvin
   @87 DO ~SetGlobal("AjantisMelvin","GLOBAL",1)~
 == 7XAJANJ @88
 == HMELVIN @89
@@ -259,7 +259,7 @@ CHAIN IF WEIGHT #-1 ~InParty("7XAJAN")IsValidForPartyDialog("7XAJAN")Global("Aja
 == 7XAJANJ @94
 EXIT
 
-CHAIN IF WEIGHT #-1 ~InParty("7XAJAN")IsValidForPartyDialog("7XAJAN")Global("AjantisMelvin","GLOBAL",1)~ THEN HMELVIN AjantisMelvin2
+CHAIN IF WEIGHT #-1 ~InParty("AJANTIS")IsValidForPartyDialog("AJANTIS")Global("AjantisMelvin","GLOBAL",1)~ THEN HMELVIN AjantisMelvin2
   @95 
 == 7XAJANJ @96
 == HMELVIN @97
@@ -268,28 +268,28 @@ CHAIN IF WEIGHT #-1 ~InParty("7XAJAN")IsValidForPartyDialog("7XAJAN")Global("Aja
 EXIT
 
 
-CHAIN IF WEIGHT #-1 ~InParty("7XAJAN")IsValidForPartyDialog("7XAJAN")Global("AjantisHEARTG3","GLOBAL",0)~ THEN HEARTG3 Ajantis-HEARTG3
+CHAIN IF WEIGHT #-1 ~InParty("AJANTIS")IsValidForPartyDialog("AJANTIS")Global("AjantisHEARTG3","GLOBAL",0)~ THEN HEARTG3 Ajantis-HEARTG3
   @100 DO ~SetGlobal("AjantisHEARTG3","GLOBAL",1)~
 == 7XAJANJ @101
 == HEARTG3 @102
 EXIT
 
 INTERJECT_COPY_TRANS ANOMENJ 113 AnomenAjantisKnighthood
-== 7XAJANJ IF ~InParty("7XAJAN")IsValidForPartyDialog("7XAJAN")~ THEN
+== 7XAJANJ IF ~InParty("AJANTIS")IsValidForPartyDialog("AJANTIS")~ THEN
 @103
 == ANOMENJ
 @104
 END
 
 INTERJECT_COPY_TRANS ANOMENJ 112 AnomenAjantisKnighthood-2
-== 7XAJANJ IF ~InParty("7XAJAN")IsValidForPartyDialog("7XAJAN")~ THEN
+== 7XAJANJ IF ~InParty("AJANTIS")IsValidForPartyDialog("AJANTIS")~ THEN
 @103
 == ANOMENJ
 @104
 END
 
 INTERJECT_COPY_TRANS ANOMENJ 111 AnomenAjantisKnighthood-3
-== 7XAJANJ IF ~InParty("7XAJAN")IsValidForPartyDialog("7XAJAN")~ THEN
+== 7XAJANJ IF ~InParty("AJANTIS")IsValidForPartyDialog("AJANTIS")~ THEN
 @103
 == ANOMENJ
 @104
@@ -297,14 +297,14 @@ END
 
 
 INTERJECT_COPY_TRANS ANOMENJ 84 AjantisAnomenTest
-== 7XAJANJ IF ~InParty("7XAJAN")IsValidForPartyDialog("7XAJAN")~ THEN
+== 7XAJANJ IF ~InParty("AJANTIS")IsValidForPartyDialog("AJANTIS")~ THEN
 @105
 == ANOMENJ
 @106
 END
 
 INTERJECT PLAYER1 33 AjantisTreeofLife
-== PLAYER1 IF ~InParty("7XAJAN")IsValidForPartyDialog("7XAJAN")~ THEN
+== PLAYER1 IF ~InParty("AJANTIS")IsValidForPartyDialog("AJANTIS")~ THEN
 @107
 END
 ++ @108 EXTERN 7XAJANJ AjantisTreeofLife2
@@ -316,20 +316,20 @@ END
 END
 
 
-CHAIN IF WEIGHT #-1 ~InParty("7XAJAN")IsValidForPartyDialog("7XAJAN")Global("AjantisHEARTG4","GLOBAL",0)~ THEN HEARTG4 Ajantis-HEARTG4-1
+CHAIN IF WEIGHT #-1 ~InParty("AJANTIS")IsValidForPartyDialog("AJANTIS")Global("AjantisHEARTG4","GLOBAL",0)~ THEN HEARTG4 Ajantis-HEARTG4-1
   @110 DO ~SetGlobal("AjantisHEARTG4","GLOBAL",1)~
 == 7XAJANJ @111
 == HEARTG4 @112
 EXIT
 
-CHAIN IF WEIGHT #-1 ~InParty("7XAJAN")IsValidForPartyDialog("7XAJAN")Global("AjantisHEARTG4","GLOBAL",1)~ THEN HEARTG4 Ajantis-HEARTG4-2
+CHAIN IF WEIGHT #-1 ~InParty("AJANTIS")IsValidForPartyDialog("AJANTIS")Global("AjantisHEARTG4","GLOBAL",1)~ THEN HEARTG4 Ajantis-HEARTG4-2
   @113 DO ~SetGlobal("AjantisHEARTG4","GLOBAL",2)~
 == 7XAJANJ @114
 == HEARTG4 @115
 EXIT
 
 
-CHAIN IF WEIGHT #-1 ~InParty("7XAJAN")IsValidForPartyDialog("7XAJAN")Global("AjantisKAYL2","GLOBAL",0)~ THEN KAYL2 AjantisKAYL2
+CHAIN IF WEIGHT #-1 ~InParty("AJANTIS")IsValidForPartyDialog("AJANTIS")Global("AjantisKAYL2","GLOBAL",0)~ THEN KAYL2 AjantisKAYL2
   @116 DO ~SetGlobal("AjantisKAYL2","GLOBAL",1)~
 == 7XAJANJ @117
 == KAYL2 @118
@@ -590,25 +590,25 @@ END
 
 
 INTERJECT_COPY_TRANS BODHI 18 AjantisBODHI-18
-== 7XAJANJ IF ~InParty("7XAJAN") !StateCheck("7XAJAN",CD_STATE_NOTVALID)~ THEN @152 DO ~ChangeAIScript("",DEFAULT)SetLeavePartyDialogueFile()LeaveParty()EscapeArea()~
+== 7XAJANJ IF ~InParty("AJANTIS") !StateCheck("AJANTIS",CD_STATE_NOTVALID)~ THEN @152 DO ~ChangeAIScript("",DEFAULT)SetLeavePartyDialogueFile()LeaveParty()EscapeArea()~
 END
 
 INTERJECT_COPY_TRANS ARAN 4 AjantisARAN-4
-== 7XAJANJ IF ~InParty("7XAJAN") !StateCheck("7XAJAN",CD_STATE_NOTVALID)~ THEN @153
+== 7XAJANJ IF ~InParty("AJANTIS") !StateCheck("AJANTIS",CD_STATE_NOTVALID)~ THEN @153
 END
 
 INTERJECT_COPY_TRANS C6ELHAN2 8 AjantisC6ELHAN2-8
-== 7XAJANJ IF ~InParty("7XAJAN") !StateCheck("7XAJAN",CD_STATE_NOTVALID)~ THEN @161
+== 7XAJANJ IF ~InParty("AJANTIS") !StateCheck("AJANTIS",CD_STATE_NOTVALID)~ THEN @161
 == C6ELHAN2 @162
 == 7XAJANJ @163
 END
 
 INTERJECT_COPY_TRANS PLAYER1 25 Ajantis_Hell
-== 7XAJANJ IF ~InParty("7XAJAN") !StateCheck("7XAJAN",CD_STATE_NOTVALID)~ THEN @164
+== 7XAJANJ IF ~InParty("AJANTIS") !StateCheck("AJANTIS",CD_STATE_NOTVALID)~ THEN @164
 END
 
 CHAIN IF ~Global("7xAjantisNalia","GLOBAL",0)
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 See("Nalia")
 InParty("Nalia")!StateCheck("Nalia",CD_STATE_NOTVALID)~
 THEN 7XAJANB 7XAJANNaliaBanter
@@ -619,7 +619,7 @@ THEN 7XAJANB 7XAJANNaliaBanter
 EXIT
 
 CHAIN IF ~Global("7xAjantisAerie","GLOBAL",0)
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 See("Aerie")
 InParty("Aerie")!StateCheck("Aerie",CD_STATE_NOTVALID)~
 THEN 7XAJANB 7XAJANAerieBanter
@@ -631,13 +631,13 @@ EXIT
 
 
 INTERJECT_COPY_TRANS PLAYER1 5 Ajantis_PLAYER1-5
-== 7XAJANJ IF ~InParty("7XAJAN") !StateCheck("7XAJAN",CD_STATE_NOTVALID)~ THEN @188
+== 7XAJANJ IF ~InParty("AJANTIS") !StateCheck("AJANTIS",CD_STATE_NOTVALID)~ THEN @188
 END
 
 
 // Tree of Life
 INTERJECT PLAYER1 33 TreeOLifeAjantis1
-== PLAYER1 IF ~InParty("7XAJAN") !StateCheck("7XAJAN",CD_STATE_NOTVALID)~ THEN @189
+== PLAYER1 IF ~InParty("AJANTIS") !StateCheck("AJANTIS",CD_STATE_NOTVALID)~ THEN @189
 END
 ++ @190 EXTERN 7XAJANJ TreeOLifeAjantis2
 ++ @191 EXTERN 7XAJANJ TreeOLifeAjantis2
@@ -739,8 +739,8 @@ END
 CHAIN
 IF ~CombatCounter(0) !See([ENEMY]) 
 InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)
-See("7XAJAN") 
-InParty("7XAJAN") !StateCheck("7XAJAN",CD_STATE_NOTVALID)
+See("AJANTIS") 
+InParty("AJANTIS") !StateCheck("AJANTIS",CD_STATE_NOTVALID)
 Global("AjantisMinscBanter","GLOBAL",1)~ THEN BMINSC 7xAjantisMinsc1
 @249 DO ~SetGlobal("AjantisMinscBanter","GLOBAL",2)~ 
 == 7XAJANB @250
@@ -753,8 +753,8 @@ EXIT
 CHAIN
 IF ~CombatCounter(0) !See([ENEMY]) 
 InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)
-See("7XAJAN") 
-InParty("7XAJAN") !StateCheck("7XAJAN",CD_STATE_NOTVALID)
+See("AJANTIS") 
+InParty("AJANTIS") !StateCheck("AJANTIS",CD_STATE_NOTVALID)
 Global("AjantisMinscBanter","GLOBAL",2)~ THEN BMINSC 7xAjantisMinsc1
 @255 DO ~SetGlobal("AjantisMinscBanter","GLOBAL",3)~ 
 == 7XAJANB @256
@@ -867,7 +867,7 @@ END
 END
 
 CHAIN IF ~Global("7xAjantisYoshimo","GLOBAL",0)
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 See("Yoshimo")
 InParty("Yoshimo")!StateCheck("Yoshimo",CD_STATE_NOTVALID)~
 THEN 7XAJANB 7XAJANYoshimoBanter
@@ -881,7 +881,7 @@ EXIT
 
 CHAIN IF ~InParty("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)
 See("Keldorn")
-InParty("7XAJAN") !StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS") !StateCheck("AJANTIS",CD_STATE_NOTVALID)
 Global("KeldornAjantisTalk","GLOBAL",1)
 GlobalGT("AjantisIsTalking","GLOBAL",5)~ THEN 7XAJANB AjantisKeldorn02
 @296 DO ~SetGlobal("KeldornAjantisTalk","GLOBAL",2)~
@@ -895,9 +895,9 @@ EXIT
 CHAIN IF ~Global("AjantisAnomen","GLOBAL",1)
 GlobalGT("AjantisIsTalking","GLOBAL",5)
 !Alignment("Anomen",CHAOTIC_NEUTRAL)
-InParty("7XAJAN") !StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS") !StateCheck("AJANTIS",CD_STATE_NOTVALID)
 InParty("Anomen")!StateCheck("Anomen",CD_STATE_NOTVALID)
-See("7XAJAN")~
+See("AJANTIS")~
 THEN BANOMEN Anomen7XAJANBanter2
 @302 DO ~SetGlobal("AjantisAnomen","GLOBAL",2)~
 == 7XAJANB @303
@@ -909,9 +909,9 @@ EXIT
 CHAIN IF ~Global("AjantisAnomen","GLOBAL",1)
 GlobalGT("AjantisIsTalking","GLOBAL",5)
 Alignment("Anomen",CHAOTIC_NEUTRAL)
-InParty("7XAJAN") !StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS") !StateCheck("AJANTIS",CD_STATE_NOTVALID)
 InParty("Anomen")!StateCheck("Anomen",CD_STATE_NOTVALID)
-See("7XAJAN")~
+See("AJANTIS")~
 THEN BANOMEN Anomen7XAJANBanter2Chaotic
 @307 DO ~SetGlobal("AjantisAnomen","GLOBAL",2)~
 == 7XAJANB @308
@@ -922,8 +922,8 @@ THEN BANOMEN Anomen7XAJANBanter2Chaotic
 EXIT
 
 CHAIN IF ~Global("7xAjantisAerie","GLOBAL",1)
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
-See("7XAJAN")
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
+See("AJANTIS")
 InParty("Aerie")!StateCheck("Aerie",CD_STATE_NOTVALID)~
 THEN BAERIE 7XAJANAerieBanter
 @313 DO ~SetGlobal("7xAjantisAerie","GLOBAL",2)~
@@ -1072,7 +1072,7 @@ CHAIN IF ~Global("AjantisQuest","GLOBAL",5)~ THEN 7xKatr 7xKatrinaAjantis
 == 7XAJANJ @369
 == 7xKatr @370
 =@371
-== IF_FILE_EXISTS 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @448
+== IF_FILE_EXISTS 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @448
 == 7XAJANJ @372
 == 7xKatr @373
 == 7XAJANJ @374
@@ -1180,15 +1180,15 @@ CHAIN IF ~Global("AjantisQuest","GLOBAL",13)~ THEN 7xKatr 7xKatrinaAjantisFinal
 == 7xKatr @409
 == IF_FILE_EXISTS NEERAJ IF ~InParty("Neera") InMyArea("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN @429
 == IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID) OR(2) !InParty("Neera") StateCheck("Neera",CD_STATE_NOTVALID)~ THEN @429
-== IF_FILE_EXISTS 7XsharJ IF ~InParty("7XSHAR") !StateCheck("7XSHAR",CD_STATE_NOTVALID)~ THEN @430
-== IF_FILE_EXISTS 7XTIAXJ IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @431
+== IF_FILE_EXISTS 7XsharJ IF ~InParty("SHARTEEL") !StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @430
+== IF_FILE_EXISTS 7XTIAXJ IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @431
 == 7XAJANJ @410
 == 7xKatr @411
 == IF_FILE_EXISTS WILSONJ IF ~InParty("Wilson") !StateCheck("Wilson",CD_STATE_NOTVALID)~ THEN @436
-== IF_FILE_EXISTS 7XXZARJ IF ~InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @432
+== IF_FILE_EXISTS 7XXZARJ IF ~InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @432
 == JAHEIRAJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @433
 == MINSCJ IF ~InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN @434
-== IF_FILE_EXISTS 7XkagaJ IF ~InParty("7Xkaga") !StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @438
+== IF_FILE_EXISTS 7XkagaJ IF ~InParty("KAGAIN") !StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN @438
 == 7XAJANJ @412
 == 7xKatr @413
 == 7XAJANJ @414
@@ -1197,29 +1197,29 @@ CHAIN IF ~Global("AjantisQuest","GLOBAL",13)~ THEN 7xKatr 7xKatrinaAjantisFinal
 == 7xKatr @417
 == IF_FILE_EXISTS DORNJ IF ~InParty("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN @439
 == 7XAJANJ IF ~InParty("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN @440
-== IF_FILE_EXISTS 7XMONTJ IF ~InParty("7XMONT") !StateCheck("7XMONT",CD_STATE_NOTVALID) OR(2) !InParty("Dorn") StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN @439
-== 7XAJANJ IF ~InParty("7XMONT") !StateCheck("7XMONT",CD_STATE_NOTVALID) OR(2) !InParty("Dorn") StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN @440
+== IF_FILE_EXISTS 7XMONTJ IF ~InParty("MONTARON") !StateCheck("MONTARON",CD_STATE_NOTVALID) OR(2) !InParty("Dorn") StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN @439
+== 7XAJANJ IF ~InParty("MONTARON") !StateCheck("MONTARON",CD_STATE_NOTVALID) OR(2) !InParty("Dorn") StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN @440
 == 7XAJANJ @418
 == 7xKatr @419
 =@420
 == 7XAJANJ @421
 == 7xKatr @422
 == 7XAJANJ @423
-== IF_FILE_EXISTS 7XMONTJ IF ~InParty("7XMONT") !StateCheck("7XMONT",CD_STATE_NOTVALID)~ THEN @435
-== VICONIJ IF ~InParty("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) OR(2) !InParty("7XMONT") StateCheck("7XMONT",CD_STATE_NOTVALID)~ THEN @435
+== IF_FILE_EXISTS 7XMONTJ IF ~InParty("MONTARON") !StateCheck("MONTARON",CD_STATE_NOTVALID)~ THEN @435
+== VICONIJ IF ~InParty("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) OR(2) !InParty("MONTARON") StateCheck("MONTARON",CD_STATE_NOTVALID)~ THEN @435
 == 7xKatr @424
-== IF_FILE_EXISTS 7XTIAXJ IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @443
-== 7xKatr IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @444
-== IF_FILE_EXISTS 7XXZARJ IF ~InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID) InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @449
+== IF_FILE_EXISTS 7XTIAXJ IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @443
+== 7xKatr IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @444
+== IF_FILE_EXISTS 7XXZARJ IF ~InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID) InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @449
 == 7XAJANJ @425 DO ~AddJournalEntry(@1852,QUEST_DONE) AddexperienceParty(6000)~
 == 7xKatr @426
-=@427 DO ~GiveItem("RING07","7XAJAN") EscapeArea()~
+=@427 DO ~GiveItem("RING07","AJANTIS") EscapeArea()~
 == KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @445
-== IF_FILE_EXISTS 7XkagaJ IF ~InParty("7Xkaga") !StateCheck("7Xkaga",CD_STATE_NOTVALID) OR(2) !InParty("Korgan") StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @445
+== IF_FILE_EXISTS 7XkagaJ IF ~InParty("KAGAIN") !StateCheck("KAGAIN",CD_STATE_NOTVALID) OR(2) !InParty("Korgan") StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @445
 == KELDORJ IF ~InParty("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN @441
 == 7XAJANJ IF ~InParty("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN @442
-== IF_FILE_EXISTS 7XCoranJ IF ~InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @446
-== IF_FILE_EXISTS 7XGarJ IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @447
+== IF_FILE_EXISTS 7XCoranJ IF ~InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @446
+== IF_FILE_EXISTS 7XGarJ IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @447
 == 7XAJANJ @428
 EXIT
 
@@ -1239,7 +1239,7 @@ CHAIN
 IF ~CombatCounter(0) !See([ENEMY]) 
 InParty("Imoen2")!StateCheck("Imoen2",CD_STATE_NOTVALID)
 See("Imoen2")
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 Global("Ajantis_ImoenBanter","GLOBAL",1)~ THEN 7XAJANB ajantisimoen2
 @458
 DO ~SetGlobal("Ajantis_ImoenBanter","GLOBAL",2)~

@@ -1,5 +1,5 @@
 IF
-AreaCheck("AR5500")!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("7XTIAX")
+AreaCheck("AR5500")!StateCheck("TIAX",CD_STATE_NOTVALID)InParty("TIAX")
   Global("TiaxAR5500","AR5500",0)
   CombatCounter(0)
 THEN
@@ -12,7 +12,7 @@ END
 IF
 AreaCheck("AR4500")
 Dead("chalcy02")
-InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)
+InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("TiaxAR4500battle","AR4500",0)
 CombatCounter(0)
 THEN
@@ -25,7 +25,7 @@ IF
 AreaCheck("AR4500")
 Dead("chalcy02")
 RealGlobalTimerExpired("TiaxAR4500battleTimer","LOCALS") 
-InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)
+InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("TiaxAR4500battle","AR4500",1)
 CombatCounter(0)
 THEN

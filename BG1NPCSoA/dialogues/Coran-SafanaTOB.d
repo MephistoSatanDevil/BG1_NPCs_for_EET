@@ -2,7 +2,7 @@ BEGIN ~7XSaf25J~
 BEGIN ~7XCor25J~
 
 EXTEND_BOTTOM SARVOLO 9
-IF ~InParty("7XCORAN")~ THEN REPLY @0 GOTO CORANVolo
+IF ~InParty("CORAN")~ THEN REPLY @0 GOTO CORANVolo
 END
 
 CHAIN SARVOLO CORANVolo
@@ -11,26 +11,26 @@ CHAIN SARVOLO CORANVolo
 @2
 =
 @3
-== 7XCor25J IF ~InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @4
+== 7XCor25J IF ~InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @4
 =
 @5
 EXTERN SARVOLO 9
 
 EXTEND_BOTTOM SARVOLO 9
-IF ~InParty("7XSAFA")~ THEN REPLY @323 GOTO SAFANAVolo
+IF ~InParty("SAFANA")~ THEN REPLY @323 GOTO SAFANAVolo
 END
 
 CHAIN SARVOLO SAFANAVolo
 @324
 = @325
-== 7XCor25J IF ~InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @326
-== 7XSaf25J IF ~InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID) InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @327
-== 7XSaf25J IF ~InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @328
+== 7XCor25J IF ~InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @326
+== 7XSaf25J IF ~InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID) InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @327
+== 7XSaf25J IF ~InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @328
 EXTERN SARVOLO 9
 
 EXTEND_TOP FATESP 6 #9
-IF ~!Dead("7XSAFA")
-    !InMyArea("7XSAFA")
+IF ~!Dead("SAFANA")
+    !InMyArea("SAFANA")
     Global("SAFANASummonedTOB","GLOBAL",0)~
 THEN
   REPLY @6
@@ -39,14 +39,14 @@ THEN
      CreateCreature("7XCRE62",[1999.1218],0)
      SetGlobal("SAFANASummonedTOB","GLOBAL",1) 	 
 	 SmallWait(10) 
-	 ActionOverride("7XSAFA",StartDialogNoSet([PC]))~
+	 ActionOverride("SAFANA",StartDialogNoSet([PC]))~
 EXIT
 END
 
 
 EXTEND_TOP FATESP 6 #9
-IF ~!Dead("7XCORAN")
-    !InMyArea("7XCORAN")
+IF ~!Dead("CORAN")
+    !InMyArea("CORAN")
     Global("CORANSummonedTOB","GLOBAL",0)~
 THEN
   REPLY @7
@@ -113,7 +113,7 @@ BEGIN ~B7XCor25~
 
 CHAIN IF
 ~InParty("Imoen2")!StateCheck("Imoen2",CD_STATE_NOTVALID)
-Global("CoranImoenToB","GLOBAL",0)InParty("7XCORAN") InMyArea("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)~
+Global("CoranImoenToB","GLOBAL",0)InParty("CORAN") InMyArea("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)~
 THEN ~BIMOEN25~ ImoenCoranToB1
 @20 DO ~SetGlobal("CoranImoenToB","GLOBAL",1)~
 == B7XCor25 @21
@@ -137,7 +137,7 @@ CombatCounter(0)
 InParty("Anomen")
 Range("Anomen",30)
 !StateCheck("Anomen",CD_STATE_NOTVALID)
-InParty("7XCORAN") InMyArea("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)
+InParty("CORAN") InMyArea("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)
 Global("CoranAnomenToB","GLOBAL",0)~ THEN ~BANOME25~ CoranAnomenToB_1
 @32 DO ~SetGlobal("CoranAnomenToB","GLOBAL",1)~
 == B7XCor25  @33
@@ -159,7 +159,7 @@ CombatCounter(0)
 InParty("Korgan")
 Range("Korgan",30)
 !StateCheck("Korgan",CD_STATE_NOTVALID)
-InParty("7XCORAN") InMyArea("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)
+InParty("CORAN") InMyArea("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)
 Global("CoranKorganToB","GLOBAL",0)~
 THEN ~BKORGA25~ CoranKorganToB_1
 @41 DO ~SetGlobal("CoranKorganToB","GLOBAL",1)~
@@ -183,7 +183,7 @@ CombatCounter(0)
 InParty("Haerdalis")
 Range("Haerdalis",30)
 !StateCheck("Haerdalis",CD_STATE_NOTVALID)
-InParty("7XCORAN") InMyArea("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)
+InParty("CORAN") InMyArea("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)
 Global("CoranHaerDalisToB","GLOBAL",0)
 ~THEN ~BHAERD25~  CoranHaerDalisToB_1
 @51 DO ~SetGlobal("CoranHaerDalisTo","GLOBAL",1)~
@@ -202,7 +202,7 @@ CHAIN
 IF ~InParty("Aerie")
 See("Aerie")
 !StateCheck("Aerie",CD_STATE_NOTVALID)
-InParty("7XCORAN") InMyArea("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)
+InParty("CORAN") InMyArea("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)
 Global("CoranAerieToB","GLOBAL",0)~ THEN B7XCor25 CoranAerieToB_1
 @59
 =
@@ -240,7 +240,7 @@ CHAIN
 IF ~InParty("Cernd")
 See("Cernd")
 !StateCheck("Cernd",CD_STATE_NOTVALID)
-InParty("7XCORAN") InMyArea("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)
+InParty("CORAN") InMyArea("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)
 Global("CoranCerndToB","GLOBAL",0)~ THEN B7XCor25 CoranCernd_1
 @74
 =
@@ -268,7 +268,7 @@ CHAIN
 IF ~InParty("Edwin")
 See("Edwin")
 !StateCheck("Edwin",CD_STATE_NOTVALID)
-InParty("7XCORAN") InMyArea("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)
+InParty("CORAN") InMyArea("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)
 Global("CoranEdwinToB","GLOBAL",0)~ THEN B7XCor25 CoranEdwin_1
 @84
 DO ~SetGlobal("CoranEdwinToB","GLOBAL",1)~
@@ -294,7 +294,7 @@ CHAIN
 IF ~InParty("Jaheira")
 See("Jaheira")
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
-InParty("7XCORAN") InMyArea("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)
+InParty("CORAN") InMyArea("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)
 Global("CoranJaheiraToB","GLOBAL",0)~ THEN B7XCor25 KariJaheiraTethyr
 @93
 DO ~SetGlobal("CoranJaheiraToB","GLOBAL",1)~
@@ -329,7 +329,7 @@ CHAIN
 IF ~InParty("Jan")
 See("Jan")
 !StateCheck("Jan",CD_STATE_NOTVALID)
-InParty("7XCORAN") InMyArea("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)
+InParty("CORAN") InMyArea("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)
 Global("CoranJanToB","GLOBAL",0)~ THEN B7XCor25 CoranJan_1
 @106
 =
@@ -354,7 +354,7 @@ CHAIN
 IF ~InParty("Mazzy")
 See("Mazzy")
 !StateCheck("Mazzy",CD_STATE_NOTVALID)
-InParty("7XCORAN") InMyArea("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)
+InParty("CORAN") InMyArea("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)
 Global("CoranMazzyToB","GLOBAL",0)~ THEN BMAZZY25 CoranMazzy_1
 @114
 DO ~SetGlobal("CoranMazzyToB","GLOBAL",1)~
@@ -378,7 +378,7 @@ CHAIN
 IF ~InParty("Minsc")
 See("Minsc")
 !StateCheck("Minsc",CD_STATE_NOTVALID)
-InParty("7XCORAN") InMyArea("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)
+InParty("CORAN") InMyArea("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)
 Global("CoranMinscTalkToB","GLOBAL",0)~ THEN B7XCor25 CoranMinsc_1
 @122
 DO ~SetGlobal("CoranMinscTalkToB","GLOBAL",1)~
@@ -470,8 +470,8 @@ BEGIN ~B7XSaf25~
 
 
 
-CHAIN IF ~Global("SafanaCoranTob","GLOBAL",1)InParty("7XCORAN") InMyArea("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)
-InParty("7XSAFA") InMyArea("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN ~B7XCor25~ SAFANACORANTOB-BANTER2
+CHAIN IF ~Global("SafanaCoranTob","GLOBAL",1)InParty("CORAN") InMyArea("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)
+InParty("SAFANA") InMyArea("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN ~B7XCor25~ SAFANACORANTOB-BANTER2
 @153 DO ~SetGlobal("SafanaCoranTob","GLOBAL",2)~
 == B7XSaf25 @154
 == B7XCor25 @155
@@ -482,8 +482,8 @@ InParty("7XSAFA") InMyArea("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THE
 == B7XSaf25 @159
 EXIT
 
-CHAIN IF ~Global("SafanaCoranTob","GLOBAL",2)InParty("7XCORAN") InMyArea("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)
-InParty("7XSAFA") InMyArea("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN ~B7XSaf25~ SAFANACORANTOB-BANTER3
+CHAIN IF ~Global("SafanaCoranTob","GLOBAL",2)InParty("CORAN") InMyArea("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)
+InParty("SAFANA") InMyArea("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN ~B7XSaf25~ SAFANACORANTOB-BANTER3
 @160 DO ~SetGlobal("SafanaCoranTob","GLOBAL",3)~
 == B7XCor25 @161
 =
@@ -497,15 +497,15 @@ InParty("7XSAFA") InMyArea("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THE
 == B7XSaf25 @168
 EXIT
 
-CHAIN IF~InParty("7XSAFA") InMyArea("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+CHAIN IF~InParty("SAFANA") InMyArea("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 !StateCheck("Sarevok",CD_STATE_NOTVALID)InParty("Sarevok")
 Global("SafanaSarevok","GLOBAL",0)~
 THEN ~BSAREV25~ SarevokSafana1
 @169
 =
 @170 DO ~SetGlobal("SafanaSarevok","GLOBAL",1)~
-== B7XCor25 IF ~InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @171
-== B7XSaf25 IF ~InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @172
+== B7XCor25 IF ~InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @171
+== B7XSaf25 IF ~InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @172
 == B7XSaf25 @173
 == BSAREV25 @174
 == B7XSaf25 @175
@@ -517,15 +517,15 @@ THEN ~BSAREV25~ SarevokSafana1
 @180
 =
 @181
-== B7XCor25 IF ~InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @182
+== B7XCor25 IF ~InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @182
 =
 @183
-== B7XSaf25 IF ~InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @184
-== BSAREV25 IF ~InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @185
+== B7XSaf25 IF ~InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @184
+== BSAREV25 IF ~InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @185
 EXIT
 
 
-CHAIN IF~InParty("7XSAFA") InMyArea("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+CHAIN IF~InParty("SAFANA") InMyArea("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 !StateCheck("Sarevok",CD_STATE_NOTVALID)InParty("Sarevok")
 Global("SafanaSarevok","GLOBAL",1)~
 THEN ~BSAREV25~ SarevokSafana2
@@ -545,7 +545,7 @@ THEN ~BSAREV25~ SarevokSafana2
 EXIT
 
 CHAIN
-IF ~InParty("7XSAFA") InMyArea("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+IF ~InParty("SAFANA") InMyArea("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 InParty("Nalia")!StateCheck("Nalia",CD_STATE_NOTVALID)
 !ActuallyInCombat() 
 Global("SafanaNaliaToB","GLOBAL", 0)~
@@ -567,7 +567,7 @@ DO ~SetGlobal("SafanaNaliaToB", "GLOBAL", 1)~
 EXIT
 
 CHAIN
-IF ~InParty("7XSAFA") InMyArea("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+IF ~InParty("SAFANA") InMyArea("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 InParty("Jaheira")!StateCheck("Jaheira",CD_STATE_NOTVALID)
 !ActuallyInCombat()
 Global("SafanaJaheiraToB","GLOBAL",0)~ THEN ~BJAHEI25~ JahSafToB-1
@@ -582,7 +582,7 @@ EXIT
 
 
 CHAIN
-IF ~InParty("7XSAFA") InMyArea("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+IF ~InParty("SAFANA") InMyArea("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 InParty("Aerie")!StateCheck("Aerie",CD_STATE_NOTVALID)
 !ActuallyInCombat()
 Global("SafanaAerieToB","GLOBAL",0)~ THEN ~BAERIE25~ AerieSafaToB1
@@ -602,7 +602,7 @@ EXIT
 CHAIN
 IF ~InParty("Aerie")
 See("Aerie")
-!StateCheck("Aerie",CD_STATE_NOTVALID)InParty("7XSAFA") InMyArea("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+!StateCheck("Aerie",CD_STATE_NOTVALID)InParty("SAFANA") InMyArea("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 Global("SafanaAerieToBRomance","GLOBAL",0)
 Global("babytalk","GLOBAL",0)
 Global("AerieRomanceActive","GLOBAL",2)~ THEN ~B7XSaf25~ SafanaAerieRomanceTalk_1
@@ -619,7 +619,7 @@ CHAIN
 IF ~InParty("Aerie")
 See("Aerie")
 !StateCheck("Aerie",CD_STATE_NOTVALID)
-InParty("7XSAFA") InMyArea("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+InParty("SAFANA") InMyArea("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 Global("SafanaAerieToBRomance","GLOBAL",1)
 Global("babytalk","GLOBAL",1)
 Global("AerieHadBaby","GLOBAL",0)
@@ -643,7 +643,7 @@ CombatCounter(0)
 InParty("Cernd")
 Range("Cernd",30)
 !StateCheck("Cernd",CD_STATE_NOTVALID)
-InParty("7XSAFA") InMyArea("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+InParty("SAFANA") InMyArea("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 Global("SafanaCerndToB","GLOBAL",0)~
 THEN ~B7XSaf25~ SafanaCerndToB_1
 @236 DO ~SetGlobal("SafanaCerndToB","GLOBAL",1)~
@@ -664,17 +664,17 @@ CombatCounter(0)
 InParty("Korgan")
 Range("Korgan",30)
 !StateCheck("Korgan",CD_STATE_NOTVALID)
-InParty("7XSAFA") InMyArea("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+InParty("SAFANA") InMyArea("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 Global("SafanaKorganToB","GLOBAL",0)~
 THEN ~BKORGA25~ SafanaKorganToB_1
 @244 DO ~SetGlobal("SafanaKorganToB","GLOBAL",1)~
-== B7XCor25 IF ~InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @245
-== B7XSaf25 IF ~InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @246
+== B7XCor25 IF ~InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @245
+== B7XSaf25 IF ~InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @246
 == B7XSaf25  @247
 == BKORGA25 @248
 == B7XSaf25  @249
 == BKORGA25 @250
-== B7XCor25 IF ~InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @251
+== B7XCor25 IF ~InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @251
 EXIT
 
 CHAIN IF~
@@ -683,7 +683,7 @@ CombatCounter(0)
 InParty("Mazzy")
 Range("Mazzy",30)
 !StateCheck("Mazzy",CD_STATE_NOTVALID)
-InParty("7XSAFA") InMyArea("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+InParty("SAFANA") InMyArea("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 Global("SafanaMazzyToB","GLOBAL",0)~
 THEN ~BMAZZY25~ SafanaMazzyToB_1
 @252 DO ~SetGlobal("SafanaMazzyToB","GLOBAL",1)~
@@ -702,7 +702,7 @@ EXIT
 
 
 CHAIN
-IF ~InParty("7XSAFA") InMyArea("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+IF ~InParty("SAFANA") InMyArea("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 InParty("Jaheira")!StateCheck("Jaheira",CD_STATE_NOTVALID)
 !ActuallyInCombat()
 Global("SafanaJaheiraToB","GLOBAL",1)~ THEN ~B7XSaf25~ JahSafToB-2
@@ -722,7 +722,7 @@ CombatCounter(0)
 InParty("Imoen2")
 Range("Imoen2",30)
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
-InParty("7XSAFA") InMyArea("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+InParty("SAFANA") InMyArea("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 Global("SafanaImoenToB","GLOBAL",0)~
 THEN ~B7XSaf25~ SafanaImoenToB_1
 @267 DO ~SetGlobal("SafanaImoenToB","GLOBAL",1)~
@@ -741,7 +741,7 @@ CombatCounter(0)
 InParty("Valygar")
 Range("Valygar",30)
 !StateCheck("Valygar",CD_STATE_NOTVALID)
-InParty("7XSAFA") InMyArea("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+InParty("SAFANA") InMyArea("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 Global("SafanaValygarToB","GLOBAL",0)~
 THEN ~B7XSaf25~ SafanaValygar_1
 @274 DO ~SetGlobal("SafanaValygarToB","GLOBAL",1)~
@@ -802,114 +802,114 @@ END
 
 
 INTERJECT_COPY_TRANS SARBHA02 0 coranSARBHA02-0
-== 7XCor25J IF ~InParty("7XCORAN") InMyArea("7XCORAN")~ THEN
+== 7XCor25J IF ~InParty("CORAN") InMyArea("CORAN")~ THEN
 @290
 END
 
 INTERJECT_COPY_TRANS SARBHA03 4 coranSARBHA03-4
-== 7XCor25J IF ~InParty("7XCORAN") InMyArea("7XCORAN")~ THEN
+== 7XCor25J IF ~InParty("CORAN") InMyArea("CORAN")~ THEN
 @291
 END
 
 
 INTERJECT_COPY_TRANS SARBHA03 5 coranSARBHA03-5
-== 7XCor25J IF ~InParty("7XCORAN") InMyArea("7XCORAN")~ THEN
+== 7XCor25J IF ~InParty("CORAN") InMyArea("CORAN")~ THEN
 @292
 END
 
 INTERJECT_COPY_TRANS SARBUL01 0 coranSARBUL01-0
-== 7XCor25J IF ~InParty("7XCORAN") InMyArea("7XCORAN")~ THEN
+== 7XCor25J IF ~InParty("CORAN") InMyArea("CORAN")~ THEN
 @293 
 END
 
 INTERJECT_COPY_TRANS SARBUL04 0 coranSARBUL04-0
-== 7XCor25J IF ~InParty("7XCORAN") InMyArea("7XCORAN")~ THEN
+== 7XCor25J IF ~InParty("CORAN") InMyArea("CORAN")~ THEN
 @294
 == SARBUL04 @295
-== 7XCor25J IF ~InParty("7XCORAN") InMyArea("7XCORAN")~ THEN
+== 7XCor25J IF ~InParty("CORAN") InMyArea("CORAN")~ THEN
 @296
 == SARBUL04 @297
-== 7XCor25J IF ~InParty("7XCORAN") InMyArea("7XCORAN")~ THEN
+== 7XCor25J IF ~InParty("CORAN") InMyArea("CORAN")~ THEN
 @298
 END
 
 INTERJECT_COPY_TRANS SARBUL05 1 coranSARBUL05-1
-== 7XCor25J IF ~InParty("7XCORAN") InMyArea("7XCORAN")~ THEN
+== 7XCor25J IF ~InParty("CORAN") InMyArea("CORAN")~ THEN
 @299
 =
 @300
 END
 
 INTERJECT_COPY_TRANS3 FINSOL01 27 CoranSafanaFinSol
-== 7XCor25J IF ~InParty("7XCORAN") !StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @320
-== 7XSaf25J IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @321
+== 7XCor25J IF ~InParty("CORAN") !StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @320
+== 7XSaf25J IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @321
 END
 
 INTERJECT_COPY_TRANS BOTSMITH 146 7xSafanaBOTSMITH-146
-== 7XSaf25J IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @329
+== 7XSaf25J IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @329
 == BOTSMITH @330
 END
 
 INTERJECT_COPY_TRANS SARBAR01 2 7xCoranSARBAR01-2
-== 7XCor25J IF ~InParty("7XCORAN") !StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @331
+== 7XCor25J IF ~InParty("CORAN") !StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @331
 END
 
 INTERJECT_COPY_TRANS SARTEM01 10 7xSafanaSARTEM01-10
-== 7XSaf25J IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @332
+== 7XSaf25J IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @332
 END
 
 INTERJECT_COPY_TRANS SARGRL01 0 7xSafanaSARGRL01-0
-== 7XSaf25J IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @333
+== 7XSaf25J IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @333
 END
 
 INTERJECT_COPY_TRANS GROMNIR 7 7xSafanaGROMNIR-7
-== 7XSaf25J IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @334
+== 7XSaf25J IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @334
 == GROMNIR @335
 END
 
 INTERJECT_COPY_TRANS SARMEL01 36 7xSafanaSARMEL01-36
-== 7XSaf25J IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @336
+== 7XSaf25J IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @336
 END
 
 INTERJECT_COPY_TRANS HGWRA01 14 7xSafanaHGWRA01-14
-== 7XSaf25J IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @337
+== 7XSaf25J IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @337
 == HGWRA01 @338
 =@339
 END
 
 INTERJECT_COPY_TRANS SARMEL01 62 7xSafanaSARMEL01-62
-== 7XSaf25J IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @340
+== 7XSaf25J IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @340
 END
 
 INTERJECT_COPY_TRANS AMMERC03 2 7xSafanaAMMERC03-2
-== 7XSaf25J IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @341
+== 7XSaf25J IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @341
 END
 
 INTERJECT_COPY_TRANS MARLOWE 6 7xSafanaMARLOWE-6
-== 7XSaf25J IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @342
+== 7XSaf25J IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @342
 == MARLOWE @343
 END
 
 INTERJECT_COPY_TRANS BAZMONK 0 7xSafanaBAZMONK-0
-== 7XSaf25J IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @344
+== 7XSaf25J IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @344
 END
 
 INTERJECT_COPY_TRANS BAZMONK 14 7xCoranBAZMONK-14
-== 7XCor25J IF ~InParty("7XCORAN") !StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @345
+== 7XCor25J IF ~InParty("CORAN") !StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @345
 END
 
 INTERJECT_COPY_TRANS SENBEH01 3 CoranSafanaSENBEH01-3
-== 7XSaf25J IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @346
-== 7XCor25J IF ~InParty("7XCORAN") !StateCheck("7XCORAN",CD_STATE_NOTVALID) InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @347
+== 7XSaf25J IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @346
+== 7XCor25J IF ~InParty("CORAN") !StateCheck("CORAN",CD_STATE_NOTVALID) InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @347
 END
 
 INTERJECT_COPY_TRANS SENDAI 13 7xSafanaSENDAI-13
-== 7XSaf25J IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @348
+== 7XSaf25J IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @348
 == SENDAI @349
 END
 
 INTERJECT_COPY_TRANS FINSOL01 32 7xSafanaFINSOL01-32
-== 7XSaf25J IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @350
+== 7XSaf25J IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @350
 END
 
 ///////////////////////////

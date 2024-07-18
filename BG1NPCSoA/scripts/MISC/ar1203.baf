@@ -25,5 +25,5 @@ IF
 	Global("GarrickFirkraagDeadTalk","AR1203",2)
 THEN
 	RESPONSE #100
-ActionOverride("7XGAR",StartDialogueNoSet(Player1))
+ActionOverride("GARRICK",StartDialogueNoSet(Player1))
 END

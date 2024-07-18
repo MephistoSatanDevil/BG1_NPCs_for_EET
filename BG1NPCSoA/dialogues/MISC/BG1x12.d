@@ -85,11 +85,11 @@ CHAIN 7XNOBLE8 7xBorivykFirstTalk4
 @71
 == EDWINJ IF ~InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @73
 == JAHEIRAJ IF ~InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @74
-== 7XTIAXJ IF ~InParty("7XTIAX") InMyArea("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @75
+== 7XTIAXJ IF ~InParty("TIAX") InMyArea("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @75
 == IF_FILE_EXISTS O#TIAXJ IF ~InParty("O#Tiax") InMyArea("O#Tiax") !StateCheck("O#Tiax",CD_STATE_NOTVALID)~ THEN @75
-== 7XsharJ IF ~InParty("7XSHAR") InMyArea("7XSHAR") !StateCheck("7XSHAR",CD_STATE_NOTVALID)~ THEN @76
-== VICONIJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) OR(3) !InParty("7XSHAR") !InMyArea("7XSHAR") StateCheck("7XSHAR",CD_STATE_NOTVALID)~ THEN @76
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @77
+== 7XsharJ IF ~InParty("SHARTEEL") InMyArea("SHARTEEL") !StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @76
+== VICONIJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) OR(3) !InParty("SHARTEEL") !InMyArea("SHARTEEL") StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @76
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @77
 == 7xBoriv @78
 =@79 
 == JAHEIRAJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @80
@@ -148,12 +148,12 @@ CHAIN 7xBoriv 7xBorivykFirstTalkAnimals
 == JAHEIRAJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @22
 == AERIEJ IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @23
 == CERNDJ IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN @24
-== 7XFALDJ IF ~InParty("7XFALD") !StateCheck("7XFALD",CD_STATE_NOTVALID)~ THEN @25
-== 7xBoriv IF ~OR(4) InParty("Jaheira") InParty("Aerie") InParty("Cernd") InParty("7XFALD") OR(4) !StateCheck("Jaheira",CD_STATE_NOTVALID) !StateCheck("Aerie",CD_STATE_NOTVALID) !StateCheck("Cernd",CD_STATE_NOTVALID) !StateCheck("7XFALD",CD_STATE_NOTVALID)~ THEN @26
-== 7XTIAXJ IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @27
+== 7XFALDJ IF ~InParty("FALDORN") !StateCheck("FALDORN",CD_STATE_NOTVALID)~ THEN @25
+== 7xBoriv IF ~OR(4) InParty("Jaheira") InParty("Aerie") InParty("Cernd") InParty("FALDORN") OR(4) !StateCheck("Jaheira",CD_STATE_NOTVALID) !StateCheck("Aerie",CD_STATE_NOTVALID) !StateCheck("Cernd",CD_STATE_NOTVALID) !StateCheck("FALDORN",CD_STATE_NOTVALID)~ THEN @26
+== 7XTIAXJ IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @27
 =@28
-== 7xBoriv IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @29
-== 7XTIAXJ IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @30
+== 7xBoriv IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @29
+== 7XTIAXJ IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @30
 == IF_FILE_EXISTS O#TIAXJ IF ~InParty("O#Tiax") InMyArea("O#Tiax") !StateCheck("O#Tiax",CD_STATE_NOTVALID)~ THEN @27
 =@28
 == 7xBoriv IF ~InParty("O#Tiax") InMyArea("O#Tiax") !StateCheck("O#Tiax",CD_STATE_NOTVALID)~ THEN @29
@@ -161,12 +161,12 @@ CHAIN 7xBoriv 7xBorivykFirstTalkAnimals
 == EDWINJ IF ~InParty("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @31
 == IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN @32
 == 7xBoriv IF ~OR(2) InParty("Edwin") InParty("Imoen2") OR(2) !StateCheck("Edwin",CD_STATE_NOTVALID) !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN @33
-== 7XXZARJ IF ~InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @34
-== 7xBoriv IF ~InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @35
-== 7XXZARJ IF ~InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @36
-== NALIAJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID) InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @37
-== AERIEJ IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID) InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID) OR(2) !InParty("Nalia") StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @37
-== 7xBoriv IF ~InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @38
+== 7XXZARJ IF ~InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @34
+== 7xBoriv IF ~InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @35
+== 7XXZARJ IF ~InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @36
+== NALIAJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID) InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @37
+== AERIEJ IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID) InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID) OR(2) !InParty("Nalia") StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @37
+== 7xBoriv IF ~InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @38
 END
 IF ~~ THEN REPLY @39 EXTERN 7xBoriv 7xBorivykFirstTalkQuestion
 
@@ -175,12 +175,12 @@ CHAIN 7xBoriv 7xBorivykFirstTalkAnimals_1
 == JAHEIRAJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @22
 == AERIEJ IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @23
 == CERNDJ IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN @24
-== 7XFALDJ IF ~InParty("7XFALD") !StateCheck("7XFALD",CD_STATE_NOTVALID)~ THEN @25
-== 7xBoriv IF ~OR(4) InParty("Jaheira") InParty("Aerie") InParty("Cernd") InParty("7XFALD") OR(4) !StateCheck("Jaheira",CD_STATE_NOTVALID) !StateCheck("Aerie",CD_STATE_NOTVALID) !StateCheck("Cernd",CD_STATE_NOTVALID) !StateCheck("7XFALD",CD_STATE_NOTVALID)~ THEN @26
-== 7XTIAXJ IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @27
+== 7XFALDJ IF ~InParty("FALDORN") !StateCheck("FALDORN",CD_STATE_NOTVALID)~ THEN @25
+== 7xBoriv IF ~OR(4) InParty("Jaheira") InParty("Aerie") InParty("Cernd") InParty("FALDORN") OR(4) !StateCheck("Jaheira",CD_STATE_NOTVALID) !StateCheck("Aerie",CD_STATE_NOTVALID) !StateCheck("Cernd",CD_STATE_NOTVALID) !StateCheck("FALDORN",CD_STATE_NOTVALID)~ THEN @26
+== 7XTIAXJ IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @27
 =@28
-== 7xBoriv IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @29
-== 7XTIAXJ IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @30
+== 7xBoriv IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @29
+== 7XTIAXJ IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @30
 == IF_FILE_EXISTS O#TIAXJ IF ~InParty("O#Tiax") InMyArea("O#Tiax") !StateCheck("O#Tiax",CD_STATE_NOTVALID)~ THEN @27
 =@28
 == 7xBoriv IF ~InParty("O#Tiax") InMyArea("O#Tiax") !StateCheck("O#Tiax",CD_STATE_NOTVALID)~ THEN @29
@@ -188,12 +188,12 @@ CHAIN 7xBoriv 7xBorivykFirstTalkAnimals_1
 == EDWINJ IF ~InParty("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @31
 == IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN @32
 == 7xBoriv IF ~OR(2) InParty("Edwin") InParty("Imoen2") OR(2) !StateCheck("Edwin",CD_STATE_NOTVALID) !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN @33
-== 7XXZARJ IF ~InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @34
-== 7xBoriv IF ~InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @35
-== 7XXZARJ IF ~InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @36
-== NALIAJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID) InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @37
-== AERIEJ IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID) InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID) OR(2) !InParty("Nalia") StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @37
-== 7xBoriv IF ~InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @38
+== 7XXZARJ IF ~InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @34
+== 7xBoriv IF ~InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @35
+== 7XXZARJ IF ~InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @36
+== NALIAJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID) InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @37
+== AERIEJ IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID) InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID) OR(2) !InParty("Nalia") StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @37
+== 7xBoriv IF ~InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @38
 END
 IF ~~ THEN REPLY @39 EXTERN 7xBoriv 7xBorivykFirstTalkQuestion
 
@@ -222,21 +222,21 @@ CHAIN 7xBoriv 7xBorivykCashTalk1
 == JAHEIRAJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @22
 == AERIEJ IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @23
 == CERNDJ IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN @24
-== 7XFALDJ IF ~InParty("7XFALD") !StateCheck("7XFALD",CD_STATE_NOTVALID)~ THEN @25
-== 7xBoriv IF ~OR(4) InParty("Jaheira") InParty("Aerie") InParty("Cernd") InParty("7XFALD") OR(4) !StateCheck("Jaheira",CD_STATE_NOTVALID) !StateCheck("Aerie",CD_STATE_NOTVALID) !StateCheck("Cernd",CD_STATE_NOTVALID) !StateCheck("7XFALD",CD_STATE_NOTVALID)~ THEN @26
-== 7XTIAXJ IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @27
+== 7XFALDJ IF ~InParty("FALDORN") !StateCheck("FALDORN",CD_STATE_NOTVALID)~ THEN @25
+== 7xBoriv IF ~OR(4) InParty("Jaheira") InParty("Aerie") InParty("Cernd") InParty("FALDORN") OR(4) !StateCheck("Jaheira",CD_STATE_NOTVALID) !StateCheck("Aerie",CD_STATE_NOTVALID) !StateCheck("Cernd",CD_STATE_NOTVALID) !StateCheck("FALDORN",CD_STATE_NOTVALID)~ THEN @26
+== 7XTIAXJ IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @27
 =@28
-== 7xBoriv IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @29
-== 7XTIAXJ IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @30
+== 7xBoriv IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @29
+== 7XTIAXJ IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @30
 == EDWINJ IF ~InParty("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @31
 == IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN @32
 == 7xBoriv IF ~OR(2) InParty("Edwin") InParty("Imoen2") OR(2) !StateCheck("Edwin",CD_STATE_NOTVALID) !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN @33
-== 7XXZARJ IF ~InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @34
-== 7xBoriv IF ~InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @35
-== 7XXZARJ IF ~InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @36
-== NALIAJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID) InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @37
-== AERIEJ IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID) InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID) OR(2) !InParty("Nalia") StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @37
-== 7xBoriv IF ~InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @38
+== 7XXZARJ IF ~InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @34
+== 7xBoriv IF ~InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @35
+== 7XXZARJ IF ~InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @36
+== NALIAJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID) InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @37
+== AERIEJ IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID) InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID) OR(2) !InParty("Nalia") StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @37
+== 7xBoriv IF ~InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @38
 END
 IF ~~ THEN REPLY @39 EXTERN 7xBoriv 7xBorivykFirstTalkQuestion
 
@@ -245,21 +245,21 @@ CHAIN 7xBoriv 7xBorivykCashTalk2
 == JAHEIRAJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @22
 == AERIEJ IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @23
 == CERNDJ IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN @24
-== 7XFALDJ IF ~InParty("7XFALD") !StateCheck("7XFALD",CD_STATE_NOTVALID)~ THEN @25
-== 7xBoriv IF ~OR(4) InParty("Jaheira") InParty("Aerie") InParty("Cernd") InParty("7XFALD") OR(4) !StateCheck("Jaheira",CD_STATE_NOTVALID) !StateCheck("Aerie",CD_STATE_NOTVALID) !StateCheck("Cernd",CD_STATE_NOTVALID) !StateCheck("7XFALD",CD_STATE_NOTVALID)~ THEN @26
-== 7XTIAXJ IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @27
+== 7XFALDJ IF ~InParty("FALDORN") !StateCheck("FALDORN",CD_STATE_NOTVALID)~ THEN @25
+== 7xBoriv IF ~OR(4) InParty("Jaheira") InParty("Aerie") InParty("Cernd") InParty("FALDORN") OR(4) !StateCheck("Jaheira",CD_STATE_NOTVALID) !StateCheck("Aerie",CD_STATE_NOTVALID) !StateCheck("Cernd",CD_STATE_NOTVALID) !StateCheck("FALDORN",CD_STATE_NOTVALID)~ THEN @26
+== 7XTIAXJ IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @27
 =@28
-== 7xBoriv IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @29
-== 7XTIAXJ IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @30
+== 7xBoriv IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @29
+== 7XTIAXJ IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @30
 == EDWINJ IF ~InParty("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @31
 == IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN @32
 == 7xBoriv IF ~OR(2) InParty("Edwin") InParty("Imoen2") OR(2) !StateCheck("Edwin",CD_STATE_NOTVALID) !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN @33
-== 7XXZARJ IF ~InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @34
-== 7xBoriv IF ~InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @35
-== 7XXZARJ IF ~InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @36
-== NALIAJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID) InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @37
-== AERIEJ IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID) InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID) OR(2) !InParty("Nalia") StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @37
-== 7xBoriv IF ~InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @38
+== 7XXZARJ IF ~InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @34
+== 7xBoriv IF ~InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @35
+== 7XXZARJ IF ~InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @36
+== NALIAJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID) InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @37
+== AERIEJ IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID) InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID) OR(2) !InParty("Nalia") StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @37
+== 7xBoriv IF ~InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @38
 END
 IF ~~ THEN REPLY @39 EXTERN 7xBoriv 7xBorivykFirstTalkQuestion
 
@@ -394,7 +394,7 @@ IF ~HasItem("Bird7x",Myself)~ THEN REPLY @129 GOTO 7xBorivykShopBird
 IF ~HasItem("Ferret7x",Myself)~ THEN REPLY @128 GOTO 7xBorivykShopFerret
 IF ~~ THEN REPLY @126 GOTO 7xBorivykShopEND
 IF ~Global("TiaxDragonFamiliar","ARBGX7",0) InParty("O#Tiax")InMyArea("O#Tiax")!StateCheck("O#Tiax",CD_STATE_NOTVALID)~ THEN EXTERN IF_FILE_EXISTS O#TIAXJ 7xBorivykKTiaxDragon
-IF ~Global("TiaxDragonFamiliar","ARBGX7",0) InParty("7XTIAX")InMyArea("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN EXTERN 7XTIAXJ 7xBorivykTiaxDragon
+IF ~Global("TiaxDragonFamiliar","ARBGX7",0) InParty("TIAX")InMyArea("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN EXTERN 7XTIAXJ 7xBorivykTiaxDragon
 END
 
 IF ~~ BEGIN 7xBorivykShopRabbitNoAerie
@@ -709,7 +709,7 @@ CHAIN 7XTIAXJ 7xBorivykTiaxDragon
 @230 DO ~SetGlobal("TiaxDragonFamiliar","ARBGX7",1)~
 == 7xBoriv @231
 =@232
-== 7XTIAXJ @233 DO ~GiveItemCreate("dragn7x","7XTIAX",1,0,0)~
+== 7XTIAXJ @233 DO ~GiveItemCreate("dragn7x","TIAX",1,0,0)~
 == 7xBoriv @234
 == JAHEIRAJ IF ~InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @235
 == 7XTIAXJ IF ~InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @229
@@ -717,11 +717,11 @@ CHAIN 7XTIAXJ 7xBorivykTiaxDragon
 == VICONIJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) OR(3) !InParty("Anomen") !InMyArea("Anomen") StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @236
 == NALIAJ IF ~InParty("Nalia") InMyArea("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @237
 == AERIEJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID) OR(3) !InParty("Nalia") !InMyArea("Nalia") StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @237
-== 7XQUAYJ IF ~InParty("7XQUAY") InMyArea("7XQUAY") !StateCheck("7XQUAY",CD_STATE_NOTVALID)~ THEN @238
-== 7XsharJ IF ~InParty("7XSHAR") InMyArea("7XSHAR") !StateCheck("7XSHAR",CD_STATE_NOTVALID) OR(3) !InParty("7XQUAY") !InMyArea("7XQUAY") StateCheck("7XQUAY",CD_STATE_NOTVALID)~ THEN @238
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @239
-== VALYGARJ IF ~InParty("Valygar") InMyArea("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID) OR(3) !InParty("7XSAFA") !InMyArea("7XSAFA") StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @239
-== KORGANJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID) OR(3) !InParty("Valygar") !InMyArea("Valygar") StateCheck("Valygar",CD_STATE_NOTVALID) OR(3) !InParty("7XSAFA") !InMyArea("7XSAFA") StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @256
+== 7XQUAYJ IF ~InParty("QUAYLE") InMyArea("QUAYLE") !StateCheck("QUAYLE",CD_STATE_NOTVALID)~ THEN @238
+== 7XsharJ IF ~InParty("SHARTEEL") InMyArea("SHARTEEL") !StateCheck("SHARTEEL",CD_STATE_NOTVALID) OR(3) !InParty("QUAYLE") !InMyArea("QUAYLE") StateCheck("QUAYLE",CD_STATE_NOTVALID)~ THEN @238
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @239
+== VALYGARJ IF ~InParty("Valygar") InMyArea("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID) OR(3) !InParty("SAFANA") !InMyArea("SAFANA") StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @239
+== KORGANJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID) OR(3) !InParty("Valygar") !InMyArea("Valygar") StateCheck("Valygar",CD_STATE_NOTVALID) OR(3) !InParty("SAFANA") !InMyArea("SAFANA") StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @256
 == JANJ IF ~InParty("Jan") InMyArea("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN @240
 == 7XTIAXJ IF ~InParty("Jan") InMyArea("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN @241
 == 7XTIAXJ @242
@@ -740,11 +740,11 @@ CHAIN IF_FILE_EXISTS O#TIAXJ 7xBorivykKTiaxDragon
 == VICONIJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) OR(3) !InParty("Anomen") !InMyArea("Anomen") StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @236
 == NALIAJ IF ~InParty("Nalia") InMyArea("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @237
 == AERIEJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID) OR(3) !InParty("Nalia") !InMyArea("Nalia") StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @237
-== 7XQUAYJ IF ~InParty("7XQUAY") InMyArea("7XQUAY") !StateCheck("7XQUAY",CD_STATE_NOTVALID)~ THEN @238
-== 7XsharJ IF ~InParty("7XSHAR") InMyArea("7XSHAR") !StateCheck("7XSHAR",CD_STATE_NOTVALID) OR(3) !InParty("7XQUAY") !InMyArea("7XQUAY") StateCheck("7XQUAY",CD_STATE_NOTVALID)~ THEN @238
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @239
-== VALYGARJ IF ~InParty("Valygar") InMyArea("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID) OR(3) !InParty("7XSAFA") !InMyArea("7XSAFA") StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @239
-== KORGANJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID) OR(3) !InParty("Valygar") !InMyArea("Valygar") StateCheck("Valygar",CD_STATE_NOTVALID) OR(3) !InParty("7XSAFA") !InMyArea("7XSAFA") StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @256
+== 7XQUAYJ IF ~InParty("QUAYLE") InMyArea("QUAYLE") !StateCheck("QUAYLE",CD_STATE_NOTVALID)~ THEN @238
+== 7XsharJ IF ~InParty("SHARTEEL") InMyArea("SHARTEEL") !StateCheck("SHARTEEL",CD_STATE_NOTVALID) OR(3) !InParty("QUAYLE") !InMyArea("QUAYLE") StateCheck("QUAYLE",CD_STATE_NOTVALID)~ THEN @238
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @239
+== VALYGARJ IF ~InParty("Valygar") InMyArea("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID) OR(3) !InParty("SAFANA") !InMyArea("SAFANA") StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @239
+== KORGANJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID) OR(3) !InParty("Valygar") !InMyArea("Valygar") StateCheck("Valygar",CD_STATE_NOTVALID) OR(3) !InParty("SAFANA") !InMyArea("SAFANA") StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @256
 == JANJ IF ~InParty("Jan") InMyArea("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN @240
 == IF_FILE_EXISTS O#TIAXJ IF ~InParty("Jan") InMyArea("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN @241
 == IF_FILE_EXISTS O#TIAXJ @242

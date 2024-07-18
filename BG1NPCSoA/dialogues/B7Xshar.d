@@ -598,7 +598,7 @@ END
 
 CHAIN IF WEIGHT #-99 ~Global("SharAR0903","GLOBAL",1)
 AreaCheck("AR0903")
-InParty("7XSHAR")!StateCheck("7XSHAR",CD_STATE_NOTVALID)~ THEN ~B7Xshar~ RadiantHeart1
+InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN ~B7Xshar~ RadiantHeart1
 @220
 =
 @221
@@ -609,8 +609,8 @@ EXIT
 
 CHAIN
 IF WEIGHT #-99 ~InParty("Korgan")
-!StateCheck("Korgan",CD_STATE_NOTVALID)InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+!StateCheck("Korgan",CD_STATE_NOTVALID)InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 OR(6)
 AreaCheck("AR0406")
 AreaCheck("AR0509")
@@ -634,7 +634,7 @@ EXIT
 CHAIN
 IF WEIGHT #-99~InParty("Edwin")
 Gender("Edwin",FEMALE)
-InParty("7XSHAR")!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 !StateCheck("Edwin",CD_STATE_NOTVALID)
 Global("SharTeelEdwina","LOCALS",1)
 CombatCounter(0)
@@ -658,8 +658,8 @@ EXIT
 
 CHAIN
 IF WEIGHT #-99 ~Global("PlayerLooksLikeDrow","GLOBAL",1)
-InParty("Valygar")InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("Valygar")InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 !StateCheck("Valygar",CD_STATE_NOTVALID)
 Global("SharTeelValygarDrowTalk","LOCALS",0)~ THEN ~B7Xshar~ SharValDrowComment1
 @237
@@ -677,8 +677,8 @@ IF ~Gender(Player1, FEMALE)~ THEN REPLY @242 GOTO SharValDrowComment2
 ++ @244 EXTERN BVALYGA SharValDrowComment3
 
 
-CHAIN IF ~ InParty("Anomen")See("Anomen")InParty("7XSHAR")
-!StateCheck("Anomen",CD_STATE_NOTVALID)!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+CHAIN IF ~ InParty("Anomen")See("Anomen")InParty("SHARTEEL")
+!StateCheck("Anomen",CD_STATE_NOTVALID)!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("AnomenIsKnight","GLOBAL",1)
 Global("AnomenSharKnightTalk","LOCALS",0)~ THEN BANOMEN SharTeelAnomenKnightBanter1
 @245
@@ -695,8 +695,8 @@ EXIT
 
 CHAIN
 IF ~InParty("Anomen")
-See("Anomen")InParty("7XSHAR")
-!StateCheck("Anomen",CD_STATE_NOTVALID)!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+See("Anomen")InParty("SHARTEEL")
+!StateCheck("Anomen",CD_STATE_NOTVALID)!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 !Alignment("Anomen",CHAOTIC_NEUTRAL)
 Global("AnomenRomanceActive","GLOBAL",2)
 Global("AnoSharRomanceBanter","GLOBAL",0)~ THEN B7Xshar SharTeelAnomenCockBlock
@@ -721,9 +721,9 @@ END
 ++ @262 EXTERN BANOMEN SharTeelAnomenCockBlock5
  
 CHAIN IF ~InParty("Aerie")
-See("Aerie")InParty("7XSHAR")
+See("Aerie")InParty("SHARTEEL")
 !StateCheck("Aerie",CD_STATE_NOTVALID)
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("HaerdalisRomanceActive","GLOBAL",2)
 Global("SharAeriehaerdalisR","GLOBAL",0)~ THEN ~B7Xshar~ SharAeriehaerdalisRomance1
@@ -753,8 +753,8 @@ EXIT
 
 
 CHAIN
-IF WEIGHT #-99~InParty("Viconia")InParty("7XSHAR")!StateCheck("Viconia",CD_STATE_NOTVALID)
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)AreaCheck("ar2100")
+IF WEIGHT #-99~InParty("Viconia")InParty("SHARTEEL")!StateCheck("Viconia",CD_STATE_NOTVALID)
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)AreaCheck("ar2100")
 Global("Sharar2100","GLOBAL",1)~ THEN B7Xshar SHARVICunderdark
 @278
 =
@@ -772,8 +772,8 @@ EXIT
 
 CHAIN IF
 ~IsValidForPartyDialog("Imoen2")InParty("Imoen2")
-Global("SharImoen","GLOBAL",0)InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)~
+Global("SharImoen","GLOBAL",0)InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~
 THEN B7Xshar SHAR-IMOEN_BANTER1
 @286
 =
@@ -803,8 +803,8 @@ EXIT
 
 
 CHAIN IF ~Global("SharTeelJaheira","GLOBAL",0)See("Jaheira")InParty("Jaheira")
-InParty("7XSHAR")!StateCheck("Jaheira",CD_STATE_NOTVALID)
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)~ THEN B7Xshar KHALID
+InParty("SHARTEEL")!StateCheck("Jaheira",CD_STATE_NOTVALID)
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN B7Xshar KHALID
 @302 DO ~SetGlobal("SharTeelJaheira","GLOBAL",1)~
 == BJAHEIR @303 
 == B7Xshar @304
@@ -817,8 +817,8 @@ EXIT
 CHAIN
 IF ~InParty("Minsc")
 See("Minsc")
-!StateCheck("Minsc",CD_STATE_NOTVALID)InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+!StateCheck("Minsc",CD_STATE_NOTVALID)InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("MinscSharTalk","GLOBAL",0)~ THEN B7Xshar Minsc01
 @309
 DO ~SetGlobal("MinscSharTalk","GLOBAL",1)~
@@ -840,8 +840,8 @@ EXIT
 CHAIN
 IF ~InParty("HaerDalis")
 See("HaerDalis")
-!StateCheck("HaerDalis",CD_STATE_NOTVALID)InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+!StateCheck("HaerDalis",CD_STATE_NOTVALID)InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("HaerdaSharTalk","GLOBAL",0)~ THEN B7Xshar Dalis01
 @317
 DO ~SetGlobal("HaerdaSharTalk","GLOBAL",1)~
@@ -866,8 +866,8 @@ EXIT
 CHAIN
 IF ~InParty("Anomen")
 See("Anomen")
-!StateCheck("Anomen",CD_STATE_NOTVALID)InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+!StateCheck("Anomen",CD_STATE_NOTVALID)InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("AnomenSharTalk","GLOBAL",0)~ THEN B7Xshar Anomen01
 @326
 DO ~SetGlobal("AnomenSharTalk","GLOBAL",1)~
@@ -919,8 +919,8 @@ EXIT
 CHAIN
 IF ~InParty("Jan")
 See("Jan")
-!StateCheck("Jan",CD_STATE_NOTVALID)InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+!StateCheck("Jan",CD_STATE_NOTVALID)InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("JanSharTalk","GLOBAL",0)~ THEN B7Xshar Jan01
 @348
 =
@@ -946,8 +946,8 @@ CHAIN
 IF ~InParty("Valygar")
 See("Valygar")
 !StateCheck("Valygar",CD_STATE_NOTVALID)
-InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("SharValygar","GLOBAL",0)~ THEN B7Xshar SharValygar1
 @358 
 DO ~SetGlobal("SharValygar","GLOBAL",1)~
@@ -979,8 +979,8 @@ EXIT
 
 CHAIN 
 IF ~Global("SharEdwin","GLOBAL",0)InParty("Edwin")See("Edwin")!StateCheck("Edwin",CD_STATE_NOTVALID)
-InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 ~ THEN ~B7Xshar~ SharEdwinBanter
 @376
 =
@@ -1024,8 +1024,8 @@ EXIT
 
 
 CHAIN IF ~Global("SharCerndTalk","GLOBAL",0)
-InParty("Cernd")!StateCheck("Cernd",CD_STATE_NOTVALID)InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)~ THEN B7Xshar SharCerndBanter
+InParty("Cernd")!StateCheck("Cernd",CD_STATE_NOTVALID)InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN B7Xshar SharCerndBanter
 @400 
 DO ~SetGlobal("SharCerndTalk","GLOBAL",1)~
 == BCERND
@@ -1046,8 +1046,8 @@ EXIT
 CHAIN
 IF ~InParty("Korgan")
 See("Korgan")
-!StateCheck("Korgan",CD_STATE_NOTVALID)InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+!StateCheck("Korgan",CD_STATE_NOTVALID)InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("KorganSharTalk","GLOBAL",0)~ THEN B7Xshar SharKorgan1
 @408
 DO ~SetGlobal("KorganSharTalk","GLOBAL",1)~
@@ -1073,8 +1073,8 @@ EXIT
 CHAIN
 IF ~InParty("Keldorn")
 See("Keldorn")
-!StateCheck("Keldorn",CD_STATE_NOTVALID)InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+!StateCheck("Keldorn",CD_STATE_NOTVALID)InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("KeldornSharTalk","GLOBAL",0)~ THEN B7Xshar KeldornShar1
 @418
 DO ~SetGlobal("KeldornSharTalk","GLOBAL",1)~
@@ -1098,7 +1098,7 @@ EXIT
 
 
 CHAIN IF
-~InParty("Mazzy")InParty("7XSHAR")!StateCheck("7XSHAR",CD_STATE_NOTVALID)!StateCheck("Mazzy",CD_STATE_NOTVALID)
+~InParty("Mazzy")InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)!StateCheck("Mazzy",CD_STATE_NOTVALID)
 Global("SharteelMazzy","GLOBAL",0)~
 THEN B7Xshar SharTeel-Mazzy-Banter1
 @428
@@ -1122,7 +1122,7 @@ THEN B7Xshar SharTeel-Mazzy-Banter1
 == B7Xshar @442
 EXIT
 
-CHAIN IF ~InParty("7XSHAR")!StateCheck("7XSHAR",CD_STATE_NOTVALID)InParty("Korgan")!StateCheck("Korgan",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("Korgan")!StateCheck("Korgan",CD_STATE_NOTVALID)
 Global("KorganSharTalk","GLOBAL",1)~ THEN ~BKORGAN~ SharKorgan2
 @443
 =
@@ -1148,9 +1148,9 @@ EXIT
 
 
 
-CHAIN IF ~InParty("7XSHAR")
-See("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("SHARTEEL")
+See("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 CombatCounter(0)
 !See([ENEMY])InParty("Yoshimo")
 See("Yoshimo")
@@ -1186,7 +1186,7 @@ DO ~SetGlobal("SharYoshimo","GLOBAL",1)~
 == BYOSHIM @473
 EXIT
 
-CHAIN IF ~InParty("7XSHAR")See("7XSHAR")!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("SHARTEEL")See("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 CombatCounter(0)!See([ENEMY])InParty("Nalia")!StateCheck("Nalia",CD_STATE_NOTVALID)See("Nalia")
 Global("SharNaliaChat","GLOBAL",0)~ THEN BNALIA Sharnaliachat1
 @474 DO ~SetGlobal("SharNaliaChat","GLOBAL",1)~
@@ -1216,8 +1216,8 @@ EXIT
 
 CHAIN IF
 ~IsValidForPartyDialog("Imoen2")InParty("Imoen2")
-Global("SharImoen","GLOBAL",1)InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)~
+Global("SharImoen","GLOBAL",1)InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~
 THEN B7Xshar SHAR-IMOEN_BANTER2
 @490
 =
@@ -1236,7 +1236,7 @@ EXIT
 
 
 CHAIN IF ~InParty("Aerie")!StateCheck("Aerie",CD_STATE_NOTVALID)
-InParty("7XSHAR")See("7XSHAR")CombatCounter(0)!See([ENEMY])
+InParty("SHARTEEL")See("SHARTEEL")CombatCounter(0)!See([ENEMY])
 Global("SharAerie","GLOBAL",1)~ THEN B7Xshar SharAerieBanter2
 @500
 =
@@ -1275,8 +1275,8 @@ EXIT
 
 CHAIN IF ~Global("SharCerndTalk","GLOBAL",1)
 InParty("Cernd")!StateCheck("Cernd",CD_STATE_NOTVALID)
-InParty("7XSHAR")See("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("SHARTEEL")See("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 AreaType(FOREST)~ THEN B7Xshar SharCerndBanter2
 @517
 =
@@ -1292,8 +1292,8 @@ DO ~SetGlobal("SharCerndTalk","GLOBAL",2)~
 == BCERND @523
 EXIT
 
-CHAIN IF ~InParty("7XSHAR")See("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)CombatCounter(0)!See([ENEMY])InParty("Nalia")
+CHAIN IF ~InParty("SHARTEEL")See("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)CombatCounter(0)!See([ENEMY])InParty("Nalia")
 See("Nalia")!StateCheck("Nalia",CD_STATE_NOTVALID)
 Global("SharNaliaChat","GLOBAL",1)~ THEN B7Xshar Sharnaliachat2
 @524 DO ~SetGlobal("SharNaliaChat","GLOBAL",2)~
@@ -1308,8 +1308,8 @@ EXIT
 
 CHAIN
 IF ~InParty("Keldorn")See("Keldorn")
-!StateCheck("Keldorn",CD_STATE_NOTVALID)InParty("7XSHAR")
-See("7XSHAR")!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+!StateCheck("Keldorn",CD_STATE_NOTVALID)InParty("SHARTEEL")
+See("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("KeldornSharTalk","GLOBAL",1)~ THEN B7Xshar KeldornShar2
 @530
 DO ~SetGlobal("KeldornSharTalk","GLOBAL",2)~
@@ -1329,9 +1329,9 @@ DO ~SetGlobal("KeldornSharTalk","GLOBAL",2)~
 EXIT
 
 CHAIN IF
-~InParty("Mazzy")InParty("7XSHAR")!StateCheck("Mazzy",CD_STATE_NOTVALID)
-See("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+~InParty("Mazzy")InParty("SHARTEEL")!StateCheck("Mazzy",CD_STATE_NOTVALID)
+See("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("SharteelMazzy","GLOBAL",1)~
 THEN BMAZZY SharTeel-Mazzy-Banter2
 @539 DO ~SetGlobal("SharteelMazzy","GLOBAL",2)~
@@ -1342,8 +1342,8 @@ THEN BMAZZY SharTeel-Mazzy-Banter2
 == B7Xshar @543
 EXIT
 
-CHAIN IF ~InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)InParty("Aerie")
+CHAIN IF ~InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("Aerie")
 IsValidForPartyDialog("Aerie")
 CombatCounter(0)
 !See([ENEMY])
@@ -1366,9 +1366,9 @@ EXIT
 CHAIN
 IF ~InParty("Anomen")
 See("Anomen")
-!StateCheck("Anomen",CD_STATE_NOTVALID)InParty("7XSHAR")
-See("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+!StateCheck("Anomen",CD_STATE_NOTVALID)InParty("SHARTEEL")
+See("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("AnomenSharTalk","GLOBAL",1)~ THEN BANOMEN SharAnomen02
 @552
 DO ~SetGlobal("AnomenSharTalk","GLOBAL",2)~
@@ -1389,8 +1389,8 @@ EXIT
 CHAIN
 IF ~InParty("Minsc")
 See("Minsc")
-!StateCheck("Minsc",CD_STATE_NOTVALID)InParty("7XSHAR")
-See("7XSHAR")!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+!StateCheck("Minsc",CD_STATE_NOTVALID)InParty("SHARTEEL")
+See("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("MinscSharTalk","GLOBAL",1)~ THEN B7Xshar Minsc02
 @562
 =
@@ -1422,8 +1422,8 @@ DO ~SetGlobal("MinscSharTalk","GLOBAL",2)~
 EXIT
 
 CHAIN IF ~Global("SharTeelJaheira","GLOBAL",1)See("Jaheira")IsValidForPartyDialog("Jaheira")InParty("Jaheira")
-InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)~ THEN ~BJAHEIR~ JaheiraSharTeel2
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN ~BJAHEIR~ JaheiraSharTeel2
 @576 DO ~SetGlobal("SharTeelJaheira","GLOBAL",2)~
 == B7Xshar @577 
 == BJAHEIR @578
@@ -1436,7 +1436,7 @@ EXIT
 
 CHAIN 
 IF ~Global("SharEdwin","GLOBAL",1)InParty("Edwin")See("Edwin")!StateCheck("Edwin",CD_STATE_NOTVALID)
-InParty("7XSHAR")!StateCheck("7XSHAR",CD_STATE_NOTVALID)~ THEN ~B7Xshar~ SharEdwinBanter2
+InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN ~B7Xshar~ SharEdwinBanter2
 @583
 DO ~SetGlobal("SharEdwin","GLOBAL",2)~
 == BEDWIN @584
@@ -1453,8 +1453,8 @@ EXIT
 CHAIN
 IF ~InParty("Jan")
 See("Jan")
-!StateCheck("Jan",CD_STATE_NOTVALID)InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+!StateCheck("Jan",CD_STATE_NOTVALID)InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("JanSharTalk","GLOBAL",1)~ THEN B7Xshar Jan02
 @592
 =
@@ -1473,11 +1473,11 @@ DO ~SetGlobal("JanSharTalk","GLOBAL",2)~
 == BJAN @601
 EXIT
 
-CHAIN IF ~InParty("7XSHAR")InParty("Yoshimo")
+CHAIN IF ~InParty("SHARTEEL")InParty("Yoshimo")
 See("Yoshimo")
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
-See("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+See("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 CombatCounter(0)
 !See([ENEMY])
 Global("SharYoshimo","GLOBAL",1)~ THEN ~B7Xshar~ SharYoshimo_2
@@ -1503,8 +1503,8 @@ DO ~SetGlobal("SharYoshimo","GLOBAL",2)~
 EXIT
 
 CHAIN IF
-~Global("SharValygar","GLOBAL",1)InParty("7XSHAR")See("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)CombatCounter(0)!See([ENEMY])
+~Global("SharValygar","GLOBAL",1)InParty("SHARTEEL")See("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)CombatCounter(0)!See([ENEMY])
 OR(2)
 AreaType(OUTDOOR)
 AreaType(DUNGEON)~
@@ -1539,9 +1539,9 @@ EXIT
 CHAIN
 IF ~InParty("Minsc")
 See("Minsc")
-!StateCheck("Minsc",CD_STATE_NOTVALID)InParty("7XSHAR")
-See("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+!StateCheck("Minsc",CD_STATE_NOTVALID)InParty("SHARTEEL")
+See("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("MinscSharTalk","GLOBAL",2)~ THEN ~B7Xshar~ Minsc03
 @634
 DO ~SetGlobal("MinscSharTalk","GLOBAL",3)~
@@ -1562,8 +1562,8 @@ EXIT
 
 CHAIN IF
 ~IsValidForPartyDialog("Imoen2")InParty("Imoen2")
-Global("SharImoen","GLOBAL",2)InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)~
+Global("SharImoen","GLOBAL",2)InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~
 THEN B7Xshar SHAR-IMOEN_BANTER3
 @641
 =
@@ -1578,8 +1578,8 @@ EXIT
 CHAIN
 IF ~InParty("Anomen")
 See("Anomen")
-!StateCheck("Anomen",CD_STATE_NOTVALID)InParty("7XSHAR")
-See("7XSHAR")!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+!StateCheck("Anomen",CD_STATE_NOTVALID)InParty("SHARTEEL")
+See("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("AnomenSharTalk","GLOBAL",2)~ THEN BANOMEN SharAnomen03
 @647 
 DO ~SetGlobal("AnomenSharTalk","GLOBAL",3)~
@@ -1600,9 +1600,9 @@ EXIT
 CHAIN
 IF ~InParty("Keldorn")
 See("Keldorn")
-!StateCheck("Keldorn",CD_STATE_NOTVALID)InParty("7XSHAR")
-See("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+!StateCheck("Keldorn",CD_STATE_NOTVALID)InParty("SHARTEEL")
+See("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("KeldornSharTalk","GLOBAL",2)~ THEN B7Xshar KeldornShar3
 @657
 DO ~SetGlobal("KeldornSharTalk","GLOBAL",3)~
@@ -1624,9 +1624,9 @@ DO ~SetGlobal("KeldornSharTalk","GLOBAL",3)~
 == B7Xshar @668
 EXIT
 
-CHAIN IF ~InParty("7XSHAR")
-See("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("SHARTEEL")
+See("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 CombatCounter(0)
 !See([ENEMY])InParty("Nalia")
 See("Nalia")IsValidForPartyDialog("Nalia")
@@ -1645,8 +1645,8 @@ Global("SharNaliaChat","GLOBAL",2)~ THEN B7Xshar Sharnaliachat3
 EXIT
 
 CHAIN IF ~Global("SharTeelJaheira","GLOBAL",2)See("Jaheira")InParty("Jaheira")
-InParty("7XSHAR")!StateCheck("Jaheira",CD_STATE_NOTVALID)
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)~ THEN ~B7Xshar~ JaheiraSharTeel3
+InParty("SHARTEEL")!StateCheck("Jaheira",CD_STATE_NOTVALID)
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN ~B7Xshar~ JaheiraSharTeel3
 @677
 =
 @678 DO ~SetGlobal("SharTeelJaheira","GLOBAL",3)~ 
@@ -1664,7 +1664,7 @@ EXIT
 
 CHAIN 
 IF ~Global("SharEdwin","GLOBAL",2)InParty("Edwin")See("Edwin")!StateCheck("Edwin",CD_STATE_NOTVALID)
-InParty("7XSHAR")!StateCheck("7XSHAR",CD_STATE_NOTVALID)~ THEN ~BEDWIN~ SharEdwinBanter3
+InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN ~BEDWIN~ SharEdwinBanter3
 @686 
 DO ~SetGlobal("SharEdwin","GLOBAL",3)~
 ==B7Xshar @687
@@ -1692,11 +1692,11 @@ DO ~SetGlobal("SharEdwin","GLOBAL",3)~
 @703
 EXIT
 
-CHAIN IF ~InParty("7XSHAR")InParty("Yoshimo")
+CHAIN IF ~InParty("SHARTEEL")InParty("Yoshimo")
 See("Yoshimo")
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
-See("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+See("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 CombatCounter(0)
 !See([ENEMY])
 Global("SharYoshimo","GLOBAL",2)~ THEN ~BYOSHIM~ SharYoshimo_3
@@ -1718,11 +1718,11 @@ DO ~SetGlobal("SharYoshimo","GLOBAL",3)~
 @715
 EXIT
 
-CHAIN IF ~InParty("7XSHAR")InParty("Yoshimo")
+CHAIN IF ~InParty("SHARTEEL")InParty("Yoshimo")
 See("Yoshimo")
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
-See("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+See("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 CombatCounter(0)
 !See([ENEMY])
 Global("SharYoshimo","GLOBAL",3)~ THEN ~BYOSHIM~ SharYoshimo_4
@@ -1748,8 +1748,8 @@ EXIT
 CHAIN
 IF ~InParty("Anomen")
 See("Anomen")
-!StateCheck("Anomen",CD_STATE_NOTVALID)InParty("7XSHAR")
-See("7XSHAR")!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+!StateCheck("Anomen",CD_STATE_NOTVALID)InParty("SHARTEEL")
+See("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("AnomenSharTalk","GLOBAL",3)~ THEN BANOMEN SharAnomen04
 @727
 =
@@ -1770,7 +1770,7 @@ EXIT
 CHAIN IF ~CombatCounter(0)
 !See([ENEMY])Global("SharImoen","GLOBAL",3)
 IsValidForPartyDialog("Imoen2")InParty("Imoen2")
-InParty("7XSHAR")!StateCheck("7XSHAR",CD_STATE_NOTVALID)~ THEN B7Xshar SHARImoenBanter4
+InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN B7Xshar SHARImoenBanter4
 @737 DO ~SetGlobal("SharImoen","GLOBAL",4)~
 == BIMOEN2 @738
 =

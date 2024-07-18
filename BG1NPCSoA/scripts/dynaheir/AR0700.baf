@@ -1,14 +1,26 @@
-
-IF 
-Global("DynaheirCreation","GLOBAL",0)
-!Exists("7XDYNAX")
-
-
+IF
+	Global("DynaheirCreation","GLOBAL",0)
+	!Exists("7XDYNAX")
+	BeenInParty("7XDYNAX")
+	!StateCheck("7XDYNAX",STATE_REALLY_DEAD)
 THEN
-  RESPONSE #100
-CreateCreature("7XDYNAx",[2583.2108],2)
-SetGlobal("DynaheirCreation","GLOBAL",1)
-Continue()
+	RESPONSE #100
+		MoveGlobal("AR0900","7XDYNAX",[2583.2108])
+		ActionOverride("7XDYNAX",Face(2))
+		ActionOverride("7XDYNAX",SetDialog("7XDYNAX"))
+		SetGlobal("DynaheirCreation","GLOBAL",1)
+		Continue()
 END
 
-
+IF
+	Global("DynaheirCreation","GLOBAL",0)
+	!Exists("7XDYNAX")
+	OR(2)
+		!BeenInParty("7XDYNAX")
+		StateCheck("7XDYNAX",STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		CreateCreature("7XDYNAx",[2583.2108],2)
+		SetGlobal("DynaheirCreation","GLOBAL",1)
+		Continue()
+END

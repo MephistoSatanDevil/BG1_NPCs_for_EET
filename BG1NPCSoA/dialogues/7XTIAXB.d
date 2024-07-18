@@ -173,7 +173,7 @@ IF~~THEN REPLY @55 GOTO Tiax-PC-Banter2
 END
 
 
-IF ~InParty("Viconia")InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+IF ~InParty("Viconia")InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 See("Viconia")!StateCheck("Viconia",CD_STATE_NOTVALID)
 Global("VicTiaxPCBanter","GLOBAL",0)~ THEN BEGIN VicTiaxPCBanter1
 SAY @56
@@ -197,7 +197,7 @@ END
 //////////////////////////////////////////////////////////////////////////////////////
 CHAIN
 IF ~AreaCheck("AR0509")Global("TiaxAerieAR0509","GLOBAL",0)
-InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("Aerie")!StateCheck("Aerie",CD_STATE_NOTVALID)
+InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)InParty("Aerie")!StateCheck("Aerie",CD_STATE_NOTVALID)
 ~ THEN 7XTIAXB TiaxAerieAR0509
 @65 
 DO ~SetGlobal("TiaxAerieAR0509","GLOBAL",1)~ 
@@ -215,7 +215,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Aerie")!StateCheck("Aerie",CD_STATE_NOTVALID)
-InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("TiaxAerieTalk","GLOBAL",0)~ THEN 7XTIAXB Tiax-Aerie-Banter
 @74 
 DO ~SetGlobal("TiaxAerieTalk","GLOBAL",1)~
@@ -250,7 +250,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Anomen")!StateCheck("Anomen",CD_STATE_NOTVALID)
-See("Anomen")InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+See("Anomen")InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("AnomenTiax","GLOBAL",0)~ THEN 7XTIAXB tiax_anomen1
 @88
 DO ~SetGlobal("AloraAno1","GLOBAL",1)~
@@ -266,7 +266,7 @@ EXIT
 
 
 CHAIN IF ~InParty("Mazzy")!StateCheck("Mazzy",CD_STATE_NOTVALID)
-CombatCounter(0)InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+CombatCounter(0)InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("TiaxMazzy","GLOBAL",0)~ THEN 7XTIAXB TiaxMazzyBanter#1
     @95 
     DO ~SetGlobal("TiaxMazzy","GLOBAL",1)~
@@ -285,7 +285,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Minsc")
-See("Minsc")InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+See("Minsc")InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 !StateCheck("Minsc",CD_STATE_NOTVALID)
 Global("MinscTiaxTalk","GLOBAL",0)~ THEN 7XTIAXB MinscTIAXbanter1
 @104
@@ -315,7 +315,7 @@ EXIT
 CHAIN
 IF ~InParty("Korgan")
 See("Korgan")
-!StateCheck("Korgan",CD_STATE_NOTVALID)InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+!StateCheck("Korgan",CD_STATE_NOTVALID)InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("KorganTiaxTalk","GLOBAL",0)~ THEN 7XTIAXB KorganTiaxBanter1
 @119
@@ -366,7 +366,7 @@ DO ~SetGlobal("KorganTiaxTalk","GLOBAL",1)~
 EXIT
 
 CHAIN IF ~InParty("Mazzy")!StateCheck("Mazzy",CD_STATE_NOTVALID)
-InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)CombatCounter(0)
+InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)CombatCounter(0)
 Global("TiaxMazzy","GLOBAL",1)~ THEN 7XTIAXB TiaxMazzyBanter#2
 @146
 =
@@ -388,7 +388,7 @@ EXIT
 
 CHAIN
 IF ~InParty("HaerDalis")
-See("HaerDalis")!StateCheck("HaerDalis",CD_STATE_NOTVALID)InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+See("HaerDalis")!StateCheck("HaerDalis",CD_STATE_NOTVALID)InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("HaerdaTiaxTalk","GLOBAL",0)~ THEN 7XTIAXB Dalistiax1
 @157
@@ -411,7 +411,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Jan")
-See("Jan")!StateCheck("Jan",CD_STATE_NOTVALID)InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+See("Jan")!StateCheck("Jan",CD_STATE_NOTVALID)InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("JanTiaxTalk","GLOBAL",0)~ THEN 7XTIAXB JanTiax1
 @167
@@ -438,7 +438,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Nalia")
-See("Nalia")!StateCheck("Nalia",CD_STATE_NOTVALID)InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+See("Nalia")!StateCheck("Nalia",CD_STATE_NOTVALID)InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("NaliaVTalk","GLOBAL",0)~ THEN 7XTIAXB NaliaV01
 @178
 DO ~SetGlobal("NaliaVTalk","GLOBAL",1)~
@@ -452,7 +452,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Imoen2")
-See("Imoen2")!StateCheck("Imoen2",CD_STATE_NOTVALID)InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+See("Imoen2")!StateCheck("Imoen2",CD_STATE_NOTVALID)InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("ImoenTiaxTalk","GLOBAL",0)~ THEN 7XTIAXB  ImoenTiaxBanter01
 @184 DO ~SetGlobal("ImoenTiaxTalk","GLOBAL",1)~
 == BIMOEN2 @185
@@ -473,7 +473,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Keldorn")
-See("Keldorn")!StateCheck("Keldorn",CD_STATE_NOTVALID)InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+See("Keldorn")!StateCheck("Keldorn",CD_STATE_NOTVALID)InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("KeldornTiaxTalk","GLOBAL",0)~ THEN 7XTIAXB KeldornTiaxBanter1
 @195
 DO ~SetGlobal("KeldornTiaxTalk","GLOBAL",1)~
@@ -489,7 +489,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Cernd")
-See("Cernd")!StateCheck("Cernd",CD_STATE_NOTVALID)InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+See("Cernd")!StateCheck("Cernd",CD_STATE_NOTVALID)InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("TiaxCernd","GLOBAL",0)~ THEN 7XTIAXB CerndTiax1
 @200
 DO ~SetGlobal("TiaxCernd","GLOBAL",1)~
@@ -503,7 +503,7 @@ EXIT
 
 
 CHAIN IF ~InParty("Valygar")
-See("Valygar")!StateCheck("Valygar",CD_STATE_NOTVALID)InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+See("Valygar")!StateCheck("Valygar",CD_STATE_NOTVALID)InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("ValygarTiax","GLOBAL",0)~ THEN 7XTIAXB Tiax_Valygar1
 @206 DO ~SetGlobal("ValygarTiax","GLOBAL",1)~
 == BVALYGA @207
@@ -525,7 +525,7 @@ EXIT
 CHAIN
 IF ~InParty("Viconia")
 See("Viconia")
-!StateCheck("Viconia",CD_STATE_NOTVALID)InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+!StateCheck("Viconia",CD_STATE_NOTVALID)InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("VicTiaxTalk","GLOBAL",0)~ THEN 7XTIAXB ViconTiax1
 @217
 =
@@ -545,7 +545,7 @@ EXIT
 CHAIN
 IF ~Global("TiaxEdwin","GLOBAL",0)InParty("Edwin")
 See("Edwin")!StateCheck("Edwin",CD_STATE_NOTVALID)
-InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 CombatCounter(0)~ THEN 7XTIAXB TiaxEdwin1
   @226
 =
@@ -565,7 +565,7 @@ CHAIN
 IF ~InParty("Yoshimo")
 See("Yoshimo")
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
-InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("TiaxYoshimo","GLOBAL",0)~ THEN BYOSHIM YoshimoTiaxBanter1
 @233
 =
@@ -582,7 +582,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Jaheira")See("Jaheira")!StateCheck("Jaheira",CD_STATE_NOTVALID)
-InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("TiaxJaheira","GLOBAL",0)~ THEN BJAHEIR TiaxJaheira1
 @241
 =
@@ -600,7 +600,7 @@ EXIT
 //////////////////////////////////////////
 CHAIN
 IF ~InParty("Jan")
-See("Jan")!StateCheck("Jan",CD_STATE_NOTVALID)InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+See("Jan")!StateCheck("Jan",CD_STATE_NOTVALID)InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("JanTiaxTalk","GLOBAL",1)~ THEN 7XTIAXB JanTiax2
 @248
@@ -621,7 +621,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Minsc")
-See("Minsc")InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+See("Minsc")InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 !StateCheck("Minsc",CD_STATE_NOTVALID)
 Global("MinscTiaxTalk","GLOBAL",1)~ THEN 7XTIAXB MinscTIAXbanter2
 @256
@@ -640,7 +640,7 @@ EXIT
 CHAIN
 IF ~InParty("Viconia")
 See("Viconia")
-!StateCheck("Viconia",CD_STATE_NOTVALID)InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+!StateCheck("Viconia",CD_STATE_NOTVALID)InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("VicTiaxTalk","GLOBAL",1)~ THEN 7XTIAXB ViconTiax2
 @261
 DO ~SetGlobal("VicTiaxTalk","GLOBAL",2)~
@@ -663,7 +663,7 @@ EXIT
 
 
 CHAIN
-IF ~InParty("Aerie")!StateCheck("Aerie",CD_STATE_NOTVALID)InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+IF ~InParty("Aerie")!StateCheck("Aerie",CD_STATE_NOTVALID)InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("TiaxAerieTalk","GLOBAL",1)~ THEN 7XTIAXB Tiax-Aerie-Banter2
 @270
 =
@@ -684,7 +684,7 @@ EXIT
 CHAIN
 IF ~InParty("Nalia")
 See("Nalia")
-!StateCheck("Nalia",CD_STATE_NOTVALID)InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+!StateCheck("Nalia",CD_STATE_NOTVALID)InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("NaliaVTalk","GLOBAL",1)~ THEN 7XTIAXB NaliaV02
 @279
 DO ~SetGlobal("NaliaVTalk","GLOBAL",2)~
@@ -705,7 +705,7 @@ CHAIN
 IF ~InParty("Yoshimo")
 See("Yoshimo")
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
-InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("TiaxYoshimo","GLOBAL",1)~ THEN 7XTIAXB YoshimoTiaxBanter2
 @290 DO ~SetGlobal("TiaxYoshimo","GLOBAL",2)~
 == BYOSHIM @291
@@ -720,7 +720,7 @@ CHAIN
   IF ~Global("TiaxEdwin","GLOBAL",1)
   InParty("Edwin")
   See("Edwin")!StateCheck("Edwin",CD_STATE_NOTVALID)
-  InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+  InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
   CombatCounter(0)~ THEN ~BEDWIN~ TiaxEdwin2
   @296
 =
@@ -735,7 +735,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Jaheira")See("Jaheira")!StateCheck("Jaheira",CD_STATE_NOTVALID)
-InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("TiaxJaheira","GLOBAL",1)~ THEN 7XTIAXB TiaxJaheira2
 @302 DO ~SetGlobal("TiaxJaheira","GLOBAL",2)~
 ==BJAHEIR @303
@@ -750,7 +750,7 @@ EXIT
 CHAIN
 IF ~InParty("Nalia")
 See("Nalia")
-!StateCheck("Nalia",CD_STATE_NOTVALID)InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+!StateCheck("Nalia",CD_STATE_NOTVALID)InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("NaliaVTalk","GLOBAL",2)~ THEN ~BNALIA~ NaliaV03
 @307
 DO ~SetGlobal("NaliaVTalk","GLOBAL",3)~
@@ -766,7 +766,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Minsc")
-See("Minsc")InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+See("Minsc")InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 !StateCheck("Minsc",CD_STATE_NOTVALID)
 Global("MinscTiaxTalk","GLOBAL",2)~ THEN 7XTIAXB MinscTIAXbanter3
 @316 
@@ -785,7 +785,7 @@ CHAIN
 IF ~InParty("Yoshimo")
 See("Yoshimo")
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
-InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("TiaxYoshimo","GLOBAL",2)~ THEN 7XTIAXB YoshimoTiaxBanter3
 @325
 =
@@ -799,7 +799,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Jan")
-See("Jan")!StateCheck("Jan",CD_STATE_NOTVALID)InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+See("Jan")!StateCheck("Jan",CD_STATE_NOTVALID)InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("JanTiaxTalk","GLOBAL",2)~ THEN 7XTIAXB JanTiax3
 @332
@@ -812,7 +812,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Jaheira")See("Jaheira")!StateCheck("Jaheira",CD_STATE_NOTVALID)
-InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("TiaxJaheira","GLOBAL",2)~ THEN 7XTIAXB TiaxJaheira3
 @337 DO ~SetGlobal("TiaxJaheira","GLOBAL",3)~
 == BJAHEIR @338 
@@ -826,7 +826,7 @@ EXIT
 CHAIN
 IF ~InParty("Nalia")
 See("Nalia")
-!StateCheck("Nalia",CD_STATE_NOTVALID)InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+!StateCheck("Nalia",CD_STATE_NOTVALID)InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("NaliaVTalk","GLOBAL",3)~ THEN ~7XTIAXB~ NaliaV04
 @341
 DO ~SetGlobal("NaliaVTalk","GLOBAL",4)~
@@ -842,7 +842,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Minsc")
-See("Minsc")InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+See("Minsc")InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 !StateCheck("Minsc",CD_STATE_NOTVALID)
 Global("MinscTiaxTalk","GLOBAL",3)~ THEN ~BMINSC~ MinscTIAXbanter4
 @349 
@@ -859,7 +859,7 @@ CHAIN
 IF ~InParty("Yoshimo")
 See("Yoshimo")
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
-InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("TiaxYoshimo","GLOBAL",3)~ THEN 7XTIAXB YoshimoTiaxBanter4
 @356 DO ~SetGlobal("TiaxYoshimo","GLOBAL",4)~
 ==BYOSHIM @357
@@ -873,7 +873,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Jaheira")See("Jaheira")!StateCheck("Jaheira",CD_STATE_NOTVALID)
-InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("TiaxJaheira","GLOBAL",3)~ THEN ~BJAHEIR~ TiaxJaheira4
 @363 DO ~SetGlobal("TiaxJaheira","GLOBAL",4)~
 == 7XTIAXB @364
@@ -884,7 +884,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Jan")
-See("Jan")!StateCheck("Jan",CD_STATE_NOTVALID)InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+See("Jan")!StateCheck("Jan",CD_STATE_NOTVALID)InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("JanTiaxTalk","GLOBAL",3)~ THEN ~BJAN~ JanTiax4
 @367 
@@ -899,7 +899,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Neera")
-See("Neera")!StateCheck("Neera",CD_STATE_NOTVALID)InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+See("Neera")!StateCheck("Neera",CD_STATE_NOTVALID)InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("NeeraTiaxTalk","GLOBAL",0)~ THEN ~7XTIAXB~ NeeraTiax1
 @373 
@@ -916,7 +916,7 @@ DO ~SetGlobal("NeeraTiaxTalk","GLOBAL",1) ActionOverride(Player1,SetDialog("PLAY
 EXIT
 
 CHAIN
-IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID) See("7XTIAX") InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID) See("TIAX") InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("NeeraTiaxTalk","GLOBAL",1)~ THEN IF_FILE_EXISTS ~BNEERA~ NeeraTiax2
 @388
@@ -930,7 +930,7 @@ DO ~SetGlobal("NeeraTiaxTalk","GLOBAL",2)~
 EXIT
 
 CHAIN
-IF ~InParty("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID) See("7XTIAX") InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+IF ~InParty("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID) See("TIAX") InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("RasaadTiaxTalk","GLOBAL",0)~ THEN IF_FILE_EXISTS ~BRASAAD~ RasaadTiax1
 @395
@@ -941,7 +941,7 @@ DO ~SetGlobal("RasaadTiaxTalk","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID) See("Neera") InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID) See("Neera") InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("NeeraTiaxTalk","GLOBAL",2)~ THEN 7XTIAXB NeeraTiax3
 @399
@@ -953,15 +953,15 @@ DO ~SetGlobal("NeeraTiaxTalk","GLOBAL",3)~
 == BVICONI IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @404
 == BJAHEIR IF ~InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @405
 == IF_FILE_EXISTS BNEERA @406
-== IF_FILE_EXISTS BNEERA IF ~OR(2) InParty("7XXZAR") InParty("7XMONT")~ THEN @407
-== IF_FILE_EXISTS 7XMONTB IF ~InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)~ THEN @408
-== IF_FILE_EXISTS 7XXZARB IF ~InParty("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID) OR(2) !InParty("7XMONT")StateCheck("7XMONT",CD_STATE_NOTVALID)~ THEN @408
-== BEDWIN IF ~InParty("Edwin")!StateCheck("Edwin",CD_STATE_NOTVALID) OR(2) !InParty("7XXZAR") StateCheck("7XXZAR",CD_STATE_NOTVALID) OR(2) !InParty("7XMONT")StateCheck("7XMONT",CD_STATE_NOTVALID)~ THEN @408
-== IF_FILE_EXISTS 7XFALDB IF ~InParty("7XFALD") !StateCheck("7XFALD",CD_STATE_NOTVALID)~ THEN @409
+== IF_FILE_EXISTS BNEERA IF ~OR(2) InParty("XZAR") InParty("MONTARON")~ THEN @407
+== IF_FILE_EXISTS 7XMONTB IF ~InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)~ THEN @408
+== IF_FILE_EXISTS 7XXZARB IF ~InParty("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID) OR(2) !InParty("MONTARON")StateCheck("MONTARON",CD_STATE_NOTVALID)~ THEN @408
+== BEDWIN IF ~InParty("Edwin")!StateCheck("Edwin",CD_STATE_NOTVALID) OR(2) !InParty("XZAR") StateCheck("XZAR",CD_STATE_NOTVALID) OR(2) !InParty("MONTARON")StateCheck("MONTARON",CD_STATE_NOTVALID)~ THEN @408
+== IF_FILE_EXISTS 7XFALDB IF ~InParty("FALDORN") !StateCheck("FALDORN",CD_STATE_NOTVALID)~ THEN @409
 EXIT
 
 CHAIN
-IF ~InParty("Wilson") !StateCheck("Wilson",CD_STATE_NOTVALID) See("7XTIAX") InParty("7XTIAX")!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+IF ~InParty("Wilson") !StateCheck("Wilson",CD_STATE_NOTVALID) See("TIAX") InParty("TIAX")!StateCheck("TIAX",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("WilsonTiaxTalk","GLOBAL",0)~ THEN IF_FILE_EXISTS BWILSON WilsonTiax1
 @382

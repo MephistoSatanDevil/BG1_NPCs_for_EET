@@ -1,7 +1,7 @@
 BEGIN ~7XEldoJ~
 
 INTERJECT_COPY_TRANS SHADEL 4 EldothShadeLord
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @0
 ==SHADEL
 @1
@@ -12,7 +12,7 @@ INTERJECT_COPY_TRANS SHADEL 4 EldothShadeLord
 END
 
 INTERJECT_COPY_TRANS SHADEL 0 EldothShadowlord2
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @0
 == SHADEL
 @4
@@ -27,7 +27,7 @@ END
 
 
 INTERJECT_COPY_TRANS WELLYN 10 EldothWellyn1
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @8
 ==WELLYN
 @9
@@ -35,21 +35,21 @@ END
 
 
 INTERJECT_COPY_TRANS VVSANSUK 0 EldothSansuki
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @10
 ==VVSANSUK
 @11
 END
 
 INTERJECT_COPY_TRANS DELON 3 EldothDelon
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @12
 ==DELON
 @13
 END
 
 INTERJECT_COPY_TRANS EDWIN 3 EldothEdwinJob1
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @14
 =
 @15
@@ -58,42 +58,42 @@ INTERJECT_COPY_TRANS EDWIN 3 EldothEdwinJob1
 END
 
 INTERJECT_COPY_TRANS PLAYER1 2 EldothPlayer01
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @17
 END
 
 INTERJECT_COPY_TRANS KALAH2 7 EldothKALAH2-7
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
  @18
 == KALAH2 @19
 END
 
 
 INTERJECT_COPY_TRANS KALAH2 8 EldothKALAH2-8
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
  @18
 == KALAH2 @19
 END
 
 
 INTERJECT_COPY_TRANS KALAH2 9 EldothKALAH2-9
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
  @18
 == KALAH2 @19
 END
 
 INTERJECT_COPY_TRANS HENDAK 1 EldothHENDAK1
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
  @20
 END
 
 INTERJECT_COPY_TRANS VICG1 2 EldothVicG1
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @21
 END
 
 INTERJECT_COPY_TRANS VICG1 4 EldothVicG12
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @22
 =
 @23
@@ -103,25 +103,25 @@ END
 
 
 INTERJECT_COPY_TRANS VICONI 2 EldothVICONI2
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
  @24
 END
 
 
 INTERJECT_COPY_TRANS LYROS 24 EldothLYROS24
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
  @25
 END
 
 
 
 INTERJECT_COPY_TRANS RENAL 30 EldothRENAL30
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
  @26
 END
 
 INTERJECT_COPY_TRANS NALIA 13 EldothNALIA13
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @27
 =
 @28
@@ -129,7 +129,7 @@ END
 
 
 INTERJECT_COPY_TRANS NALIA 14 EldothNALIA14
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @27
 =
 @28
@@ -137,56 +137,56 @@ END
 
 
 INTERJECT_COPY_TRANS NALIA 109 EldothNALIA109
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
  @29
 END
 
 INTERJECT_COPY_TRANS BODHI 1 EldothBODHI1
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
  @30
 == 7XEldoJ @31
 END
 
 INTERJECT_COPY_TRANS BODHI 4 EldothBohdi4
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @32
 END 
 
 
 INTERJECT_COPY_TRANS BODHI 6 EldothBODHI6
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
  @33
 END
 
 
 INTERJECT_COPY_TRANS BODHI 21 EldothBODHI21
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
  @34
 =
 @35
 END
 
 INTERJECT_COPY_TRANS BODHI 18 EldothBODHI18
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
  @36
 END
 
 
 
 INTERJECT_COPY_TRANS BODHI 28 EldothBODHI28
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
  @37
 ==BODHI @38
 END
 
 INTERJECT_COPY_TRANS BODHI 45 Eldothbodhi45
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @39
 END
 
 
 INTERJECT_COPY_TRANS BODHI 49 EldothBODHI49
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
  @40
 =
 @41
@@ -194,28 +194,28 @@ END
 
 
 INTERJECT_COPY_TRANS BODHI 72 EldothBODHI72
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
  @42
 END
 
 INTERJECT_COPY_TRANS BODHI 125 EldothBohdi125
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @43
 END 
 
 INTERJECT_COPY_TRANS C6BODHI 22 EldothC6BODHI22
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN @44 DO ~LeaveParty() Enemy()~
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN @44 DO ~LeaveParty() Enemy()~
 == C6BODHI @296
 END 
 
 
 INTERJECT_COPY_TRANS PPSAEM 59 EldothPPSAEM59
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
  @45
 END
 
 INTERJECT_COPY_TRANS PPTIAX 6 EldothPPTIAX6
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
  @46
 =
 @47
@@ -225,7 +225,7 @@ END
 
 
 INTERJECT_COPY_TRANS IMOEN2J 26 EldothIMOEN2J26
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @49
 == IMOEN2J @50
 == 7XEldoJ @51
@@ -233,7 +233,7 @@ END
 
 
 APPEND BPROST1
-IF ~!StateCheck("7XELDOT",CD_STATE_NOTVALID)IsGabber("7XELDOT")~ THEN BEGIN Eldothprost1-1
+IF ~!StateCheck("ELDOTH",CD_STATE_NOTVALID)IsGabber("ELDOTH")~ THEN BEGIN Eldothprost1-1
 SAY @52
 IF ~~ THEN EXTERN 7XEldoJ Eldothprost1-2
 END
@@ -254,7 +254,7 @@ END
 
 APPEND MADAM
 IF
-~Name("7XELDOT",LastTalkedToBy)~ THEN BEGIN EldothMadam
+~Name("ELDOTH",LastTalkedToBy)~ THEN BEGIN EldothMadam
 SAY @55
 ++ @56 EXTERN MADAM 1
 ++ @57 EXTERN MADAM 2
@@ -264,7 +264,7 @@ END
 
 APPEND PIRCOR01
 IF ~!NumberOfTimesTalkedTo(0)
-Name("7XELDOT",LastTalkedToBy)~ THEN BEGIN EldothPirCor01
+Name("ELDOTH",LastTalkedToBy)~ THEN BEGIN EldothPirCor01
 SAY @58
 ++ @59 EXTERN PIRCOR01 5
 ++ @60 EXTERN PIRCOR01 7
@@ -273,50 +273,50 @@ END
 END
 
 INTERJECT_COPY_TRANS RENFELD 6 EldothRenfeld
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @62
 END
 
 
 INTERJECT_COPY_TRANS NALIA 45 EldothNaliaJoin
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @63 
 =
 @64 
 END
 
 INTERJECT_COPY_TRANS AERIE 26 EldothAerieMeet
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @65
 END 
 
 
 INTERJECT_COPY_TRANS ARAN 0 EldothAranMeet1
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @66
 =
 @67
 END 
 
 INTERJECT_COPY_TRANS ARAN 77 EldothAran77
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @68
 END
 
 INTERJECT_COPY_TRANS ARAN 58 EldothAran58
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @69
 END 
 
 INTERJECT_COPY_TRANS ARAN 76 EldothAran76
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @70
 =
 @71
 END 
 
 INTERJECT_COPY_TRANS BEGGAR1 0 Eldothbeggar1
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @72
 =
 @73
@@ -325,7 +325,7 @@ END
 
 
 INTERJECT_COPY_TRANS BOANASTE 0 EldothValen0
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @74
 == BOANASTE @75
 == 7XEldoJ @76
@@ -334,7 +334,7 @@ END
 
 
 INTERJECT_COPY_TRANS BRAT2 7 EldothBrat2-7
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @77
 =
 @78
@@ -342,7 +342,7 @@ END
 
 
 INTERJECT_COPY_TRANS YOSHJ 113 EldothYoshimoJ113
-== 7XEldoJ IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEldoJ IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @79
 =
 @80 
@@ -357,7 +357,7 @@ IF ~~ THEN DO ~SetGlobal("EldothExists","AR0800",99)
 SetGlobal("7XEldoJoined","GLOBAL",1) JoinParty()~ EXIT
 END
 
-IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)InParty("7XSKI")~ THEN BEGIN ELDOTH1
+IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)InParty("SKIE")~ THEN BEGIN ELDOTH1
 SAY @82
 =
 @83 
@@ -367,7 +367,7 @@ END
 
 IF ~~ THEN BEGIN NEXTTALK
 SAY @84 
-IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)InParty("7XSKI")!Dead("7XSKI")~ THEN EXTERN ~7XSkiJ~ ELDOTH1-B
+IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)InParty("SKIE")!Dead("SKIE")~ THEN EXTERN ~7XSkiJ~ ELDOTH1-B
 END
 
 IF ~~ THEN BEGIN ELDOTH2
@@ -456,7 +456,7 @@ IF ~~ THEN BEGIN SKIE1
 SAY @109
 =
 @110
-IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)InParty("7XSKI")!Dead("7XSKI")~ THEN EXTERN ~7XSkiJ~ ELDOTH1-C
+IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)InParty("SKIE")!Dead("SKIE")~ THEN EXTERN ~7XSkiJ~ ELDOTH1-C
 END
 
 IF ~~ THEN BEGIN SKIE2
@@ -577,7 +577,7 @@ END
 
 
 CHAIN IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)
-See("Jaheira")InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)
+See("Jaheira")InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 Global("7XEldoJaheira","GLOBAL",0)~ THEN B7XEldo 7XEldoJahsChat1
 @146 
 DO ~SetGlobal("7XEldoJaheira","GLOBAL",1)~
@@ -594,7 +594,7 @@ DO ~SetGlobal("7XEldoJaheira","GLOBAL",1)~
 EXIT
 
 CHAIN IF~InParty("Aerie")!StateCheck("Aerie",CD_STATE_NOTVALID)
-See("Aerie")InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)
+See("Aerie")InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 Global("EldothAerie","GLOBAL",0)~ THEN B7XEldo EldothAerie1
 @154 DO ~SetGlobal("EldothAerie","GLOBAL",1)~
 == BAERIE @155
@@ -618,7 +618,7 @@ Global("EldothAerie","GLOBAL",0)~ THEN B7XEldo EldothAerie1
 EXIT
 
 CHAIN IF
-~Global("VicEldoth","GLOBAL",0)InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)
+~Global("VicEldoth","GLOBAL",0)InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 InParty("Viconia")!StateCheck("Viconia",CD_STATE_NOTVALID)~
 THEN BVICONI VicEldoth1
 @167 DO ~SetGlobal("VicEldoth","GLOBAL",1)~
@@ -634,7 +634,7 @@ THEN BVICONI VicEldoth1
 == BVICONI @174
 =
 @175
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN @176
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN @176
 == BANOMEN IF ~IsValidForPartyDialog("Anomen")~ THEN @177
 == B7XEldo IF ~IsValidForPartyDialog("Anomen")~ THEN @178
 =
@@ -646,7 +646,7 @@ EXIT
 CHAIN
 IF ~InParty("Anomen")
 See("Anomen")!StateCheck("Anomen",CD_STATE_NOTVALID)
-InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)
+InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 Global("EldothAnomen","GLOBAL",0)~ THEN B7XEldo EldothAnomen1
 @182 DO ~SetGlobal("EldothAnomen","GLOBAL",1)~
 == BANOMEN
@@ -675,7 +675,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Keldorn")!StateCheck("Keldorn",CD_STATE_NOTVALID)
-See("Keldorn")InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)
+See("Keldorn")InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 Global("EldothKeldorn","GLOBAL",0)~ THEN B7XEldo EldothKeldorn
 @194
 =
@@ -695,7 +695,7 @@ EXIT
 
 CHAIN
 IF~InParty("Nalia")
-See("Nalia")InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)
+See("Nalia")InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 !StateCheck("Nalia",CD_STATE_NOTVALID)
 Global("EldothNalia","GLOBAL",0)~ THEN B7XEldo EldothNalia1
 @201
@@ -726,7 +726,7 @@ EXIT
 
 
 CHAIN
-IF ~InParty("Minsc")InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)
+IF ~InParty("Minsc")InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 !StateCheck("Minsc",CD_STATE_NOTVALID)Global("EldothMinsc","GLOBAL",0)~ THEN BMINSC MinscEldothTalk1
 @213 
 DO ~SetGlobal("EldothMinsc","GLOBAL",1)~
@@ -746,7 +746,7 @@ EXIT
 
 CHAIN IF ~InParty("Yoshimo")
 See("Yoshimo")
-!StateCheck("Yoshimo",STATE_SLEEPING)InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)
+!StateCheck("Yoshimo",STATE_SLEEPING)InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 Global("EldothYoshi","GLOBAL",0)~ THEN B7XEldo eldothyoshi_1
 @222 
 DO ~SetGlobal("EldothYoshi","GLOBAL",1)~
@@ -767,7 +767,7 @@ EXIT
 
 
 CHAIN IF ~InParty("Edwin")
-!StateCheck("Edwin",STATE_SLEEPING)InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)
+!StateCheck("Edwin",STATE_SLEEPING)InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 Global("EdwinEldoth","GLOBAL",0)~ THEN ~BEDWIN~ EdwardEldoth1
 @233 DO ~SetGlobal("EdwinEldoth","GLOBAL",1)~
 == B7XEldo @234 
@@ -786,7 +786,7 @@ EXIT
 CHAIN
 IF ~InParty("Cernd")
 See("Cernd")
-!StateCheck("Cernd",STATE_SLEEPING)InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)
+!StateCheck("Cernd",STATE_SLEEPING)InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 Global("EldothCernd","GLOBAL",0)~ THEN B7XEldo CerndEldoth-1
 @242
 =
@@ -798,7 +798,7 @@ DO ~SetGlobal("EldothCernd","GLOBAL",1)~
 == B7XEldo @247
 EXIT
 
-CHAIN IF ~InParty("Korgan")InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("Korgan")InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 See("Korgan")!StateCheck("Korgan",STATE_SLEEPING)
 Global("EldothKorgan","GLOBAL",0)~ THEN B7XEldo Eldoth_korgan1
 @248
@@ -818,7 +818,7 @@ DO ~SetGlobal("EldothKorgan","GLOBAL",1)~
 EXIT
 
 CHAIN IF~InParty("Aerie")!StateCheck("Aerie",CD_STATE_NOTVALID)
-See("Aerie")InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)
+See("Aerie")InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 Global("EldothAerie","GLOBAL",1)~ THEN B7XEldo EldothAerie2
 @258 DO ~SetGlobal("EldothAerie","GLOBAL",2)~
 == B7XEldo @259
@@ -826,7 +826,7 @@ Global("EldothAerie","GLOBAL",1)~ THEN B7XEldo EldothAerie2
 == B7XEldo @261
 EXIT
 
-CHAIN IF ~InParty("Korgan")InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("Korgan")InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 See("Korgan")!StateCheck("Korgan",STATE_SLEEPING)
 Global("EldothKorgan","GLOBAL",1)~ THEN ~BKORGAN~ Eldoth_korgan2
 @262
@@ -843,7 +843,7 @@ EXIT
 
 
 CHAIN IF
-~Global("VicEldoth","GLOBAL",1)InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)
+~Global("VicEldoth","GLOBAL",1)InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 InParty("Viconia")!StateCheck("Viconia",CD_STATE_NOTVALID)~
 THEN ~B7XEldo~ VicEldoth2
 @267 DO ~SetGlobal("VicEldoth","GLOBAL",2)~
@@ -862,7 +862,7 @@ EXIT
 
 CHAIN
 IF~InParty("Nalia")
-See("Nalia")InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)
+See("Nalia")InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 !StateCheck("Nalia",CD_STATE_NOTVALID)
 Global("EldothNalia","GLOBAL",1)~ THEN B7XEldo EldothNalia2
 @277 
@@ -874,7 +874,7 @@ DO ~SetGlobal("EldothNalia","GLOBAL",2)~
 EXIT
 
 CHAIN IF~InParty("Aerie")!StateCheck("Aerie",CD_STATE_NOTVALID)
-See("Aerie")InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)
+See("Aerie")InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 Global("EldothAerie","GLOBAL",2)~ THEN ~BAERIE~ EldothAerie3
 @281 DO ~SetGlobal("EldothAerie","GLOBAL",3)~
 == B7XEldo @282
@@ -892,7 +892,7 @@ Global("EldothAerie","GLOBAL",2)~ THEN ~BAERIE~ EldothAerie3
 == B7XEldo @290 
 EXIT
 
-CHAIN IF ~InParty("Korgan")InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("Korgan")InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 See("Korgan")!StateCheck("Korgan",STATE_SLEEPING)
 Global("EldothKorgan","GLOBAL",2)~ THEN ~BKORGAN~ Eldoth_korgan3
 @291

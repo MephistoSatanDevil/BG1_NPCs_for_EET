@@ -89,7 +89,7 @@ END
 
 IF
 
-InParty("7XALORA")!StateCheck("7XALORA",CD_STATE_NOTVALID)
+InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)
  PartyHasItem("misc8t")
  Global("AloraCerndBaby","LOCALS",0)
 THEN
@@ -100,7 +100,7 @@ END
 
 // Umar Hills
 IF
-InParty("7XALORA")!StateCheck("7XALORA",CD_STATE_NOTVALID)
+InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)
 AreaCheck("AR1100")
   Global("AloraAR1100","AR1100",0)
   CombatCounter(0)
@@ -114,7 +114,7 @@ END
 IF
 InParty("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID) 
 GENDER("Edwin",FEMALE)
-InParty("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID) 
+InParty("ALORA") !StateCheck("ALORA",CD_STATE_NOTVALID) 
 Global("AloraEdwinaTalk","GLOBAL",0)
 GlobalGT("AloraEd","GLOBAL",1)
 THEN
@@ -127,7 +127,7 @@ IF
 RealGlobalTimerExpired("AloraEdwinaTalkTimer","GLOBAL")
 InParty("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID) 
 GENDER("Edwin",FEMALE)
-InParty("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID) 
+InParty("ALORA") !StateCheck("ALORA",CD_STATE_NOTVALID) 
 See("Edwin")
 Global("AloraEdwinaTalk","GLOBAL",1)
 CombatCounter(0)
@@ -140,7 +140,7 @@ END
 // Sahuagins City Talk
 IF
 AreaCheck("AR2300")
-InParty("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID) 
+InParty("ALORA") !StateCheck("ALORA",CD_STATE_NOTVALID) 
 Global("AloraAR2300Talk","AR2300",0)
 THEN
   RESPONSE #100
@@ -151,7 +151,7 @@ END
 IF
 AreaCheck("AR2300")
 RealGlobalTimerExpired("AloraAR2300TalkTimer","GLOBAL")
-InParty("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID) 
+InParty("ALORA") !StateCheck("ALORA",CD_STATE_NOTVALID) 
 See(Player1)
 Global("AloraAR2300Talk","AR2300",1)
 CombatCounter(0)

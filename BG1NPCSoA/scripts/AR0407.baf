@@ -1,19 +1,79 @@
-IF 
-Global("XzarMonty","GLOBAL",0)
-Global("LyrosJob","GLOBAL",3)
-!Exists("7XMONT")
-!Exists("7XXZAR")
-
-
+IF
+	Global("XzarMonty","GLOBAL",0)
+	Global("LyrosJob","GLOBAL",3)
+	!Exists("MONTARON")
+	!Exists("XZAR")
+	BeenInParty("MONTARON")
+	!StateCheck("MONTARON",STATE_REALLY_DEAD)
+	BeenInParty("XZAR")
+	!StateCheck("XZAR",STATE_REALLY_DEAD)
 THEN
-  RESPONSE #100
-CreateCreature("7XCRE74",[270.433],11)
-CreateCreature("7XCRE75",[181.388],7)
-SetGlobal("XzarMonty","GLOBAL",2)
-Continue()
+	RESPONSE #100
+		MoveGlobal("AR0407","MONTARON",[270.433])
+		ActionOverride("MONTARON",Face(11))
+		ActionOverride("MONTARON",SetDialog("7XMONT"))
+		MoveGlobal("AR0407","XZAR",[181.388])
+		ActionOverride("XZAR",Face(7))
+		ActionOverride("XZAR",SetDialog("7XXZAR"))
+		SetGlobal("XzarMonty","GLOBAL",2)
+		Continue()
 END
 
+IF
+	Global("XzarMonty","GLOBAL",0)
+	Global("LyrosJob","GLOBAL",3)
+	!Exists("MONTARON")
+	!Exists("XZAR")
+	OR(2)
+		!BeenInParty("MONTARON")
+		StateCheck("MONTARON",STATE_REALLY_DEAD)
+	BeenInParty("XZAR")
+	!StateCheck("XZAR",STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		CreateCreature("7XCRE74",[270.433],11)
+		MoveGlobal("AR0407","XZAR",[181.388])
+		ActionOverride("XZAR",Face(7))
+		ActionOverride("XZAR",SetDialog("7XXZAR"))
+		SetGlobal("XzarMonty","GLOBAL",2)
+		Continue()
+END
 
+IF
+	Global("XzarMonty","GLOBAL",0)
+	Global("LyrosJob","GLOBAL",3)
+	!Exists("MONTARON")
+	!Exists("XZAR")
+	BeenInParty("MONTARON")
+	!StateCheck("MONTARON",STATE_REALLY_DEAD)
+	OR(2)
+		!BeenInParty("XZAR")
+		StateCheck("XZAR",STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		MoveGlobal("AR0407","MONTARON",[270.433])
+		ActionOverride("MONTARON",Face(11))
+		ActionOverride("MONTARON",SetDialog("7XMONT"))
+		CreateCreature("7XCRE75",[181.388],7)
+		SetGlobal("XzarMonty","GLOBAL",2)
+		Continue()
+END
 
-
-
+IF
+	Global("XzarMonty","GLOBAL",0)
+	Global("LyrosJob","GLOBAL",3)
+	!Exists("MONTARON")
+	!Exists("XZAR")
+	OR(2)
+		!BeenInParty("MONTARON")
+		StateCheck("MONTARON",STATE_REALLY_DEAD)
+	OR(2)
+		!BeenInParty("XZAR")
+		StateCheck("XZAR",STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		CreateCreature("7XCRE74",[270.433],11)
+		CreateCreature("7XCRE75",[181.388],7)
+		SetGlobal("XzarMonty","GLOBAL",2)
+		Continue()
+END

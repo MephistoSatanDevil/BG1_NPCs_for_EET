@@ -21,7 +21,7 @@ SAY @7
 IF ~~ THEN DO ~SetGlobal("SkieInParty","GLOBAL",0)~ EXIT
 END
 
-IF ~Global("SkieInParty","GLOBAL",0)!InParty("7XSKI")~ THEN BEGIN RejoinSkie
+IF ~Global("SkieInParty","GLOBAL",0)!InParty("SKIE")~ THEN BEGIN RejoinSkie
 SAY @9
 IF ~~ THEN REPLY @10 EXIT
 IF ~~ THEN REPLY @11 DO ~SetGlobal("SkieInParty","GLOBAL",1)JoinParty()~ EXIT
@@ -188,7 +188,7 @@ SAY @79
 IF ~~ THEN DO ~SetGlobal("SkieInParty","GLOBAL",1)JoinParty()~ EXIT
 END
 
-IF ~Global("SkieNPC","GLOBAL",99)!InParty("7XSKI")~ THEN BEGIN Skie00x08
+IF ~Global("SkieNPC","GLOBAL",99)!InParty("SKIE")~ THEN BEGIN Skie00x08
 SAY @80
 IF ~~ THEN GOTO SKIE2
 END

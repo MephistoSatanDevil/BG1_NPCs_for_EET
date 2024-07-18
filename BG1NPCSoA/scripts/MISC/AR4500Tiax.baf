@@ -1,9 +1,9 @@
 IF
-	InPartyAllowDead("7XTIAX")
+	InPartyAllowDead("TIAX")
 	Global("Tiax1SummonedTOB","GLOBAL",1)
 THEN
 	RESPONSE #100
-		ActionOverride("7XTIAX",ChangeAIScript("7XTIAX25",OVERRIDE))
+		ActionOverride("TIAX",ChangeAIScript("7XTIAX25",OVERRIDE))
 		SetGlobal("Tiax1SummonedTOB","GLOBAL",2)
 END
 

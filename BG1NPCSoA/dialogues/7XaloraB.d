@@ -20,7 +20,7 @@ END
 CHAIN
 IF ~InParty("Minsc")
 See("Minsc")
-!StateCheck("Minsc",CD_STATE_NOTVALID)InParty("7XALORA")!StateCheck("7XALORA",CD_STATE_NOTVALID)
+!StateCheck("Minsc",CD_STATE_NOTVALID)InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)
 Global("AloraMinsc1","LOCALS",0) CombatCounter(0)~ THEN 7XAloraB MinscAlora1
 @5
 =
@@ -46,7 +46,7 @@ EXIT
 
 CHAIN IF ~InParty("Edwin")
 See("Edwin")
-GENDER("Edwin",MALE)InParty("7XALORA")!StateCheck("7XALORA",CD_STATE_NOTVALID)
+GENDER("Edwin",MALE)InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)
 !StateCheck("Edwin",CD_STATE_NOTVALID)Global("AloraEd","GLOBAL",0) CombatCounter(0)~ THEN 7XAloraB EddyAlora1
 @17
 =
@@ -76,7 +76,7 @@ EXIT
 
 CHAIN IF ~InParty("Yoshimo")
 See("Yoshimo")
-!StateCheck("Yoshimo",CD_STATE_NOTVALID)InParty("7XALORA")!StateCheck("7XALORA",CD_STATE_NOTVALID)
+!StateCheck("Yoshimo",CD_STATE_NOTVALID)InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)
 Global("AloraYoshi","LOCALS",0) CombatCounter(0)~ THEN 7XAloraB alora_yoshi
 @33
 =
@@ -98,7 +98,7 @@ EXIT
 
 CHAIN IF ~InParty("Jaheira")
 See("Jaheira")
-!StateCheck("Jaheira",CD_STATE_NOTVALID)InParty("7XALORA")!StateCheck("7XALORA",CD_STATE_NOTVALID)
+!StateCheck("Jaheira",CD_STATE_NOTVALID)InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)
 Global("AloraJaheira","LOCALS",0) CombatCounter(0)~ THEN 7XAloraB JahsChat
 @44 
 DO ~SetGlobal("AloraJaheira","LOCALS",1)~
@@ -122,7 +122,7 @@ EXIT
 CHAIN
 IF ~InParty("Viconia")
 See("Viconia")
-!StateCheck("Viconia",CD_STATE_NOTVALID)InParty("7XALORA")!StateCheck("7XALORA",CD_STATE_NOTVALID)
+!StateCheck("Viconia",CD_STATE_NOTVALID)InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)
 Global("AloraViconia1","LOCALS",0) CombatCounter(0)~ THEN 7XAloraB ViconiaAlora1
 @57 
 DO ~SetGlobal("AloraViconia1","LOCALS",1)~
@@ -140,7 +140,7 @@ EXIT
 CHAIN
 IF ~InParty("Mazzy")
 See("Mazzy")
-!StateCheck("Mazzy",CD_STATE_NOTVALID)InParty("7XALORA")!StateCheck("7XALORA",CD_STATE_NOTVALID)
+!StateCheck("Mazzy",CD_STATE_NOTVALID)InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)
 Global("AloraMazzy","LOCALS",0) CombatCounter(0)~ THEN 7XAloraB MazzyAlora1
 @63
 =
@@ -162,7 +162,7 @@ EXIT
 CHAIN
 IF ~InParty("Mazzy")
 See("Mazzy")
-!StateCheck("Mazzy",CD_STATE_NOTVALID)InParty("7XALORA")!StateCheck("7XALORA",CD_STATE_NOTVALID)
+!StateCheck("Mazzy",CD_STATE_NOTVALID)InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)
 Global("AloraMazzy","LOCALS",1) CombatCounter(0)~ THEN 7XAloraB MazzyAlora2
 @73 
 DO ~SetGlobal("AloraMazzy","LOCALS",2)~
@@ -184,7 +184,7 @@ EXIT
 
 CHAIN IF ~InParty("Korgan")
 See("Korgan")
-!StateCheck("Korgan",CD_STATE_NOTVALID)InParty("7XALORA")!StateCheck("7XALORA",CD_STATE_NOTVALID)
+!StateCheck("Korgan",CD_STATE_NOTVALID)InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)
 Global("AloraKorgan","LOCALS",0) CombatCounter(0)~ THEN BKORGAN alorakorgan1
 @84
 =
@@ -203,8 +203,8 @@ DO ~SetGlobal("AloraKorgan","LOCALS",1)~
 == BKORGAN IF ~InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @95
 EXIT
 
-CHAIN IF ~InParty("Edwin") See("7XALORA") !StateCheck("Edwin",CD_STATE_NOTVALID) 
-InParty("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("Edwin") See("ALORA") !StateCheck("Edwin",CD_STATE_NOTVALID) 
+InParty("ALORA") !StateCheck("ALORA",CD_STATE_NOTVALID)
 Global("AloraEd","GLOBAL",1) CombatCounter(0)~ THEN BEDWIN EddyAlora2
 @96 DO ~SetGlobal("AloraEd","GLOBAL",2)~
 == 7XAloraB @97
@@ -218,7 +218,7 @@ Global("AloraEd","GLOBAL",1) CombatCounter(0)~ THEN BEDWIN EddyAlora2
 EXIT
 
 CHAIN IF WEIGHT #-20 ~InParty("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID) 
-InParty("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)
+InParty("ALORA") !StateCheck("ALORA",CD_STATE_NOTVALID)
 Global("AloraEdwinaTalk","GLOBAL",2) CombatCounter(0)~ THEN 7XAloraB EddyAlora3
 @105 DO ~SetGlobal("AloraEdwinaTalk","GLOBAL",3)~
 == BEDWIN @106

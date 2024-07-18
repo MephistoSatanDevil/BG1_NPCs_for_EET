@@ -104,7 +104,7 @@ EXIT
 END
 
 IF ~Global("Rejected","GLOBAL",0)
-!InParty("7XAlora")~ THEN BEGIN RejoinAlora
+!InParty("ALORA")~ THEN BEGIN RejoinAlora
 SAY @38
 ++ @32 DO ~SetGlobal("Rejected","GLOBAL",1)JoinParty()~ + Join
 IF ~~ THEN REPLY @39 EXIT
@@ -135,59 +135,59 @@ BEGIN ~7XAloraJ~
 
 
 I_C_T RIBALD 0 Alora-RIBALD
-== 7XAloraJ IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @45
-== RIBALD IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @46
-== 7XAloraJ IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @47
-== RIBALD IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @48
-== 7XAloraJ IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @49
-== RIBALD IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @50
-== 7XAloraJ IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @51
+== 7XAloraJ IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @45
+== RIBALD IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @46
+== 7XAloraJ IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @47
+== RIBALD IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @48
+== 7XAloraJ IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @49
+== RIBALD IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @50
+== 7XAloraJ IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @51
 END
 
 
 I_C_T SHOP03 0 Alora-Maheer
-== 7XAloraJ IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @52
-== SHOP03 IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @53
-== 7XAloraJ IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @54
+== 7XAloraJ IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @52
+== SHOP03 IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @53
+== 7XAloraJ IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @54
 END
 
 I_C_T SHOP03 8 Alora-Maheer2
-== 7XAloraJ IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @55
-== SHOP03 IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @56
+== 7XAloraJ IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @55
+== SHOP03 IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @56
 END
 
 INTERJECT_COPY_TRANS2 CIRCG1 3 AloraCircguard
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @57
 END
 
 
 I_C_T SHOP02 0 Alora-Arnolinus
-== 7XAloraJ IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @58
-== SHOP02 IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @59
-== 7XAloraJ IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @60
-== SHOP02 IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @61
+== 7XAloraJ IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @58
+== SHOP02 IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @59
+== 7XAloraJ IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @60
+== SHOP02 IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @61
 END
 
 
 I_C_T SHOP05 0 Alora-Perter
-== 7XAloraJ IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @62
-== SHOP05 IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @63
-== 7XAloraJ IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @64
+== 7XAloraJ IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @62
+== SHOP05 IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @63
+== 7XAloraJ IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @64
 END
 
 
 
 I_C_T SHOP01 10 Alora-Mira
-== 7XAloraJ IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @65
-== SHOP01 IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @66
-== 7XAloraJ IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @67
+== 7XAloraJ IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @65
+== SHOP01 IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @66
+== 7XAloraJ IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @67
 END
 
 
 INTERJECT_COPY_TRANS AERIE 26 AloraAerieOgre
-== 7XAloraJ IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+== 7XAloraJ IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @68
 == AERIE
 @69
@@ -195,26 +195,26 @@ INTERJECT_COPY_TRANS AERIE 26 AloraAerieOgre
 END
 
 I_C_T AERIE 37 AloraAerieOgre3
-  == 7XAloraJ IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+  == 7XAloraJ IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
  @71
 END
 
 INTERJECT_COPY_TRANS COHRVALE 1 AloraCohrvale
-== 7XAloraJ IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+== 7XAloraJ IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @72
 == COHRVALE
 @73
 END
 
 INTERJECT_COPY_TRANS BOOTER 2 AloraBooter
-== 7XAloraJ IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+== 7XAloraJ IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @74
 END
 
 
 INTERJECT_COPY_TRANS AERIE 31 AloraAerieOgre2
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @75
 =
 @76
@@ -226,115 +226,115 @@ END
 
 INTERJECT_COPY_TRANS BRUS2 0 AloraBrus
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @79
 END
 
 INTERJECT_COPY_TRANS GAELAN 0 AloraGaelan1
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @80
 == GAELAN
 @81
 END
 
 INTERJECT_COPY_TRANS ABYDEM01 0 AloraABYDEM
-== 7XAloraJ IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @82
+== 7XAloraJ IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @82
 == ABYDEM01 @128
 END
 
 INTERJECT_COPY_TRANS AMNLEGS 0 AloraAMNLEGS
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @83
 == AMNLEGS @84
 END
 
 INTERJECT_COPY_TRANS ANOMEN 6 AloraAnomen
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @85
 END
 
 INTERJECT_COPY_TRANS WAYLANE 16 AloraWaylane
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @86 
 END
 
 INTERJECT_COPY_TRANS BHALF1 0 AloraStivan
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @87 
 END
 
 INTERJECT_COPY_TRANS BHALF1 1 AloraStivan2
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @88 
 END
 
 INTERJECT_COPY_TRANS BHALF1 2 AloraStivan3
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @89
 =
 @90
 == BHALF1 @91 
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @92
 END
 
 INTERJECT_COPY_TRANS BMUGG1 0 AloraMugger
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @93 
 END
 
 INTERJECT_COPY_TRANS BOGRE1 0 AloraBOgre
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @94 
 END
 
 
 INTERJECT_COPY_TRANS BOY1 4 AloraBoy1
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @95
 == BOY1 @96 
 END
 
 INTERJECT_COPY_TRANS CROGAM02 0 AloraCrogam2
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @97 
 END
 
 INTERJECT_COPY_TRANS ANNO1 1 AloraANNO1
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @98 
 END
 
 INTERJECT_COPY_TRANS BINNKEEP 8 AloraBinnkeep1
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @99 
 END
 
 
 INTERJECT_COPY_TRANS BINNKEEP 7 AloraBinnkeep2
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
 @100 
 END
 
 
 I_C_T AERIE 3 AerieAloraTranfs1
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
  @101
 =
 @102
@@ -343,7 +343,7 @@ END
 
 INTERJECT_COPY_TRANS KALAH2 9 aloraALAH2-9
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
  @103
 == KALAH2 @104
 END
@@ -351,23 +351,23 @@ END
 
 INTERJECT_COPY_TRANS KALAH2 8 aloraKALAH2-8
 == 7XAloraJ
-IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN
+IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN
  @103
 == KALAH2 @104
 END
 
 INTERJECT_COPY_TRANS EDWIN 30 aloraEdwin-30
-== EDWIN IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @105
+== EDWIN IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @105
 END
 
 INTERJECT_COPY_TRANS EDWIN 31 aloraEdwin-31
-== EDWIN IF ~!Dead("7XAlora") InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @105
+== EDWIN IF ~!Dead("ALORA") InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @105
 END
 
 // Tree of Life
 ///////////////////
 INTERJECT PLAYER1 33 Alora_TreeOfLife1
-== PLAYER1 IF ~InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @106
+== PLAYER1 IF ~InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @106
 END
 ++ @107 EXTERN 7XAloraJ Alora_TreeOfLife2
 ++ @108 EXTERN 7XAloraJ Alora_TreeOfLife2
@@ -381,7 +381,7 @@ END
 END
 
 INTERJECT_COPY_TRANS SHOP04 0 AloraEdwinEngeTalk
-== EDWINJ IF ~InParty("Edwin")!StateCheck("Edwin",CD_STATE_NOTVALID) InParty("7XALORA")!StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @111
+== EDWINJ IF ~InParty("Edwin")!StateCheck("Edwin",CD_STATE_NOTVALID) InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @111
 == SHOP04 @112
 == EDWINJ @113
 == 7XAloraJ @114
@@ -393,7 +393,7 @@ INTERJECT_COPY_TRANS SHOP04 0 AloraEdwinEngeTalk
 END
 
 INTERJECT_COPY_TRANS SHOP04 4 AloraEdwinEngeTalk
-== EDWINJ IF ~InParty("Edwin")!StateCheck("Edwin",CD_STATE_NOTVALID) InParty("7XALORA")!StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @111
+== EDWINJ IF ~InParty("Edwin")!StateCheck("Edwin",CD_STATE_NOTVALID) InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @111
 == SHOP04 @112
 == EDWINJ @113
 == 7XAloraJ @114
@@ -405,7 +405,7 @@ INTERJECT_COPY_TRANS SHOP04 4 AloraEdwinEngeTalk
 END
 
 INTERJECT BODHI 6 Alora_BODHI-6
-== 7XAloraJ IF ~InParty("7XAlora")!StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @120
+== 7XAloraJ IF ~InParty("ALORA")!StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @120
 END
 ++ @121 EXTERN 7XAloraJ Alora_BODHI-6_1
 

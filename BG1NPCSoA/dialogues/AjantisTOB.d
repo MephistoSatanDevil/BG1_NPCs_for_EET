@@ -1,6 +1,6 @@
 EXTEND_TOP FATESP 6 #4
-  IF ~!Dead("7XAJAN")
-!InMyArea("7XAJAN")
+  IF ~!Dead("AJANTIS")
+!InMyArea("AJANTIS")
 Global("AjantisSummonedToB","GLOBAL",0)~ THEN
    REPLY @0
     DO ~CreateVisualEffect("SPPORTAL",[1999.1218])
@@ -8,7 +8,7 @@ Wait(2)
 CreateCreature("7XCRE70",[1999.1218],0)
 SetGlobal("AjantisSummonedToB","GLOBAL",1)
 SmallWait(10) 
-ActionOverride("7XAJAN",StartDialogNoSet([PC]))~ GOTO 8
+ActionOverride("AJANTIS",StartDialogNoSet([PC]))~ GOTO 8
 END
 
 BEGIN ~7XAJA25P~
@@ -128,13 +128,13 @@ END
 END
 
 EXTEND_BOTTOM SARVOLO 9
-IF ~InParty("7XAJAN")~ THEN REPLY @27 GOTO 7xAjantisVolo
+IF ~InParty("AJANTIS")~ THEN REPLY @27 GOTO 7xAjantisVolo
 END
 
 CHAIN SARVOLO 7xAjantisVolo
 @28
 =@29
-== 7XAJA25J IF ~InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)~ THEN @30
+== 7XAJA25J IF ~InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)~ THEN @30
 EXTERN SARVOLO 9
 
 APPEND 7XAJA25J
@@ -192,9 +192,9 @@ END
 CHAIN IF ~
 CombatCounter(0)
 !See([ENEMY])
-See("7XAJAN")
+See("AJANTIS")
 InParty("Imoen2")!StateCheck("Imoen2",CD_STATE_NOTVALID)
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 Global("AjantisImoenToB","LOCALS",0)~
 THEN BIMOEN25 AjantisImoen_ToB_1
 @46 DO ~SetGlobal("AjantisImoenToB","LOCALS",1)~

@@ -3,7 +3,7 @@
 
 
 IF 
-InParty("7XSHAR")Global("SharSevenSisters","GLOBAL",0)
+InParty("SHARTEEL")Global("SharSevenSisters","GLOBAL",0)
 
 
 THEN

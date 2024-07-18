@@ -129,7 +129,7 @@ EXIT
 END
 
 IF ~Global("XANInParty","GLOBAL",1)
-!InParty("7XXAN")~ THEN BEGIN RejoinXAN
+!InParty("XAN")~ THEN BEGIN RejoinXAN
 SAY @44
 IF ~~ THEN REPLY @37 DO ~SetGlobal("XanInParty","GLOBAL",0)~ GOTO JOIN2
 IF ~~ THEN REPLY @45 GOTO BLEAK2
@@ -149,7 +149,7 @@ END
 
 
 IF ~Global("XANInParty","GLOBAL",2)
-!InParty("7XXAN")~ THEN BEGIN RejoinXAN
+!InParty("XAN")~ THEN BEGIN RejoinXAN
 SAY @56
 IF ~~ THEN REPLY @37 GOTO JOIN2
 IF ~~ THEN REPLY @45 GOTO BLEAK2
@@ -160,7 +160,7 @@ END
 BEGIN ~7XXANB~
 
 
-IF ~Global("XanGraveYardTalk","LOCALS",0)InParty("7XXAN")!StateCheck("7XXAN",CD_STATE_NOTVALID)
+IF ~Global("XanGraveYardTalk","LOCALS",0)InParty("XAN")!StateCheck("XAN",CD_STATE_NOTVALID)
 AreaCheck("ar0800")~ THEN BEGIN xanGraveDepresion.
   SAY @57
 =
@@ -181,7 +181,7 @@ END
 
 IF ~See(Player1)
 Class(Player1,MAGE)
-!StateCheck(Player1,CD_STATE_NOTVALID)InParty("7XXAN")!StateCheck("7XXAN",CD_STATE_NOTVALID)
+!StateCheck(Player1,CD_STATE_NOTVALID)InParty("XAN")!StateCheck("XAN",CD_STATE_NOTVALID)
 Global("XanPCMageTalk","GLOBAL",0)~ THEN BEGIN XanMageTalk1
 SAY @64
 =
@@ -205,7 +205,7 @@ IF ~~ THEN EXIT
 END
 
 IF ~PartyRested()
-See(Player1)InParty("7XXAN")!StateCheck("7XXAN",CD_STATE_NOTVALID)
+See(Player1)InParty("XAN")!StateCheck("XAN",CD_STATE_NOTVALID)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 Global("XanRestBanter","LOCALS",0)~ THEN BEGIN XanRestBanter1
 SAY @73
@@ -272,7 +272,7 @@ END
 CHAIN
 IF~InParty("Aerie")
 See("Aerie")
-!StateCheck("Aerie",CD_STATE_NOTVALID)InParty("7XXAN")!StateCheck("7XXAN",CD_STATE_NOTVALID)
+!StateCheck("Aerie",CD_STATE_NOTVALID)InParty("XAN")!StateCheck("XAN",CD_STATE_NOTVALID)
 Global("AerieXan","GLOBAL",0)
 ~THEN ~7XXANB~ XanAerieBanter1
 @93
@@ -289,7 +289,7 @@ EXIT
 CHAIN
 IF ~InParty("Imoen2")
 See("Imoen2")
-!StateCheck("Imoen2",CD_STATE_NOTVALID)InParty("7XXAN")!StateCheck("7XXAN",CD_STATE_NOTVALID)
+!StateCheck("Imoen2",CD_STATE_NOTVALID)InParty("XAN")!StateCheck("XAN",CD_STATE_NOTVALID)
 Global("XanImmyTalk","GLOBAL",0)~ THEN 7XXANB XanImmyBanter1
 @98 
 DO ~SetGlobal("XanImmyTalk","GLOBAL",1)~
@@ -307,7 +307,7 @@ EXIT
 CHAIN
 IF ~InParty("Jaheira")
 See("Jaheira")
-!StateCheck("Jaheira",CD_STATE_NOTVALID)InParty("7XXAN")!StateCheck("7XXAN",CD_STATE_NOTVALID)
+!StateCheck("Jaheira",CD_STATE_NOTVALID)InParty("XAN")!StateCheck("XAN",CD_STATE_NOTVALID)
 Global("XanJaheiraTalk","GLOBAL",0)~ THEN 7XXANB XanJaheiraTalk1
 @103
 DO ~SetGlobal("XanJaheiraTalk","GLOBAL",1)~
@@ -324,7 +324,7 @@ EXIT
 CHAIN
 IF ~InParty("Nalia")
 See("Nalia")
-!StateCheck("Nalia",CD_STATE_NOTVALID)InParty("7XXAN")!StateCheck("7XXAN",CD_STATE_NOTVALID)
+!StateCheck("Nalia",CD_STATE_NOTVALID)InParty("XAN")!StateCheck("XAN",CD_STATE_NOTVALID)
 Global("XanNaliaTalk","GLOBAL",0)~ THEN 7XXANB XanNaliaBanter1
 @108
 DO ~SetGlobal("XanNaliaTalk","GLOBAL",1)~
@@ -339,7 +339,7 @@ EXIT
 CHAIN
 IF ~InParty("Yoshimo")
 See("Yoshimo")
-!StateCheck("Yoshimo",CD_STATE_NOTVALID)InParty("7XXAN")!StateCheck("7XXAN",CD_STATE_NOTVALID)
+!StateCheck("Yoshimo",CD_STATE_NOTVALID)InParty("XAN")!StateCheck("XAN",CD_STATE_NOTVALID)
 Global("XanYoshimoTalk","GLOBAL",0)~ THEN 7XXANB XanYoshimoBanter1
 @115
 DO ~SetGlobal("XanYoshimoTalk","GLOBAL",1)~
@@ -360,7 +360,7 @@ EXIT
 CHAIN
 IF ~InParty("Haerdalis")
 See("Haerdalis")
-!StateCheck("Haerdalis",CD_STATE_NOTVALID)InParty("7XXAN")!StateCheck("7XXAN",CD_STATE_NOTVALID)
+!StateCheck("Haerdalis",CD_STATE_NOTVALID)InParty("XAN")!StateCheck("XAN",CD_STATE_NOTVALID)
 Global("XanHaerTalk","GLOBAL",0)~ THEN 7XXANB XanHaerdalisBanter1
 @122
 DO ~SetGlobal("XanHaerTalk","GLOBAL",1)~
@@ -380,7 +380,7 @@ EXIT
 
 CHAIN IF 
 ~InParty("Valygar")
-InParty("7XXAN")!StateCheck("7XXAN",CD_STATE_NOTVALID)
+InParty("XAN")!StateCheck("XAN",CD_STATE_NOTVALID)
 See("Valygar")!StateCheck("Valygar",CD_STATE_NOTVALID)
 Global("XanValygar","GLOBAL",0)~ THEN 7XXANB XanValygarBanter1
 @129 DO ~SetGlobal("XanValygar","GLOBAL",1)~
@@ -395,7 +395,7 @@ CHAIN
 IF ~InParty("Korgan")
 See("Korgan")
 !StateCheck("Korgan",CD_STATE_NOTVALID)
-InParty("7XXAN")!StateCheck("7XXAN",CD_STATE_NOTVALID)
+InParty("XAN")!StateCheck("XAN",CD_STATE_NOTVALID)
 Global("XanKorgan","GLOBAL",0)~ THEN BKORGAN Stealing
 @134
 DO ~SetGlobal("XanKorgan","GLOBAL",1)~
@@ -406,7 +406,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Minsc")
-See("Minsc")InParty("7XXAN")!StateCheck("7XXAN",CD_STATE_NOTVALID)
+See("Minsc")InParty("XAN")!StateCheck("XAN",CD_STATE_NOTVALID)
 !StateCheck("Minsc",CD_STATE_NOTVALID)
 Global("MinscXanTalk","GLOBAL",0)~ THEN ~BMINSC~ MinscXan01
 @138
@@ -422,7 +422,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Anomen")
-See("Anomen")InParty("7XXAN")!StateCheck("7XXAN",CD_STATE_NOTVALID)
+See("Anomen")InParty("XAN")!StateCheck("XAN",CD_STATE_NOTVALID)
 !StateCheck("Anomen",CD_STATE_NOTVALID)
 Global("AnomenXanTalk","GLOBAL",0)~ THEN 7XXANB AnomenXan01
 @145
@@ -436,7 +436,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Cernd")
-See("Cernd")InParty("7XXAN")!StateCheck("7XXAN",CD_STATE_NOTVALID)
+See("Cernd")InParty("XAN")!StateCheck("XAN",CD_STATE_NOTVALID)
 !StateCheck("Cernd",CD_STATE_NOTVALID)
 Global("CerndXanTalk","GLOBAL",0)~ THEN 7XXANB CerndV01
 @151
@@ -449,7 +449,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Edwin")
-See("Edwin")InParty("7XXAN")!StateCheck("7XXAN",CD_STATE_NOTVALID)
+See("Edwin")InParty("XAN")!StateCheck("XAN",CD_STATE_NOTVALID)
 !StateCheck("Edwin",CD_STATE_NOTVALID)
 Global("EdwinXanTalk","GLOBAL",0)~ THEN 7XXANB EdwinXan01
 @156
@@ -479,7 +479,7 @@ EXIT
 
 BEGIN ~7XXANJ~
 
-IF ~IsGabber(Player1)InParty("7XXAN")!StateCheck("7XXAN",CD_STATE_NOTVALID)RandomNum(3,1)
+IF ~IsGabber(Player1)InParty("XAN")!StateCheck("XAN",CD_STATE_NOTVALID)RandomNum(3,1)
 CombatCounter(0)~ THEN BEGIN XanPCClickClick1
 SAY @168
 ++ @169 + XanPCClickClick1-3
@@ -501,7 +501,7 @@ IF ~~ THEN BEGIN XanPCClickClick1-3
  IF ~~ THEN EXIT
 END
 
-IF ~IsGabber(Player1)InParty("7XXAN")!StateCheck("7XXAN",CD_STATE_NOTVALID)RandomNum(3,2)
+IF ~IsGabber(Player1)InParty("XAN")!StateCheck("XAN",CD_STATE_NOTVALID)RandomNum(3,2)
 CombatCounter(0)~ THEN BEGIN XanPCClickClick2
 SAY @174
 ++ @175 + XanPCClickClick1-3
@@ -516,7 +516,7 @@ IF ~~ THEN BEGIN XanPCClickClick2-1
  IF ~~ THEN EXIT
 END
 
-IF ~IsGabber(Player1)InParty("7XXAN")!StateCheck("7XXAN",CD_STATE_NOTVALID)RandomNum(3,3)
+IF ~IsGabber(Player1)InParty("XAN")!StateCheck("XAN",CD_STATE_NOTVALID)RandomNum(3,3)
 CombatCounter(0)~ THEN BEGIN XanPCClickClick3
 SAY @179 
 ++ @180 + XanPCClickClick3-1
@@ -542,7 +542,7 @@ END
 
 
 APPEND UDDROW02
-IF ~Global("XANDROW02","GLOBAL",0)InParty("7XXAN")!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN")~ THEN BEGIN XanUDDROW02
+IF ~Global("XANDROW02","GLOBAL",0)InParty("XAN")!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN")~ THEN BEGIN XanUDDROW02
 SAY @190
 IF ~~ THEN EXTERN 7XXANJ XanUDDROW02-1
 END
@@ -557,20 +557,20 @@ END
 END
 
 I_C_T UDDROW04 2 XANDROW04-1
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN @192
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN @192
 == UDDROw04 @193
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN @194
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN @194
 END
 
 
 
 I_C_T UDILSLA1 0 XanUDILSlave1
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
  @195
 END
 
 INTERJECT_COPY_TRANS2 DADROW03 22 XanDadrow03-1
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
 @196
 END
 
@@ -578,19 +578,19 @@ END
 
 
 I_C_T UDkuo01 0 XanKoa
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
 @197
 END
 
 
 I_C_T UDIMRAE 13 XanImrae
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
   @198
 END
 
 
 I_C_T UDPHAE01 31 XanPhaere2
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
 @199
 == UDPHAE01 @200
 == 7XXANJ  @201
@@ -599,163 +599,163 @@ END
 
 
 INTERJECT_COPY_TRANS UDSOLA01 0 XanSolaufein1
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
 @203
 ==UDSOLA01
 @204
 END
 
 INTERJECT_COPY_TRANS FIRKRA02 21 XanFIRKRA02-21
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
  @205
 END
 
 INTERJECT_COPY_TRANS RENFELD 8 XanRENFELD8
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
  @51
 END
 
 
 INTERJECT_COPY_TRANS RYLOCK 24 XanRYLOCK24
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
  @206
 END
 
 INTERJECT_COPY_TRANS LYROS 19 XanLYROS19
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
  @207
 END
 
 INTERJECT_COPY_TRANS LUSETTE 11 XanLUSETTE11
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
  @208
 END
 
 INTERJECT_COPY_TRANS EDWIN 8 XanEDWIN8
- == 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+ == 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
 @209
 == EDWIN @210
 END
 
 INTERJECT_COPY_TRANS EDWIN 30 XanEDWIN30
-  == 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+  == 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
 @211
 END
 
 INTERJECT_COPY_TRANS SCSARLES 11 XanSCSARLES11
-  == 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+  == 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
  @212
 END
 
 INTERJECT_COPY_TRANS DELON 15 XanDELON15
-  == 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+  == 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
  @213
 END
 
 INTERJECT_COPY_TRANS DELON 16 XanDELON16
-  == 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+  == 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
  @213
 END
 
 INTERJECT_COPY_TRANS UHMAY01 18 XanUHMAY01-18
-  == 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+  == 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
 @214
 END
 
 INTERJECT_COPY_TRANS DALESON 13 XanDALESON13
-  == 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+  == 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
  @215
 END
 
 INTERJECT_COPY_TRANS CEFALDOR 2 XanCEFALDOR2
-  == 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+  == 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
  @216
 END
 
 INTERJECT_COPY_TRANS BODHI 21 XanBODHI21
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
  @217
 END
 
 INTERJECT_COPY_TRANS BODHI 34 XanBODHI34
-  == 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+  == 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
  @218
 END
 
 INTERJECT_COPY_TRANS PPSAEM 53 XanPPSAEM53
-  == 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+  == 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
  @219
 END
 
 INTERJECT_COPY_TRANS YOSHJ 113 XanYOSHJ13
-  == 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+  == 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
  @220
 END
 
 INTERJECT_COPY_TRANS SAHPR1 1 XanSAHPR1-1
-  == 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+  == 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
  @221
 END
 
 INTERJECT_COPY_TRANS SAHKNG01 1 XanSAHKNG01-1
-  == 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+  == 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
 @222
 END
 
 INTERJECT_COPY_TRANS SAHPR2 13 XanSAHPR2-13
-  == 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+  == 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
 @223
 END
 
 INTERJECT_COPY_TRANS GAAL 11 XanGaalQuest-11
- == 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)!Dead("7XXAN") InParty("7XXAN")~ THEN
+ == 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)!Dead("XAN") InParty("XAN")~ THEN
 @224
 END
 
 INTERJECT_COPY_TRANS GAAL 23 XanGaalEnemy23
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)InParty("XAN")~ THEN
 @225
-== GAAL IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)InParty("7XXAN")~ THEN @226
+== GAAL IF ~!StateCheck("XAN",CD_STATE_NOTVALID)InParty("XAN")~ THEN @226
 END
 
 
 INTERJECT_COPY_TRANS ANOMENJ 111 XanAnomenBecomeKnight1
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)InParty("XAN")~ THEN
 @227
 == ANOMENJ
 @228
 END
 
 INTERJECT_COPY_TRANS ANOMENJ 112 XanAnomenBecomeKnight2
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)InParty("XAN")~ THEN
 @227
 == ANOMENJ
 @228
 END
 
 INTERJECT_COPY_TRANS ANOMENJ 113 XanAnomenBecomeKnight3
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)InParty("XAN")~ THEN
 @227
 == ANOMENJ
 @228
 END
 
 INTERJECT_COPY_TRANS SHADRA01 0 XanShadowDragon-0
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)InParty("XAN")~ THEN
 @229
 == SHADRA01
 @230
 END
 
 INTERJECT_COPY_TRANS TORGAL 0 XanTorGal-0
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)InParty("XAN")~ THEN
 @231
 ==TORGAL
 @232
 END
 
 INTERJECT_COPY_TRANS VALYGAR 0 xanJvalygar-0
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)InParty("XAN")~ THEN
 @233
 == VALYGAR @234
 == 7XXANJ @235
@@ -763,18 +763,18 @@ INTERJECT_COPY_TRANS VALYGAR 0 xanJvalygar-0
 END
 
 I_C_T SAFE DELCIA 16 Xan_delcia16
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)InParty("XAN")~ THEN
  @237
   == DELCIA @238
 END
 
 I_C_T PIRCOR02 13 Xan_PIRCOR02-13
-== 7XXANJ IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)InParty("7XXAN")~ THEN
+== 7XXANJ IF ~!StateCheck("XAN",CD_STATE_NOTVALID)InParty("XAN")~ THEN
   @239
 END
 
 INTERJECT PLAYER1 33 XanTreeofLife
-== PLAYER1 IF ~!StateCheck("7XXAN",CD_STATE_NOTVALID)InParty("7XXAN")~ THEN
+== PLAYER1 IF ~!StateCheck("XAN",CD_STATE_NOTVALID)InParty("XAN")~ THEN
 @240
 END
 ++ @241 EXTERN 7XXANJ XanTreeofLife2

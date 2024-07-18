@@ -90,7 +90,7 @@ END
 
 IF
 
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
  ReputationLT(Player1,9)
 Global("BranwenLowRepTalk","GLOBAL",0) 
 THEN
@@ -101,19 +101,19 @@ END
 
 IF
 
-CombatCounter(0)InParty("Minsc")HPPercentLT("Minsc",45)InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+CombatCounter(0)InParty("Minsc")HPPercentLT("Minsc",45)InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 !StateCheck("Minsc",CD_STATE_NOTVALID)!See([ENEMY])Global("BranMinscHurt","GLOBAL",0)
 
 THEN 
   RESPONSE #100
 SetGlobal("BranMinscHurt","GLOBAL",1)
-ActionOverride("Minsc",Interact("7XBRAN"))
+ActionOverride("Minsc",Interact("BRANWEN"))
 
 END
 
 IF
 
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 AreaCheck("arbgx7")
   Global("Branarbgx7","GLOBAL",0)
   CombatCounter(0)
@@ -126,7 +126,7 @@ END
 
 IF
 
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 AreaCheck("ar0902")
   Global("Branar0902","GLOBAL",0)
   CombatCounter(0)
@@ -140,7 +140,7 @@ IF
 
 AreaCheck("AR0801")
 Global("BranAR0801","GLOBAL",0)
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
   CombatCounter(0)
 THEN
   RESPONSE #100
@@ -152,7 +152,7 @@ IF
 ReputationGT(Player1,12)
 Global("BranwenHighRep","GLOBAL",0)
 CombatCounter(0)
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 See(Player1) 
 
 THEN 
@@ -164,7 +164,7 @@ END
 
 IF
 
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 AreaCheck("ar0300")
   Global("Branar0300","GLOBAL",0)
   CombatCounter(0)
@@ -175,8 +175,8 @@ THEN
 END
 
 IF
-	InParty("7XBRAN")  // Бранвен
-	!StateCheck("7XBRAN",CD_STATE_NOTVALID)  // Бранвен
+	InParty("BRANWEN")  // Бранвен
+	!StateCheck("BRANWEN",CD_STATE_NOTVALID)  // Бранвен
 	Global("Player1AttackKnights","LOCALS",0)
 	OR(3)
 		AreaCheck("AR0900")  // Temple District

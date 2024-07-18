@@ -1,26 +1,56 @@
-
-IF 
-Global("TiaxQuest","AR0700",0)
-!Exists("7XTIAX")
-
-
+IF
+	Global("TiaxQuest","AR0700",0)
+	!Exists("TIAX")
+	BeenInParty("TIAX")
+	!StateCheck("TIAX",STATE_REALLY_DEAD)
 THEN
-  RESPONSE #100
-CreateCreature("7XCRE77",[3109.1583],0)
-SetGlobal("TiaxQuest","AR0700",2)
-Continue()
+	RESPONSE #100
+		MoveGlobal("AR0700","TIAX",[3109.1583])
+		ActionOverride("TIAX",Face(0))
+		ActionOverride("TIAX",SetDialog("7XTIAX"))
+		SetGlobal("TiaxQuest","AR0700",2)
+		Continue()
+END
+
+IF
+	Global("TiaxQuest","AR0700",0)
+	!Exists("TIAX")
+	OR(2)
+		!BeenInParty("TIAX")
+		StateCheck("TIAX",STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		CreateCreature("7XCRE77",[3109.1583],0)
+		SetGlobal("TiaxQuest","AR0700",2)
+		Continue()
 END
 
 
-IF 
-Global("OldQuayleGone","GLOBAL",1)
-Global("QuayleCREATION","GLOBAL",0)
-!Exists("7XQUAY")
-
-
+IF
+	Global("OldQuayleGone","GLOBAL",1)
+	Global("QuayleCREATION","GLOBAL",0)
+	!Exists("QUAYLE")
+	BeenInParty("QUAYLE")
+	!StateCheck("QUAYLE",STATE_REALLY_DEAD)
 THEN
-  RESPONSE #100
-CreateCreature("7XCRE78",[2789.1661],12)
-SetGlobal("QuayleCREATION","GLOBAL",1)
-Continue()
+	RESPONSE #100
+		MoveGlobal("AR0700","QUAYLE",[2789.1661])
+		ActionOverride("QUAYLE",Face(12))
+		ActionOverride("QUAYLE",SetDialog("7XQUAY"))
+		SetGlobal("QuayleCREATION","GLOBAL",1)
+		Continue()
+END
+
+IF
+	Global("OldQuayleGone","GLOBAL",1)
+	Global("QuayleCREATION","GLOBAL",0)
+	!Exists("QUAYLE")
+	OR(2)
+		!BeenInParty("QUAYLE")
+		StateCheck("QUAYLE",STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		CreateCreature("7XCRE78",[2789.1661],12)
+		SetGlobal("QuayleCREATION","GLOBAL",1)
+		Continue()
 END

@@ -6,7 +6,7 @@ BEGIN 7XMONTB
 
 CHAIN
 IF ~InParty("Jaheira")IsValidForPartyDialog("Jaheira")
-InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 Global("JaheiraMonty", "GLOBAL",0)~ THEN 7XMONTB JaheiraTalk
 @524
 =
@@ -33,7 +33,7 @@ EXIT
 
 CHAIN IF ~HPPercentGT("Korgan",40)InParty("Korgan")
 See("Korgan")!StateCheck("Korgan",CD_STATE_NOTVALID)
-AreaType(DUNGEON)InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+AreaType(DUNGEON)InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 Global("MontiKorgan","GLOBAL",0)~ THEN 7XMONTB monti_korgan1
 @538
 =
@@ -94,7 +94,7 @@ EXIT
 CHAIN
   IF ~Global("7XMONTJan","GLOBAL",0)
   InParty("Jan")See("Jan")IsValidForPartyDialog("Jan")
-InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
   CombatCounter(0)~ THEN 7XMONTB 7XMONTJan1
   @574
 DO ~SetGlobal("7XMONTJan","GLOBAL",1)~
@@ -112,7 +112,7 @@ EXIT
 
 CHAIN IF ~Global("MontiImoenTalk","GLOBAL",0)
 InParty("Imoen2")IsValidForPartyDialog("Imoen2")
-InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 ~ THEN 7XMONTB imoen-monty-banter1
 @580
 =
@@ -160,7 +160,7 @@ CHAIN
   IF ~Global("MontyViccy1","GLOBAL",0)
   InParty("Viconia")
   See("Viconia")IsValidForPartyDialog("Viconia")
-  InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+  InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
   CombatCounter(0)~ THEN 7XMONTB MontyViconia1
   @600
 DO ~SetGlobal("MontyViccy1","GLOBAL",1)~
@@ -189,7 +189,7 @@ EXIT
 CHAIN IF ~Global("MontyMinsc","GLOBAL",0)
   InParty("Minsc")
   See("Minsc")IsValidForPartyDialog("Minsc")
-  InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+  InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
   CombatCounter(0)~ THEN 7XMONTB MontyMinsc1
   @610
 =
@@ -206,7 +206,7 @@ EXIT
 CHAIN IF ~Global("MontyYoshi","GLOBAL",0)
   InParty("Yoshimo")
   See("Yoshimo")IsValidForPartyDialog("Yoshimo")
-  InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+  InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
   CombatCounter(0)~ THEN 7XMONTB MontyYoshi1
 @617
 =
@@ -231,7 +231,7 @@ EXIT
 
 
 CHAIN IF ~InParty("Edwin")Range("Edwin",30)
-!StateCheck("Edwin",CD_STATE_NOTVALID)InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+!StateCheck("Edwin",CD_STATE_NOTVALID)InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 Global("EdwinBanterMonty","GLOBAL",0)~ THEN 7XMONTB MontyEdwin1
 @629 DO ~SetGlobal("EdwinBanterMonty","GLOBAL",1)~
 == BEDWIN @630
@@ -251,7 +251,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Mazzy")
-See("Mazzy")InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+See("Mazzy")InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 !StateCheck("Mazzy",CD_STATE_NOTVALID)
 Global("MontyMazzy","GLOBAL",0)~ THEN 7XMONTB MazzyAlora1
 @641
@@ -273,13 +273,13 @@ DO ~SetGlobal("MontyMazzy","GLOBAL",1)~
 =
 @652
 == BMAZZY @653 
-== 7XMONTB @654 DO ~ApplyDamage("7XMONT",2,SLASHING)~
+== 7XMONTB @654 DO ~ApplyDamage("MONTARON",2,SLASHING)~
 EXIT
 
 CHAIN IF ~Global("MontyMinsc","GLOBAL",1)
   InParty("Minsc")
   See("Minsc")IsValidForPartyDialog("Minsc")
-  InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+  InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
   CombatCounter(0)~ THEN 7XMONTB MontyMinsc2
   @655
 DO ~SetGlobal("MontyMinsc","GLOBAL",2)~
@@ -308,7 +308,7 @@ CHAIN
   IF ~Global("MontyViccy1","GLOBAL",1)
   InParty("Viconia")
   See("Viconia")IsValidForPartyDialog("Viconia")
-  InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+  InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
   CombatCounter(0)~ THEN 7XMONTB MontyViconia2
   @671
 DO ~SetGlobal("MontyViccy1","GLOBAL",2)~
@@ -336,7 +336,7 @@ EXIT
 
 
 CHAIN IF ~InParty("Edwin")Range("Edwin",30)
-!StateCheck("Edwin",CD_STATE_NOTVALID)InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+!StateCheck("Edwin",CD_STATE_NOTVALID)InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 Global("EdwinBanterMonty","GLOBAL",1)~ THEN ~BEDWIN~ MontyEdwin2
 @682 DO ~SetGlobal("EdwinBanterMonty","GLOBAL",2)~
 == 7XMONTB @683
@@ -366,7 +366,7 @@ EXIT
 
 CHAIN IF ~Global("MontiImoenTalk","GLOBAL",1)
 InParty("Imoen2")IsValidForPartyDialog("Imoen2")
-InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)~ THEN ~7XMONTB~ imoen-monty-banter2
+InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)~ THEN ~7XMONTB~ imoen-monty-banter2
 @698
 =
 @699 DO ~SetGlobal("MontiImoenTalk","GLOBAL",2)~
@@ -383,7 +383,7 @@ EXIT
 CHAIN IF ~Global("MontyYoshi","GLOBAL",1)
   InParty("Yoshimo")
   See("Yoshimo")IsValidForPartyDialog("Yoshimo")
-  InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+  InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
   CombatCounter(0)~ THEN BYOSHIM MontyYoshi2
 @706
 DO ~SetGlobal("MontyYoshi","GLOBAL",2)~
@@ -411,7 +411,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Jaheira")IsValidForPartyDialog("Jaheira")
-InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 Global("JaheiraMonty", "GLOBAL",1)~ THEN ~BJAHEIR~ JaheiraTalk2
 @721
 =
@@ -428,7 +428,7 @@ CHAIN
   IF ~Global("7XMONTJan","GLOBAL",1)
   InParty("Jan")
   See("Jan")
-  IsValidForPartyDialog("Jan")InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+  IsValidForPartyDialog("Jan")InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
   CombatCounter(0)~ THEN BJAN 7XMONTJan2
   @728
 =
@@ -459,7 +459,7 @@ EXIT
 CHAIN IF ~Global("MontyYoshi","GLOBAL",2)
   InParty("Yoshimo")
   See("Yoshimo")IsValidForPartyDialog("Yoshimo")
-  InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+  InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
   CombatCounter(0)~ THEN 7XMONTB MontyYoshi3
 @745
 DO ~SetGlobal("MontyYoshi","GLOBAL",3)~
@@ -477,7 +477,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Jaheira")IsValidForPartyDialog("Jaheira")
-InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 Global("JaheiraMonty", "GLOBAL",2)~ THEN ~7XMONTB~ JaheiraTalk3
 @756
 =
@@ -490,7 +490,7 @@ Global("JaheiraMonty", "GLOBAL",2)~ THEN ~7XMONTB~ JaheiraTalk3
 EXIT
 
 CHAIN IF ~InParty("Edwin")Range("Edwin",30)
-!StateCheck("Edwin",CD_STATE_NOTVALID)InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+!StateCheck("Edwin",CD_STATE_NOTVALID)InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 Global("EdwinBanterMonty","GLOBAL",2)~ THEN ~7XMONTB~ MontyEdwin3
 @763 DO ~SetGlobal("EdwinBanterMonty","GLOBAL",3)~
 == BEDWIN @764
@@ -506,7 +506,7 @@ EXIT
 
 CHAIN IF ~InParty("Keldorn")!StateCheck("Keldorn",CD_STATE_NOTVALID)
  See("Keldorn")
-InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 Global("KeldornBanterMonty","LOCALS",0)~ THEN ~7XMONTB~ MontyKeldorn1
 @775 DO ~SetGlobal("KeldornBanterMonty","LOCALS",1)~
 == BKELDOR @776
@@ -524,7 +524,7 @@ Global("KeldornBanterMonty","LOCALS",0)~ THEN ~7XMONTB~ MontyKeldorn1
 =@788
 =@789
 == BKORGAN IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @790
-== IF_FILE_EXISTS 7XXZARB IF ~InParty("7XXZAR") InMyArea("7XXZAR") !StateCheck("7XXZAR",CD_STATE_NOTVALID)~ THEN @791
+== IF_FILE_EXISTS 7XXZARB IF ~InParty("XZAR") InMyArea("XZAR") !StateCheck("XZAR",CD_STATE_NOTVALID)~ THEN @791
 == BKELDOR @792
 == 7XMONTB @793
 EXIT

@@ -1,7 +1,7 @@
 
 IF 
 Global("AjantisCreation","GLOBAL",0)
-!Exists("7XAJAN")
+!Exists("AJANTIS")
 
 
 THEN

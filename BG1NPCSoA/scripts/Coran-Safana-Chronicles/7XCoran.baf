@@ -14,7 +14,7 @@ END
 
 IF
 
-InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)
+InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)
 AreaCheck("AR2600")
 See(Player1)
   Global("CoranHome","GLOBAL",0)
@@ -31,7 +31,7 @@ IF
 AreaType(FOREST) AreaType(OUTDOOR)
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID)
-InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)
+InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)
 !AreaCheck("AR2600")
 Global("PcCoranChat2","GLOBAL",0)
   CombatCounter(0)
@@ -42,7 +42,7 @@ THEN
 END
 
 IF
-InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)
+InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)
 !AreaCheck("AR2600")
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID)
@@ -76,7 +76,7 @@ HasItemEquiped("CHAN01",Myself)
 HasItemEquiped("CHAN04",Myself)
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID)
-InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)
+InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)
 Global("PcCoranChatArmour","LOCALS",0)
 CombatCounter(0)
 THEN

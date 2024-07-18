@@ -100,8 +100,8 @@ END
 
 IF
 
-InParty("7XSHAR")
-        !StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+        !StateCheck("SHARTEEL",CD_STATE_NOTVALID)
  ReputationLT(Player1,9)
 Global("SharLowRepTalk","GLOBAL",0) 
 
@@ -113,8 +113,8 @@ END
 
 
 IF
-	InParty("7XSHAR")
-        !StateCheck("7XSHAR",CD_STATE_NOTVALID)
+	InParty("SHARTEEL")
+        !StateCheck("SHARTEEL",CD_STATE_NOTVALID)
         InParty("Aerie")
 	Dead("Aerie")
 	Global("SharAerieDie","LOCALS",0)
@@ -129,7 +129,7 @@ END
 IF
         InParty("Minsc")
 	InParty(Myself)
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 	Dead("Minsc")
 	Global("SharMinscDie","LOCALS",0)
 THEN
@@ -140,7 +140,7 @@ END
 
 IF
 	InParty(Myself)
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
         InParty("Aerie")
 	Dead("Aerie")
 	Global("SharAerieDie","LOCALS",0)
@@ -154,8 +154,8 @@ END
 IF
 	AreaCheck("AR1904")
 	Global("Shar1904troll","GLOBAL",0)
-	InParty("7XSHAR")
-        !StateCheck("7XSHAR",CD_STATE_NOTVALID)
+	InParty("SHARTEEL")
+        !StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 	Detect([PC])
 THEN
 	RESPONSE #100
@@ -166,22 +166,22 @@ END
 IF
     Global("SharTeelEdwina","LOCALS",0)
     InParty("Edwin")
-    InParty("7XSHAR")
-        !StateCheck("7XSHAR",CD_STATE_NOTVALID)
+    InParty("SHARTEEL")
+        !StateCheck("SHARTEEL",CD_STATE_NOTVALID)
     Gender("Edwin",FEMALE)
     See("Edwin")!StateCheck("Edwin",CD_STATE_NOTVALID)
     CombatCounter(0)
 THEN
     RESPONSE #100
 	  SetGlobal("SharTeelEdwina","LOCALS",1)
-ActionOverride("7XSHAR",Interact("Edwin"))
+ActionOverride("SHARTEEL",Interact("Edwin"))
 END
 
 
 IF
     AreaCheck("AR0205")         
-    InParty("7XSHAR")
-    !StateCheck("7XSHAR",CD_STATE_NOTVALID)
+    InParty("SHARTEEL")
+    !StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 	Dead("UnseeingEye")
     Global("SharKilledUnseeingEye","Locals",0)
  THEN
@@ -191,8 +191,8 @@ IF
 END
 
 IF
-InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
  PartyHasItem("sw2h10")
  Global("SharTeelCarsomyr","LOCALS",0)
 THEN
@@ -203,8 +203,8 @@ END
 
 IF
 
-InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
  PartyHasItem("misc8t")
  Global("SharTeelCerndBaby","LOCALS",0)
 THEN
@@ -215,8 +215,8 @@ END
 
 IF
 
-InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 PartyHasItem("misc9h")
  Global("SharTeelNebHead","LOCALS",0)
 THEN
@@ -226,8 +226,8 @@ THEN
 END
 
 IF
-  InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+  InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
   Global("SharElfForest","GLOBAL",0)
   Race(Player1,ELF)
   AreaType(FOREST)
@@ -241,8 +241,8 @@ END
 
 IF
 
-InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 AreaCheck("AR0201")
   Global("SharAR0201","GLOBAL",0)
   CombatCounter(0)
@@ -254,8 +254,8 @@ END
 
 IF
 
-InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 AreaCheck("AR0305")
   Global("SharAR0305","GLOBAL",0)
   CombatCounter(0)
@@ -267,8 +267,8 @@ END
 
 IF
 
-InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 See(Player1)
 !StateCheck(Player1,STATE_SLEEPING)
 Class(Player1,THIEF_ALL)
@@ -283,8 +283,8 @@ END
 
 IF
 
-InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 PartyRested()
 See(Player1)
 !StateCheck(Player1,STATE_SLEEPING)
@@ -299,8 +299,8 @@ END
 
 IF
 
-InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 AreaType(FOREST)
 See(Player1)
 !StateCheck(Player1,STATE_SLEEPING)
@@ -314,8 +314,8 @@ END
 
 IF
 
-InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 AreaCheck("ARbgx2")
   Global("SharARbgx2","GLOBAL",0)
   CombatCounter(0)
@@ -327,8 +327,8 @@ END
 
 IF
 
-InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 AreaCheck("AR0800")
   Global("SharAR0800","GLOBAL",0)
   CombatCounter(0)
@@ -340,8 +340,8 @@ END
 
 IF
 
-InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 AreaCheck("AR0903")
   Global("SharAR0903","GLOBAL",0)
   CombatCounter(0)
@@ -353,7 +353,7 @@ END
 
 IF
 InParty("Korgan")!StateCheck("Korgan",CD_STATE_NOTVALID)
-InParty("7XSHAR")!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 OR(6)
 AreaCheck("AR0406")
 AreaCheck("AR0509")
@@ -371,20 +371,20 @@ END
 
 IF
 InParty("Korgan")!StateCheck("Korgan",CD_STATE_NOTVALID)
-InParty("7XSHAR")!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("KorganSharTavern","GLOBAL",1)
 RealGlobalTimerExpired("KorganSharTavernTimer","GLOBAL") 
 
 THEN
   RESPONSE #100
 SetGlobal("KorganSharTavern","GLOBAL",2)
-    ActionOverride("7XSHAR",Interact("Korgan"))
+    ActionOverride("SHARTEEL",Interact("Korgan"))
 END
 
 IF
 AreaCheck("ar2100")
-InParty("7XSHAR")
-!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 InParty("Viconia")!StateCheck("Viconia",CD_STATE_NOTVALID)
   Global("Sharar2100","GLOBAL",0)
   CombatCounter(0)
@@ -392,15 +392,15 @@ InParty("Viconia")!StateCheck("Viconia",CD_STATE_NOTVALID)
 THEN
   RESPONSE #100
   SetGlobal("Sharar2100","GLOBAL",1)
-   ActionOverride("7XSHAR",Interact("Viconia"))
+   ActionOverride("SHARTEEL",Interact("Viconia"))
 END
 
 IF
 Global("SharteelRomanceActive","GLOBAL",1)
 Global("SharSafanaWomanSecrets","GLOBAL",0) 
-See("7XSAFA")
-InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)
-InParty("7XSHAR")!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+See("SAFANA")
+InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)
+InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 OR(6)
 AreaCheck("AR0406")
 AreaCheck("AR0509")
@@ -418,10 +418,10 @@ END
 IF
 Global("SharSafanaWomanSecrets","GLOBAL",1) 
 RealGlobalTimerExpired("SharSafanaWomanTimer","GLOBAL") 
-InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)
-InParty("7XSHAR")!StateCheck("7XSHAR",CD_STATE_NOTVALID)
+InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)
+InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 THEN
   RESPONSE #100
 SetGlobal("SharSafanaWomanSecrets","GLOBAL",2) 
-ActionOverride("7XSHAR",Interact("7XSAFA"))
+ActionOverride("SHARTEEL",Interact("SAFANA"))
 END

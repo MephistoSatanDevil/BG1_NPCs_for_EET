@@ -1,6 +1,6 @@
 EXTEND_TOP FATESP 6 #4
-  IF ~!Dead("7XKIVA")
-!InMyArea("7XKIVA")
+  IF ~!Dead("KIVAN")
+!InMyArea("KIVAN")
 Global("KIVANSummonedToB","GLOBAL",0)~ THEN
    REPLY @0
     DO ~CreateVisualEffect("SPPORTAL",[1999.1218])

@@ -1,5 +1,5 @@
 IF
-!InParty("7XFALD")
+!InParty("FALDORN")
 Global("FaldornCreated","GLOBAL",0) 
 !Global("DestroyTrademeet","GLOBAL",7) 
 !Global("DestroyTrademeet","GLOBAL",10)
@@ -14,7 +14,7 @@ THEN
 END
 
 IF
-!InParty("7XFALD")
+!InParty("FALDORN")
 Global("FaldornCreated","GLOBAL",0)
 AreaCheck("AR2000")
 Global("DestroyTrademeet","GLOBAL",2)
@@ -48,7 +48,7 @@ THEN
 END
 
 IF
-    !InParty("7XFALD")
+    !InParty("FALDORN")
 	AreaCheck("AR2000")
 	Global("FaldornCreated","GLOBAL",1)
     Global("DestroyTrademeet","GLOBAL",3)
@@ -102,8 +102,8 @@ END
 // Athkatla
 IF
 !StateCheck(Player1,CD_STATE_NOTVALID)
-!StateCheck("7XFALD",CD_STATE_NOTVALID)
-InParty("7XFALD")
+!StateCheck("FALDORN",CD_STATE_NOTVALID)
+InParty("FALDORN")
 Global("7xFaldornCityTalk","GLOBAL",0)
 CombatCounter(0)
 OR(9)
@@ -124,7 +124,7 @@ END
 
 IF
 !StateCheck(Player1,CD_STATE_NOTVALID)
-InParty("7XFALD")!StateCheck("7XFALD",CD_STATE_NOTVALID)
+InParty("FALDORN")!StateCheck("FALDORN",CD_STATE_NOTVALID)
 Global("7xFaldornCityTalk","GLOBAL",1)
 CombatCounter(0)
 RealGlobalTimerExpired("7xFaldornCityTalkTimer","GLOBAL") 

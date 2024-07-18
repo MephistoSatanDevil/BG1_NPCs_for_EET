@@ -1,6 +1,6 @@
 // This is dream script 
 IF
-InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 See("Nalia")
 InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)
 Global("GarrickNaliaRomance","GLOBAL",2)
@@ -14,7 +14,7 @@ END
 
 // Garrick's quest
 IF
-InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 GlobalTimerExpired("GarrickQuestTalkTimer","GLOBAL") 
 CombatCounter(0) 
 !AreaType(DUNGEON)

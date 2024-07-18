@@ -90,8 +90,8 @@ END
 
 IF
 AreaCheck("AR1100")
-InParty("7XYES")
-!StateCheck("7XYES",CD_STATE_NOTVALID) 
+InParty("YESLICK")
+!StateCheck("YESLICK",CD_STATE_NOTVALID) 
   Global("7XYESAR1100","GLOBAL",0)
   CombatCounter(0)
 THEN
@@ -103,8 +103,8 @@ END
 IF
 AreaCheck("AR0900")
 
-InParty("7XYES")
-!StateCheck("7XYES",CD_STATE_NOTVALID) 
+InParty("YESLICK")
+!StateCheck("YESLICK",CD_STATE_NOTVALID) 
   Global("7XYESAR0900","GLOBAL",0)
   CombatCounter(0)
 THEN
@@ -116,8 +116,8 @@ END
 IF
 
 HPPercentLT(Player1,40)
-InParty("7XYES")
-!StateCheck("7XYES",CD_STATE_NOTVALID) 
+InParty("YESLICK")
+!StateCheck("YESLICK",CD_STATE_NOTVALID) 
   Global("7XYESHealPCtalk","GLOBAL",0)
   CombatCounter(0)
 THEN
@@ -129,8 +129,8 @@ END
 
 IF
 
-InParty("7XYES")
-!StateCheck("7XYES",CD_STATE_NOTVALID) 
+InParty("YESLICK")
+!StateCheck("YESLICK",CD_STATE_NOTVALID) 
 CheckStatGT(Player1,50,INTOXICATION)
 OR(11)
 AreaCheck("AR0509")
@@ -160,8 +160,8 @@ END
 IF
 AreaCheck("ar2100")
 
-InParty("7XYES")
-!StateCheck("7XYES",CD_STATE_NOTVALID) 
+InParty("YESLICK")
+!StateCheck("YESLICK",CD_STATE_NOTVALID) 
   Global("7XYESar2100","GLOBAL",0)
   CombatCounter(0)
 THEN
@@ -175,8 +175,8 @@ END
 IF
 Global("PlayerLooksLikeDrow","GLOBAL",1)
     Global("YeslickLooksLikeDrow","GLOBAL",0)
-InParty("7XYES")
-!StateCheck("7XYES",CD_STATE_NOTVALID) 
+InParty("YESLICK")
+!StateCheck("YESLICK",CD_STATE_NOTVALID) 
   CombatCounter(0)
 
 THEN

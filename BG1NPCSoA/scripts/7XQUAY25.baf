@@ -1,5 +1,5 @@
 IF
-AreaCheck("AR6001")!StateCheck("7XQUAY",CD_STATE_NOTVALID)InParty("7XQUAY") InMyArea("7XQUAY")
+AreaCheck("AR6001")!StateCheck("QUAYLE",CD_STATE_NOTVALID)InParty("QUAYLE") InMyArea("QUAYLE")
   Global("QuayleAR6001","AR6001",0)
   CombatCounter(0)
 THEN

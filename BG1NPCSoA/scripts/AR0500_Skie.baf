@@ -1,9 +1,24 @@
 IF 
- Global("SKIEQUEST","GLOBAL",0)
-
+	Global("SKIEQUEST","GLOBAL",0)
+	BeenInParty("SKIE")
+	!StateCheck("SKIE",STATE_REALLY_DEAD)
 THEN
-  RESPONSE #100
-CreateCreature("7XCRE4",[709.3660],7)
-SetGlobal("SKIEQUEST","GLOBAL",2)
-Continue()
+	RESPONSE #100
+		MoveGlobal("AR0500","SKIE",[709.3660])
+		ActionOverride("SKIE",Face(7))
+		ActionOverride("SKIE",SetDialog("7XSKI"))
+		SetGlobal("SKIEQUEST","GLOBAL",2)
+		Continue()
+END
+
+IF 
+	Global("SKIEQUEST","GLOBAL",0)
+	OR(2)
+		!BeenInParty("SKIE")
+		StateCheck("SKIE",STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		CreateCreature("7XCRE4",[709.3660],7)
+		SetGlobal("SKIEQUEST","GLOBAL",2)
+		Continue()
 END

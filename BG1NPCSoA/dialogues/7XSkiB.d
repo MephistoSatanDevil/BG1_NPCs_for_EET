@@ -6,7 +6,7 @@ IF~~ THEN DO ~SetGlobal("SkieCerndBaby","GLOBAL",2)~ EXIT
 END
 
 
-IF WEIGHT #-99~Global("SkieARbgx2","GLOBAL",1)AreaCheck("ARbgx2") InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN BEGIN WaterGardensSneak0
+IF WEIGHT #-99~Global("SkieARbgx2","GLOBAL",1)AreaCheck("ARbgx2") InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN BEGIN WaterGardensSneak0
 SAY @1
 =
 @2
@@ -40,7 +40,7 @@ IF~~ THEN EXIT
 END
 
 
-IF ~Global("SkieIsTalking","GLOBAL",0) InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN BEGIN SkieFirstTalk
+IF ~Global("SkieIsTalking","GLOBAL",0) InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN BEGIN SkieFirstTalk
 SAY @12
 =
 @13 
@@ -76,7 +76,7 @@ SAY @25
 IF~~THEN EXIT
 END
 
-IF ~Global("SkieIsTalking","GLOBAL",2) InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN BEGIN SKIEPC_New1
+IF ~Global("SkieIsTalking","GLOBAL",2) InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN BEGIN SKIEPC_New1
 SAY @26
 =
 @27
@@ -119,7 +119,7 @@ IF ~~ THEN EXIT
 END  
 
 
-IF ~Global("SkieIsTalking","GLOBAL",3) InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN BEGIN Skie-PC-Banter1
+IF ~Global("SkieIsTalking","GLOBAL",3) InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN BEGIN Skie-PC-Banter1
 SAY @42
 =
 @43
@@ -162,7 +162,7 @@ IF ~~ THEN EXIT
 END
 
 
-IF ~Global("SkieIsTalking","GLOBAL",4) InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN BEGIN SkiePCTalk4
+IF ~Global("SkieIsTalking","GLOBAL",4) InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN BEGIN SkiePCTalk4
 SAY @62
 =
 @63
@@ -202,7 +202,7 @@ END
 CHAIN 
 IF WEIGHT #-99~InParty("Nalia")
 !StateCheck("Nalia",CD_STATE_NOTVALID)
-InParty("7XSKI")!StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE")!StateCheck("SKIE",CD_STATE_NOTVALID)
 !Global("Chapter","GLOBAL",%bg2_chapter_5%)
 Global("NaliaKeepPlot","GLOBAL",1)
 Global("NaliaSkieKeepBanter","GLOBAL", 1)~ 
@@ -219,7 +219,7 @@ EXIT
 
 CHAIN
 IF WEIGHT #-99~InParty("Edwin")See("Edwin")
-Gender("Edwin",FEMALE)InParty("7XSKI")!StateCheck("7XSKI",CD_STATE_NOTVALID)
+Gender("Edwin",FEMALE)InParty("SKIE")!StateCheck("SKIE",CD_STATE_NOTVALID)
 !StateCheck("Edwin",STATE_SLEEPING)
 Global("SkieEdwinaFemale","GLOBAL",1)~ THEN ~7XSkiB~ SkieEdwinaBanter1
 @86
@@ -249,7 +249,7 @@ DO ~SetGlobal("SkieEdwinaFemale","GLOBAL",2)~
 EXIT
 
 CHAIN
-IF WEIGHT #-99~AreaCheck("AR2200")InParty("Imoen2")IsValidForPartyDialog("Imoen2")InParty("7XSKI")!StateCheck("7XSKI",CD_STATE_NOTVALID)
+IF WEIGHT #-99~AreaCheck("AR2200")InParty("Imoen2")IsValidForPartyDialog("Imoen2")InParty("SKIE")!StateCheck("SKIE",CD_STATE_NOTVALID)
 Global("SkieImoenBanter","GLOBAL",0)~ THEN ~7XSkiB~ SkiImoBhaal1
 @106
 DO ~SetGlobal("SkieImoenBanter","GLOBAL",1)~
@@ -271,7 +271,7 @@ EXIT
 CHAIN
 IF WEIGHT #-99 ~AreaCheck("AR0509")Global("SkieJaheiraAR0509","GLOBAL",0)InParty("Jaheira")
 See("Jaheira")!StateCheck("Jaheira",CD_STATE_NOTVALID)
-InParty("7XSKI")!StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN ~7XSkiB~ SkieJahAR0509
+InParty("SKIE")!StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN ~7XSkiB~ SkieJahAR0509
 @116 
 DO ~SetGlobal("SkieJaheiraAR0509","GLOBAL",2)~ 
 == BJAHEIR @117
@@ -296,7 +296,7 @@ EXIT
 
 CHAIN
 IF  WEIGHT #-99 ~AreaCheck("AR0701")Global("SkieMinscBanter701","GLOBAL",0)
-InParty("7XSKI")!StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE")!StateCheck("SKIE",CD_STATE_NOTVALID)
 InParty("Minsc")See("Minsc")!StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~7XSkiB~ SkieMinscSewer
 @131
 =
@@ -314,7 +314,7 @@ EXIT
 CHAIN
 IF WEIGHT #-99 ~AreaCheck("AR2007")Global("SkieJaheiraAR2007","GLOBAL",0)InParty("Jaheira")
 See("Jaheira")!StateCheck("Jaheira",CD_STATE_NOTVALID)
-InParty("7XSKI")!StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN ~7XSkiB~ SkieJahAR2007
+InParty("SKIE")!StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN ~7XSkiB~ SkieJahAR2007
 @138
 =
 @139 
@@ -327,7 +327,7 @@ EXIT
 
 CHAIN
 IF WEIGHT #-99~InParty("Cernd")!StateCheck("Cernd",CD_STATE_NOTVALID)
-InParty("7XSKI")!StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE")!StateCheck("SKIE",CD_STATE_NOTVALID)
 See("Cernd")
 OR(2)
 AreaType(FOREST)
@@ -347,7 +347,7 @@ EXIT
 
 CHAIN
 IF WEIGHT #-99 ~AreaCheck("AR2100")Global("SkieJaheiraAR2100","GLOBAL",0)
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 InParty("Jaheira")See("Jaheira")
 !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~7XSkiB~ SkieJahAR2100
 @150 
@@ -377,7 +377,7 @@ EXIT
 CHAIN IF ~InParty("Imoen2")
 See("Imoen2")
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 Global("ImoenSkieTalk","GLOBAL",0)~ THEN ~7XSkiB~ ImoenSkie1
 @164 DO ~SetGlobal("ImoenSkieTalk","GLOBAL",1)~
 == BIMOEN2 @165
@@ -402,7 +402,7 @@ CHAIN IF ~InParty("Haerdalis")
 See("Haerdalis")
 !StateCheck("Haerdalis",CD_STATE_NOTVALID)
 Global("SkieHaerDalis","GLOBAL",0) 
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN ~7XSkiB~ HaerDalisSkie1
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN ~7XSkiB~ HaerDalisSkie1
 @175 DO ~SetGlobal("SkieHaerDalis","GLOBAL",1)~
 == BHAERDA @176
 == 7XSkiB @177
@@ -417,7 +417,7 @@ CHAIN
 IF ~InParty("Minsc")
 See("Minsc")
 !StateCheck("Minsc",CD_STATE_NOTVALID)
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 Global("MinscSkieTalk","GLOBAL",0)~ THEN ~7XSkiB~ MinscSkie01
 @182
 =
@@ -438,7 +438,7 @@ CHAIN
 IF ~InParty("Valygar")
 See("Valygar")
 !StateCheck("Valygar",CD_STATE_NOTVALID)
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 Global("SkieValyTalk","GLOBAL",0)~ THEN ~7XSkiB~ ValygarBanter1
 @190
 DO ~SetGlobal("SkieValyTalk","GLOBAL",1)~
@@ -468,7 +468,7 @@ EXIT
 CHAIN
 IF ~Global("SkieKel","GLOBAL",0)See("Keldorn")
 InParty("Keldorn")
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN ~7XSkiB~ keldorn
 @202
 DO ~SetGlobal("SkieKel","GLOBAL",1)~
@@ -486,7 +486,7 @@ EXIT
 CHAIN
 IF ~InParty("Jaheira")
 See("Jaheira")!StateCheck("Jaheira",CD_STATE_NOTVALID)
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 Global("JahSkieTalk","GLOBAL",0)~ THEN ~7XSkiB~ JahSkie01
 @209
 =
@@ -511,7 +511,7 @@ CHAIN
 IF ~InParty("HaerDalis")
 See("HaerDalis")
 !StateCheck("HaerDalis",CD_STATE_NOTVALID)
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 Global("HaerSkieTalk","GLOBAL",0)~ THEN ~7XSkiB~ DalisSkie1
 @217 
 DO ~SetGlobal("HaerSkieTalk","GLOBAL",1)~
@@ -532,7 +532,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Edwin")
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 See("Edwin")!StateCheck ("Edwin", CD_STATE_NOTVALID)Global("EdwinSkieTalk","GLOBAL",0)~ THEN ~7XSkiB~ EdwinSkie1
 @224
 DO ~ SetGlobal("EdwinSkieTalk","GLOBAL",1) ~
@@ -558,7 +558,7 @@ CHAIN
 IF ~InParty("Yoshimo")
 See("Yoshimo")
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 Global("YoshiSkieTalk","GLOBAL",0)~ THEN ~7XSkiB~ YoshiSkie01
 @233 
 DO ~SetGlobal("YoshiSkieTalk","GLOBAL",1)~
@@ -585,7 +585,7 @@ EXIT
 CHAIN IF ~InParty("Nalia")
 See("Nalia")
 !StateCheck("Nalia",CD_STATE_NOTVALID)
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 Global("SkieNaliaChat","GLOBAL",0)~ THEN ~7XSkiB~ naliachat1
 @243 DO ~SetGlobal("SkieNaliaChat","GLOBAL",1)~
 == BNALIA @244
@@ -611,7 +611,7 @@ EXIT
 CHAIN
 IF ~InParty("Aerie")
 See("Aerie")
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 !StateCheck("Aerie",CD_STATE_NOTVALID)
 Global("AerieSkieTalk","GLOBAL",0)~ THEN ~7XSkiB~ AerieSkie01
 @258
@@ -629,7 +629,7 @@ EXIT
 CHAIN
 IF ~InParty("Viconia")
 See("Viconia")
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 !StateCheck("Viconia",CD_STATE_NOTVALID)
 Global("VicSkieTalk","GLOBAL",0)~ THEN ~7XSkiB~ VicSkie01
 @262
@@ -645,7 +645,7 @@ EXIT
 
 CHAIN IF
 ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 Global("SkieKorgan","GLOBAL",0)~
 THEN ~7XSkiB~ SkieKorgan1
 @268 DO ~SetGlobal("SkieKorgan","GLOBAL",1)~
@@ -663,7 +663,7 @@ EXIT
 
 
 CHAIN IF
-~InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+~InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)
 Global("SkieMazzy","GLOBAL",0)~
 THEN BMAZZY MazzySkie1
@@ -682,7 +682,7 @@ EXIT
 
 
 CHAIN IF
-~InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+~InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)
 Global("SkieMazzy","GLOBAL",1)~
 THEN ~7XSkiB~ MazzySkie2
@@ -704,7 +704,7 @@ EXIT
 CHAIN IF ~InParty("Haerdalis")
 See("Haerdalis")
 !StateCheck("Haerdalis",CD_STATE_NOTVALID)
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 Global("SkieHaerDalis","GLOBAL",1)~ THEN ~BHAERDA~ HaerDalisSkie2
 @296
 =
@@ -726,7 +726,7 @@ EXIT
 
 CHAIN IF
 ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 Global("SkieKorgan","GLOBAL",1)~
 THEN ~7XSkiB~ SkieKorgan2
 @306 DO ~SetGlobal("SkieKorgan","GLOBAL",2)~
@@ -748,7 +748,7 @@ CHAIN
 IF ~InParty("Yoshimo")
 See("Yoshimo")
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 Global("YoshiSkieTalk","GLOBAL",1)~ THEN ~BYOSHIM~ YoshiSkie02
 @316 
 DO ~SetGlobal("YoshiSkieTalk","GLOBAL",2)~
@@ -768,7 +768,7 @@ EXIT
 CHAIN
 IF ~InParty("Jaheira")
 See("Jaheira")!StateCheck("Jaheira",CD_STATE_NOTVALID)
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 Global("JahSkieTalk","GLOBAL",1)~ THEN ~BJAHEIR~ JahSkie02
 @325
 DO ~SetGlobal("JahSkieTalk","GLOBAL",2)~
@@ -784,7 +784,7 @@ EXIT
 CHAIN
 IF ~InParty("Aerie")
 See("Aerie")
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 !StateCheck("Aerie",CD_STATE_NOTVALID)
 Global("AerieSkieTalk","GLOBAL",1)~ THEN ~7XSkiB~ AerieSkie02
 @331
@@ -814,7 +814,7 @@ CHAIN
 IF ~Global("SkieKel","GLOBAL",1)
 	See("Keldorn")
 	InParty("Keldorn")
-	InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+	InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 	!StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN ~BKELDOR~ keldorn2
 @343
 DO ~SetGlobal("SkieKel","GLOBAL",2)~
@@ -831,7 +831,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Edwin")
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 See("Edwin")!StateCheck ("Edwin",CD_STATE_NOTVALID)
 Global("EdwinSkieTalk","GLOBAL",1)~ THEN ~7XSkiB~ EdwinSkie2
 @349
@@ -854,7 +854,7 @@ EXIT
 CHAIN IF ~InParty("Nalia")
 See("Nalia")
 !StateCheck("Nalia",CD_STATE_NOTVALID)
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 Global("SkieNaliaChat","GLOBAL",1)~ THEN ~BNALIA~ naliachat2
 @358 DO ~SetGlobal("SkieNaliaChat","GLOBAL",2)~
 == 7XSkiB @359
@@ -881,7 +881,7 @@ EXIT
 CHAIN IF ~InParty("Imoen2")
 See("Imoen2")IsValidForPartyDialog("Imoen2")
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 Global("ImoenSkieTalk","GLOBAL",1)~ THEN ~7XSkiB~ ImoenSkie2
 @370 DO ~SetGlobal("ImoenSkieTalk","GLOBAL",2)~
 == BIMOEN2 @371
@@ -919,7 +919,7 @@ EXIT
 
 
 CHAIN IF
-~InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+~InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)
 Global("SkieKorgan","GLOBAL",2)~
 THEN BKORGAN SkieKorgan3
@@ -939,7 +939,7 @@ EXIT
 CHAIN IF ~InParty("Imoen2")
 See("Imoen2")
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 Global("ImoenSkieTalk","GLOBAL",2)~ THEN ~7XSkiB~ ImoenSkie3
 @396 DO ~SetGlobal("ImoenSkieTalk","GLOBAL",3)~
 == BIMOEN2 @397
@@ -973,7 +973,7 @@ EXIT
 CHAIN IF ~InParty("Nalia")
 See("Nalia")
 !StateCheck("Nalia",CD_STATE_NOTVALID)
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 Global("SkieNaliaChat","GLOBAL",2)~ THEN ~BNALIA~ naliachat3
 @413 DO ~SetGlobal("SkieNaliaChat","GLOBAL",3)~
 == 7XSkiB @414
@@ -988,7 +988,7 @@ EXIT
 CHAIN IF ~InParty("Haerdalis")
 See("Haerdalis")
 !StateCheck("Haerdalis",CD_STATE_NOTVALID)
-InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
+InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
 Global("SkieHaerDalis","GLOBAL",2)~ THEN ~7XSkiB~ HaerDalisSkie3
 @420 DO ~SetGlobal("SkieHaerDalis","GLOBAL",3)~
 == BHAERDA @421

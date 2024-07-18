@@ -1,6 +1,6 @@
 IF
 Global("StartEndBios","AR6200",1)
-InParty("7XYES")
+InParty("YESLICK")
 Global("7XYESBio","GLOBAL",0)
 THEN
 RESPONSE #100

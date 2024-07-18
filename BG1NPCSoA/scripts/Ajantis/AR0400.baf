@@ -1,5 +1,5 @@
 IF 
-InParty("7XAJAN") !StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS") !StateCheck("AJANTIS",CD_STATE_NOTVALID)
 Global("AjantisQuest","GLOBAL",4)
 Global("7XKatrinaExists","AR0400",0)
 CombatCounter(0) 
@@ -10,7 +10,7 @@ THEN
 END
 
 IF 
-InParty("7XAJAN") !StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS") !StateCheck("AJANTIS",CD_STATE_NOTVALID)
 Global("AjantisQuest","GLOBAL",4)
 RealGlobalTimerExpired("AjantisAR0400TalkTimer","GLOBAL") 
 Global("7XKatrinaExists","AR0400",0)
@@ -37,7 +37,7 @@ EndCutSceneMode()
 END
 
 IF 
-InParty("7XAJAN") !StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS") !StateCheck("AJANTIS",CD_STATE_NOTVALID)
 Global("AjantisQuest","GLOBAL",4)
 Global("7XKatrinaExists","AR0400",1)
 CombatCounter(0) 
@@ -52,11 +52,11 @@ ActionOverride("7XKatr",StartDialogNoSet(Player1))
 END
 
 IF 
-InParty("7XAJAN") !StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS") !StateCheck("AJANTIS",CD_STATE_NOTVALID)
 Global("AjantisQuest","GLOBAL",6)
 THEN
   RESPONSE #100
 ActionOverride("7XKatr",DestroySelf())  
 SetGlobal("AjantisQuest","GLOBAL",7)
-ActionOverride("7XAJAN",StartDialogNoSet(Player1))
+ActionOverride("AJANTIS",StartDialogNoSet(Player1))
 END

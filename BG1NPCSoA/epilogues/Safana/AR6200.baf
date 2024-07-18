@@ -1,6 +1,6 @@
 IF
 Global("StartEndBios","AR6200",1)
-InParty("7XSAFA")
+InParty("SAFANA")
 Global("7XSAFABio","GLOBAL",0)
 THEN
 RESPONSE #100

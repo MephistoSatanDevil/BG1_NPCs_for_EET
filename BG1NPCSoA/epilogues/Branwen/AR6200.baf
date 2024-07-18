@@ -1,6 +1,6 @@
 IF
 Global("StartEndBios","AR6200",1)
-InParty("7XBRAN")
+InParty("BRANWEN")
 Global("7XBRANBio","GLOBAL",0)
 THEN
 RESPONSE #100

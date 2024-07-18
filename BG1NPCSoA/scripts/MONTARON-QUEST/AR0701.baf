@@ -3,7 +3,7 @@
 
 
 IF 
-InParty("7XMONT")Global("MontiQuest","GLOBAL",1)
+InParty("MONTARON")Global("MontiQuest","GLOBAL",1)
 
 
 THEN

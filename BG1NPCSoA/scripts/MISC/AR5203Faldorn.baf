@@ -4,7 +4,7 @@ IF
 	Dead("yaga01")
 	Global("SaradushSacked","GLOBAL",1)
 	Global("FaldornYagaShura","AR5203",0)
-	InParty("7XFALD") InMyArea("7XFALD") !StateCheck("7XFALD",CD_STATE_NOTVALID)
+	InParty("FALDORN") InMyArea("FALDORN") !StateCheck("FALDORN",CD_STATE_NOTVALID)
 THEN
 	RESPONSE #100
 	SetGlobal("FaldornYagaShura","AR5203",1)
@@ -24,9 +24,9 @@ END
 IF
 	!StateCheck(Player1,CD_STATE_NOTVALID)
 	!ActuallyInCombat()
-	InParty("7XFALD") InMyArea("7XFALD") !StateCheck("7XFALD",CD_STATE_NOTVALID)
+	InParty("FALDORN") InMyArea("FALDORN") !StateCheck("FALDORN",CD_STATE_NOTVALID)
 	Global("FaldornYagaShura","AR5203",2)
 THEN
 	RESPONSE #100
-ActionOverride("7XFALD",StartDialogNoSet("Player1"))
+ActionOverride("FALDORN",StartDialogNoSet("Player1"))
 END

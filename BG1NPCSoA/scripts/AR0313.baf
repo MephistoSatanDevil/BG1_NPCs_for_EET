@@ -1,23 +1,36 @@
 IF 
- Global("BG1NPCQuest","GLOBAL",1)
-
+	Global("BG1NPCQuest","GLOBAL",1)
+	BeenInParty("GARRICK")
+	!StateCheck("GARRICK",STATE_REALLY_DEAD)
 THEN
-  RESPONSE #100
-CreateCreature("7XCRE3",[478.400],2)
-SetGlobal("BG1NPCQuest","GLOBAL",2)
-Continue()
+	RESPONSE #100
+		MoveGlobal("AR0313","GARRICK",[478.400])
+		ActionOverride("GARRICK",Face(2))
+		ActionOverride("GARRICK",SetDialog("7XGAR"))
+		SetGlobal("BG1NPCQuest","GLOBAL",2)
+		Continue()
 END
 
+IF 
+	Global("BG1NPCQuest","GLOBAL",1)
+	OR(2)
+		!BeenInParty("GARRICK")
+		StateCheck("GARRICK",STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		CreateCreature("7XCRE3",[478.400],2)
+		SetGlobal("BG1NPCQuest","GLOBAL",2)
+		Continue()
+END
 
 IF 
- Global("GarrickNPCStart","AR0313",1)
-
+	Global("GarrickNPCStart","AR0313",1)
 THEN
-  RESPONSE #100
-SetGlobal("GarrickNPCStart","AR0313",2)
-StartMovie("RestInn")
-Wait(1)
-ActionOverride("7XGAR", StartDialogNoSet(Player1))
+	RESPONSE #100
+		SetGlobal("GarrickNPCStart","AR0313",2)
+		StartMovie("RestInn")
+		Wait(1)
+		ActionOverride("GARRICK", StartDialogNoSet(Player1))
 END
 
 

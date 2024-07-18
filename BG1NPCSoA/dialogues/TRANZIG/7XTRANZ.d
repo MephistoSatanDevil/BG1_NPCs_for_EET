@@ -1,14 +1,14 @@
 BEGIN ~7XTRANZ~
 
 
-IF ~NumTimesTalkedTo(0)InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN BEGIN BranwenTRANZIG1
+IF ~NumTimesTalkedTo(0)InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN BEGIN BranwenTRANZIG1
 SAY @0
 IF ~~ THEN EXTERN ~7XBRANJ~ BranwenTRANZIG2
 END
 
 
-IF ~NumTimesTalkedTo(0)!InParty("7XBRAN")~ THEN BEGIN TRANZIGMinus1
+IF ~NumTimesTalkedTo(0)!InParty("BRANWEN")~ THEN BEGIN TRANZIGMinus1
 SAY @1
 =
 @2

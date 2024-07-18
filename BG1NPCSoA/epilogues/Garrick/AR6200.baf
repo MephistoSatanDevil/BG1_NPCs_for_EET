@@ -1,7 +1,7 @@
 IF
 Global("GarrickNaliaRomance","GLOBAL",0)
 Global("StartEndBios","AR6200",1)
-InParty("7XGAR")
+InParty("GARRICK")
 Global("7XGARBio","GLOBAL",0)
 THEN
 RESPONSE #100
@@ -14,7 +14,7 @@ END
 IF
 Global("GarrickNaliaRomance","GLOBAL",2)
 Global("StartEndBios","AR6200",1)
-InParty("7XGAR")
+InParty("GARRICK")
 Global("7XGARBio","GLOBAL",0)
 THEN
 RESPONSE #100

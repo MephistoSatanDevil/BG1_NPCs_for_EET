@@ -1,7 +1,7 @@
 ////
 
 APPEND ~KGSTO2~
-IF WEIGHT #-10 ~Global("Dalindra","GLOBAL",1)IsGabber("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN BEGIN DalindraYeslick1
+IF WEIGHT #-10 ~Global("Dalindra","GLOBAL",1)IsGabber("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN BEGIN DalindraYeslick1
 SAY @55
       IF ~~ THEN EXTERN ~7XYESJ~ DalindraYeslick2
   END

@@ -90,21 +90,21 @@ END
 IF
 
 Global("TiaxQuayle","GLOBAL",0)
-InParty("7XQUAY")!StateCheck("7XQUAY",CD_STATE_NOTVALID)
-See("7XTIAX")InParty("7XTIAX")
-!StateCheck("7XTIAX",CD_STATE_NOTVALID)
+InParty("QUAYLE")!StateCheck("QUAYLE",CD_STATE_NOTVALID)
+See("TIAX")InParty("TIAX")
+!StateCheck("TIAX",CD_STATE_NOTVALID)
 CombatCounter(0)
 !See([ENEMY])
 
 THEN
   RESPONSE #100
-    ActionOverride("7XTIAX",Interact("7XQUAY"))
+    ActionOverride("TIAX",Interact("QUAYLE"))
 END
 
 IF
 
 
-InParty("7XQUAY")!StateCheck("7XQUAY",CD_STATE_NOTVALID)
+InParty("QUAYLE")!StateCheck("QUAYLE",CD_STATE_NOTVALID)
 AreaCheck("AR1002")
   Global("7XQUAYAR1002","GLOBAL",0)
  
@@ -117,7 +117,7 @@ END
 
 IF
 
-InParty("7XQUAY")!StateCheck("7XQUAY",CD_STATE_NOTVALID)
+InParty("QUAYLE")!StateCheck("QUAYLE",CD_STATE_NOTVALID)
 NumInPartyGT("4")
 Global("7XQUAYGroupAdvice","GLOBAL",0)
 
@@ -129,7 +129,7 @@ END
 
 IF
 RealGlobalTimerExpired("7XQUAYGroupTimer","GLOBAL")
-InParty("7XQUAY")!StateCheck("7XQUAY",CD_STATE_NOTVALID)
+InParty("QUAYLE")!StateCheck("QUAYLE",CD_STATE_NOTVALID)
 NumInPartyGT("4")
 Global("7XQUAYGroupAdvice","GLOBAL",1)
 
@@ -142,7 +142,7 @@ END
 
 IF
 
-InParty("7XQUAY")!StateCheck("7XQUAY",CD_STATE_NOTVALID)
+InParty("QUAYLE")!StateCheck("QUAYLE",CD_STATE_NOTVALID)
 OR(11)
 AreaCheck("AR0509")
 AreaCheck("AR0021")

@@ -1,19 +1,19 @@
 
 EXTEND_TOP SARVOLO 9
-IF ~InParty("7XXAN")~ THEN REPLY @0 GOTO XAN1Volo
+IF ~InParty("XAN")~ THEN REPLY @0 GOTO XAN1Volo
 END
 
 CHAIN SARVOLO XAN1Volo
 @1
-== 7XXAN25J IF ~InParty("7XXAN")~ THEN @2
+== 7XXAN25J IF ~InParty("XAN")~ THEN @2
 EXTERN SARVOLO 9
 
 
 
 
 EXTEND_TOP FATESP 6 #9
-IF ~!Dead("7XXAN")
-    !InMyArea("7XXAN")
+IF ~!Dead("XAN")
+    !InMyArea("XAN")
     Global("XAN1SummonedTOB","GLOBAL",0)~
 THEN
   REPLY @3

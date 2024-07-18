@@ -271,8 +271,8 @@ BEGIN ~7XFALDB~
 
 CHAIN IF~
 CombatCounter(0)!See([ENEMY])InParty("Jaheira")Range("Jaheira",30)
-!StateCheck("Jaheira",CD_STATE_NOTVALID)!StateCheck("7XFALD",CD_STATE_NOTVALID)
-InParty("7XFALD")Global("FALDORNJaheira","GLOBAL",0)~ THEN ~BJAHEIR~ FaldornJaheira_1
+!StateCheck("Jaheira",CD_STATE_NOTVALID)!StateCheck("FALDORN",CD_STATE_NOTVALID)
+InParty("FALDORN")Global("FALDORNJaheira","GLOBAL",0)~ THEN ~BJAHEIR~ FaldornJaheira_1
 @48 DO ~SetGlobal("FALDORNJaheira","GLOBAL",1)~
 == 7XFALDB  @49
 == BJAHEIR @50
@@ -281,8 +281,8 @@ InParty("7XFALD")Global("FALDORNJaheira","GLOBAL",0)~ THEN ~BJAHEIR~ FaldornJahe
 EXIT
 
 CHAIN IF
-~CombatCounter(0)!StateCheck("7XFALD",CD_STATE_NOTVALID)
-InParty("7XFALD")
+~CombatCounter(0)!StateCheck("FALDORN",CD_STATE_NOTVALID)
+InParty("FALDORN")
 !See([ENEMY])
 InParty("Minsc")
 Range("Minsc",30)
@@ -302,9 +302,9 @@ THEN ~BMINSC~ FaldornMinsc_1
 == BMINSC @63
 EXIT
 
-CHAIN IF ~InParty("7XFALD")
-See("7XFALD")
-!StateCheck("7XFALD",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("FALDORN")
+See("FALDORN")
+!StateCheck("FALDORN",CD_STATE_NOTVALID)
 !StateCheck("Aerie",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("FaldornAerie","LOCALS",0)~ THEN BAERIE FaldornAerie_1
@@ -325,8 +325,8 @@ Global("FaldornAerie","LOCALS",0)~ THEN BAERIE FaldornAerie_1
 EXIT
 
 CHAIN
-IF~InParty("Cernd")InParty("7XFALD")
-See("Cernd")!StateCheck("7XFALD",CD_STATE_NOTVALID)
+IF~InParty("Cernd")InParty("FALDORN")
+See("Cernd")!StateCheck("FALDORN",CD_STATE_NOTVALID)
 !StateCheck("Cernd",CD_STATE_NOTVALID)
 Global("CerndFaldorn","LOCALS",0)~THEN 7XFALDB FaldornCernd1
 @75
@@ -343,7 +343,7 @@ EXIT
 
 CHAIN
 IF~InParty("Viconia")
-See("Viconia")!StateCheck("7XFALD",CD_STATE_NOTVALID)InParty("7XFALD")
+See("Viconia")!StateCheck("FALDORN",CD_STATE_NOTVALID)InParty("FALDORN")
 !StateCheck("Viconia",CD_STATE_NOTVALID)
 Global("FaldornViconia","LOCALS",0)~THEN 7XFALDB ViconiaFaldorn
 @82
@@ -358,7 +358,7 @@ EXIT
 CHAIN
 IF~InParty("Edwin")
 See("Edwin")HPPercentLT("Edwin",50)
-!StateCheck("Edwin",STATE_SLEEPING)!StateCheck("7XFALD",CD_STATE_NOTVALID)InParty("7XFALD")
+!StateCheck("Edwin",STATE_SLEEPING)!StateCheck("FALDORN",CD_STATE_NOTVALID)InParty("FALDORN")
 Global("EdwinFaldorn","LOCALS",0)~THEN 7XFALDB EdwinFaldorn1
 @87
 DO~SetGlobal("EdwinFaldorn","LOCALS",1)~
@@ -375,7 +375,7 @@ EXIT
 CHAIN IF ~InParty("Anomen")
 See("Anomen")
 !StateCheck("Anomen",CD_STATE_NOTVALID)
-!StateCheck("7XFALD",CD_STATE_NOTVALID)InParty("7XFALD")
+!StateCheck("FALDORN",CD_STATE_NOTVALID)InParty("FALDORN")
 CombatCounter(0)Global("FaldornAnomen","LOCALS",0)~ THEN BANOMEN FaldornAnomen_1
 @94
 =
@@ -389,7 +389,7 @@ DO ~SetGlobal("FaldornAnomen","LOCALS",1)~
 == BANOMEN @100
 EXIT
 
-CHAIN IF ~!StateCheck("7XFALD",CD_STATE_NOTVALID)InParty("7XFALD")
+CHAIN IF ~!StateCheck("FALDORN",CD_STATE_NOTVALID)InParty("FALDORN")
 !StateCheck("Cernd",CD_STATE_NOTVALID)InParty("Cernd")
 CombatCounter(0)Global("CerndBaby","GLOBAL",1)
 Global("FaldornCerndBaby","LOCALS",0)~ THEN 7XFALDB FaldornCerndBaby_1
@@ -406,7 +406,7 @@ DO ~SetGlobal("FaldornCerndBaby","LOCALS",1)~
 EXIT
 
 CHAIN IF ~InParty("Haerdalis")
-See("Haerdalis")!StateCheck("7XFALD",CD_STATE_NOTVALID)InParty("7XFALD")
+See("Haerdalis")!StateCheck("FALDORN",CD_STATE_NOTVALID)InParty("FALDORN")
 !StateCheck("Haerdalis",CD_STATE_NOTVALID)
 Global("FaldornHaerdalis","LOCALS",0)~ THEN 7XFALDB FaldornHaerdalis_1
 @109
@@ -421,7 +421,7 @@ DO ~SetGlobal("FaldornHaerdalis","LOCALS",1)~
 EXIT
 
 CHAIN IF ~InParty("Imoen2")
-See("Imoen2")!StateCheck("7XFALD",CD_STATE_NOTVALID)InParty("7XFALD")
+See("Imoen2")!StateCheck("FALDORN",CD_STATE_NOTVALID)InParty("FALDORN")
 !StateCheck("Imoen2",CD_STATE_NOTVALID)CombatCounter(0)
 Global("FaldornImoen","LOCALS",0)~ THEN 7XFALDB FaldornImoen_1
 @117
@@ -439,7 +439,7 @@ EXIT
 CHAIN IF ~InParty("Minsc")
 See("Minsc")
 !StateCheck("Minsc",CD_STATE_NOTVALID)
-!StateCheck("7XFALD",CD_STATE_NOTVALID)InParty("7XFALD")
+!StateCheck("FALDORN",CD_STATE_NOTVALID)InParty("FALDORN")
 CombatCounter(0)
 Global("FaldornMinsc","LOCALS",0)~ THEN 7XFALDB FaldornMinsc_1
 @126
@@ -456,7 +456,7 @@ EXIT
 CHAIN IF ~InParty("Korgan")
 See("Korgan")
 !StateCheck("Korgan",CD_STATE_NOTVALID)
-!StateCheck("7XFALD",CD_STATE_NOTVALID)InParty("7XFALD")
+!StateCheck("FALDORN",CD_STATE_NOTVALID)InParty("FALDORN")
 CombatCounter(0)
 Global("FaldornKorgan","GLOBAL",0)~ THEN 7XFALDB FaldornKorgan_1
 @187
@@ -500,15 +500,15 @@ CHAIN IF ~~ THEN CEFALDOR 7xTrademeet3
 == KELDORJ IF ~InParty("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN @206 DO ~ChangeAIScript("",DEFAULT) LeaveParty() SetLeavePartyDialogFile() Enemy() ChangeEnemyAlly(Myself, ENEMY)~
 == CERNDJ IF ~InParty("Cernd") InMyArea("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN @207 DO ~ChangeAIScript("",DEFAULT) LeaveParty() SetLeavePartyDialogFile() EscapeArea()~
 == KORGANJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @208
-== IF_FILE_EXISTS 7XCoranJ IF ~InParty("7XCORAN") InMyArea("7XCORAN") !StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @209
-== IF_FILE_EXISTS 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @211
-== IF_FILE_EXISTS 7XBRANJ IF ~InParty("7XBRAN") InMyArea("7XBRAN") !StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @210 DO ~ChangeAIScript("",DEFAULT) LeaveParty() SetLeavePartyDialogFile() EscapeArea()~
-== IF_FILE_EXISTS 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @212
-== IF_FILE_EXISTS 7XSkiJ IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN @213
-== IF_FILE_EXISTS 7XAloraJ IF ~InParty("7XAlora") InMyArea("7XAlora") !StateCheck("7XAlora",CD_STATE_NOTVALID)~ THEN @214
-== IF_FILE_EXISTS 7XkagaJ IF ~InParty("7Xkaga") InMyArea("7Xkaga") !StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @215
-== IF_FILE_EXISTS 7XsharJ IF ~InParty("7XSHAR") InMyArea("7XSHAR") !StateCheck("7XSHAR",CD_STATE_NOTVALID)~ THEN @216
-== IF_FILE_EXISTS 7XGarJ IF ~InParty("7XGAR") InMyArea("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @218
+== IF_FILE_EXISTS 7XCoranJ IF ~InParty("CORAN") InMyArea("CORAN") !StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @209
+== IF_FILE_EXISTS 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @211
+== IF_FILE_EXISTS 7XBRANJ IF ~InParty("BRANWEN") InMyArea("BRANWEN") !StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @210 DO ~ChangeAIScript("",DEFAULT) LeaveParty() SetLeavePartyDialogFile() EscapeArea()~
+== IF_FILE_EXISTS 7XYESJ IF ~InParty("YESLICK") InMyArea("YESLICK") !StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN @212
+== IF_FILE_EXISTS 7XSkiJ IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN @213
+== IF_FILE_EXISTS 7XAloraJ IF ~InParty("ALORA") InMyArea("ALORA") !StateCheck("ALORA",CD_STATE_NOTVALID)~ THEN @214
+== IF_FILE_EXISTS 7XkagaJ IF ~InParty("KAGAIN") InMyArea("KAGAIN") !StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN @215
+== IF_FILE_EXISTS 7XsharJ IF ~InParty("SHARTEEL") InMyArea("SHARTEEL") !StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @216
+== IF_FILE_EXISTS 7XGarJ IF ~InParty("GARRICK") InMyArea("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @218
 == CEFALDOR @219
 EXTERN CEFALDOR 7xTrademeet3_END
 
@@ -831,13 +831,13 @@ END
 
 // Hell
 I_C_T PLAYER1 25 7xFaldorn_Hell
-  == 7XFALDJ IF ~InParty("7XFALD") !StateCheck("7XFALD",CD_STATE_NOTVALID)~ THEN @196
+  == 7XFALDJ IF ~InParty("FALDORN") !StateCheck("FALDORN",CD_STATE_NOTVALID)~ THEN @196
 END
 
 // Tree of Life
 ///////////////////
 INTERJECT PLAYER1 33 Faldorn_TreeOfLife1
-== PLAYER1 IF ~InParty("7XFALD")!StateCheck("7XFALD",CD_STATE_NOTVALID)~ THEN @197
+== PLAYER1 IF ~InParty("FALDORN")!StateCheck("FALDORN",CD_STATE_NOTVALID)~ THEN @197
 END
 ++ @198 EXTERN 7XFALDJ Faldorn_TreeOfLife2
 ++ @199 EXTERN 7XFALDJ Faldorn_TreeOfLife2
@@ -851,7 +851,7 @@ END
 END
 
 INTERJECT_COPY_TRANS IF_FILE_EXISTS WILSON 15 FaldornWILSON-15
-== 7XFALDJ IF ~InParty("7XFALD") InMyArea("7XFALD") !StateCheck("7XFALD",CD_STATE_NOTVALID)~ THEN @225
+== 7XFALDJ IF ~InParty("FALDORN") InMyArea("FALDORN") !StateCheck("FALDORN",CD_STATE_NOTVALID)~ THEN @225
 == WILSON @226
 END
 
@@ -878,5 +878,5 @@ END
 END
 
 INTERJECT_COPY_TRANS TRGYP02 24 FaldornTRGYP02-24
-== 7XFALDJ IF ~InParty("7XFALD") InMyArea("7XFALD") !StateCheck("7XFALD",CD_STATE_NOTVALID)~ THEN @239
+== 7XFALDJ IF ~InParty("FALDORN") InMyArea("FALDORN") !StateCheck("FALDORN",CD_STATE_NOTVALID)~ THEN @239
 END

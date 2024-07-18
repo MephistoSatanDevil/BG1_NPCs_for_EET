@@ -1,17 +1,24 @@
-
-
 IF 
-Global("KivanQuest","GLOBAL",0)
-
+	Global("KivanQuest","GLOBAL",0)
+	BeenInParty("KIVAN")
+	!StateCheck("KIVAN",STATE_REALLY_DEAD)
 THEN
-  RESPONSE #100
-CreateCreature("7XCRE73",[468.837],4)
-SetGlobal("KivanQuest","GLOBAL",1)
-Continue()
+	RESPONSE #100
+		MoveGlobal("AR0020","KIVAN",[468.837])
+		ActionOverride("KIVAN",Face(4))
+		ActionOverride("KIVAN",SetDialog("7XKIVA"))
+		SetGlobal("KivanQuest","GLOBAL",1)
+		Continue()
 END
 
-
-
-
-
-
+IF 
+	Global("KivanQuest","GLOBAL",0)
+	OR(2)
+		!BeenInParty("7XCRE73")
+		StateCheck("KIVAN",STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		CreateCreature("7XCRE73",[468.837],4)
+		SetGlobal("KivanQuest","GLOBAL",1)
+		Continue()
+END

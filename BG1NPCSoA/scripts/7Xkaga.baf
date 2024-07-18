@@ -89,7 +89,7 @@ END
 
 IF
 
-InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)
+InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)
  PartyHasItem("misc9t")
  Global("KagainDragonEggs","LOCALS",0)
 THEN
@@ -101,7 +101,7 @@ END
 
 IF
 
-InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)
+InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)
 OR(2)
 AreaCheck("AR0900")
 AreaCheck("AR1000")

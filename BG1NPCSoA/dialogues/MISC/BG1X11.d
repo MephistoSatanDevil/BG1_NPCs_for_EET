@@ -176,14 +176,14 @@ CHAIN IF ~AreaCheck("7XARAU") Global("7xAuctionGoldsword","GLOBAL",3) InParty("M
 == 7XCRE97 @140
 == NOBLEM3 @141
 == JAHEIRAJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @171
-== 7XFALDJ IF ~InParty("7XFALD") !StateCheck("7XFALD",CD_STATE_NOTVALID)~ THEN @172
+== 7XFALDJ IF ~InParty("FALDORN") !StateCheck("FALDORN",CD_STATE_NOTVALID)~ THEN @172
 == NALIAJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @173
 == NOBLEM3 IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @174
 == PLAYER1 @142
 == ANOMENJ IF ~InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @143
 == KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @144
 == JANJ IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN @145
-== 7XTIAXJ IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @395
+== 7XTIAXJ IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @395
 == MINSCJ @146
 == BG1X23 @147
 == NOBLEM3 @148
@@ -266,14 +266,14 @@ CHAIN IF ~AreaCheck("7XARAU") Global("7xAuctionGoldsword","GLOBAL",3) OR(2) !InP
 == 7XCRE97 @140
 == NOBLEM3 @141
 == JAHEIRAJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @171
-== 7XFALDJ IF ~InParty("7XFALD") !StateCheck("7XFALD",CD_STATE_NOTVALID)~ THEN @172
+== 7XFALDJ IF ~InParty("FALDORN") !StateCheck("FALDORN",CD_STATE_NOTVALID)~ THEN @172
 == NALIAJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @173
 == NOBLEM3 IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @174
 == PLAYER1 @142
 == ANOMENJ IF ~InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @143
 == KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @144
 == JANJ IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN @145
-== 7XTIAXJ IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @395
+== 7XTIAXJ IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @395
 == BG1X23 @147
 == NOBLEM3 @148
 == 7XCRE97 @149
@@ -348,9 +348,9 @@ END
 
 IF ~~ BEGIN 7xDruzerTalk3
 SAY @359
-IF ~OR(3) !InParty("7XTIAX") !InMyArea("7XTIAX") StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN REPLY @360 GOTO 7xDruzerTalk4
-IF ~OR(3) !InParty("7XTIAX") !InMyArea("7XTIAX") StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN REPLY @361 GOTO 7xDruzerTalk5
-IF ~InParty("7XTIAX") InMyArea("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN EXTERN 7XTIAXJ 7xDruzerTalk4Tiax
+IF ~OR(3) !InParty("TIAX") !InMyArea("TIAX") StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN REPLY @360 GOTO 7xDruzerTalk4
+IF ~OR(3) !InParty("TIAX") !InMyArea("TIAX") StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN REPLY @361 GOTO 7xDruzerTalk5
+IF ~InParty("TIAX") InMyArea("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN EXTERN 7XTIAXJ 7xDruzerTalk4Tiax
 END
 
 IF ~~ BEGIN 7xDruzerTalk4
@@ -520,7 +520,7 @@ CHAIN IF ~AreaCheck("7XARAU") Global("7xAuctionPoems","GLOBAL",3) InParty("HaerD
 == BG1X24 @278 // Lady Aliella
 == 7XCRE97 @278 // Charles
 == 7XSAREZ @279
-== 7XGarJ IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @295
+== 7XGarJ IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @295
 == HAERDAJ @280
 == 7XSAREZ @281
 == 7XCRE97 @282 // Charles
@@ -561,7 +561,7 @@ CHAIN IF ~AreaCheck("7XARAU") Global("7xAuctionPoems","GLOBAL",3) OR(2) !InParty
 == BG1X24 @278 // Lady Aliella
 == 7XCRE97 @278 // Charles
 == 7XSAREZ @279
-== 7XGarJ IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @295
+== 7XGarJ IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @295
 == 7xAUCTIO @293
 == 7XSAREZ @294
 == 7xAUCTIO @208
@@ -593,7 +593,7 @@ CHAIN IF ~AreaCheck("7XARAU") Global("7xAuctionMirror","GLOBAL",3)~ THEN 7xAUCTI
 == 7xAUCTIO @5
 =@6
 =@7
-== 7XTIAXJ IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @392
+== 7XTIAXJ IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @392
 == BNOBLE2 @8 // Lady Diana
 == BNOBLE1 @9 // Lord Feveron
 == BNOBLE2 @10 // Lady Diana
@@ -675,7 +675,7 @@ CHAIN IF ~AreaCheck("7XARAU") Global("7xAuctionDiadema","GLOBAL",3)~ THEN 7xDILI
 =@69
 =@70
 =@71
-== 7XTIAXJ IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @393
+== 7XTIAXJ IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @393
 == 7xDILIN @72
 == BNOBLE1 @73 // Lord Feveron
 == BNOBLE2 @74 // Lady Diana
@@ -761,20 +761,20 @@ CHAIN IF ~AreaCheck("7XARAU") Global("7xAuctionAromat","GLOBAL",3)~ THEN 7xAUCTI
 @180 DO ~SetGlobal("7xAuctionAromat","GLOBAL",4) ActionOverride(Player1,SetDialog("PLAYER1"))~
 =@181
 =@182
-== 7XTIAXJ IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @387
-== 7xAUCTIO IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @388
-== 7XNOBLE1 IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @389
-== 7XTIAXJ IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @390
-== 7xAUCTIO IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @391
+== 7XTIAXJ IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @387
+== 7xAUCTIO IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @388
+== 7XNOBLE1 IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @389
+== 7XTIAXJ IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @390
+== 7xAUCTIO IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @391
 == 7xAUCTIO @183
 == IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN @184
 == IF_FILE_EXISTS NEERAJ IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN @185
-== 7XSafaJ IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @186
-== 7XCoranJ IF ~InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID) InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @187
-== 7XSafaJ IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID) InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @188
-== BG1X1 IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID) InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @189
-== 7XCRE97 IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID) InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @190
-== 7XNOBLE2 IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID) InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @191
+== 7XSafaJ IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @186
+== 7XCoranJ IF ~InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID) InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @187
+== 7XSafaJ IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID) InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @188
+== BG1X1 IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID) InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @189
+== 7XCRE97 IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID) InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @190
+== 7XNOBLE2 IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID) InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @191
 == EDWINJ IF ~InParty("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @192
 == NALIAJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @193
 == KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @194
@@ -784,7 +784,7 @@ CHAIN IF ~AreaCheck("7XARAU") Global("7xAuctionAromat","GLOBAL",3)~ THEN 7xAUCTI
 == noblem3 IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @198
 == KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @199
 == 7xAUCTIO @311
-== 7XTIAXJ IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @394
+== 7XTIAXJ IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @394
 END
 IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN REPLY @200 EXTERN KORGANJ AuctionSceneAromat2KorganSoft
 IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN REPLY @202 EXTERN 7xAUCTIO AuctionSceneAromat2Buy
@@ -829,7 +829,7 @@ CHAIN IF ~AreaCheck("7XARAU") Global("7xAuctionCloak","GLOBAL",3)~ THEN 7XNOBLE7
 == 7XNOBLE8 @427 // Samnus
 =@428
 =@429
-== 7XTIAXJ IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @396
+== 7XTIAXJ IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @396
 == BG1X23 @430 // Lady Ravhana
 == 7XNOBLE8 @431 // Samnus
 =@432
@@ -840,15 +840,15 @@ CHAIN IF ~AreaCheck("7XARAU") Global("7xAuctionCloak","GLOBAL",3)~ THEN 7XNOBLE7
 == HAERDAJ IF ~InParty("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @437
 == 7XNOBLE8 IF ~InParty("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @438 // Samnus
 == HAERDAJ IF ~InParty("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @439
-== 7XGarJ IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @440
-== 7XNOBLE8 IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @441 // Samnus
+== 7XGarJ IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @440
+== 7XNOBLE8 IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @441 // Samnus
 =@442
-== 7XGarJ IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @443
-== 7XNOBL10 IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @444 // Lady Barvicia
-== 7XGarJ IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @445
-== 7XNOBL10 IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @446 // Lady Barvicia
-== 7XGarJ IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @447
-== 7XNOBL10 IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @448 // Lady Barvicia
+== 7XGarJ IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @443
+== 7XNOBL10 IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @444 // Lady Barvicia
+== 7XGarJ IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @445
+== 7XNOBL10 IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @446 // Lady Barvicia
+== 7XGarJ IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @447
+== 7XNOBL10 IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @448 // Lady Barvicia
 =@449
 == 7XNOBLE9 @450 // Sir Robin
 == 7XNOBL10 @451 // Lady Barvicia
@@ -860,14 +860,14 @@ CHAIN IF ~AreaCheck("7XARAU") Global("7xAuctionCloak","GLOBAL",3)~ THEN 7XNOBLE7
 == 7XNOBLE9 @457 // Sir Robin
 == 7XNOBL10 @458 // Lady Barvicia
 == 7XNOBLE8 @459 // Samnus
-== 7XGarJ IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @460
+== 7XGarJ IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @460
 == HAERDAJ IF ~InParty("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @461
 == BNOBLE1 IF ~InParty("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @462 // Lord Feveron
 == 7XNOBLE9 IF ~InParty("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @463 // Sir Robin
 == 7XNOBL10 @464 // Lady Barvicia
 == 7XNOBLE9 @465 // Sir Robin
 END
-IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN REPLY @466 EXTERN 7XGarJ AuctionSceneCloakGarrick
+IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN REPLY @466 EXTERN 7XGarJ AuctionSceneCloakGarrick
 IF ~InParty("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN REPLY @467 EXTERN HAERDAJ AuctionSceneCloakHaerDalis
 IF ~~ THEN REPLY @471 EXTERN 7XNOBLE8 AuctionSceneCloakMyself
 IF ~~ THEN REPLY @472 EXTERN 7XNOBLE9 AuctionSceneCloakRobin
@@ -941,15 +941,15 @@ IF ~~ BEGIN AuctionSceneCloakAfter3_1_1
 SAY @489
 =@491
 =@492
-IF ~OR (3) !InParty("7XGAR") !InMyArea("7XGAR") StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN GOTO AuctionSceneCloakAfter3_3
-IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN EXTERN 7XGarJ AuctionSceneCloakAfter3_Garrick
+IF ~OR (3) !InParty("GARRICK") !InMyArea("GARRICK") StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN GOTO AuctionSceneCloakAfter3_3
+IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN EXTERN 7XGarJ AuctionSceneCloakAfter3_Garrick
 END
 
 IF ~~ BEGIN AuctionSceneCloakAfter3_1_2
 SAY @489
 =@492
-IF ~OR (3) !InParty("7XGAR") !InMyArea("7XGAR") StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN GOTO AuctionSceneCloakAfter3_3
-IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN EXTERN 7XGarJ AuctionSceneCloakAfter3_Garrick
+IF ~OR (3) !InParty("GARRICK") !InMyArea("GARRICK") StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN GOTO AuctionSceneCloakAfter3_3
+IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN EXTERN 7XGarJ AuctionSceneCloakAfter3_Garrick
 END
 
 IF ~~ BEGIN AuctionSceneCloakAfter3_3
@@ -1007,11 +1007,11 @@ CHAIN IF ~AreaCheck("7XARAU") Global("7xAuctionPendant","GLOBAL",3)~ THEN 7xAUCT
 == 7XNOBL11 @528
 == NALIAJ @529
 == 7xAUCTIO @530
-== IF_FILE_EXISTS 7XsharJ IF ~InParty("7XSHAR") !StateCheck("7XSHAR",CD_STATE_NOTVALID)~ THEN @315
+== IF_FILE_EXISTS 7XsharJ IF ~InParty("SHARTEEL") !StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @315
 == VICONIJ IF ~InParty("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @317
 == EDWINJ IF ~InParty("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID) OR(2) !InParty("Viconia") StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @317
-== IF_FILE_EXISTS 7XSafaJ IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @318
-== IF_FILE_EXISTS 7XMONTJ IF ~InParty("7XMONT") !StateCheck("7XMONT",CD_STATE_NOTVALID)~ THEN @319
+== IF_FILE_EXISTS 7XSafaJ IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @318
+== IF_FILE_EXISTS 7XMONTJ IF ~InParty("MONTARON") !StateCheck("MONTARON",CD_STATE_NOTVALID)~ THEN @319
 == AERIEJ IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @316
 END
 IF ~~ THEN REPLY @531 EXTERN 7xAUCTIO AuctionScenePendant2
@@ -1152,7 +1152,7 @@ CHAIN IF ~AreaCheck("7XARAU") Global("7xAuctionBoots","GLOBAL",3) InParty("Mazzy
 =@602
 == JAHEIRAJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @603
 == 7xAUCTIO @604
-== IF_FILE_EXISTS 7XSafaJ IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @605
+== IF_FILE_EXISTS 7XSafaJ IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @605
 == AERIEJ IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @606
 == IF_FILE_EXISTS NEERAJ IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN @607
 == IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID) OR(2) !InParty("Neera") StateCheck("Neera",CD_STATE_NOTVALID)~ THEN @607
@@ -1179,7 +1179,7 @@ CHAIN IF ~AreaCheck("7XARAU") Global("7xAuctionBoots","GLOBAL",3) OR(2) !InParty
 =@602
 == JAHEIRAJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @603
 == 7xAUCTIO @604
-== IF_FILE_EXISTS 7XSafaJ IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @605
+== IF_FILE_EXISTS 7XSafaJ IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @605
 == AERIEJ IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @606
 == IF_FILE_EXISTS NEERAJ IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN @607
 == IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID) OR(2) !InParty("Neera") StateCheck("Neera",CD_STATE_NOTVALID)~ THEN @607
@@ -1270,12 +1270,12 @@ CHAIN IF ~AreaCheck("7XARAU") Global("7xAuctionHat","GLOBAL",3) InParty("Edwin")
 == IF_FILE_EXISTS NEERAJ IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN @664
 == IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID) OR(2) !InParty("Neera") StateCheck("Neera",CD_STATE_NOTVALID)~ THEN @664
 == JAHEIRAJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @665
-== 7XkagaJ IF ~InParty("7Xkaga") !StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @666
-== KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID) OR(2) !InParty("7Xkaga") StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @666
+== 7XkagaJ IF ~InParty("KAGAIN") !StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN @666
+== KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID) OR(2) !InParty("KAGAIN") StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN @666
 == JANJ IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN @667
-== 7XGarJ IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @668
-== 7XMONTJ IF ~InParty("7XMONT") !StateCheck("7XMONT",CD_STATE_NOTVALID)~ THEN @669
-== 7XQUAYJ IF ~InParty("7XQUAY") !StateCheck("7XQUAY",CD_STATE_NOTVALID) OR(2) !InParty("7XMONT") StateCheck("7XMONT",CD_STATE_NOTVALID)~ THEN @669
+== 7XGarJ IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @668
+== 7XMONTJ IF ~InParty("MONTARON") !StateCheck("MONTARON",CD_STATE_NOTVALID)~ THEN @669
+== 7XQUAYJ IF ~InParty("QUAYLE") !StateCheck("QUAYLE",CD_STATE_NOTVALID) OR(2) !InParty("MONTARON") StateCheck("MONTARON",CD_STATE_NOTVALID)~ THEN @669
 == BG1X23 @670 // Lady Ravhana
 == 7xAUCTIO @671
 =@672
@@ -1356,12 +1356,12 @@ CHAIN IF ~AreaCheck("7XARAU") Global("7xAuctionHat","GLOBAL",3) OR(2) !InParty("
 == IF_FILE_EXISTS NEERAJ IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN @664
 == IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID) OR(2) !InParty("Neera") StateCheck("Neera",CD_STATE_NOTVALID)~ THEN @664
 == JAHEIRAJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @665
-== 7XkagaJ IF ~InParty("7Xkaga") !StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @666
-== KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID) OR(2) !InParty("7Xkaga") StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @666
+== 7XkagaJ IF ~InParty("KAGAIN") !StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN @666
+== KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID) OR(2) !InParty("KAGAIN") StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN @666
 == JANJ IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN @667
-== 7XGarJ IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @668
-== 7XMONTJ IF ~InParty("7XMONT") !StateCheck("7XMONT",CD_STATE_NOTVALID)~ THEN @669
-== 7XQUAYJ IF ~InParty("7XQUAY") !StateCheck("7XQUAY",CD_STATE_NOTVALID) OR(2) !InParty("7XMONT") StateCheck("7XMONT",CD_STATE_NOTVALID)~ THEN @669
+== 7XGarJ IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @668
+== 7XMONTJ IF ~InParty("MONTARON") !StateCheck("MONTARON",CD_STATE_NOTVALID)~ THEN @669
+== 7XQUAYJ IF ~InParty("QUAYLE") !StateCheck("QUAYLE",CD_STATE_NOTVALID) OR(2) !InParty("MONTARON") StateCheck("MONTARON",CD_STATE_NOTVALID)~ THEN @669
 == BG1X23 @670 // Lady Ravhana
 == 7xAUCTIO @671
 =@672

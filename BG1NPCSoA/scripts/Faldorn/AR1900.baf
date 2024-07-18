@@ -1,7 +1,7 @@
 
 IF 
 Global("DestroyTrademeet","GLOBAL",7)
-!InMyArea("7XFALD")
+!InMyArea("FALDORN")
 Global("CreateFaldornSoA","GLOBAL",0)
 
 THEN
@@ -13,7 +13,7 @@ END
 
 IF 
 Global("DestroyTrademeet","GLOBAL",10)
-!InMyArea("7XFALD")
+!InMyArea("FALDORN")
 Global("CreateFaldornSoA","GLOBAL",0)
 
 THEN

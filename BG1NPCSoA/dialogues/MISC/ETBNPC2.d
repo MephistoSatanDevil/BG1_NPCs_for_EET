@@ -21,7 +21,7 @@ IF ~~ THEN DO ~EraseJournalEntry(@1793)AddJournalEntry(@17941,QUEST_DONE)
 SetGlobal("ETBNPC2","GLOBAL",4)ReputationInc(2)AddexperienceParty(25000)~ EXIT
 END
 
-IF ~Global("ETBNPC2","GLOBAL",0)!InParty("7XSKI")~ THEN BEGIN Calandra1
+IF ~Global("ETBNPC2","GLOBAL",0)!InParty("SKIE")~ THEN BEGIN Calandra1
    SAY @7
 =
 @8
@@ -252,7 +252,7 @@ END
 END
 
 EXTEND_BOTTOM ACOLYTE1 0 
-IF ~Global("ETBQUEST","GLOBAL",1) OR(2) !InParty("7XBRAN") StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN REPLY @101 GOTO TalonETBQuest2
+IF ~Global("ETBQUEST","GLOBAL",1) OR(2) !InParty("BRANWEN") StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN REPLY @101 GOTO TalonETBQuest2
 END
 
 APPEND ACOLYTE1

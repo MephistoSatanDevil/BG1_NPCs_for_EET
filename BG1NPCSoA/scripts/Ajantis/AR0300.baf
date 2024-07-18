@@ -1,5 +1,5 @@
 IF 
-InParty("7XAJAN") !StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS") !StateCheck("AJANTIS",CD_STATE_NOTVALID)
 Global("AjantisQuest","GLOBAL",12)
 Global("ANKatrinaExists","AR0300",0)
 CombatCounter(0) 

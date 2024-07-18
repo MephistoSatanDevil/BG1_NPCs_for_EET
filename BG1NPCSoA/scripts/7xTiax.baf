@@ -89,7 +89,7 @@ END
 
 IF
   PartyHasItem("ring39")
-!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("7XTIAX")
+!StateCheck("TIAX",CD_STATE_NOTVALID)InParty("TIAX")
   Global("TiaxRingofGaxx","LOCALS",0)
 THEN
  RESPONSE #100
@@ -100,7 +100,7 @@ END
 
 IF
 
-AreaCheck("AR1800")!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("7XTIAX")
+AreaCheck("AR1800")!StateCheck("TIAX",CD_STATE_NOTVALID)InParty("TIAX")
   Global("tiaxAR1800","GLOBAL",0)
   CombatCounter(0)
 THEN
@@ -113,7 +113,7 @@ IF
 	ReputationLT(Player1,4)
 	ReputationGT(Player1,1)
 Global("TiaxRepTalk2","Locals",0)
-	!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("7XTIAX")
+	!StateCheck("TIAX",CD_STATE_NOTVALID)InParty("TIAX")
 	See(Player1)
 	CombatCounter(0)
 	
@@ -128,7 +128,7 @@ IF
 	ReputationLT(Player1,7)
 	ReputationGT(Player1,3)
 	Global("TiaxRepTalk1","Locals",0)
-	!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("7XTIAX")
+	!StateCheck("TIAX",CD_STATE_NOTVALID)InParty("TIAX")
 	See(Player1)
 	CombatCounter(0)
 	
@@ -140,7 +140,7 @@ END
 
 IF
 
-AreaCheck("AR0300")!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("7XTIAX")
+AreaCheck("AR0300")!StateCheck("TIAX",CD_STATE_NOTVALID)InParty("TIAX")
   Global("tiaxAR0300","GLOBAL",0)
   CombatCounter(0)
 THEN
@@ -151,7 +151,7 @@ END
 
 IF
 
-AreaCheck("AR0800")!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("7XTIAX")
+AreaCheck("AR0800")!StateCheck("TIAX",CD_STATE_NOTVALID)InParty("TIAX")
   Global("tiaxAR0800","GLOBAL",0)
   CombatCounter(0)
 THEN
@@ -163,7 +163,7 @@ END
 
 IF
 
-AreaCheck("AR0700")!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("7XTIAX")
+AreaCheck("AR0700")!StateCheck("TIAX",CD_STATE_NOTVALID)InParty("TIAX")
   Global("tiaxAR0700","GLOBAL",0)
   CombatCounter(0)
 THEN
@@ -174,7 +174,7 @@ END
 
 IF
 
-AreaCheck("AR0400")!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("7XTIAX")
+AreaCheck("AR0400")!StateCheck("TIAX",CD_STATE_NOTVALID)InParty("TIAX")
   Global("tiaxAR0400","GLOBAL",0)
   CombatCounter(0)
 THEN
@@ -185,7 +185,7 @@ END
 
 IF
 
-AreaCheck("AR0406")!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("7XTIAX")
+AreaCheck("AR0406")!StateCheck("TIAX",CD_STATE_NOTVALID)InParty("TIAX")
   Global("tiaxAR0406","GLOBAL",0)
   CombatCounter(0)
 THEN
@@ -196,7 +196,7 @@ END
 
 IF
 
-AreaCheck("AR0404")!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("7XTIAX")
+AreaCheck("AR0404")!StateCheck("TIAX",CD_STATE_NOTVALID)InParty("TIAX")
   Global("tiaxAR0404","GLOBAL",0)
   CombatCounter(0)
 THEN
@@ -207,7 +207,7 @@ END
 
 IF
 
-AreaCheck("AR0701")!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("7XTIAX")
+AreaCheck("AR0701")!StateCheck("TIAX",CD_STATE_NOTVALID)InParty("TIAX")
   Global("tiaxAR0701","GLOBAL",0)
   CombatCounter(0)
 THEN
@@ -218,7 +218,7 @@ END
 
 IF
 
-AreaCheck("AR0300")!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("7XTIAX")
+AreaCheck("AR0300")!StateCheck("TIAX",CD_STATE_NOTVALID)InParty("TIAX")
   Global("tiaxAR0300","GLOBAL",0)
   CombatCounter(0)
 THEN
@@ -229,7 +229,7 @@ END
 
 IF
 
-AreaCheck("AR1106")!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("7XTIAX")
+AreaCheck("AR1106")!StateCheck("TIAX",CD_STATE_NOTVALID)InParty("TIAX")
   Global("tiaxAR1106","GLOBAL",0)
   CombatCounter(0)
 THEN
@@ -241,7 +241,7 @@ END
 
 IF
 
-AreaCheck("AR1401")!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("7XTIAX")
+AreaCheck("AR1401")!StateCheck("TIAX",CD_STATE_NOTVALID)InParty("TIAX")
   Global("tiaxAR1401","GLOBAL",0)
   CombatCounter(0)
 THEN
@@ -253,7 +253,7 @@ END
 
 // Water Gardens
 IF
-AreaCheck("ARBGX2")!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("7XTIAX")
+AreaCheck("ARBGX2")!StateCheck("TIAX",CD_STATE_NOTVALID)InParty("TIAX")
   Global("TiaxARBGX2","ARBGX2",0)
   CombatCounter(0)
 THEN
@@ -264,7 +264,7 @@ END
 
 IF
 AreaCheck("ARBGX2")
-!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("7XTIAX")
+!StateCheck("TIAX",CD_STATE_NOTVALID)InParty("TIAX")
   Global("TiaxARBGX2","ARBGX2",1)
   RealGlobalTimerExpired("TiaxARBGX2TalkTimer","GLOBAL") 
   CombatCounter(0)

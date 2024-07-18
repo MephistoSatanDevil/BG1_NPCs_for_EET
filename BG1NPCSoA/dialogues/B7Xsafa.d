@@ -4,7 +4,7 @@ BEGIN ~B7Xsafa~
 
 CHAIN
 IF ~Global("SafanaHaerDalis","GLOBAL",0)
-InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)!StateCheck("HaerDalis",CD_STATE_NOTVALID)
+InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)!StateCheck("HaerDalis",CD_STATE_NOTVALID)
 InParty("HaerDalis")~ THEN BHAERDA SafanaHaerDalisBanter1
 @47
 DO ~SetGlobal("SafanaHaerDalis","GLOBAL",1)~
@@ -27,7 +27,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Anomen")IsValidForPartyDialog("Anomen")
-CombatCounter(0)InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+CombatCounter(0)InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 Global("AnomenSafana","GLOBAL",0)~ THEN BANOMEN AnomenSafana
 @58
 DO ~SetGlobal("AnomenSafana","GLOBAL",1)~
@@ -52,7 +52,7 @@ DO ~SetGlobal("AnomenSafana","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("Valygar")See("Valygar")InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+IF ~InParty("Valygar")See("Valygar")InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 !StateCheck("Valygar",CD_STATE_NOTVALID)CombatCounter(0)
 Global("ValygarSafana","GLOBAL",0)~ THEN B7Xsafa ValygarSafana1
 @68 
@@ -82,7 +82,7 @@ DO ~SetGlobal("ValygarSafana","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+IF ~InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 CombatCounter(0)!StateCheck("Viconia",CD_STATE_NOTVALID)InParty("Viconia")
 Global("ViconiaSafana","GLOBAL",0)~ THEN BVICONI ViconiaSafana1
 @81
@@ -106,7 +106,7 @@ EXIT
 
 
 CHAIN IF
-~InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)IsValidForPartyDialog("Korgan")
+~InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)IsValidForPartyDialog("Korgan")
 InParty("Korgan")Global("SafanaKorgan","GLOBAL",0)~
 THEN BKORGAN KORGANSAFA1
 @89 DO ~SetGlobal("SafanaKorgan","GLOBAL",1)~
@@ -125,7 +125,7 @@ THEN BKORGAN KORGANSAFA1
 EXIT
 
 CHAIN IF
-~InParty("Mazzy")IsValidForPartyDialog("Mazzy")InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+~InParty("Mazzy")IsValidForPartyDialog("Mazzy")InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 Global("SafaMazzy","GLOBAL",0)~
 THEN BMAZZY SafaMazzy1
 @100
@@ -143,7 +143,7 @@ THEN BMAZZY SafaMazzy1
 EXIT
 
 CHAIN IF ~Global("SafaAerie","GLOBAL",0)
-See("Aerie") InParty("Aerie") !Dead("Aerie")InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+See("Aerie") InParty("Aerie") !Dead("Aerie")InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN B7Xsafa SafanaAerie1
 @109
 == Baerie @110
@@ -162,7 +162,7 @@ EXIT
 
 CHAIN IF ~Global("SafanaEdwin","GLOBAL",0)
     InParty("Edwin") See("Edwin") !Dead("Edwin")
-    Gender("Edwin",MALE)InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+    Gender("Edwin",MALE)InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
     !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN B7Xsafa SafaEdwin1
 @119
 =
@@ -179,7 +179,7 @@ EXIT
 
 CHAIN IF ~Global("SafanaEdwina","GLOBAL",0)
     InParty("Edwin") !Dead("Edwin")IsValidForPartyDialog("Edwin")
-    Gender("Edwin",FEMALE)InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+    Gender("Edwin",FEMALE)InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
     !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN B7Xsafa sexy
 @127
 =
@@ -211,7 +211,7 @@ CHAIN IF ~Global("SafanaEdwina","GLOBAL",0)
 EXIT
 
 
-CHAIN IF ~See("7XSAFA")InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)InParty("Yoshimo")
+CHAIN IF ~See("SAFANA")InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)InParty("Yoshimo")
 CombatCounter(0)!StateCheck("Yoshimo",CD_STATE_NOTVALID)
 !See([ENEMY])
 Global("SafaYoshimo","GLOBAL",0)~ THEN BYOSHIM SafaYoshimo_1
@@ -243,7 +243,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Nalia")!StateCheck("Nalia",CD_STATE_NOTVALID)
-InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 Global("SafaNaliaTalk","GLOBAL",0)~ THEN B7Xsafa SafaNaliaTalk
 @167
 =
@@ -265,7 +265,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Jaheira")!StateCheck("Jaheira",CD_STATE_NOTVALID)
-InParty("7XSAFA")See("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+InParty("SAFANA")See("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 Global("7XSafaJaheira1","GLOBAL",0)~ THEN BJAHEIR 7XSafaJaheiraBanter
 @175 DO ~SetGlobal("7XSafaJaheira1","GLOBAL",1)~
 ==B7Xsafa
@@ -295,7 +295,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)
-InParty("7XSAFA")See("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+InParty("SAFANA")See("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 Global("7XSafaJan","GLOBAL",0)~ THEN BJAN 7XSafaJanBanter1
 @189 DO ~SetGlobal("7XSafaJan","GLOBAL",1)~
 ==B7Xsafa
@@ -324,7 +324,7 @@ CHAIN
 IF ~InParty("Minsc")
 See("Minsc")
 !StateCheck("Minsc",CD_STATE_NOTVALID)
-Global("SafaMinsc","GLOBAL",0)InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN B7Xsafa MinscSafana1
+Global("SafaMinsc","GLOBAL",0)InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN B7Xsafa MinscSafana1
 @200
 DO ~SetGlobal("SafaMinsc","GLOBAL",1)~
 == B7Xsafa @201
@@ -343,8 +343,8 @@ EXIT
 ///////////////////////////////////////////////////////////
 
 CHAIN
-IF ~InParty("Nalia")!StateCheck("Nalia",CD_STATE_NOTVALID)Global("SafaNaliaTalk","GLOBAL",1)InParty("7XSAFA")
-See("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN BNALIA SafaNaliaTalk2
+IF ~InParty("Nalia")!StateCheck("Nalia",CD_STATE_NOTVALID)Global("SafaNaliaTalk","GLOBAL",1)InParty("SAFANA")
+See("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN BNALIA SafaNaliaTalk2
 @209
 =
 @210
@@ -383,7 +383,7 @@ DO ~SetGlobal("SafaNaliaTalk","GLOBAL",2)~
 @227
 EXIT
 
-CHAIN IF ~!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+CHAIN IF ~!StateCheck("SAFANA",CD_STATE_NOTVALID)
 InParty("Yoshimo")!StateCheck("Yoshimo",CD_STATE_NOTVALID)
 CombatCounter(0)IsValidForPartyDialog("Yoshimo")!See([ENEMY])Global("SafaYoshimo","GLOBAL",1)~ THEN B7Xsafa SafaYoshimo_2
 @228 
@@ -412,7 +412,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Jaheira")!StateCheck("Jaheira",CD_STATE_NOTVALID)
-InParty("7XSAFA")See("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+InParty("SAFANA")See("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 Global("7XSafaJaheira1","GLOBAL",1)~ THEN ~B7Xsafa~ 7XSafaJaheiraBanter2
 @243
 =
@@ -442,7 +442,7 @@ Global("7XSafaJaheira1","GLOBAL",1)~ THEN ~B7Xsafa~ 7XSafaJaheiraBanter2
 EXIT
 
 CHAIN
-IF ~InParty("Valygar")See("Valygar")InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+IF ~InParty("Valygar")See("Valygar")InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 !StateCheck("Valygar",CD_STATE_NOTVALID)CombatCounter(0)
 Global("ValygarSafana","GLOBAL",0)~ THEN ~BVALYGA~ ValygarSafana2
 @260 
@@ -460,7 +460,7 @@ DO ~SetGlobal("ValygarSafana","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+IF ~InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 CombatCounter(0)!StateCheck("Viconia",CD_STATE_NOTVALID)InParty("Viconia")
 Global("ViconiaSafana","GLOBAL",1)~ THEN ~BVICONI~ ViconiaSafana2
 @266
@@ -482,7 +482,7 @@ EXIT
 
 CHAIN
 IF ~Global("SafanaHaerDalis","GLOBAL",1)
-InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 IsValidForPartyDialog("HaerDalis")InParty("HaerDalis")~ THEN ~B7Xsafa~ SafanaHaerDalisBanter2
 @275
 =
@@ -501,7 +501,7 @@ EXIT
 ////////////////////////////////////
 
 CHAIN
-IF ~InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+IF ~InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 CombatCounter(0)!StateCheck("Viconia",CD_STATE_NOTVALID)InParty("Viconia")
 Global("ViconiaSafana","GLOBAL",2)~ THEN ~B7Xsafa~ ViconiaSafana3
 @283
@@ -526,7 +526,7 @@ EXIT
 CHAIN
 IF WEIGHT #-60 ~InParty("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)
 CombatCounter(0)
-InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 Global("KeldornSafana","LOCALS",0)
 OR(2) AreaCheck("AR1600") AreaCheck("AR0300")
 !Global("SafanaQUEST","GLOBAL",2)~ THEN BKELDOR KeldornSafana1
@@ -543,8 +543,8 @@ EXIT
 
 CHAIN
 IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)
-See("7XSAFA")
-InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+See("SAFANA")
+InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 Global("7XSafaJan","GLOBAL",1)~ THEN BJAN 7XSafaJanBanter2
 @304 DO ~SetGlobal("7XSafaJan","GLOBAL",2)~
 ==B7Xsafa @305

@@ -1,13 +1,13 @@
 I_C_T TCYRANDO 1 SKIE-CYRANDO1-1
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @0 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @0 
 END
 
 I_C_T TGARRICK 0 SKIE-TGARRICK0-1
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @1 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @1 
 END
 
 I_C_T TGARRICK 2 SKIE-TGARRICK2-1
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @2
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @2
 =
 @3
  == TGARRICK @4
@@ -28,24 +28,24 @@ I_C_T TGARRICK 2 SKIE-TGARRICK2-1
 END
 
 I_C_T TGARRICK 5 SKIE-TGARRICK5-1
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @15 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @15 
 END
 
 I_C_T TCADRIL 1 SKIE-TCADRIL2-1
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @16 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @16 
 END
 
 I_C_T TCADRIL 0 SKIE-TCADRIL0-1
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @17 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @17 
 END
 
 
 I_C_T WMART1 1 SKIE-WMART1-1
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @18 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @18 
 END
 
 I_C_T UDDROW05 3 SkieDrowComm1
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN
   @19
   == UDDROW05 @20
 == 7XSkiJ
@@ -53,13 +53,13 @@ I_C_T UDDROW05 3 SkieDrowComm1
 END
 
 I_C_T UDkuo01 0 SKIEKoa
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN
  @22
 END
 
 
 I_C_T WELLYN 6 SKIEWellyn2
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN
 @23
 =
 @24
@@ -67,7 +67,7 @@ END
 
 
 I_C_T WELLYN 3 SKIEWellyn1
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN
 @25
 =
 @26 
@@ -77,7 +77,7 @@ I_C_T WELLYN 3 SKIEWellyn1
 END
 
 I_C_T C6CORAN 0 SkieCoran1
- == 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN 
+ == 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN 
 @29
 =
 @30
@@ -86,25 +86,25 @@ I_C_T C6CORAN 0 SkieCoran1
 END
 
 I_C_T C6CORAN 6 SkieCoran2
- == 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN 
+ == 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN 
 @32
 END
 
 
 I_C_T C6CORAN 9 SkieCoran3
- == 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN 
+ == 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN 
 @33
 END
 
 I_C_T2 C6CORAN 25 SkieCoran4
- == 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN 
+ == 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN 
 @34
 =
 @35
 END
 
 I_C_T2 C6CORAN 27 SkieCoran5
- == 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN 
+ == 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN 
 @34
 =
 @35
@@ -112,7 +112,7 @@ END
 
 
 APPEND MURTLEN
-IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")
+IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")
 Global("SkieMurtlen","GLOBAL",0)~ THEN BEGIN FHLMurtlen
 SAY @36
 IF ~~ THEN EXTERN 7XSkiJ Skie-Murtlen
@@ -130,14 +130,14 @@ END
 END
 
 I_C_T UDSILVER 9 SkieUDDragon
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @39
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @39
 =@40
 =@42
 == UDSILVER @41
 END
 
 INTERJECT_COPY_TRANS C6ELHAN2 81 skiecommentelhan
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN
 @43
 =
 @44
@@ -147,7 +147,7 @@ END
 
 
 I_C_T ARGRIM 0 SKIE-ARGRIM
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @46
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @46
 == ARGRIM @47
 == 7XSkiJ @48
 == ARGRIM @49
@@ -158,56 +158,56 @@ END
 
 
 I_C_T ARGRIM 1 SKIE-ARGRIM2
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @53
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @53
 == ARGRIM @54
 == 7XSkiJ @55
 END
 
 I_C_T ARGRIM 2 SKIE-ARGRIM3
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @56
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @56
 END
 
 I_C_T BEGGAR3 0 SKIE-BEGGAR3
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @57
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @57
 END
 
 INTERJECT_COPY_TRANS NOBLEW1 3 SkieNOBLEW1-3
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN
 @58
 END
 
 
 INTERJECT_COPY_TRANS NOBLEW1 4 SkieNOBLEW1-4
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN
 @59
 END
 
 
 INTERJECT_COPY_TRANS BOOTER 2 SkieBooterDisgust
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN
 @60
 END
 
 
 INTERJECT_COPY_TRANS HAWKER01 1 SkieHawker
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN
 @61
 END 
 
 
 INTERJECT_COPY_TRANS BOOTER 3 SkieBooter2
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN
 @62
 END
 
 INTERJECT_COPY_TRANS ARNBOY01 3 SkieArnboy
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN
 @63
 END
 
 
 APPEND GCHILD01
-IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")
+IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")
 Global("SkieChild01","GLOBAL",0)~ THEN BEGIN SkieChild01
 SAY @64
 IF ~~ THEN EXTERN 7XSkiJ SkieChild01
@@ -223,28 +223,28 @@ END
 END
 
 INTERJECT_COPY_TRANS ARAN 85 SkieAranNew
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN 
 @66
 END
 
 I_C_T RAELIS 79 SkieRaelisBribe
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN
 @67
 END
 
 I_C_T BOANASTE 4 SkieMeetWBodhi
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @68
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @68
 END
 
 
 INTERJECT_COPY_TRANS BRAT3 4 SkieBrat3-4
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN 
 @69
 END
 
 
 APPEND BRAT2
-IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")
+IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")
 Global("SkieBrat","GLOBAL",0)~ THEN BEGIN SkieBrat1
 SAY @70
 IF ~~ THEN EXTERN 7XSkiJ SkieBrat2
@@ -261,50 +261,50 @@ END
 
 
 I_C_T RIBALD 0 SKIERIBALD
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @72
-== RIBALD IF ~!Dead("7XSKI") InParty("7XSKI")~ THEN @73
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @72
+== RIBALD IF ~!Dead("SKIE") InParty("SKIE")~ THEN @73
 END
 
 
 I_C_T NOBLEM3 5 SKIE-LordOphal
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @74
-== NOBLEM3 IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @75
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @76
-== NOBLEM3 IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @77
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @78
-== NOBLEM3 IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @79
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @74
+== NOBLEM3 IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @75
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @76
+== NOBLEM3 IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @77
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @78
+== NOBLEM3 IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @79
 END
 
 I_C_T NOBLEM3 6 SKIE-LordOphal
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @80
-== NOBLEM3 IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @81
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @76
-== NOBLEM3 IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @82
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @83
-== NOBLEM3 IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @84
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @85
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @80
+== NOBLEM3 IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @81
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @76
+== NOBLEM3 IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @82
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @83
+== NOBLEM3 IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @84
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @85
 END
 
 I_C_T HAQUAT 2 SKIE-Quataris
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @86
-== HAQUAT IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @87
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @86
+== HAQUAT IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @87
 =
 @88
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @89
-== HAQUAT IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @90
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @89
+== HAQUAT IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @90
 =
 @91
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @92
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @92
 END
 
 
 
 I_C_T LLARSH 3 SKIE-LLARSH
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @93
-== LLARSH IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @94
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @95
-== LLARSH IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @96
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN @97
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @93
+== LLARSH IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @94
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @95
+== LLARSH IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @96
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN @97
 END
 
 
@@ -312,12 +312,12 @@ END
 
 
 I_C_T COWENF2 4 SKIE-CowledWizard
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @98
-== COWENF2 IF ~!Dead("7XSKI") InParty("7XSKI")~ THEN @99
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @98
+== COWENF2 IF ~!Dead("SKIE") InParty("SKIE")~ THEN @99
 END
 
 INTERJECT_COPY_TRANS TORGAL 0 SkieTorGal
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN
 @100
 ==TORGAL
 @101
@@ -325,20 +325,20 @@ END
 
 
 I_C_T BODYG1 0 SKIE-BodyG1
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @102
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @102
 END
 
 I_C_T BODYG1 1 SKIEBodyG1-2
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @103
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @103
 END
 
 I_C_T BODYG2 1 SKIEBodyG2-1
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @104
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @104
 END
 
 
 INTERJECT_COPY_TRANS VICONI 0 SkieViconia
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN
 @105
 ==VICONI
 @106
@@ -351,141 +351,141 @@ END
 
 
 INTERJECT_COPY_TRANS HAERDA 26 Skiehaer
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN
 @109
 ==HAERDA
 @110
 END
 
 INTERJECT_COPY_TRANS ANOMENJ 1 SkieAnomenAjantis
- ==  7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN
+ ==  7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN
 @111
 END
 
 INTERJECT_COPY_TRANS BBEGG1 0 SkieBeggar1
- ==  7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN
+ ==  7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN
 @112
 END
 
 INTERJECT_COPY_TRANS BBEGG2 0 SkieBeggar2
- ==  7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN
+ ==  7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN
 @113
 END
 
 
 INTERJECT_COPY_TRANS BEGGAR1 0 SkieBeggar3
- ==  7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN
+ ==  7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN
 @114
 END
 
 INTERJECT_COPY_TRANS BEGGAR1 10 SkieBeggar4
- ==  7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN
+ ==  7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN
 @115
 END
 
 INTERJECT_COPY_TRANS BEGGAR3 0 SkieBeggar5
- ==  7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN
+ ==  7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN
 @116
 END
 
 INTERJECT_COPY_TRANS BHALF1 0 SkieStivan
 == 7XSkiJ
-IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN
+IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN
 @117
 END
 
 INTERJECT_COPY_TRANS BHALF1 1 SkieStivan2
 == 7XSkiJ
-IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN
+IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN
 @118
 END
 
 INTERJECT_COPY_TRANS BHALF1 2 SkieStivan3
 == 7XSkiJ
-IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN
+IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN
 @119
 END
 
 INTERJECT_COPY_TRANS BHALF1 3 SkieStivan4
 == 7XSkiJ
-IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN
+IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN
 @120
 END
 
 INTERJECT_COPY_TRANS BHALF1 4 SkieStivan5
 == 7XSkiJ
-IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN
+IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN
 @121
 END
 
 INTERJECT_COPY_TRANS BMTHIEF 0 SkieBMTHIEF
 == 7XSkiJ
-IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID) !Dead("7XSKI") InParty("7XSKI")~ THEN
+IF ~!StateCheck("SKIE",CD_STATE_NOTVALID) !Dead("SKIE") InParty("SKIE")~ THEN
 @122
 END
 
 I_C_T BNOBLE1 1 SKIEBNoble
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @123
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @123
 == BNOBLE1 @124
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @125
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @125
 == BNOBLE1 @126
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @127
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @127
 END
 
 I_C_T BNOBLE2 1 SKIEBNoble2-1
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @128
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @128
 END
 
 I_C_T BNOBLE2 6 SKIEBNoble2-2
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @129
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @129
 == BNOBLE2 @130
 =
 @131
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @132
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @132
 =
 @133
 END
 
 I_C_T BRELM 11 SKIEBRelm
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @134
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @134
 == BRELM @135
 END
 
 I_C_T BRUS3 1 SKIEBrus
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @136
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @136
 END
 
 I_C_T BSHOP01 0 SKIEBSHOP01
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @137
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @137
 END
 
 I_C_T CROGAM01 0 SKIECrogam1
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @138 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @138 
 END
 
 I_C_T EMBARL 0 SKIE-EMBARL
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @139 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @139 
 END
 
 
 I_C_T FATMAN 0 SKIE-FATMAN
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @140 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @140 
 END
 
 I_C_T AMCUST01 4 SKIE-AMCUSTOMER1
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @141 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @141 
 END
 
 I_C_T AMCUST01 2 SKIE-AMCUSTOMER2
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @142 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @142 
 END
 
 I_C_T AMCUST01 1 SKIE-AMCUSTOMER3
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @143 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @143 
 END
 
 I_C_T AMCUST01 3 SKIE-AMCUSTOMER4
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @144
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @144
 == AMCUST01 @145
 == 7XSkiJ @146
 == AMCUST01 @147
@@ -493,29 +493,29 @@ END
 
 
 I_C_T AMNG1 0 SKIE-AMNGuard1
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @148 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @148 
 == AMNG1 @149
 END
 
 
 I_C_T AMNLEGS 0 SKIE-AMNGuard2
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @148 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @148 
 == AMNLEGS @150
 =
 @151
 END
 
 I_C_T ARAN 0 SKIE-ARAN1
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @152 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @152 
 == ARAN @153
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @154 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @154 
 == ARAN @155
 END
 
 I_C_T BARSAIL2 1 SKIE-BarSailor1
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @156
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @156
 == BARSAIL2 @157
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @158
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @158
 == BARSAIL2 @159
 END
 
@@ -525,62 +525,62 @@ END
 
 
 I_C_T WINNKEEP 0 SKIE-WINNKEEP
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @160 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @160 
 END
 
 I_C_T WCUST05 1 SKIE-WCust05
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @161 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @161 
 END
 
 I_C_T WCUST05 3 SKIE-WCust05-2
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @162 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @162 
 END
 
 I_C_T WCUST04 1 SKIE-WCust04
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @163
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @163
 == WCUST04 @164 
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @165
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @165
 END
 
 
 I_C_T WCUST02 5 SKIE-Alicia
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN @166 
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN @166 
 END
 
 
 INTERJECT_COPY_TRANS NALIAJ 213 SkieNaliaJ1
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN
 @167
 END 
 
 
 
 INTERJECT_COPY_TRANS BEDWIN 4 SkieBEdwinNalia1
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN
 @168
 END 
 
 INTERJECT_COPY_TRANS BNALIA 40 SkieBEdwinNalia2
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN
 @169
 == BEDWIN @170
 END 
 
 
 INTERJECT_COPY_TRANS SLUMM1 5 SkieSLUMM1-5
-== 7XSkiJ IF ~!StateCheck("7XSKI",CD_STATE_NOTVALID)!Dead("7XSKI") InParty("7XSKI")~ THEN
+== 7XSkiJ IF ~!StateCheck("SKIE",CD_STATE_NOTVALID)!Dead("SKIE") InParty("SKIE")~ THEN
 @171
 END 
 
 // Hell
 I_C_T PLAYER1 25 7xSkie_Hell
-  == 7XSkiJ IF ~InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN @178
+  == 7XSkiJ IF ~InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN @178
 END
 
 // Tree of Life
 ///////////////////
 INTERJECT PLAYER1 33 Skie_TreeOfLife1
-== PLAYER1 IF ~InParty("7XSKI")!StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN @172
+== PLAYER1 IF ~InParty("SKIE")!StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN @172
 =@173
 END
 ++ @174 EXTERN 7XSkiJ Skie_TreeOfLife2

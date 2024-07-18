@@ -1,14 +1,79 @@
+IF
+	Global("CoranCity","GLOBAL",1)
+	Global("SafanaExists","AR0408",0)
+	Dead("C6SAFA")
+	BeenInParty("SAFANA")
+	!StateCheck("SAFANA",STATE_REALLY_DEAD)
+	BeenInParty("CORAN")
+	!StateCheck("CORAN",STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		SetGlobal("CoranCity","GLOBAL",2)
+		SetGlobal("SafanaExists","AR0408",2)
+		MoveGlobal("AR0408","SAFANA",[351.330])
+		ActionOverride("SAFANA",Face(13))
+		ActionOverride("SAFANA",SetDialog("7XSAFA"))
+		MoveGlobal("AR0408","CORAN",[312.354])
+		ActionOverride("CORAN",Face(13))
+		ActionOverride("CORAN",SetDialog("7XCORAN"))
+		Continue() 
+END
 
 IF
-Global("CoranCity","GLOBAL",1)
-Global("SafanaExists","AR0408",0)
-Dead("C6SAFA")
-
+	Global("CoranCity","GLOBAL",1)
+	Global("SafanaExists","AR0408",0)
+	Dead("C6SAFA")
+	OR(2)
+		!BeenInParty("SAFANA")
+		StateCheck("SAFANA",STATE_REALLY_DEAD)
+	BeenInParty("CORAN")
+	!StateCheck("CORAN",STATE_REALLY_DEAD)
 THEN
-RESPONSE #100
-SetGlobal("CoranCity","GLOBAL",2)
-SetGlobal("SafanaExists","AR0408",2)
-CreateCreature("7XCRE63",[312.354],13)
-CreateCreature("7XCRE62",[351.330],13)
-Continue() 
+	RESPONSE #100
+		SetGlobal("CoranCity","GLOBAL",2)
+		SetGlobal("SafanaExists","AR0408",2)
+		CreateCreature("7XCRE62",[351.330],13)
+		MoveGlobal("AR0408","CORAN",[312.354])
+		ActionOverride("CORAN",Face(13))
+		ActionOverride("CORAN",SetDialog("7XCORAN"))
+		Continue() 
+END
+
+IF
+	Global("CoranCity","GLOBAL",1)
+	Global("SafanaExists","AR0408",0)
+	Dead("C6SAFA")
+	BeenInParty("SAFANA")
+	!StateCheck("SAFANA",STATE_REALLY_DEAD)
+	OR(2)
+		!BeenInParty("CORAN")
+		StateCheck("CORAN",STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		SetGlobal("CoranCity","GLOBAL",2)
+		SetGlobal("SafanaExists","AR0408",2)
+		MoveGlobal("AR0408","SAFANA",[351.330])
+		ActionOverride("SAFANA",Face(13))
+		ActionOverride("SAFANA",SetDialog("7XSAFA"))
+		CreateCreature("7XCRE63",[312.354],13)
+		Continue() 
+END
+
+IF
+	Global("CoranCity","GLOBAL",1)
+	Global("SafanaExists","AR0408",0)
+	Dead("C6SAFA")
+	OR(2)
+		!BeenInParty("SAFANA")
+		StateCheck("SAFANA",STATE_REALLY_DEAD)
+	OR(2)
+		!BeenInParty("CORAN")
+		StateCheck("CORAN",STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		SetGlobal("CoranCity","GLOBAL",2)
+		SetGlobal("SafanaExists","AR0408",2)
+		CreateCreature("7XCRE62",[351.330],13)
+		CreateCreature("7XCRE63",[312.354],13)
+		Continue() 
 END

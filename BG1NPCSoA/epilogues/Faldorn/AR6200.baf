@@ -1,6 +1,6 @@
 IF
 Global("StartEndBios","AR6200",1)
-InParty("7XFALD")
+InParty("FALDORN")
 Global("7XFALDBio","GLOBAL",0)
 THEN
 RESPONSE #100

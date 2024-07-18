@@ -2,7 +2,7 @@
 IF
 GlobalGT("chapter" ,"GLOBAL",%bg2_chapter_7%)
 Global("7xAjantisPCToBTalk","LOCALS",0)
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 CombatCounter(0) 
 !See([ENEMY])
 THEN
@@ -14,7 +14,7 @@ END
 IF
 RealGlobalTimerExpired("AjantisPCToBTalk","GLOBAL") 
 Global("7xAjantisPCToBTalk","LOCALS",1)
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 CombatCounter(0) 

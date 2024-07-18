@@ -137,7 +137,7 @@ END
 
 BEGIN ~7xCREYY~
 
-IF ~OR(2)IsGabber("7XGAR")InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)AreaCheck("ARBGX6")
+IF ~OR(2)IsGabber("GARRICK")InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)AreaCheck("ARBGX6")
 RandomNum(5,1)~THEN BEGIN KeltaarArgrimWaterGardenGarrick1
 SAY @41
 =
@@ -210,7 +210,7 @@ END
 
 
 
-IF ~OR(2)IsGabber("7XSHAR")InParty("7XSHAR")See("7XSHAR")!StateCheck("7XSHAR",CD_STATE_NOTVALID)AreaCheck("ARBGX6")
+IF ~OR(2)IsGabber("SHARTEEL")InParty("SHARTEEL")See("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)AreaCheck("ARBGX6")
 RandomNum(5,1)~THEN BEGIN KeltaarArgrimWaterGarden7XSHAR1
 SAY @56
 IF ~~ THEN EXTERN ~7XSHARJ~ 179
@@ -218,7 +218,7 @@ END
 
 
 
-IF ~OR(2)IsGabber("7XYES")InParty("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)AreaCheck("ARBGX6")
+IF ~OR(2)IsGabber("YESLICK")InParty("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)AreaCheck("ARBGX6")
 RandomNum(2,1)~ THEN BEGIN KeltaarArgrimWaterGardenYeslick
 SAY @57
 IF ~~ THEN EXTERN ~7XYESJ~ YeslickKeltaarArgrimWaterGardenComment

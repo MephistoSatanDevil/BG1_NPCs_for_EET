@@ -1,9 +1,24 @@
+IF
+	Global("BRANWExists","AR0900",0)
+	BeenInParty("BRANWEN")
+	!StateCheck("BRANWEN",STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		SetGlobal("BRANWExists","AR0900",1)
+		MoveGlobal("AR0900","BRANWEN",[2435.1264])
+		ActionOverride("BRANWEN",Face(3))
+		ActionOverride("BRANWEN",SetDialog("7XBRAN"))
+		Continue() 
+END
 
 IF
-Global("BRANWExists","AR0900",0)
+	Global("BRANWExists","AR0900",0)
+	OR(2)
+		!BeenInParty("BRANWEN")
+		StateCheck("BRANWEN",STATE_REALLY_DEAD)
 THEN
-RESPONSE #100
-SetGlobal("BRANWExists","AR0900",1)
-CreateCreature("7XCRE5",[2435.1264],3)
-Continue() 
+	RESPONSE #100
+		SetGlobal("BRANWExists","AR0900",1)
+		CreateCreature("7XCRE5",[2435.1264],3)
+		Continue() 
 END

@@ -32,8 +32,8 @@ END
 
 IF ~~ THEN BEGIN SafanaQuestAfter5
 SAY @153
-IF ~OR(2) !InParty("7XCORAN") StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN DO ~LeaveParty() EscapeArea()~ EXIT
-IF ~InParty("7XCORAN") !StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN DO ~LeaveParty() EscapeArea()~ EXTERN 7XCoranJ SafanaQuestAfter6
+IF ~OR(2) !InParty("CORAN") StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN DO ~LeaveParty() EscapeArea()~ EXIT
+IF ~InParty("CORAN") !StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN DO ~LeaveParty() EscapeArea()~ EXTERN 7XCoranJ SafanaQuestAfter6
 END
 
 IF WEIGHT #-20 ~AreaCheck("AR0406")Global("SafanaCCHoldThis","GLOBAL",1)~ THEN BEGIN SafanaCCHoldThis
@@ -139,8 +139,8 @@ SAY @47
 IF ~Gender(Player1,MALE)~ THEN DO ~SetGlobal("SafanaPCStartFirst","LOCALS",1)~ REPLY @50 GOTO SafanaPCTalk1_1Male
 IF ~Gender(Player1,FEMALE)~ THEN DO ~SetGlobal("SafanaPCStartFirst","LOCALS",1)~ REPLY @50 GOTO SafanaPCTalk1_1Female
 IF ~~ THEN DO ~SetGlobal("SafanaPCStartFirst","LOCALS",1)~ REPLY @49 GOTO SafanaPCTalk1_2
-IF ~InParty("7XCORAN")!StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN DO ~SetGlobal("SafanaPCStartFirst","LOCALS",1)~ REPLY @48 EXTERN ~7XCoranJ~ CoranAttackPC1
-IF ~OR(2) !InParty("7XCORAN") StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN DO ~SetGlobal("SafanaPCStartFirst","LOCALS",1)~ REPLY @48 GOTO SafanaPCTalk1_End
+IF ~InParty("CORAN")!StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN DO ~SetGlobal("SafanaPCStartFirst","LOCALS",1)~ REPLY @48 EXTERN ~7XCoranJ~ CoranAttackPC1
+IF ~OR(2) !InParty("CORAN") StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN DO ~SetGlobal("SafanaPCStartFirst","LOCALS",1)~ REPLY @48 GOTO SafanaPCTalk1_End
 END
 
 IF ~~ THEN BEGIN SafanaPCTalk1_1Male
@@ -236,10 +236,10 @@ SAY @167
 =@168
 =@169
 =@170
-IF ~OR(3) !InParty("HaerDalis") !InMyArea("HaerDalis") StateCheck("HaerDalis",CD_STATE_NOTVALID) OR(3) !InParty("7XGAR") !InMyArea("7XGAR") StateCheck("7XGAR",CD_STATE_NOTVALID) OR(3) !InParty("Jaheira") !InMyArea("Jaheira") StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN REPLY @173 GOTO SafanaPCTalk2_5
-IF ~OR(3) !InParty("HaerDalis") !InMyArea("HaerDalis") StateCheck("HaerDalis",CD_STATE_NOTVALID) OR(3) !InParty("7XGAR") !InMyArea("7XGAR") StateCheck("7XGAR",CD_STATE_NOTVALID) InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN EXTERN JAHEIRAJ SafanaPCTalk2_Jaheira
-IF ~InParty("HaerDalis") InMyArea("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID) OR(3) !InParty("7XGAR") !InMyArea("7XGAR") StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN EXTERN HAERDAJ SafanaPCTalk2_HaerDalis
-IF ~InParty("7XGAR") InMyArea("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN EXTERN IF_FILE_EXISTS 7XGarJ SafanaPCTalk2_Garrick
+IF ~OR(3) !InParty("HaerDalis") !InMyArea("HaerDalis") StateCheck("HaerDalis",CD_STATE_NOTVALID) OR(3) !InParty("GARRICK") !InMyArea("GARRICK") StateCheck("GARRICK",CD_STATE_NOTVALID) OR(3) !InParty("Jaheira") !InMyArea("Jaheira") StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN REPLY @173 GOTO SafanaPCTalk2_5
+IF ~OR(3) !InParty("HaerDalis") !InMyArea("HaerDalis") StateCheck("HaerDalis",CD_STATE_NOTVALID) OR(3) !InParty("GARRICK") !InMyArea("GARRICK") StateCheck("GARRICK",CD_STATE_NOTVALID) InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN EXTERN JAHEIRAJ SafanaPCTalk2_Jaheira
+IF ~InParty("HaerDalis") InMyArea("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID) OR(3) !InParty("GARRICK") !InMyArea("GARRICK") StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN EXTERN HAERDAJ SafanaPCTalk2_HaerDalis
+IF ~InParty("GARRICK") InMyArea("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN EXTERN IF_FILE_EXISTS 7XGarJ SafanaPCTalk2_Garrick
 END
 
 IF ~~ THEN BEGIN SafanaPCTalk2_5
@@ -282,8 +282,8 @@ CHAIN IF ~Global("SafanaPCStart","GLOBAL",5) Global("SafanaPCStartFirst","LOCALS
 =@181
 =@182
 == AERIEJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @183
-== IF_FILE_EXISTS 7XGarJ IF ~InParty("7XGAR") InMyArea("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @184
-== 7XCoranJ IF ~InParty("7XCORAN") InMyArea("7XCORAN") !StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @185
+== IF_FILE_EXISTS 7XGarJ IF ~InParty("GARRICK") InMyArea("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @184
+== 7XCoranJ IF ~InParty("CORAN") InMyArea("CORAN") !StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN @185
 == 7XSafaJ @186
 =@187
 =@188
@@ -330,14 +330,14 @@ END
 
 // Brynnlaw talk
 
-IF WEIGHT #-40 ~AreaCheck("AR1600") InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID) Global("SafanaAR1600","AR1600",2)~ THEN 7xsafana_brynnlaw
+IF WEIGHT #-40 ~AreaCheck("AR1600") InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID) Global("SafanaAR1600","AR1600",2)~ THEN 7xsafana_brynnlaw
 SAY @197
 =@198
 =@199
 =@200
 =@201
-IF ~OR(2) !InParty("7XCORAN") StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN DO ~SetGlobal("SafanaAR1600","AR1600",3)~ GOTO safana_brynnlawNOCoran
-IF ~InParty("7XCORAN") !StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN DO ~SetGlobal("SafanaAR1600","AR1600",3)~ GOTO safana_brynnlawCoran
+IF ~OR(2) !InParty("CORAN") StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN DO ~SetGlobal("SafanaAR1600","AR1600",3)~ GOTO safana_brynnlawNOCoran
+IF ~InParty("CORAN") !StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN DO ~SetGlobal("SafanaAR1600","AR1600",3)~ GOTO safana_brynnlawCoran
 END
 
 IF ~~ THEN BEGIN safana_brynnlawCoran
@@ -380,8 +380,8 @@ IF ~~ THEN BEGIN SafanaPCTalkShell_4
 SAY @214
 =@215
 =@216
-IF ~OR(2) !InParty("7XGAR") StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN GOTO SafanaPCTalkShell_5
-IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN EXTERN IF_FILE_EXISTS 7XGarJ SafanaPCTalkShell_Garrick
+IF ~OR(2) !InParty("GARRICK") StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN GOTO SafanaPCTalkShell_5
+IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN EXTERN IF_FILE_EXISTS 7XGarJ SafanaPCTalkShell_Garrick
 END
 
 IF ~~ THEN BEGIN SafanaPCTalkShell_5
@@ -400,21 +400,21 @@ END
 APPEND IF_FILE_EXISTS 7XGarJ
 IF ~~ THEN BEGIN SafanaPCTalkShell_Garrick
 SAY @217
-IF ~OR(2) !InParty("7XCORAN") StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN EXTERN 7XSafaJ SafanaPCTalkShell_Garrick1
-IF ~InParty("7XCORAN") !StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN EXTERN 7XCoranJ SafanaPCTalkShell_Coran
+IF ~OR(2) !InParty("CORAN") StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN EXTERN 7XSafaJ SafanaPCTalkShell_Garrick1
+IF ~InParty("CORAN") !StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN EXTERN 7XCoranJ SafanaPCTalkShell_Coran
 END
 END
 
 
 APPEND 7XSafaJ
 // Docks talk
-IF WEIGHT #-10 ~AreaCheck("AR0300") InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID) Global("SafanaAR0300","AR0300",2)~ THEN BEGIN 7xsafana_docks
+IF WEIGHT #-10 ~AreaCheck("AR0300") InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID) Global("SafanaAR0300","AR0300",2)~ THEN BEGIN 7xsafana_docks
 SAY @237
 IF ~~ THEN DO ~SetGlobal("SafanaAR0300","AR0300",3)~ EXIT
 END
 
 // Graveyard talk
-IF WEIGHT #-10 ~AreaCheck("AR0800") InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID) Global("SafanaAR0800","AR0800",2)~ THEN BEGIN 7xsafana_graveyard
+IF WEIGHT #-10 ~AreaCheck("AR0800") InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID) Global("SafanaAR0800","AR0800",2)~ THEN BEGIN 7xsafana_graveyard
 SAY @259
 =@260
 =@261
@@ -422,19 +422,19 @@ IF ~~ THEN DO ~SetGlobal("SafanaAR0800","AR0800",3)~ EXIT
 END
 
 // Lord Logan talk
-IF WEIGHT #-10 ~AreaCheck("AR2007") InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID) Global("SafanaAR2007","AR2007",2)~ THEN BEGIN 7xsafana_logan
+IF WEIGHT #-10 ~AreaCheck("AR2007") InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID) Global("SafanaAR2007","AR2007",2)~ THEN BEGIN 7xsafana_logan
 SAY @278
 =@279
-IF ~OR(2) !InParty("7XCORAN") StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN DO ~SetGlobal("SafanaAR2007","AR2007",3)~ EXIT
-IF ~InParty("7XCORAN") !StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN DO ~SetGlobal("SafanaAR2007","AR2007",3)~ EXTERN 7XCoranJ 7xsafana_logan_Coran
+IF ~OR(2) !InParty("CORAN") StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN DO ~SetGlobal("SafanaAR2007","AR2007",3)~ EXIT
+IF ~InParty("CORAN") !StateCheck("CORAN",CD_STATE_NOTVALID)~ THEN DO ~SetGlobal("SafanaAR2007","AR2007",3)~ EXTERN 7XCoranJ 7xsafana_logan_Coran
 END
 
 END
 
 // Other
-CHAIN IF ~InParty("7XSAFA")
-See("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
-!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("SAFANA")
+See("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
+!StateCheck("SAFANA",CD_STATE_NOTVALID)
 RandomNum(5,1)
 Global("SafanaBrat","AR0700",0)~ THEN BRAT1 Safana_brat1
 @54
@@ -446,7 +446,7 @@ Global("SafanaBrat","AR0700",0)~ THEN BRAT1 Safana_brat1
 == BRAT1 @59
 EXIT
 
-CHAIN IF WEIGHT #-10 ~InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)Global("SafaSalvanas","GLOBAL",0)~ THEN SALVANAS safana_salvanas
+CHAIN IF WEIGHT #-10 ~InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)Global("SafaSalvanas","GLOBAL",0)~ THEN SALVANAS safana_salvanas
   @60
   DO ~SetGlobal("SafaSalvanas","GLOBAL",1)~
   == 7XSafaJ @61
@@ -473,7 +473,7 @@ EXIT
 
 // Tree of Life
 INTERJECT PLAYER1 33 TreeOLifeSAfana1
-== PLAYER1 IF ~InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @74
+== PLAYER1 IF ~InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @74
 END
 ++ @75 EXTERN 7XSafaJ TreeOLifeSAfana2
 ++ @76 EXTERN 7XSafaJ TreeOLifeSAfana2
@@ -487,7 +487,7 @@ END
 END
 
 
-CHAIN IF WEIGHT #-50 ~InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)Global("SafaPirate","GLOBAL",0)~ THEN PIRSEA01 safana_pirate1
+CHAIN IF WEIGHT #-50 ~InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)Global("SafaPirate","GLOBAL",0)~ THEN PIRSEA01 safana_pirate1
   @79
 =
 @80 DO ~SetGlobal("SafaPirate","GLOBAL",1)~
@@ -497,7 +497,7 @@ CHAIN IF WEIGHT #-50 ~InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)Gl
 == PIRSEA01 @84 DO ~Enemy()~ EXIT
 
 
-CHAIN IF WEIGHT #-50 ~InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)Global("SafaPirate2","GLOBAL",0)Global("SafaPirate","GLOBAL",1)~ THEN PPLDR01 safana_pirate2
+CHAIN IF WEIGHT #-50 ~InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)Global("SafaPirate2","GLOBAL",0)Global("SafaPirate","GLOBAL",1)~ THEN PPLDR01 safana_pirate2
   @85 DO ~SetGlobal("SafaPirate2","GLOBAL",1)~
   == 7XSafaJ @86
 == PPLDR01 @87
@@ -507,7 +507,7 @@ CHAIN IF WEIGHT #-50 ~InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)Gl
 == PPLDR01 @91 DO ~Enemy()~ 
 EXIT
 
-CHAIN IF WEIGHT #-50 ~InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)Global("SafaPirate2","GLOBAL",0)Global("SafaPirate","GLOBAL",0)~ THEN PPLDR01 safana_pirate3
+CHAIN IF WEIGHT #-50 ~InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)Global("SafaPirate2","GLOBAL",0)Global("SafaPirate","GLOBAL",0)~ THEN PPLDR01 safana_pirate3
   @85 DO ~SetGlobal("SafaPirate2","GLOBAL",1)~
   == 7XSafaJ @86
 == PPLDR01 @92
@@ -517,13 +517,13 @@ CHAIN IF WEIGHT #-50 ~InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)Gl
 == PPLDR01 @91 DO ~Enemy()~ 
 EXIT
 
-CHAIN IF WEIGHT #-2 ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID) PartyHasItem("MISC4T") Global("SafaGorch","AR0302",0)~ THEN GORCH safana_GORCH
+CHAIN IF WEIGHT #-2 ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID) PartyHasItem("MISC4T") Global("SafaGorch","AR0302",0)~ THEN GORCH safana_GORCH
   @242 DO ~SetGlobal("SafaGorch","AR0302",1)~
 == 7XSafaJ @243 
 == GORCH @244 DO ~Unlock("DOOR01") Unlock("DOOR02") TakePartyItem("MISC4T")~
 EXTERN GORCH 5
 
-CHAIN IF WEIGHT #-2 ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)Global("SafaThumb","AR0313",0)~ THEN THUMB safana_THUMB
+CHAIN IF WEIGHT #-2 ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)Global("SafaThumb","AR0313",0)~ THEN THUMB safana_THUMB
   @249 DO ~SetGlobal("SafaThumb","AR0313",1)~
 == 7XSafaJ @250 
 == THUMB @251
@@ -737,7 +737,7 @@ APPEND 7XCoranJ
 
 IF ~~ THEN BEGIN CoranAttackPC1
 SAY @122
-IF ~~ THEN DO ~ActionOverride("7XSAFA", LeaveParty()) ActionOverride("7XSAFA", EscapeArea()) LeaveParty() Enemy() Attack(Player1)~ EXIT
+IF ~~ THEN DO ~ActionOverride("SAFANA", LeaveParty()) ActionOverride("SAFANA", EscapeArea()) LeaveParty() Enemy() Attack(Player1)~ EXIT
 END
 
 IF ~~ THEN BEGIN SafanaQuestAfter6
@@ -760,216 +760,216 @@ END
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 I_C_T PIRCOR02 13 safana_ginia
-  == 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN
+  == 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN
   @119
 END
 
 
 I_C_T PLAYER1 25 Safana_Hell
-  == 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN
+  == 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN
  @120
 =
 @121
 END
 
 I_C_T ANOMEN 6 Safana-ANOMEN-6
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @123
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @123
 == ANOMEN @223
 END
 
 I_C_T NALIA 12 Safana-NALIA-12
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @224
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @224
 == NALIA @236
 END
 
 I_C_T TIANA 3 Safana-TIANA-3
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @225
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @225
 END
 
 I_C_T LEHTIN 3 Safana-LEHTIN-3
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @226
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @226
 END
 
 I_C_T PRISS 2 Safana-PRISS-2
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @227
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @227
 END
 
 I_C_T MADAM 4 Safana-MADAM-4
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @228
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @228
 == MADAM @229
 END
 
 I_C_T ESCORT1 5 Safana-ESCORT1-5
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @230
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @230
 END
 
 I_C_T ESCORT2 4 Safana-ESCORT2-4
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @230
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @230
 END
 
 I_C_T ESCORT3 4 Safana-ESCORT3-4
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @230
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @230
 END
 
 I_C_T HENDAK 1 Safana-HENDAK-1
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @231
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @231
 == HENDAK @234
 END
 
 I_C_T ANNO1 2 Safana-ANNO1-2
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @232
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @232
 == ANNO1 @235
 END
 
 I_C_T FIRKRA01 5 Safana-FIRKRA01-5
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @233
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @233
 END
 
 I_C_T RENAL 54 Safana-RENAL-54
-== RENAL IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @238
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @239
+== RENAL IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @238
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @239
 END
 
 I_C_T RENAL 42 Safana-RENAL-42
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @240
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @240
 == RENAL @241
 END
 
 I_C_T CSGAAL 7 Safana-CSGAAL-7
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @245
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @245
 END
 
 I_C_T THIEF6 0 Safana-THIEF6-0
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @246
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @246
 == THIEF6 @247
 END
 
 
 I_C_T THIEF7 5 Safana-THIEF7-5
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @248
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @248
 END
 
 I_C_T DELCIA 1 Safana-DELCIA-1
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID) Global("7xSafanaDelciaTalk","AR1303",0)~ THEN @254 DO ~SetGlobal("7xSafanaDelciaTalk","AR1303",1)~
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID) Global("7xSafanaDelciaTalk","AR1303",0)~ THEN @254 DO ~SetGlobal("7xSafanaDelciaTalk","AR1303",1)~
 == DELCIA @255
 END
 
 I_C_T DELCIA 3 Safana-DELCIA-3
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID) Global("7xSafanaDelciaTalk","AR1303",0)~ THEN @254 DO ~SetGlobal("7xSafanaDelciaTalk","AR1303",1)~
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID) Global("7xSafanaDelciaTalk","AR1303",0)~ THEN @254 DO ~SetGlobal("7xSafanaDelciaTalk","AR1303",1)~
 == DELCIA @255
 END
 
 I_C_T DELCIA 4 Safana-DELCIA-4
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID) Global("7xSafanaDelciaTalk","AR1303",0)~ THEN @254 DO ~SetGlobal("7xSafanaDelciaTalk","AR1303",1)~
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID) Global("7xSafanaDelciaTalk","AR1303",0)~ THEN @254 DO ~SetGlobal("7xSafanaDelciaTalk","AR1303",1)~
 == DELCIA @255
 END
 
 I_C_T DELCIA 7 Safana-DELCIA-7
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID) Global("7xSafanaDelciaTalk","AR1303",0)~ THEN @254 DO ~SetGlobal("7xSafanaDelciaTalk","AR1303",1)~
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID) Global("7xSafanaDelciaTalk","AR1303",0)~ THEN @254 DO ~SetGlobal("7xSafanaDelciaTalk","AR1303",1)~
 == DELCIA @255
 END
 
 I_C_T DELCIA 16 Safana-DELCIA-16
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID) Global("7xSafanaDelciaTalk","AR1303",0)~ THEN @254 DO ~SetGlobal("7xSafanaDelciaTalk","AR1303",1)~
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID) Global("7xSafanaDelciaTalk","AR1303",0)~ THEN @254 DO ~SetGlobal("7xSafanaDelciaTalk","AR1303",1)~
 == DELCIA @255
 END
 
 I_C_T DELCIA 44 Safana-DELCIA-44
-== 7XSafaJ IF ~InParty("7XSAFA")  InMyArea("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID) Global("7xSafanaDelciaTalk","AR1303",0)~ THEN @254 DO ~SetGlobal("7xSafanaDelciaTalk","AR1303",1)~
+== 7XSafaJ IF ~InParty("SAFANA")  InMyArea("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID) Global("7xSafanaDelciaTalk","AR1303",0)~ THEN @254 DO ~SetGlobal("7xSafanaDelciaTalk","AR1303",1)~
 == DELCIA @255
 END
 
 I_C_T DELCIA 46 Safana-DELCIA-46
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID) Global("7xSafanaDelciaTalk","AR1303",0)~ THEN @254 DO ~SetGlobal("7xSafanaDelciaTalk","AR1303",1)~
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID) Global("7xSafanaDelciaTalk","AR1303",0)~ THEN @254 DO ~SetGlobal("7xSafanaDelciaTalk","AR1303",1)~
 == DELCIA @255
 END
 
 I_C_T GARREN 0 Safana-GARREN-0
-== 7XSafaJ IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @256
+== 7XSafaJ IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @256
 == GARREN @257
 END
 
 I_C_T FIRKRA02 25 Safana-FIRKRA02-25
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @258
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @258
 == FIRKRA02 @297
 END
 
 I_C_T BODHI 125 Safana-BODHI-125
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @262
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @262
 END
 
 I_C_T SUJON 14 Safana-SUJON-14
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @263
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @263
 == SUJON @264
 END
 
 I_C_T PPSAEM 7 Safana-PPSAEM-7
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @265
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @265
 END
 
 I_C_T PPSAEM 51 Safana-PPSAEM-51
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @265
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @265
 END
 
 I_C_T ARAN 43 Safana-ARAN-43
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @266
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @266
 END
 
 I_C_T BODHI 109 Safana-BODHI-109
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @266
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @266
 END
 
 I_C_T PPSAEM 57 Safana-PPSAEM-57
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @267
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @267
 END
 
 I_C_T PPINN01 8 Safana-PPINN01-8
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @268
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @268
 END
 
 I_C_T UDSILVER 53 Safana-UDSILVER-53
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @269
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @269
 END
 
 I_C_T DAABOL 9 Safana-DAABOL-9
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @270
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @270
 END
 
 I_C_T PLAYER1 5 Safana-PLAYER1-5
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @271
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @271
 END
 
 I_C_T C6ELHAN2 8 Safana-C6ELHAN2-8
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @272
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @272
 END
 
 I_C_T C6BODHI 0 Safana-C6BODHI-0
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @273
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @273
 END
 
 I_C_T UHMAY01 17 Safana-UHMAY01-17
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @274
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @274
 END
 
 I_C_T UHOGRE01 5 Safana-UHOGRE01-5
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @275
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @275
 END
 
 I_C_T CEFALDOR 6 Safana-CEFALDOR-6
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @276
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @276
 == CEFALDOR @277
 END
 
 I_C_T TRCUT07 4 Safana-TRCUT07-4
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @287
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @287
 END
 
 
 // Guild 
-ADD_TRANS_TRIGGER RENAL 48 ~OR(2) !InParty("7XSAFA") StateCheck("7XSAFA",CD_STATE_NOTVALID)~
+ADD_TRANS_TRIGGER RENAL 48 ~OR(2) !InParty("SAFANA") StateCheck("SAFANA",CD_STATE_NOTVALID)~
 
 EXTEND_BOTTOM RENAL 48 
-IF ~InParty("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN DO ~EraseJournalEntry(34194)EraseJournalEntry(34198)EraseJournalEntry(34201)EraseJournalEntry(34205)EraseJournalEntry(34207)EraseJournalEntry(34211)EraseJournalEntry(34217)EraseJournalEntry(34218)EraseJournalEntry(34220)EraseJournalEntry(34232)EraseJournalEntry(34233)EraseJournalEntry(34234)EraseJournalEntry(34235)EraseJournalEntry(34236)EraseJournalEntry(34237)EraseJournalEntry(34238)EraseJournalEntry(34239)EraseJournalEntry(34240)EraseJournalEntry(34241)EraseJournalEntry(34243)
+IF ~InParty("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN DO ~EraseJournalEntry(34194)EraseJournalEntry(34198)EraseJournalEntry(34201)EraseJournalEntry(34205)EraseJournalEntry(34207)EraseJournalEntry(34211)EraseJournalEntry(34217)EraseJournalEntry(34218)EraseJournalEntry(34220)EraseJournalEntry(34232)EraseJournalEntry(34233)EraseJournalEntry(34234)EraseJournalEntry(34235)EraseJournalEntry(34236)EraseJournalEntry(34237)EraseJournalEntry(34238)EraseJournalEntry(34239)EraseJournalEntry(34240)EraseJournalEntry(34241)EraseJournalEntry(34243)
 AddXPObject(Player1,45500)AddXPObject(Player2,45500)AddXPObject(Player3,45500)AddXPObject(Player4,45500)AddXPObject(Player5,45500)AddXPObject(Player6,45500)
 SetGlobal("RenalJob","GLOBAL",4)
 AddJournalEntry(47538,QUEST_DONE)~ GOTO RENALSafanaGuild 
@@ -993,9 +993,9 @@ END
 END
 
 I_C_T IF_FILE_EXISTS NEERA 1 Safana-NEERA-1
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @298
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @298
 END
 
 I_C_T IF_FILE_EXISTS NEERA 21 Safana-NEERA-21
-== 7XSafaJ IF ~InParty("7XSAFA") InMyArea("7XSAFA") !StateCheck("7XSAFA",CD_STATE_NOTVALID)~ THEN @299
+== 7XSafaJ IF ~InParty("SAFANA") InMyArea("SAFANA") !StateCheck("SAFANA",CD_STATE_NOTVALID)~ THEN @299
 END

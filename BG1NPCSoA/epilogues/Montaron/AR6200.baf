@@ -1,6 +1,6 @@
 IF
 Global("StartEndBios","AR6200",1)
-InParty("7XMONT")
+InParty("MONTARON")
 !Global("MontyRomanceActive","GLOBAL",2)
 Global("7XMONTBio","GLOBAL",0)
 THEN
@@ -13,7 +13,7 @@ END
 
 IF
 Global("StartEndBios","AR6200",1)
-InParty("7XMONT")
+InParty("MONTARON")
 Global("MontyRomanceActive","GLOBAL",2)
 Global("7XMONTBio","GLOBAL",0)
 THEN

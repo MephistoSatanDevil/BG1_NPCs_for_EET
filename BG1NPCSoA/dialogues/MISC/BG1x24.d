@@ -1,6 +1,6 @@
 BEGIN ~BG1X24~
 
-IF ~!InParty("7XGAR")OR(2)Global("Aliella","LOCALS",99)
+IF ~!InParty("GARRICK")OR(2)Global("Aliella","LOCALS",99)
 Global("GarrickGirls","GLOBAL",2)~ THEN BEGIN HAPPYLIFE
 SAY @0
 =
@@ -10,7 +10,7 @@ END
 
 
 
-IF ~!InParty("7XGAR")
+IF ~!InParty("GARRICK")
 Global("GarrickGirls","GLOBAL",0)RandomNum(2,1)~ THEN BEGIN SHOOSHOO1
 SAY @2
 =
@@ -20,7 +20,7 @@ SAY @2
 IF ~~ THEN EXIT
 END
 
-IF ~!InParty("7XGAR")
+IF ~!InParty("GARRICK")
 Global("GarrickGirls","GLOBAL",0)RandomNum(2,2)~ THEN BEGIN SHOOSHOO1b
 SAY @5
 =
@@ -28,7 +28,7 @@ SAY @5
 IF ~~ THEN EXIT
 END
 
-IF ~!InParty("7XGAR")
+IF ~!InParty("GARRICK")
 Global("GarrickGirls","GLOBAL",1)RandomNum(2,1)~ THEN BEGIN SHOOSHOO2
 SAY @7
 =
@@ -36,7 +36,7 @@ SAY @7
 IF ~~ THEN EXIT
 END
 
-IF ~!InParty("7XGAR")
+IF ~!InParty("GARRICK")
 Global("GarrickGirls","GLOBAL",1)RandomNum(2,2)~ THEN BEGIN SHOOSHOO2b
 SAY @5
 =
@@ -50,14 +50,14 @@ END
 
 BEGIN ~BG1X22~
 
-IF WEIGHT #-1 ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+IF WEIGHT #-1 ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 Global("GarrickGirls","GLOBAL",2)
 Global("GarrickGirlsTalk1","GLOBAL",1)~ THEN BEGIN 22GARRICKBANTERAFTERMATH
 SAY @12
 IF ~~ THEN DO ~SetGlobal("GarrickGirlsTalk1","GLOBAL",2)~ EXIT
 END
 
-IF WEIGHT #-1 ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+IF WEIGHT #-1 ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 OR(2)
 Global("GarrickGirls","GLOBAL",0)
 Global("GarrickGirls","GLOBAL",1)
@@ -152,22 +152,22 @@ END
 
 BEGIN ~BG1X23~
 
-IF WEIGHT #-1 ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+IF WEIGHT #-1 ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 Global("GarrickGirls","GLOBAL",2)
 Global("GarrickGirlsTalk2","GLOBAL",1)
-See("7XGAR")~ THEN BEGIN 23GARRICKBANTERAFTERMATH
+See("GARRICK")~ THEN BEGIN 23GARRICKBANTERAFTERMATH
 SAY @44
 =
 @45
 IF ~~ THEN DO ~SetGlobal("GarrickGirlsTalk2","GLOBAL",2)~ EXIT
 END
 
-IF WEIGHT #-1 ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+IF WEIGHT #-1 ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 Global("GarrickGirlsTalk2","GLOBAL",0)
 OR(2)
 Global("GarrickGirls","GLOBAL",0)
 Global("GarrickGirls","GLOBAL",1)
-See("7XGAR")~ THEN BEGIN 23GARRICKBANTER2
+See("GARRICK")~ THEN BEGIN 23GARRICKBANTER2
 SAY @46
 =
 @47
@@ -238,9 +238,9 @@ END
 
 APPEND BG1X24
 IF WEIGHT #-1~AreaCheck("arBGX2")
-InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 InMyArea("FARTHIN")InMyArea("FULADY")InMyArea("BG1X9")
-See("7XGAR")Global("GarrickGirls","GLOBAL",0)~ THEN BEGIN Intro1
+See("GARRICK")Global("GarrickGirls","GLOBAL",0)~ THEN BEGIN Intro1
 SAY @62
 IF ~~ GOTO Intro2
 END
@@ -296,7 +296,7 @@ CHAIN BG1X24 Intro2
 @97
 == BG1X9 IF ~InMyArea("BG1X9")~ THEN @98 
 == EDWINJ IF ~IsValidForPartyDialog("Edwin")~ THEN @99
-== 7XsharJ IF ~InParty("7XSHAR")IsValidForPartyDialog("7XSHAR")~ THEN @100
+== 7XsharJ IF ~InParty("SHARTEEL")IsValidForPartyDialog("SHARTEEL")~ THEN @100
 == BG1X24 @101
 =
 @102
@@ -307,12 +307,12 @@ CHAIN BG1X24 Intro2
 =
 @107
 == BG1X9 IF ~InMyArea("BG1X9")~ THEN @108
-== 7XSkiJ IF ~IsValidForPartyDialog("7XSKI")~ THEN @109
+== 7XSkiJ IF ~IsValidForPartyDialog("SKIE")~ THEN @109
 == AERIEJ IF ~IsValidForPartyDialog("Aerie")~ THEN @110
 == 7XGarJ IF ~IsValidForPartyDialog("Aerie")~ THEN @111
 == 7XGarJ @112
-== 7XSkiJ IF ~IsValidForPartyDialog("7XSKI")~ THEN @113
-== 7XGarJ IF ~IsValidForPartyDialog("7XSKI")~ THEN @114
+== 7XSkiJ IF ~IsValidForPartyDialog("SKIE")~ THEN @113
+== 7XGarJ IF ~IsValidForPartyDialog("SKIE")~ THEN @114
 == BG1X24 @115
 == VICONIJ IF ~IsValidForPartyDialog("Viconia")~ THEN @116
 
@@ -378,7 +378,7 @@ END
 
 
 APPEND BG1X24
-IF WEIGHT #-1 ~InParty("7XGAR")IsValidForPartyDialog("7XGAR")
+IF WEIGHT #-1 ~InParty("GARRICK")IsValidForPartyDialog("GARRICK")
 AreaCheck("arBGX2")
 InMyArea("FARTHIN")InMyArea("FULADY")InMyArea("BG1X9")
 Global("GarrickGirls","GLOBAL",1)~ THEN BEGIN GARRICKBANTER2
@@ -485,7 +485,7 @@ END
 
 
 APPEND BG1X24
-IF WEIGHT #-1~!See("7XGAR")See("Haer'Dalis")
+IF WEIGHT #-1~!See("GARRICK")See("Haer'Dalis")
 InParty("Haer'Dalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)
 AreaCheck("arBGX2")
 Global("DalisFunnyTalk","GLOBAL",0)~ THEN BEGIN MeetDalis1

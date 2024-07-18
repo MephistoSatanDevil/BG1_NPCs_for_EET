@@ -1,8 +1,8 @@
 
 APPEND ~7XBRA25J~
 
-IF WEIGHT #-2 ~AreaCheck("AR5500") Global("BranwenAmkethran","GLOBAL",0)InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ BranwenAmkethranComment
+IF WEIGHT #-2 ~AreaCheck("AR5500") Global("BranwenAmkethran","GLOBAL",0)InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ BranwenAmkethranComment
     SAY @531
 =
 @532 
@@ -38,8 +38,8 @@ IF ~~ THEN BEGIN PCSharChatsTOB4
 END
 
 
-IF WEIGHT #-2 ~AreaCheck("AR3000") InParty("7Xshar")
-!StateCheck("7Xshar",CD_STATE_NOTVALID)Global("SharWatchers1","GLOBAL",0)~ SharTeelWatchersComment
+IF WEIGHT #-2 ~AreaCheck("AR3000") InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)Global("SharWatchers1","GLOBAL",0)~ SharTeelWatchersComment
     SAY @800
 =
 @801 
@@ -50,7 +50,7 @@ END
 APPEND ~7XYE25J~
 
 IF WEIGHT #-2 ~AreaCheck("AR5500") Global("YeslickAmkethran","GLOBAL",0)
-InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN YeslickAmkethranComment
+InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN YeslickAmkethranComment
     SAY @576
     IF ~~ DO ~IncrementGlobal("YeslickAmkethran","GLOBAL",1)~ EXIT
   END
@@ -67,8 +67,8 @@ END
 
 APPEND ~7XGar25J~ 
 
-  IF WEIGHT #-2 ~AreaCheck("AR5500") InParty("7XGAR")
-!StateCheck("7XGAR",CD_STATE_NOTVALID)Global("GarrickAmkethran","GLOBAL",2)~ GarrickAmkethranComment
+  IF WEIGHT #-2 ~AreaCheck("AR5500") InParty("GARRICK")
+!StateCheck("GARRICK",CD_STATE_NOTVALID)Global("GarrickAmkethran","GLOBAL",2)~ GarrickAmkethranComment
     SAY @681
 =
 @682 
@@ -77,19 +77,19 @@ APPEND ~7XGar25J~
 END
 
 EXTEND_TOP SARVOLO 9
-IF ~InParty("7Xshar")~ THEN REPLY @0 GOTO SharTeelVolo
+IF ~InParty("SHARTEEL")~ THEN REPLY @0 GOTO SharTeelVolo
 END
 
 CHAIN SARVOLO SharTeelVolo
 @1
 =
 @2
-== 7Xsha25J IF ~InParty("7Xshar")~ THEN @3
+== 7Xsha25J IF ~InParty("SHARTEEL")~ THEN @3
 EXTERN SARVOLO 9
 
 
 EXTEND_TOP SARVOLO 9
-IF ~InParty("7XBRAN")~ THEN REPLY @4 GOTO BranwenVolo
+IF ~InParty("BRANWEN")~ THEN REPLY @4 GOTO BranwenVolo
 END
 
 CHAIN SARVOLO BranwenVolo
@@ -98,13 +98,13 @@ CHAIN SARVOLO BranwenVolo
 @6
 =
 @7
-== 7XBRA25J IF~InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @8
+== 7XBRA25J IF~InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @8
 EXTERN SARVOLO 9
 
 
 
 EXTEND_TOP SARVOLO 9
-IF ~InParty("7XYES")~ THEN REPLY @9 GOTO YeslickVolo
+IF ~InParty("YESLICK")~ THEN REPLY @9 GOTO YeslickVolo
 END
 
 CHAIN SARVOLO YeslickVolo
@@ -113,31 +113,31 @@ CHAIN SARVOLO YeslickVolo
 @11
 =
 @12
-== B7XYE25 IF ~InParty("7XYES")~ THEN @13
+== B7XYE25 IF ~InParty("YESLICK")~ THEN @13
 =
 @14
 EXTERN SARVOLO 9
 
 
 EXTEND_TOP SARVOLO 9
-IF ~InParty("7XGAR")~ THEN REPLY @15 GOTO GarrickVolo
+IF ~InParty("GARRICK")~ THEN REPLY @15 GOTO GarrickVolo
 END
 
 CHAIN SARVOLO GarrickVolo
 @16
-== B7XGar25 IF ~InParty("7XGAR")~ THEN @17
+== B7XGar25 IF ~InParty("GARRICK")~ THEN @17
 EXTERN SARVOLO 9
 
 
 EXTEND_TOP SARVOLO 9
-IF ~InParty("7XSKI")~ THEN REPLY @18 GOTO SkieVolo
+IF ~InParty("SKIE")~ THEN REPLY @18 GOTO SkieVolo
 END
 
 CHAIN SARVOLO SkieVolo
 @19
 =
 @20
-== 7XSki25J IF ~InParty("7XSKI")~ THEN @21
+== 7XSki25J IF ~InParty("SKIE")~ THEN @21
 EXTERN SARVOLO 9
 
 
@@ -300,8 +300,8 @@ END
 CHAIN IF ~
 CombatCounter(0)
 !See([ENEMY])
-InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
-InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)
+InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
+InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("SharTeelGarrickToB","GLOBAL",0)~
 THEN B7Xsh25 SharTeelGarrick_ToB1
 @72  DO ~SetGlobal("SharTeelGarrickToB","GLOBAL",1)~
@@ -325,8 +325,8 @@ CHAIN IF ~
 CombatCounter(0)
 !See([ENEMY])
 InParty("Sarevok")!StateCheck("Sarevok",CD_STATE_NOTVALID)
-InParty("7Xshar")
-!StateCheck("7Xshar",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("SharTeelSarevok","GLOBAL",0)~
 THEN B7Xsh25 SharTeelSarevok_1
 @84  DO ~SetGlobal("SharTeelSarevok","GLOBAL",1)~
@@ -340,8 +340,8 @@ EXIT
 
 
 CHAIN IF
-~InParty("7Xshar")See("7Xshar")
-!StateCheck("7Xshar",CD_STATE_NOTVALID)
+~InParty("SHARTEEL")See("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("Minsc25Shar","LOCALS",0)~ THEN BMINSC25 MinscShar1
 @91 DO ~SetGlobal("Minsc25Shar","LOCALS",1)~
 == B7Xsh25  @92 
@@ -356,7 +356,7 @@ EXIT
 
 CHAIN IF
 ~!StateCheck("Imoen2",CD_STATE_NOTVALID)InParty("Imoen2")
-!StateCheck("7Xshar",CD_STATE_NOTVALID)InParty("7Xshar")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("SHARTEEL")
 Global("SharImoen2TOB","GLOBAL",0)~
 THEN ~B7Xsh25~ SharImoen2TOB1
 @100 DO ~SetGlobal("SharImoen2TOB","GLOBAL",1)~
@@ -381,7 +381,7 @@ EXIT
 CHAIN
 IF ~InParty("Aerie")
 See("Aerie")!StateCheck("Aerie",CD_STATE_NOTVALID)
-!StateCheck("7Xshar",CD_STATE_NOTVALID)InParty("7Xshar")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("SHARTEEL")
 Global("SharAerieTalkToB","GLOBAL",0)~ THEN ~B7Xsh25~ SharAerieTOB1
 @112
 DO ~SetGlobal("SharAerieTalkToB","GLOBAL",1)~
@@ -400,7 +400,7 @@ EXIT
 
 CHAIN 
 IF ~InParty("Nalia")!StateCheck("Nalia",CD_STATE_NOTVALID)
-!ActuallyInCombat()!StateCheck("7Xshar",CD_STATE_NOTVALID)InParty("7Xshar")
+!ActuallyInCombat()!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("SHARTEEL")
 Global("SharNaliaTOBBanter","GLOBAL", 0)~
 THEN ~B7Xsh25~ SharNaliaTOB
 @118
@@ -425,7 +425,7 @@ EXIT
 
 CHAIN
 IF ~!StateCheck("Jaheira",CD_STATE_NOTVALID)InParty("Jaheira")
-!StateCheck("7Xshar",CD_STATE_NOTVALID)InParty("7Xshar")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("SHARTEEL")
 !ActuallyInCombat()
 Global("SharJaheiraToBBanter","GLOBAL",0)~ THEN ~BJAHEI25~ SharJahTOB1
 @132 
@@ -448,7 +448,7 @@ EXIT
 
 
 CHAIN
-IF ~!StateCheck("7Xshar",CD_STATE_NOTVALID)InParty("7Xshar")
+IF ~!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("SHARTEEL")
 !ActuallyInCombat()InParty("Viconia")!StateCheck("Viconia",CD_STATE_NOTVALID)
 Global("SharTeelViconiaToB","GLOBAL",0)~ THEN ~B7Xsh25~ SharViconiaTOB1
 @146
@@ -468,7 +468,7 @@ EXIT
 
 
 CHAIN
-IF ~!StateCheck("7Xshar",CD_STATE_NOTVALID)InParty("7Xshar")
+IF ~!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("SHARTEEL")
 InParty("Mazzy")!StateCheck("Mazzy",CD_STATE_NOTVALID)
 !ActuallyInCombat()
 Global("SharMazzyToBBanter","GLOBAL",0)~ THEN BMAZZY25 SharMaazyTOB1
@@ -491,8 +491,8 @@ DO ~SetGlobal("SharMazzyToBBanter","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~Global("YeslickSharTeelTOB","LOCALS",0)InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)
-!StateCheck("7Xshar",CD_STATE_NOTVALID)InParty("7Xshar")CombatCounter(0)~ THEN ~B7XYE25~ SharYeslickTOB1
+IF ~Global("YeslickSharTeelTOB","LOCALS",0)InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("SHARTEEL")CombatCounter(0)~ THEN ~B7XYE25~ SharYeslickTOB1
   @171
 DO ~SetGlobal("YeslickSharTeelTOB","LOCALS",1)~
 == B7Xsh25 @172
@@ -510,7 +510,7 @@ EXIT
 CHAIN
 IF ~InParty("Cernd")
 See("Cernd")
-!StateCheck("Cernd",CD_STATE_NOTVALID)!StateCheck("7Xshar",CD_STATE_NOTVALID)InParty("7Xshar")
+!StateCheck("Cernd",CD_STATE_NOTVALID)!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("SHARTEEL")
 Global("SharCerndTOB","GLOBAL",0)~ THEN ~B7Xsh25~ SharCerndTOB1
 @180
 =
@@ -534,7 +534,7 @@ EXIT
 CHAIN
 IF ~InParty("Edwin")
 See("Edwin")
-!StateCheck("Edwin",CD_STATE_NOTVALID)!StateCheck("7Xshar",CD_STATE_NOTVALID)InParty("7Xshar")
+!StateCheck("Edwin",CD_STATE_NOTVALID)!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("SHARTEEL")
 Global("SharEdwinTalkToB","GLOBAL",0)~ THEN ~BEDWIN25~ SharTeelEdwinHair
 @188
 DO ~SetGlobal("SharEdwinTalkToB","GLOBAL",1)~
@@ -556,7 +556,7 @@ EXIT
 CHAIN
 IF ~InParty("Jan")
 See("Jan")
-!StateCheck("Jan",CD_STATE_NOTVALID)!StateCheck("7Xshar",CD_STATE_NOTVALID)InParty("7Xshar")
+!StateCheck("Jan",CD_STATE_NOTVALID)!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("SHARTEEL")
 Global("SharJanTalkToB","GLOBAL",0)~ THEN ~BJAN25~ SharJanTOB1
 @196
 =
@@ -582,7 +582,7 @@ EXIT
 CHAIN
 IF ~InParty("Valygar")
 See("Valygar")
-!StateCheck("Valygar",STATE_SLEEPING)!StateCheck("7Xshar",CD_STATE_NOTVALID)InParty("7Xshar")
+!StateCheck("Valygar",STATE_SLEEPING)!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("SHARTEEL")
 Global("SharValygarToB","GLOBAL",0)~ THEN ~B7Xsh25~ SharValygarTalk1
 @205
 DO ~SetGlobal("SharValygarToB","GLOBAL",1)~
@@ -612,7 +612,7 @@ CombatCounter(0)
 InParty("Haerdalis")
 Range("Haerdalis",30)
 !StateCheck("Haerdalis",CD_STATE_NOTVALID)
-!StateCheck("7Xshar",CD_STATE_NOTVALID)InParty("7Xshar")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("SHARTEEL")
 Global("SharHaerDalisTOB","GLOBAL",0)~
 THEN ~BHAERD25~ SharHaerDalis_1
 @214
@@ -627,7 +627,7 @@ EXIT
 CHAIN IF~CombatCounter(0)!See([ENEMY])
 InParty("Korgan")Range("Korgan",30)
 !StateCheck("Korgan",CD_STATE_NOTVALID)
-!StateCheck("7Xshar",CD_STATE_NOTVALID)InParty("7Xshar")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("SHARTEEL")
 Global("SharTeelKorganTOB","GLOBAL",0)~
 THEN ~B7Xsh25~ SharTeelKorgan_1
 @220 DO ~SetGlobal("SharTeelKorganTOB","GLOBAL",1)~
@@ -653,7 +653,7 @@ InParty("Anomen")
 Range("Anomen",30)
 Global("AnomenIsKnight","GLOBAL",1)
 !StateCheck("Anomen",CD_STATE_NOTVALID)
-!StateCheck("7Xshar",CD_STATE_NOTVALID)InParty("7Xshar")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("SHARTEEL")
 Global("SharTeelAnomenTOB","GLOBAL",0)~
 THEN ~BANOME25~ SharTeelAnomen_1
 @231 DO ~SetGlobal("SharTeelAnomenTOB","GLOBAL",1)~
@@ -672,7 +672,7 @@ CombatCounter(0)
 InParty("Keldorn")
 Range("Keldorn",30)
 !StateCheck("Keldorn",CD_STATE_NOTVALID)
-!StateCheck("7Xshar",CD_STATE_NOTVALID)InParty("7Xshar")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("SHARTEEL")
 Global("SharTeelKeldornTOB","GLOBAL",0)
 ~THEN B7Xsh25 SharTeelKeldorn_1
 @238 DO ~SetGlobal("SharTeelKeldornTOB","GLOBAL",1)~
@@ -685,8 +685,8 @@ Global("SharTeelKeldornTOB","GLOBAL",0)
 EXIT
 
 
-CHAIN IF ~InParty("7XSKI") InMyArea("7XSKI")!StateCheck("7XSKI",CD_STATE_NOTVALID)
-!StateCheck("7Xshar",CD_STATE_NOTVALID)InParty("7Xshar")
+CHAIN IF ~InParty("SKIE") InMyArea("SKIE")!StateCheck("SKIE",CD_STATE_NOTVALID)
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("SHARTEEL")
 Global("SkieSharTeelTOB","GLOBAL",0)~ THEN ~7XSki25B~ SkieSharTeelTOB1
 @245 DO ~SetGlobal("SkieSharTeelTOB","GLOBAL",1)~
 == B7Xsh25 @246
@@ -699,7 +699,7 @@ Global("SkieSharTeelTOB","GLOBAL",0)~ THEN ~7XSki25B~ SkieSharTeelTOB1
 EXIT
 
 
-CHAIN IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)!StateCheck("7Xshar",CD_STATE_NOTVALID)InParty("7Xshar")
+CHAIN IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("SHARTEEL")
 Global("SharTeelEldothTOB","GLOBAL",0)~ THEN ~B7XEld25~ 7XshardothTOB1
 @253 DO ~SetGlobal("SharTeelEldothTOB","GLOBAL",1)~
 == B7Xsh25 @254
@@ -716,8 +716,8 @@ CHAIN IF ~
 CombatCounter(0)
 !See([ENEMY])
 InParty("Sarevok")!StateCheck("Sarevok",CD_STATE_NOTVALID)
-InParty("7Xshar")
-!StateCheck("7Xshar",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("SharTeelSarevok","GLOBAL",1)~
 THEN ~BSAREV25~ SharTeelSarevok_2
 @261
@@ -739,8 +739,8 @@ CHAIN IF ~
 CombatCounter(0)
 !See([ENEMY])
 InParty("Sarevok")!StateCheck("Sarevok",CD_STATE_NOTVALID)
-InParty("7Xshar")
-!StateCheck("7Xshar",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("SharTeelSarevok","GLOBAL",2)~
 THEN ~BSAREV25~ SharTeelSarevok_3
 @271
@@ -758,8 +758,8 @@ EXIT
 
 CHAIN
 IF ~RealGlobalTimerExpired("ValygarSharTOB","GLOBAL")
-InParty("Valygar")See("Valygar")!StateCheck("Valygar",STATE_SLEEPING)!StateCheck("7Xshar",CD_STATE_NOTVALID)
-InParty("7Xshar")Global("SharValygarToB","GLOBAL",1)~ THEN ~B7Xsh25~ SharValygarTalk2
+InParty("Valygar")See("Valygar")!StateCheck("Valygar",STATE_SLEEPING)!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
+InParty("SHARTEEL")Global("SharValygarToB","GLOBAL",1)~ THEN ~B7Xsh25~ SharValygarTalk2
 @279
 =
 @280
@@ -775,7 +775,7 @@ EXIT
 
 CHAIN
 IF ~!StateCheck("Jaheira",CD_STATE_NOTVALID)InParty("Jaheira")
-!StateCheck("7Xshar",CD_STATE_NOTVALID)InParty("7Xshar")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("SHARTEEL")
 !ActuallyInCombat()
 Global("SharJaheiraToBBanter","GLOBAL",1)~ THEN ~B7Xsh25~ SharJahTOB2
 @287 
@@ -800,7 +800,7 @@ EXIT
 
 
 CHAIN
-IF ~!StateCheck("7Xshar",CD_STATE_NOTVALID)InParty("7Xshar")
+IF ~!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("SHARTEEL")
 !ActuallyInCombat()InParty("Viconia")!StateCheck("Viconia",CD_STATE_NOTVALID)
 Global("SharTeelViconiaToB","GLOBAL",1)~ THEN ~BVICON25~ SharViconiaTOB2
 @301
@@ -831,7 +831,7 @@ CombatCounter(0)
 InParty("Haerdalis")
 Range("Haerdalis",30)
 !StateCheck("Haerdalis",CD_STATE_NOTVALID)
-!StateCheck("7Xshar",CD_STATE_NOTVALID)InParty("7Xshar")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)InParty("SHARTEEL")
 Global("SharHaerDalisTOB","GLOBAL",1)~
 THEN ~B7Xsh25~ SharHaerDalis_2
 @315  DO ~SetGlobal("SharHaerDalisTOB","GLOBAL",2)~
@@ -844,8 +844,8 @@ EXIT
 CHAIN IF ~
 CombatCounter(0)
 !See([ENEMY])
-InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
-InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)
+InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
+InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("SharTeelGarrickToB","GLOBAL",1)~
 THEN B7Xsh25 SharTeelGarrick_ToB1
 @319  DO ~SetGlobal("SharTeelGarrickToB","GLOBAL",2)~
@@ -894,8 +894,8 @@ END
 
 
 CHAIN IF
-~InParty("Imoen2")!StateCheck("Imoen2",CD_STATE_NOTVALID)InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+~InParty("Imoen2")!StateCheck("Imoen2",CD_STATE_NOTVALID)InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 Global("B7XBRA25Imoen2","GLOBAL",0)~
 THEN ~B7XBRA25~ B7XBRA25Imoen2_1
 @336 DO ~SetGlobal("B7XBRA25Imoen2","GLOBAL",1)~
@@ -909,8 +909,8 @@ EXIT
 CHAIN IF ~
 CombatCounter(0)
 !See([ENEMY])
-InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 Global("BranwenGarrickToB","GLOBAL",0)~
 THEN ~B7XGar25~ BranwenGarrick_ToB1
 @341  DO ~SetGlobal("BranwenGarrickToB","GLOBAL",1)~
@@ -928,8 +928,8 @@ EXIT
 
 
 CHAIN
-IF ~Global("YeslickBranwenTOB","LOCALS",0)InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)
-CombatCounter(0)InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN ~B7XYE25~ BranwenYeslickTOB1
+IF ~Global("YeslickBranwenTOB","LOCALS",0)InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)
+CombatCounter(0)InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN ~B7XYE25~ BranwenYeslickTOB1
   @350
 DO ~SetGlobal("YeslickBranwenTOB","LOCALS",1)~
 == B7XBRA25 @351
@@ -947,8 +947,8 @@ DO ~SetGlobal("YeslickBranwenTOB","LOCALS",1)~
 EXIT
 
 
-CHAIN IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 Global("SkieBranwenTOB","GLOBAL",0)~ THEN ~7XSki25B~ SkieBranwenTOB1
 @361 DO ~SetGlobal("SkieBranwenTOB","GLOBAL",1)~
 == B7XBRA25 @362
@@ -959,8 +959,8 @@ Global("SkieBranwenTOB","GLOBAL",0)~ THEN ~7XSki25B~ SkieBranwenTOB1
 == 7XSki25B @367
 EXIT
 
-CHAIN IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 Global("BranwenEldothTOB","GLOBAL",0)~ THEN ~B7XEld25~ BranwenEldothTOB1
 @368 DO~SetGlobal("BranwenEldothTOB","GLOBAL",1)~
 == B7XBRA25 @369
@@ -975,8 +975,8 @@ EXIT
 
 
 CHAIN IF
-~InParty("Sarevok")!StateCheck("Sarevok",CD_STATE_NOTVALID)InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+~InParty("Sarevok")!StateCheck("Sarevok",CD_STATE_NOTVALID)InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 Global("BranwenSarevok","GLOBAL",0)~
 THEN ~B7XBRA25~ BranwenSarevok1
 @375
@@ -996,8 +996,8 @@ EXIT
 
 
 CHAIN
-IF ~InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+IF ~InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 InParty("Jaheira")!StateCheck("Jaheira",CD_STATE_NOTVALID)!ActuallyInCombat()
 Global("BranwenJaheiraToB","GLOBAL",0)~ THEN B7XBRA25 BranwenJaheiraToB1
 @386 
@@ -1020,8 +1020,8 @@ DO ~SetGlobal("BranwenJaheiraToB","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+IF ~InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 InParty("Aerie")!StateCheck("Aerie",CD_STATE_NOTVALID)
 !ActuallyInCombat()
 Global("BranwenAerieToB","GLOBAL",0)~ THEN B7XBRA25 AerieBranwen1
@@ -1044,8 +1044,8 @@ DO ~SetGlobal("BranwenAerieToB","GLOBAL",1)~
 EXIT
 
 CHAIN IF
-~InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)InParty("Cernd")
+~InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)InParty("Cernd")
 See("Cernd")!StateCheck("Cernd",CD_STATE_NOTVALID)AreaType(OUTDOOR)
 Global("Barn25Cernd","LOCALS",0)!ActuallyInCombat()~
 THEN B7XBRA25 cernd1
@@ -1085,10 +1085,10 @@ DO ~SetGlobal("BranAnomenTalkToB","GLOBAL",1)~
 EXIT
 
 CHAIN IF
-~InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)
-InParty("7Xshar")
-!StateCheck("7Xshar",CD_STATE_NOTVALID)!ActuallyInCombat()
+~InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)!ActuallyInCombat()
 Global("BranSharTeelToB","GLOBAL",0)~ THEN B7XBRA25 BranwenSharTeelTOB1
 @427
 =
@@ -1108,7 +1108,7 @@ EXIT
 CHAIN
 IF ~CombatCounter(0)!See([ENEMY])InParty("EDWIN")
 See("EDWIN")
-!StateCheck("EDWIN",CD_STATE_NOTVALID)InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+!StateCheck("EDWIN",CD_STATE_NOTVALID)InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 Global("EdwinBranwenTOB","LOCALS",0)~ THEN ~BEDWIN25~ BranwenEdwinTOB1
 @437
 DO ~SetGlobal("EdwinBranwenTOB","LOCALS",1)~
@@ -1125,7 +1125,7 @@ EXIT
 CHAIN
 IF ~CombatCounter(0) !See([ENEMY])InParty("HAERDALIS")
 See("HAERDALIS")!StateCheck("HAERDALIS",CD_STATE_NOTVALID)Global("HAERBRANTOB","GLOBAL",0)
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN ~BHAERD25~ HaerBranwen1
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN ~BHAERD25~ HaerBranwen1
 @444
 DO ~SetGlobal("HAERBRANTOB","GLOBAL",1)~
 == B7XBRA25 @445
@@ -1141,7 +1141,7 @@ EXIT
 CHAIN
 IF ~CombatCounter(0) !See([ENEMY])InParty("keldorn")
 See("keldorn")!StateCheck("keldorn",CD_STATE_NOTVALID)Global("KeldornBranTOB","LOCALS",0)
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN ~BKELDO25~ KeldornBranwenTOB1
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN ~BKELDO25~ KeldornBranwenTOB1
 @452
 DO ~SetGlobal("KeldornBranTOB","LOCALS",1)~
 == B7XBRA25 @453
@@ -1160,7 +1160,7 @@ EXIT
 CHAIN
 IF ~CombatCounter(0) !See([ENEMY])InParty("MAZZY")
 See("MAZZY")!StateCheck("MAZZY",CD_STATE_NOTVALID)
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 Global("MazzyBranTOB","LOCALS",0)~ THEN BMAZZY25 BranwenMazzyTOB1
 @463
 DO ~SetGlobal("MazzyBranTOB","LOCALS",1)~
@@ -1171,7 +1171,7 @@ DO ~SetGlobal("MazzyBranTOB","LOCALS",1)~
 EXIT
 
 CHAIN IF~CombatCounter(0)!See([ENEMY])InParty("Nalia")Range("Nalia",30)
-!StateCheck("Nalia",CD_STATE_NOTVALID)InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+!StateCheck("Nalia",CD_STATE_NOTVALID)InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 Global("BranNaliaTOB","GLOBAL",0)~ THEN B7XBRA25 TOBBranwenNalia_1
 @468 DO ~SetGlobal("BranNaliaTOB","GLOBAL",1)~
 == BNALIA25 @469
@@ -1188,7 +1188,7 @@ EXIT
 
 CHAIN IF~
 CombatCounter(0)!See([ENEMY])InParty("Korgan")Range("Korgan",30)!StateCheck("Korgan",CD_STATE_NOTVALID)
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)Global("BranKorganTOB","GLOBAL",0)~THEN ~B7XBRA25~ TOBBranwenKorgan_1
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)Global("BranKorganTOB","GLOBAL",0)~THEN ~B7XBRA25~ TOBBranwenKorgan_1
 @478 DO ~SetGlobal("BranKorganTOB","GLOBAL",1)~
 == BKORGA25 @479
 == B7XBRA25  @480
@@ -1203,7 +1203,7 @@ EXIT
 
 
 CHAIN IF~CombatCounter(0)!See([ENEMY])InParty("Nalia")Range("Nalia",30)
-!StateCheck("Nalia",CD_STATE_NOTVALID)InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+!StateCheck("Nalia",CD_STATE_NOTVALID)InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 Global("BranNaliaTOB","GLOBAL",1)~ THEN BNALIA25 TOBBranwenNalia_2
 @486 DO ~SetGlobal("BranNaliaTOB","GLOBAL",2)~
 == B7XBRA25 @487
@@ -1220,10 +1220,10 @@ EXIT
 
 
 CHAIN IF
-~InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)
-InParty("7Xshar")
-!StateCheck("7Xshar",CD_STATE_NOTVALID)!ActuallyInCombat()
+~InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)!ActuallyInCombat()
 Global("BranSharTeelToB","GLOBAL",1)~ THEN B7XBRA25 BranwenSharTeelTOB2
 @496
 DO ~SetGlobal("BranSharTeelToB","GLOBAL",2)~
@@ -1239,10 +1239,10 @@ DO ~SetGlobal("BranSharTeelToB","GLOBAL",2)~
 EXIT
 
 CHAIN IF
-~InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)
-InParty("7Xshar")
-!StateCheck("7Xshar",CD_STATE_NOTVALID)!ActuallyInCombat()
+~InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)!ActuallyInCombat()
 Global("BranSharTeelToB","GLOBAL",2)~ THEN B7XBRA25 BranwenSharTeelTOB3
 @506
 DO ~SetGlobal("BranSharTeelToB","GLOBAL",3)~
@@ -1255,10 +1255,10 @@ DO ~SetGlobal("BranSharTeelToB","GLOBAL",3)~
 EXIT
 
 CHAIN IF
-~InParty("7XBRAN")
-!StateCheck("7XBRAN",CD_STATE_NOTVALID)
-InParty("7Xshar")
-!StateCheck("7Xshar",CD_STATE_NOTVALID)!ActuallyInCombat()
+~InParty("BRANWEN")
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)
+InParty("SHARTEEL")
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)!ActuallyInCombat()
 Global("BranSharTeelToB","GLOBAL",3)~ THEN B7Xsh25 BranwenSharTeelTOB4
 @513
 DO ~SetGlobal("BranSharTeelToB","GLOBAL",4)~
@@ -1311,228 +1311,228 @@ END
 
 
 I_C_T SARBHA01 9 BranwenSARBHA01-9
-== 7XBRA25J IF ~InMyArea("7XBRAN")
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN 
+== 7XBRA25J IF ~InMyArea("BRANWEN")
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN 
 @533
 END
 
 I_C_T3 SARCULT 0 7xChatSARCULT-0
-== 7Xsha25J IF ~InParty("7Xshar") InMyArea("7Xshar") !StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @841 
-== 7XBRA25J IF ~InMyArea("7XBRAN") InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @534
+== 7Xsha25J IF ~InParty("SHARTEEL") InMyArea("SHARTEEL") !StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @841 
+== 7XBRA25J IF ~InMyArea("BRANWEN") InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @534
 END
 
 I_C_T3 SARELF01 0 7xChatSARELF01-0
-== 7Xsha25J IF ~InParty("7Xshar") InMyArea("7Xshar") !StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @842
-== 7XBRA25J IF ~InParty("7XBRAN") InMyArea("7XBRAN") !StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @535
-== 7XGar25J IF ~InParty("7XGAR") InMyArea("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @691
+== 7Xsha25J IF ~InParty("SHARTEEL") InMyArea("SHARTEEL") !StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @842
+== 7XBRA25J IF ~InParty("BRANWEN") InMyArea("BRANWEN") !StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @535
+== 7XGar25J IF ~InParty("GARRICK") InMyArea("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @691
 END
 
 I_C_T SARELF02 1 BranwenSARELF02-1
-== 7XBRA25J IF ~InMyArea("7XBRAN")
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN 
+== 7XBRA25J IF ~InMyArea("BRANWEN")
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN 
 @536
 END
 
 I_C_T3 SARELF03 1 7xChatSARELF03-1
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @845
-== 7XBRA25J IF ~InMyArea("7XBRAN") InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @537
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @845
+== 7XBRA25J IF ~InMyArea("BRANWEN") InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @537
 END
 
 I_C_T SARELF04 0 BranwenSARELF04-0
-== 7XBRA25J IF ~InMyArea("7XBRAN")
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN 
+== 7XBRA25J IF ~InMyArea("BRANWEN")
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN 
 @538
 END
 
 I_C_T SARFEM03 0 BranwenSARFEM03-0
-== 7XBRA25J IF ~InMyArea("7XBRAN")
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN 
+== 7XBRA25J IF ~InMyArea("BRANWEN")
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN 
 @539
 =
 @540
 END
 
 I_C_T3 SARMAG01 0 7xChatSARMAG01-0
-== 7Xsha25J IF ~InParty("7Xshar") InMyArea("7Xshar") !StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @848
-== 7XBRA25J IF ~InMyArea("7XBRAN") InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @541
+== 7Xsha25J IF ~InParty("SHARTEEL") InMyArea("SHARTEEL") !StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @848
+== 7XBRA25J IF ~InMyArea("BRANWEN") InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @541
 END
 
 I_C_T SARMAG01 1 BranwenSARMAG01-1
-== 7XBRA25J IF ~InMyArea("7XBRAN")
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN 
+== 7XBRA25J IF ~InMyArea("BRANWEN")
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN 
 @541
 END
 
 I_C_T SARMAN04 0 BranwenSARMAN04-0
-== 7XBRA25J IF ~InMyArea("7XBRAN")
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN 
+== 7XBRA25J IF ~InMyArea("BRANWEN")
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN 
 @542
 END
 
 I_C_T GROMG01 4 BranwenGROMG01-4
-== 7XBRA25J IF ~InMyArea("7XBRAN")
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN 
+== 7XBRA25J IF ~InMyArea("BRANWEN")
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN 
 @543
 END
 
 
 
 I_C_T3 SARMEL01 34 7xChatSARMEL01-34
-== 7XBRA25J IF ~InMyArea("7XBRAN") InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @544 
-== 7Xsha25J IF ~InParty("7Xshar") InMyArea("7Xshar") !StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @851 
+== 7XBRA25J IF ~InMyArea("BRANWEN") InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @544 
+== 7Xsha25J IF ~InParty("SHARTEEL") InMyArea("SHARTEEL") !StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @851 
 END
 
 
 I_C_T AMFAHEED 12 BranwenAMFAHEED-12
-== 7XBRA25J IF ~InMyArea("7XBRAN")
-InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN 
+== 7XBRA25J IF ~InMyArea("BRANWEN")
+InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN 
  @545 
 END
 
 
 I_C_T3 AMMAYOR 3 7xChatAMMAYOR3
-== 7XBRA25J IF ~InMyArea("7XBRAN") InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @546 
-== 7XEld25J IF ~InParty("7XELDOT") InMyArea("7XELDOT") !StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN @759  
+== 7XBRA25J IF ~InMyArea("BRANWEN") InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @546 
+== 7XEld25J IF ~InParty("ELDOTH") InMyArea("ELDOTH") !StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN @759  
 END
 
 I_C_T3 AMMAYOR 12 7xChatAMMAYOR12
-== 7XBRA25J IF ~InMyArea("7XBRAN") InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @547 
-== 7Xsha25J IF ~InParty("7Xshar") InMyArea("7Xshar") !StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @816 
+== 7XBRA25J IF ~InMyArea("BRANWEN") InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @547 
+== 7Xsha25J IF ~InParty("SHARTEEL") InMyArea("SHARTEEL") !StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @816 
 = @817
 == AMMAYOR @976 
 END
 
 I_C_T SENDAI 14 BranwenSENDAI14
-== 7XBRA25J IF ~InMyArea("7XBRAN") InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @960 
+== 7XBRA25J IF ~InMyArea("BRANWEN") InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @960 
 == SENDAI @958 
 END
 
 I_C_T HGNYA01 15 BranwenHGNYA0115
-== 7XBRA25J IF ~InMyArea("7XBRAN") InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @959 
+== 7XBRA25J IF ~InMyArea("BRANWEN") InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @959 
 END
 
 I_C_T SAREV25A 53 BranwenSAREV25A53
-== 7XBRA25J IF ~InMyArea("7XBRAN") InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @961 
+== 7XBRA25J IF ~InMyArea("BRANWEN") InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @961 
 END
 
 I_C_T YAGA01 4 BranwenYAGA014
-== 7XBRA25J IF ~InMyArea("7XBRAN") InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @962 
+== 7XBRA25J IF ~InMyArea("BRANWEN") InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @962 
 END
 
 I_C_T BALTH 18 BranwenBALTH18
-== 7XBRA25J IF ~InMyArea("7XBRAN") InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @964 
+== 7XBRA25J IF ~InMyArea("BRANWEN") InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @964 
 END
 
 I_C_T IF_FILE_EXISTS OHNVICRO 15 BranwenOHNVICRO15
-== 7XBRA25J IF ~InMyArea("7XBRAN") InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @965 
+== 7XBRA25J IF ~InMyArea("BRANWEN") InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @965 
 END
 
 I_C_T SARELF03 0 BranwenSARELF030
-== 7XBRA25J IF ~InMyArea("7XBRAN") InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @967
+== 7XBRA25J IF ~InMyArea("BRANWEN") InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @967
 END
 
 INTERJECT_COPY_TRANS3 MARLOWE 15 7xChatMarlowattack
-== 7XBRA25J IF ~InMyArea("7XBRAN") InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @971 DO ~ChangeAIScript("",DEFAULT) LeaveParty() Enemy() ChangeEnemyAlly(Myself, ENEMY)~
-== MARLOWE IF ~InMyArea("7XBRAN") InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @972
-== 7XGar25J IF ~InParty("7XGAR") InMyArea("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @973 
-== 7Xsha25J IF ~InParty("7Xshar") InMyArea("7Xshar") !StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @974
+== 7XBRA25J IF ~InMyArea("BRANWEN") InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @971 DO ~ChangeAIScript("",DEFAULT) LeaveParty() Enemy() ChangeEnemyAlly(Myself, ENEMY)~
+== MARLOWE IF ~InMyArea("BRANWEN") InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @972
+== 7XGar25J IF ~InParty("GARRICK") InMyArea("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @973 
+== 7Xsha25J IF ~InParty("SHARTEEL") InMyArea("SHARTEEL") !StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @974
 == MARLOWE @975
 END
 
 I_C_T3 AMCST01 0 7xChatAMCST01-0
-== 7XSki25J IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN @548
-== 7XEld25J IF ~InParty("7XELDOT") InMyArea("7XELDOT") !StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN @763 
+== 7XSki25J IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN @548
+== 7XEld25J IF ~InParty("ELDOTH") InMyArea("ELDOTH") !StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN @763 
 END
 
 I_C_T AMCARRAS 12 SKieAMCARRAS12
-== 7XSki25J IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN 
+== 7XSki25J IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN 
  @549 
 END
 
 
 
 I_C_T AMCARRAS 13 SKieAMCARRAS13
-== 7XSki25J IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN 
+== 7XSki25J IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN 
  @550
 END
 
 I_C_T SARELF01 4 SKieSarElves4
-== 7XSki25J IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN 
+== 7XSki25J IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN 
  @551
 END
 
 
 
 I_C_T AMMAN02 1 SKieAMMAN02-1
-== 7XSki25J IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN 
+== 7XSki25J IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN 
  @552
 END
 
 I_C_T AMMAN02 0 SKieAMMAN02-0
-== 7XSki25J IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN 
+== 7XSki25J IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN 
  @553
 END
 
 
 I_C_T AMMAN01 2 SKieAMMAN01-2
-== 7XSki25J IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN 
+== 7XSki25J IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN 
  @554
 END
 
 I_C_T AMMAN02 2 SKieAMMAN02-2
-== 7XSki25J IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN 
+== 7XSki25J IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN 
  @554
 END
 
 
 I_C_T3 AMMGRD01 1 7xchatAMMGRD01-1
-== 7XSki25J IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN @555 
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @862 
+== 7XSki25J IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN @555 
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @862 
 == AMMGRD01 @977
 END
 
 I_C_T SARGRL01 0 SkieSARGRL01
-== 7XSki25J IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN 
+== 7XSki25J IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN 
  @556 
 END
 
 
 I_C_T3 SARMAN02 0 7xchatSARMAN02-0
-== 7XSki25J IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN @557 
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @849 
+== 7XSki25J IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN @557 
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @849 
 == SARMAN02 @975
 END
 
 
 I_C_T SARMEL01 4 SkieSARMEL01-4
-== 7XSki25J IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN 
+== 7XSki25J IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN 
  @558 
 END
 
 I_C_T3 GROMG02 3 7xchatGromG02-3
-== 7Xsha25J IF ~InParty("7Xshar")InMyArea("7Xshar") !StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @850
-== 7XSki25J IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN @559
+== 7Xsha25J IF ~InParty("SHARTEEL")InMyArea("SHARTEEL") !StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @850
+== 7XSki25J IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN @559
 = @560 
 END
 
 I_C_T IMOEN25J 21 SkieIMOEN25J-21
-== 7XSki25J IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN 
+== 7XSki25J IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN 
  @561 
 END
 
 I_C_T AMMONK02 0 SkieAMMONK02-0
-== 7XSki25J IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN 
+== 7XSki25J IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN 
  @562 
 END
 
 I_C_T3 GORCHR 3 7xchatChromaticDemon3
-== 7XSki25J IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN @563
-== 7Xsha25J IF ~InParty("7Xshar") InMyArea("7Xshar") !StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @878
-== GORCHR IF ~OR(2) !StateCheck("7XSKI",CD_STATE_NOTVALID) !StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @879
+== 7XSki25J IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN @563
+== 7Xsha25J IF ~InParty("SHARTEEL") InMyArea("SHARTEEL") !StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @878
+== GORCHR IF ~OR(2) !StateCheck("SKIE",CD_STATE_NOTVALID) !StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @879
 END
 
 I_C_T AMSAEMON 3 SkieAMSAEMON-3
-== 7XSki25J IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN @980 
+== 7XSki25J IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN @980 
 END
 
 
@@ -1634,74 +1634,74 @@ END
 
 
 INTERJECT_COPY_TRANS ABAZIGAL 0 yeslickbazigal0
-== 7XYE25J IF ~InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @579
+== 7XYE25J IF ~InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN @579
 == ABAZIGAL @580
 END
 
 I_C_T AMBAR01 2 YeslickAMBAR01-2
-== 7XYE25J IF ~InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN
+== 7XYE25J IF ~InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN
 @581
 END
 
 
 I_C_T3 AMCAPT01 1 7xchatAMCAPT01-1
-== 7XYE25J IF ~InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @582
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @709 
+== 7XYE25J IF ~InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN @582
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @709 
 END
 
 I_C_T3 AMCAPT01 2 7xchatAMCAPT01-2
-== 7XYE25J IF ~InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @582
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @868
+== 7XYE25J IF ~InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN @582
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @868
 END
 
 I_C_T AMCST04 1 YeslickAMCST04-1
-== 7XYE25J IF ~InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN
+== 7XYE25J IF ~InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN
 @582
 END
 
 
 
 I_C_T AMCST02 2 YeslickAMCST02-2
-== 7XYE25J IF ~InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN 
+== 7XYE25J IF ~InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN 
 @583
 END
 
 
 I_C_T AMBOY01 2 YeslickAMBOY01-2
-== YESLIJ IF ~InParty("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN
+== YESLIJ IF ~InParty("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN
 @584
 END
 
 
 I_C_T SARBAR01 0 YeslickSarBar1-0
-== 7XYE25J IF ~InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN 
+== 7XYE25J IF ~InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN 
 @585
 END
 
 I_C_T SARBAR02 0 YeslickSarBar2-0
-== 7XYE25J IF ~InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN 
+== 7XYE25J IF ~InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN 
 @586
 == SARBAR02 @587
 == 7XYE25J @588
 END
 
 I_C_T SARBUL01 0 YeslickSARBUL01-0
-== 7XYE25J IF ~InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN 
+== 7XYE25J IF ~InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN 
 @589
 END
 
 I_C_T SARBUL01 4 YeslickSARBUL01-4
-== 7XYE25J IF ~InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN 
+== 7XYE25J IF ~InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN 
 @590
 END
 
 I_C_T SARDW04 0 YeslickSARDW04-0
-== 7XYE25J IF ~InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN 
+== 7XYE25J IF ~InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN 
 @591
 END
 
 I_C_T SARDW01 0 YeslickSARDW01-0
-== 7XYE25J IF ~InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN 
+== 7XYE25J IF ~InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN 
 @592
 == SARDW01 @593
 =
@@ -1717,39 +1717,39 @@ I_C_T SARDW01 0 YeslickSARDW01-0
 END
 
 I_C_T SARDW05 0 YeslickSARDW05-0
-== 7XYE25J IF ~InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN 
+== 7XYE25J IF ~InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN 
 @602
 END
 
 I_C_T SARMAN03 1 YeslickSARMAN03-1
-== 7XYE25J IF ~InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN 
+== 7XYE25J IF ~InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN 
 @603 
 END
 
 I_C_T3 SARPRIS2 0 7XChatSARPRIS2-0
-== 7XYE25J IF ~InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @604
+== 7XYE25J IF ~InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN @604
 = @605 
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @684
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @684
 == SARPRIS2 @978
 END
 
 
 INTERJECT_COPY_TRANS3 SARGRD01 0 7xchatSARGRD01-0
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @825
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @825
 = @826
-== SARGRD01 IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @827
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @828
-== 7XYE25J IF ~InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @606
+== SARGRD01 IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @827
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @828
+== 7XYE25J IF ~InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN @606
 END
 
 INTERJECT_COPY_TRANS HGNYA01 6 YeslickHGNYA01-6
-== 7XYE25J IF ~InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN 
+== 7XYE25J IF ~InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN 
  @607 
 END
 
 
 I_C_T BAERIE25 159 YeslickAerieBaby
-== 7XYE25J IF ~InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN 
+== 7XYE25J IF ~InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN 
 @610
 END
 
@@ -1759,7 +1759,7 @@ END
 
 CHAIN
 IF ~ReputationLT(Player1,3)
-Global("YeslickRepBanter","LOCALS",0)InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)~
+Global("YeslickRepBanter","LOCALS",0)InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)~
 THEN ~7XYE25J~ YeslickBadReputation
 @611
 =
@@ -1769,7 +1769,7 @@ EXIT
 
 
 CHAIN
-IF ~Global("YeslickImoenTOB","LOCALS",0)InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)
+IF ~Global("YeslickImoenTOB","LOCALS",0)InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)
 InParty("Imoen2")See("Imoen2")!StateCheck("Imoen2",CD_STATE_NOTVALID)CombatCounter(0)~ THEN B7XYE25 ImoenYeslickTOB1
   @613
 DO ~SetGlobal("YeslickImoenTOB","LOCALS",1)~
@@ -1793,7 +1793,7 @@ EXIT
 
 CHAIN
   IF ~Global("YeslickSarevok","LOCALS",0)InParty("Sarevok")See("Sarevok")Alignment("Sarevolk",CHAOTIC_GOOD)
-  !StateCheck("Sarevok",CD_STATE_NOTVALID)InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)
+  !StateCheck("Sarevok",CD_STATE_NOTVALID)InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)
   CombatCounter(0)~ THEN B7XYE25 SarevokYeslick1
 @622 DO ~SetGlobal("YeslickSarevok","LOCALS",1)~
  == BSAREV25
@@ -1808,7 +1808,7 @@ EXIT
 
 CHAIN
   IF ~Global("YeslickAerieTOB","LOCALS",0)InParty("Aerie")See("Aerie")
-!StateCheck("Aerie",CD_STATE_NOTVALID)InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)
+!StateCheck("Aerie",CD_STATE_NOTVALID)InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)
   CombatCounter(0)~ THEN B7XYE25 YeslickAerieTOB1
   @627
 DO ~SetGlobal("YeslickAerieTOB","LOCALS",1)~
@@ -1831,7 +1831,7 @@ EXIT
 CHAIN
 IF ~InParty("Anomen")
 See("Anomen")!StateCheck("Anomen",CD_STATE_NOTVALID)
-InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)
+InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)
 Global("YeslickAnomenTalkToB","GLOBAL",0)~ THEN ~B7XYE25~ YeslickAnomenWarrior
 @635
 DO ~SetGlobal("YeslickAnomenTalkToB","GLOBAL",1)~
@@ -1855,8 +1855,8 @@ EXIT
 
 
 CHAIN
-IF ~Global("YeslickGarrickTOB","LOCALS",0)InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)
-CombatCounter(0)InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN ~B7XYE25~ GarrickYeslickTOB1
+IF ~Global("YeslickGarrickTOB","LOCALS",0)InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)
+CombatCounter(0)InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN ~B7XYE25~ GarrickYeslickTOB1
   @644
 DO ~SetGlobal("YeslickGarrickTOB","LOCALS",1)~
 == B7XGar25 @645
@@ -1872,8 +1872,8 @@ EXIT
 
 
 
-CHAIN IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
-InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
+InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)
 Global("SkieYeslickTOB","GLOBAL",0)~ THEN ~7XSki25B~ SkieYeslickTOB1
 @654 DO ~SetGlobal("SkieYeslickTOB","GLOBAL",1)~
 == B7XYE25 @655
@@ -1885,8 +1885,8 @@ Global("SkieYeslickTOB","GLOBAL",0)~ THEN ~7XSki25B~ SkieYeslickTOB1
 == B7XYE25 @661
 EXIT
 
-CHAIN IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)
-InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)
+InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)
 Global("YeslickEldothTOB","GLOBAL",0)~ THEN ~B7XEld25~ YeslickEldothTOB1
 @662 DO~SetGlobal("YeslickEldothTOB","GLOBAL",1)~
 == B7XYE25 @663
@@ -1902,7 +1902,7 @@ CombatCounter(0)
 InParty("Minsc")
 Range("Minsc",30)
 !StateCheck("Minsc",CD_STATE_NOTVALID)
-InParty("7XYES")InMyArea("7XYES")!StateCheck("7XYES",CD_STATE_NOTVALID)
+InParty("YESLICK")InMyArea("YESLICK")!StateCheck("YESLICK",CD_STATE_NOTVALID)
 Global("YeslickMinscTOB","GLOBAL",0) ~THEN B7XYE25 IylosMinsc_2
 @668 DO ~SetGlobal ("YeslickMinscTOB","GLOBAL",2)~
 == BMINSC25 @669
@@ -1969,119 +1969,119 @@ END
 
 
 I_C_T SARPRIS1 0 GarickSARPRIS1-0
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @683
 END
 
 I_C_T SARPEL01 0 GarickSARPEL01-0
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @685 
 END
 
 I_C_T3 SARALEGS 0 7xChatSARALEGS-0
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @829 
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @686 
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @829 
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @686 
 == SARALEGS @979
 END
 
 
 I_C_T SARBAR01 9 GarickSARBAR01-9
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @687
 END
 
 I_C_T SARBOY01 1 GarickSARBOY01-1
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @688
 END
 
 I_C_T3 SARBUL04 3 7xChatSARBUL04-3
-== 7Xsha25J IF ~InParty("7Xshar") !StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @837
-== 7XGar25J IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @689
+== 7Xsha25J IF ~InParty("SHARTEEL") !StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @837
+== 7XGar25J IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @689
 == SARBUL04 @977
 END
 
 I_C_T3 SARBUL06 3 7xChatSARBUL06-3
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @837
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @689
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @837
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @689
 == SARBUL06 @977
 END
 
 
 I_C_T3 SARBUL04 0 7xChatSARBUL04-0
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @690
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @836
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @690
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @836
 END
 
 I_C_T3 SARBUL06 0 7xChatSARBUL06-0
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @690
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @836 
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @690
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @836 
 END
 
 
 I_C_T SARELF01 2 GarickSARELF01-2
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @692
 END
 
 I_C_T3 SARKIS02 2 7xChatSARKIS02-0
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @693
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @863 
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @693
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @863 
 END
 
 I_C_T SARMEL01 5 GarickSARMEL01-5
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @694
 END
 
 I_C_T SARPRO01 0 GarickSARPRO01-0
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @695
 END
 
 I_C_T SARPRO01 2 GarickSARPRO01-2
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @696
 =
 @697
 END
 
 I_C_T SARTRO01 0 GarickSARTRO01-0
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @698
 END
 
 
 I_C_T SARVOLO 0 GarickVOLO-0
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @699
 END
 
 
 
 I_C_T3 SARWAI01 0 7xChatSARWAI01-0
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @700
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @858 
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @700
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @858 
 END
 
 I_C_T AMSMITH 15 GarickAMSMITH-15
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @701 
 END
 
 I_C_T AMBAR01 0 GarickAMBAR01-0
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @702 
 END
 
 I_C_T AMBAR01 9 GarickAMBAR01-9
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @703  
 END
 
 
 I_C_T AMBOY01 0 GarickAMBOY01-0
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @704
 == AMBOY01 @705
 == 7XGar25J ~Only the bravest warrior in all of Faerûn!~[garrick5]
@@ -2090,12 +2090,12 @@ I_C_T AMBOY01 0 GarickAMBOY01-0
 END
 
 I_C_T AMCARRAS 9 GarickAMCARRAS-9
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @710  
 END
 
 I_C_T AMMERC03 0 GarickAMMERC03-0
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @711
 =
 @712 
@@ -2103,36 +2103,36 @@ END
 
 
 I_C_T AMMERC03 1 GarickAMMERC03-1
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @713 
 END
 
 
 I_C_T AMMERC04 0 GarickAMMERC04-0
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @714 
 END
 
 I_C_T AMMERC04 1 GarickAMMERC04-1
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @715 
 END
 
 
 I_C_T CERND25J 3 GarickCernd25J-3
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @716  
 END
 
 
 I_C_T AMMAN02 3 GarrickAMMAN02-3
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @717 
 END
 
 
 INTERJECT_COPY_TRANS AMGIRL01 0 Garrickamgirl-0
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @704
 == AMGIRL01 @705
 == 7XGar25J @706
@@ -2141,57 +2141,57 @@ INTERJECT_COPY_TRANS AMGIRL01 0 Garrickamgirl-0
 END
 
 I_C_T3 GORDEMO 1 7xChatGORDEMO1
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @719
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @805 
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @719
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @805 
 END
 
 I_C_T GORLUM 1 GarrickGORLUM1
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @720
 END
 
 I_C_T GORLUM2 2 GarrickGORLUM2-2
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN
  @721
 END
 
 INTERJECT_COPY_TRANS IF_FILE_EXISTS OHRMEEMS 50 GarOHRMEEMS-50
-== 7XGar25J IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @943
+== 7XGar25J IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @943
 END
 
 INTERJECT_COPY_TRANS FINMEL01 10 GarFINMEL01-10
-  == 7XGar25J IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID) OR(2) !InParty("7Xkaga") StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @944
-  == MINSC25J IF ~InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID) InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID) OR(2) !InParty("7Xkaga") StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @945
-  == FINMEL01 IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @946
+  == 7XGar25J IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID) OR(2) !InParty("KAGAIN") StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN @944
+  == MINSC25J IF ~InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID) InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID) OR(2) !InParty("KAGAIN") StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN @945
+  == FINMEL01 IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @946
 END
 
 
 INTERJECT_COPY_TRANS AMBAR01 1 GarAMBAR01-1
-  == AMBAR01 IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @981
+  == AMBAR01 IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @981
   =@982
-  == 7XGar25J IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @983
+  == 7XGar25J IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @983
   =@984
   == AMBAR01 @985
 END
 
 
 INTERJECT_COPY_TRANS AMBAR01 2 GarAMBAR01-2
-  == AMBAR01 IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @981
+  == AMBAR01 IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @981
   =@982
-  == 7XGar25J IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @983
+  == 7XGar25J IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @983
   =@984
   == AMBAR01 @985
 END
 
 INTERJECT_COPY_TRANS AMBAR01 40 GarAMBAR01-40
-  == AMBAR01 IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @981
+  == AMBAR01 IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @981
   =@982
-  == 7XGar25J IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @983
+  == 7XGar25J IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @983
   =@984
   == AMBAR01 @985
 END
 
-CHAIN IF ~Global("GarrickImoenTOB","GLOBAL",0)InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~Global("GarrickImoenTOB","GLOBAL",0)InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 InParty("Imoen2")!StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN ~B7XGar25~ GarrickImoenTOB1
 @722 DO ~SetGlobal("GarrickImoenTOB","GLOBAL",1)~
 == BIMOEN25 @723
@@ -2204,14 +2204,14 @@ InParty("Imoen2")!StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN ~B7XGar25~ Garric
 @729
 =
 @730
-== BIMOEN25 @731 DO ~RunAwayFrom("7XGAR",45)~
+== BIMOEN25 @731 DO ~RunAwayFrom("GARRICK",45)~
 EXIT
 
 CHAIN IF~
 CombatCounter(0)
 InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)
-InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
-See("7XGAR")
+InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
+See("GARRICK")
 Global("GarrickAerieTOB","GLOBAL",0)~ THEN ~BAERIE25~ GarrickAerieTOB_1
 @1099 DO ~SetGlobal("GarrickAerieTOB","GLOBAL",1)~
 == B7XGar25 @1100
@@ -2225,7 +2225,7 @@ EXIT
 CHAIN IF~
 CombatCounter(0)!See([ENEMY])
 InParty("Aerie")Range("Aerie",30)!StateCheck("Aerie",CD_STATE_NOTVALID)
-InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 Global("GarrickAerieTOB","GLOBAL",1)~ THEN ~B7XGar25~ GarrickAerieTOB_2
 @732 DO ~SetGlobal("GarrickAerieTOB","GLOBAL",2)~
 == BAERIE25 @733
@@ -2235,7 +2235,7 @@ Global("GarrickAerieTOB","GLOBAL",1)~ THEN ~B7XGar25~ GarrickAerieTOB_2
 EXIT
 
 CHAIN 
-IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)InParty("Jaheira")
+IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)InParty("Jaheira")
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
 Global("GarrickJaheiraToB","GLOBAL",0)~ THEN BJAHEI25 GarrickJaheiraToB1
 @1012
@@ -2257,7 +2257,7 @@ DO ~SetGlobal("GarrickJaheiraToB","GLOBAL",1)~
 EXIT
 
 CHAIN 
-IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)InParty("Jaheira")
+IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)InParty("Jaheira")
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
 Global("GarrickJaheiraToB","GLOBAL",1)~ THEN BJAHEI25 GarrickJaheiraToB2
 @736
@@ -2278,7 +2278,7 @@ CHAIN
 IF ~InParty("Mazzy")
 See("Mazzy")
 !StateCheck("Mazzy",CD_STATE_NOTVALID)
-InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 Global("O#CoranMazzyToB1","GLOBAL",0)~ THEN B7XGar25 GarrickMazzyToB1
 @746
 DO ~SetGlobal("GarrickMazzyToB1","GLOBAL",1)~
@@ -2347,30 +2347,30 @@ IF ~~ THEN BEGIN Eldoth_7
 END
 
 INTERJECT_COPY_TRANS AMASANA 3 EldothAMASANA-3
- == 7XEld25J IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+ == 7XEld25J IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @760 
 END
 
 INTERJECT_COPY_TRANS AMCLER01 0 EldothAMCLER01-0
- == 7XEld25J IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+ == 7XEld25J IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @761 
 END
 
 INTERJECT_COPY_TRANS AMMONK01 3 EldothAMMONK01-3
- == 7XEld25J IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+ == 7XEld25J IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @762 
 END
 
 
 INTERJECT_COPY_TRANS AMCST02 3 EldothAMCST02-3
- == 7XEld25J IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+ == 7XEld25J IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @764
 =
 @765 
 END
 
 INTERJECT_COPY_TRANS AMMAJIRA 2 EldothAMMAJIRA-2
- == 7XEld25J IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+ == 7XEld25J IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @766
 == AMMAJIRA @767
 == 7XEld25J @768
@@ -2378,17 +2378,17 @@ INTERJECT_COPY_TRANS AMMAJIRA 2 EldothAMMAJIRA-2
 END
 
 INTERJECT_COPY_TRANS AMMAYOR 10 EldothAMMAYOR10
-== 7XEld25J IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEld25J IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @770
 END
 
 INTERJECT_COPY_TRANS AMMAYOR 14 EldothAMMAYOR14
-== 7XEld25J IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)~ THEN
+== 7XEld25J IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)~ THEN
 @771
 END
 
-CHAIN IF ~InParty("7XSKI") InMyArea("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)
-InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("SKIE") InMyArea("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)
+InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 Global("SkieEldothTOB","GLOBAL",0)~ THEN ~B7XEld25~ SkieEldothTOB1
 @772 DO ~SetGlobal("SkieEldothTOB","GLOBAL",1)~
 == 7XSki25B @773
@@ -2406,7 +2406,7 @@ Global("SkieEldothTOB","GLOBAL",0)~ THEN ~B7XEld25~ SkieEldothTOB1
 == 7XSki25B @784
 EXIT
 
-CHAIN IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID)InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID)InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("SharEldothTOB","GLOBAL",0)TimeOfDay("NIGHT")~ THEN ~B7XEld25~ SharTeelEldothTOB1
 @785 DO~SetGlobal("SharEldothTOB","GLOBAL",1)~
 ==B7Xsh25@786
@@ -2423,146 +2423,146 @@ EXIT
 
 
 I_C_T AMMERC02 1 SharTeelSaemonMeet1
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN 
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN 
 @802
 END
 
 I_C_T BAZDRA01 4 SharDrakonis4
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @803
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @803
 == BAZDRA01 @946
 END
 
 
 I_C_T BAZMONK 0 SharBAZMONK0
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN  
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN  
 @804
 END
 
 
 INTERJECT_COPY_TRANS ABAZIGAL 2 Sharabazigal2
- == 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @806
+ == 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @806
  == ABAZIGAL @970
 END
 
 
 INTERJECT_COPY_TRANS ABAZIGAL 4 Sharabazigal4
- == 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+ == 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @807
  == ABAZIGAL @969
 END
 
 INTERJECT_COPY_TRANS ABAZIGAL 5 Sharabazigal5
- == 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+ == 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @807
  == ABAZIGAL @969
 END
 
 
 INTERJECT_COPY_TRANS AMARCH01 0 SharAMARCH01-0
- == 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+ == 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @808 
 END
 
 INTERJECT_COPY_TRANS AMARCH01 3 SharAMARCH01-3
- == 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+ == 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @809
 END
 
 I_C_T AMCARRAS 7 Sharamcarras7
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @810
 END
 
 I_C_T AMCARRAS 5 Sharamcarras5
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @811
 END
 
 
 I_C_T AMCLER01 6 Shar_amcler01-6
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @812
 END
 
 I_C_T AMMONK02 3 Shar_ammonk02-3
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @813
 END
 
 I_C_T AMMONK02 5 Shar_ammonk02-5
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @814
 END
 
 INTERJECT_COPY_TRANS AMMAYOR 2 SharAMMAYOR-2
- == 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+ == 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @815 
 END
 
 INTERJECT_COPY_TRANS AMMERC07 0 SharAMMERC07-0
- == 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+ == 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @818
 END
 
 INTERJECT_COPY_TRANS AMFAHEED 5 SharAMFAHEED-5
- == 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+ == 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @819 
 END
 
 
 INTERJECT_COPY_TRANS BALTH 25 SharTeelbaltha25
- == 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+ == 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @820
 == BALTH @821
 END
 
 I_C_T BAZEYE01 8 Shar_bazeye01-8
- == 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+ == 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @822
 END
 
 
 INTERJECT_COPY_TRANS SENGUA03 1 SharSENGUA031
- == 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+ == 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @823
 END
 
 
 INTERJECT_COPY_TRANS GORODR1 36 Shargorodr1-36
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
  @824
 END
 
 INTERJECT_COPY_TRANS SARBHA01 1 SharSarBHA01-1
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
  @830 
 END
 
 INTERJECT_COPY_TRANS SARBHA01 10 SharSarBHA01-10
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
  @831
 END
 
 INTERJECT_COPY_TRANS SARBHA02 0 SharSarBHA02-0
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
  @832
 =
 @833
 END
 
 INTERJECT_COPY_TRANS SARBHA02 1 SharSarBHA02-1
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @834
 END
 
 
 INTERJECT_COPY_TRANS SARBUL01 1 SharSarBUL01-1
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @835
 END
 
 I_C_T SARBUL05 5 SARBUL05-5
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
  @838
 =
 @839  
@@ -2570,179 +2570,179 @@ END
 
 
 INTERJECT_COPY_TRANS SARCNT01 18 SharSARCNT01-18
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @840 
 END
 
 
 I_C_T SARELF02 0 SharSarElves2-0
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
  @843
 =
 @844
 END
 
 I_C_T SARGRD01 1 SharSARGRD01-1
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
  @846
 END
 
 I_C_T SARGRD02 0 SharSARGRD02-0
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
  @847
 END
 
 I_C_T SARMIST 4 SharSARMIST4
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @852
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @852
 == SARMIST @1063
 END
 
 
 I_C_T SARPRO01 15 SharSARPRO01-15
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
  @853 
 END
 
 
 I_C_T SARSPIR 0 SharSARSPIR0
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @854 
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @854 
 == SARSPIR @969
 END
 
 
 I_C_T SARTRO03 4 SharSARTRO03-4
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
  @855 
 END
 
 I_C_T SARVAM01 0 SharSARVAM01-0
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
  @856
 END
 
 
 I_C_T MINSC25J 8 SharMINSC25J-8
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
  @857 
 END
 
 I_C_T AMMAG01 0 SharAMMAG01
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
  @859
 END
 
 I_C_T AMMAN01 3 SharAMMAN01-3
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
  @860
 END
 
 I_C_T AMMAN01 4 SharAMMAN01-4
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
  @861
 END
 
 I_C_T AMTGEN01 1 SharAMTGEN01-1
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
  @864
 == AMTGEN01 @946
 END
 
 
 I_C_T AMWAR01 2 SharAMWAR01-2
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
  @865 
 END
 
 I_C_T AMWAR02 2 SharAMWAR02-2
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
  @863
 END
 
 I_C_T AMBAR01 18 Sharambar18
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @866
 END
 
 I_C_T AMBAR01 39 SharAMBAR01-39
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
  @867
 END
 
 
 INTERJECT_COPY_TRANS AMCST03 3 SharAMCST03-3
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @869 
 END
 
 
 INTERJECT_COPY_TRANS AMCST04 4 SharAMCST04-4
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @870 
 END
 
 
 INTERJECT_COPY_TRANS BAERIE25 0 SharBAERIE25-0
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @871
-== BJAN25 IF ~InParty("Jan")!StateCheck("Jan",CD_STATE_NOTVALID) InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== BJAN25 IF ~InParty("Jan")!StateCheck("Jan",CD_STATE_NOTVALID) InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @872
 END
 
 
 INTERJECT_COPY_TRANS AMGIRL01 1 Sharamgirl-1
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @873
 END
 
 
 INTERJECT_COPY_TRANS3 GROMNIR 7 SharGROMNIR-7
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @874
-== GROMNIR IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @784
-== 7XBRA25J IF ~InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @963
-== GROMNIR IF ~InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @968
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @874
+== GROMNIR IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @784
+== 7XBRA25J IF ~InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @963
+== GROMNIR IF ~InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @968
 END
 
 INTERJECT_COPY_TRANS YAGA01 5 SharYAGA015
- == 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+ == 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @875
  == YAGA01 @969
 END
 
 
 INTERJECT_COPY_TRANS SENDAI 13 Sharsendai13
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @876 
 END
 
 INTERJECT_COPY_TRANS SENDAI 16 Sharsendai16
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @52
 == SENDAI @969
 END
 
 
 I_C_T GORCHR 0 SharChromaticDemon0
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @877
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @877
 END
 
 I_C_T GORCHR 11 SharChromaticDemon11
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @880
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @880
 == GORCHR @970
 END
 
 I_C_T IMOEN25J 13 SharIMOEN25J-13
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @947
 END
 
 I_C_T FINSOL01 32 SharFINSOL01-32
-== 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN
+== 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN
 @948
 END
 
 
 CHAIN
-IF ~ReputationLT(Player1,3)InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)
+IF ~ReputationLT(Player1,3)InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("SharRepBanter","LOCALS",0)~
 THEN 7Xsha25J SharBadReputation
 @881
@@ -3040,15 +3040,15 @@ END
 
 
 EXTEND_BOTTOM FINMEL01 4 
-IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID) !Global("BalthazarFights","GLOBAL",1)~ THEN DO ~ActionOverride(Player1,SetDialog("PLAYER1"))~ GOTO 7xEldothMelissan
+IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID) !Global("BalthazarFights","GLOBAL",1)~ THEN DO ~ActionOverride(Player1,SetDialog("PLAYER1"))~ GOTO 7xEldothMelissan
 END
 
 EXTEND_BOTTOM FINMEL01 3 
-IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID) !Global("BalthazarFights","GLOBAL",1)~ THEN DO ~ActionOverride(Player1,SetDialog("PLAYER1"))~ GOTO 7xEldothMelissan
+IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID) !Global("BalthazarFights","GLOBAL",1)~ THEN DO ~ActionOverride(Player1,SetDialog("PLAYER1"))~ GOTO 7xEldothMelissan
 END
 
 EXTEND_BOTTOM FINMEL01 2 
-IF ~InParty("7XELDOT")!StateCheck("7XELDOT",CD_STATE_NOTVALID) !Global("BalthazarFights","GLOBAL",1)~ THEN DO ~ActionOverride(Player1,SetDialog("PLAYER1"))~ GOTO 7xEldothMelissan
+IF ~InParty("ELDOTH")!StateCheck("ELDOTH",CD_STATE_NOTVALID) !Global("BalthazarFights","GLOBAL",1)~ THEN DO ~ActionOverride(Player1,SetDialog("PLAYER1"))~ GOTO 7xEldothMelissan
 END
 
 CHAIN FINMEL01 7xEldothMelissan
@@ -3056,29 +3056,29 @@ CHAIN FINMEL01 7xEldothMelissan
 == PLAYER1 @950
 == 7XEld25J @951
 =@957
-== IF_FILE_EXISTS 7XSki25J IF ~InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN @952
+== IF_FILE_EXISTS 7XSki25J IF ~InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN @952
 == JAHEI25J IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @953
 == KELDO25J IF ~InParty("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID) OR(2) !InParty("Jaheira") StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @953
-== IF_FILE_EXISTS 7XBRA25J IF ~InParty("7XBRAN") !StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @966
-== IF_FILE_EXISTS 7XTIA25J IF ~InParty("7XTIAX") !StateCheck("7XTIAX",CD_STATE_NOTVALID)~ THEN @956
+== IF_FILE_EXISTS 7XBRA25J IF ~InParty("BRANWEN") !StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @966
+== IF_FILE_EXISTS 7XTIA25J IF ~InParty("TIAX") !StateCheck("TIAX",CD_STATE_NOTVALID)~ THEN @956
 == ANOME25J IF ~InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @954
 == VICON25J IF ~InParty("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) OR(2) !InParty("Anomen") StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @954
 == PLAYER1 IF ~OR(2) !InParty("Viconia") StateCheck("Viconia",CD_STATE_NOTVALID) OR(2) !InParty("Anomen") StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @954
 == 7XEld25J @955 DO ~LeaveParty() ReallyForceSpellDeadRES("OHSMODE3",Myself) Enemy() ChangeEnemyAlly(Myself,ENEMY) ChangeAIScript("",DEFAULT)~
-== IF_FILE_EXISTS 7Xsha25J IF ~InParty("7Xshar")!StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @958 
+== IF_FILE_EXISTS 7Xsha25J IF ~InParty("SHARTEEL")!StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @958 
 EXTERN FINMEL01 5
 
 INTERJECT_COPY_TRANS3 FINSOL01 27 7xChatFinSol
-== IF_FILE_EXISTS 7Xsha25J IF ~InParty("7Xshar") !StateCheck("7Xshar",CD_STATE_NOTVALID)~ THEN @986
-== IF_FILE_EXISTS 7XYE25J IF ~InParty("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @608 = @609
-== IF_FILE_EXISTS 7XSki25J IF ~InParty("7XSKI") !StateCheck("7XSKI",CD_STATE_NOTVALID)~ THEN @988
-== IF_FILE_EXISTS 7XBRA25J IF ~InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @989
-== 7XGar25J IF ~InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)~ THEN @987
+== IF_FILE_EXISTS 7Xsha25J IF ~InParty("SHARTEEL") !StateCheck("SHARTEEL",CD_STATE_NOTVALID)~ THEN @986
+== IF_FILE_EXISTS 7XYE25J IF ~InParty("YESLICK") !StateCheck("YESLICK",CD_STATE_NOTVALID)~ THEN @608 = @609
+== IF_FILE_EXISTS 7XSki25J IF ~InParty("SKIE") !StateCheck("SKIE",CD_STATE_NOTVALID)~ THEN @988
+== IF_FILE_EXISTS 7XBRA25J IF ~InParty("BRANWEN")!StateCheck("BRANWEN",CD_STATE_NOTVALID)~ THEN @989
+== 7XGar25J IF ~InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)~ THEN @987
 END
 
 // Garrick - Nalia romance
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
 See("Nalia")
 !AreaType(DUNGEON)
 InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)
@@ -3099,7 +3099,7 @@ Global("GarrickNaliaRomanceTalk","GLOBAL",5)~ THEN ~B7XGar25~ NaliaGarrick10
 == BNALIA25 @1003
 EXIT
 
-CHAIN IF ~InParty("7XGAR") !StateCheck("7XGAR",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("GARRICK") !StateCheck("GARRICK",CD_STATE_NOTVALID)
 See("Nalia") PartyRested()
 !AreaType(DUNGEON)
 InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)
@@ -3268,7 +3268,7 @@ SAY @1076
 IF ~~ THEN DO ~SetGlobal("GarrickToBFriendship","GLOBAL",4)~ REPLY @1079 GOTO GarrickPCTalkToB3a
 IF ~~ THEN DO ~SetGlobal("GarrickToBFriendship","GLOBAL",4)~ REPLY @1081 GOTO GarrickPCTalkToB3b
 IF ~InParty("HaerDalis")~ THEN DO ~SetGlobal("GarrickToBFriendship","GLOBAL",4)~ REPLY @1083 GOTO GarrickPCTalkToB3c
-IF ~InParty("7XELDOT")~ THEN DO ~SetGlobal("GarrickToBFriendship","GLOBAL",4)~ REPLY @1085 GOTO GarrickPCTalkToB3d
+IF ~InParty("ELDOTH")~ THEN DO ~SetGlobal("GarrickToBFriendship","GLOBAL",4)~ REPLY @1085 GOTO GarrickPCTalkToB3d
 IF ~~ THEN DO ~SetGlobal("GarrickToBFriendship","GLOBAL",4)~ REPLY @1087 GOTO GarrickPCTalkToB3e
 IF ~~ THEN DO ~SetGlobal("GarrickToBFriendship","GLOBAL",4)~ REPLY @1089 GOTO GarrickPCTalkToB3f
 IF ~~ THEN DO ~SetGlobal("GarrickToBFriendship","GLOBAL",4)~ REPLY @1091 GOTO GarrickPCTalkToB3g
@@ -3318,7 +3318,7 @@ END
 END
 
 CHAIN IF ~CombatCounter(0)
-InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+InParty("GARRICK")!StateCheck("GARRICK",CD_STATE_NOTVALID)
 InParty("Sarevok")!StateCheck("Sarevok",CD_STATE_NOTVALID)
 Global("SarevokGarrickToB","LOCALS",0)~
 THEN ~B7XGar25~ SarevokGarrick_ToB1

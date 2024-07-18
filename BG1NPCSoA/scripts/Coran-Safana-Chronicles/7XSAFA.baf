@@ -1,7 +1,7 @@
 
 
 IF
-InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 AreaCheck("AR0300")
 Range("DOOR0302",30)
@@ -16,7 +16,7 @@ END
 
 IF
 
-InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 AreaCheck("AR0406")
   Global("SafanaCCHoldThis","GLOBAL",0)
@@ -31,7 +31,7 @@ END
 IF
 Global("SafanaQUEST","GLOBAL",5)
 Global("SafanaQUESTAfterTalk","LOCALS",0)
-InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 See(Player1)
 AreaCheck("AR0300")
@@ -43,7 +43,7 @@ THEN
 END
 
 IF
-InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 RealGlobalTimerExpired("SafanaPCTalkTimer","GLOBAL") 
@@ -61,7 +61,7 @@ END
 IF
 Global("Chapter","GLOBAL",%bg2_chapter_6%)
 AreaType("CITY")
-InParty("7XSAFA")!StateCheck("7XSAFA",CD_STATE_NOTVALID)
+InParty("SAFANA")!StateCheck("SAFANA",CD_STATE_NOTVALID)
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 CombatCounter(0) 
@@ -74,7 +74,7 @@ END
 
 // Brynnlaw 
 IF
-AreaCheck("AR1600")!StateCheck("7XSAFA",CD_STATE_NOTVALID)InParty("7XSAFA")
+AreaCheck("AR1600")!StateCheck("SAFANA",CD_STATE_NOTVALID)InParty("SAFANA")
   Global("SafanaAR1600","AR1600",0)
   CombatCounter(0)
 THEN
@@ -85,7 +85,7 @@ END
 
 IF
 AreaCheck("AR1600")
-!StateCheck("7XSAFA",CD_STATE_NOTVALID)InParty("7XSAFA")
+!StateCheck("SAFANA",CD_STATE_NOTVALID)InParty("SAFANA")
   Global("SafanaAR1600","AR1600",1)
   RealGlobalTimerExpired("SafanaAR1600TalkTimer","GLOBAL") 
   CombatCounter(0)
@@ -99,7 +99,7 @@ END
 
 // Docks
 IF
-AreaCheck("AR0300")!StateCheck("7XSAFA",CD_STATE_NOTVALID)InParty("7XSAFA")
+AreaCheck("AR0300")!StateCheck("SAFANA",CD_STATE_NOTVALID)InParty("SAFANA")
   Global("SafanaAR0300","AR0300",0)
   CombatCounter(0)
 THEN
@@ -110,7 +110,7 @@ END
 
 IF
 AreaCheck("AR0300")
-!StateCheck("7XSAFA",CD_STATE_NOTVALID)InParty("7XSAFA")
+!StateCheck("SAFANA",CD_STATE_NOTVALID)InParty("SAFANA")
   Global("SafanaAR0300","AR0300",1)
   RealGlobalTimerExpired("SafanaAR0300TalkTimer","GLOBAL") 
   CombatCounter(0)
@@ -124,7 +124,7 @@ END
 
 // Graveyard
 IF
-AreaCheck("AR0800")!StateCheck("7XSAFA",CD_STATE_NOTVALID)InParty("7XSAFA")
+AreaCheck("AR0800")!StateCheck("SAFANA",CD_STATE_NOTVALID)InParty("SAFANA")
   Global("SafanaAR0800","AR0800",0)
   CombatCounter(0)
 THEN
@@ -135,7 +135,7 @@ END
 
 IF
 AreaCheck("AR0800")
-!StateCheck("7XSAFA",CD_STATE_NOTVALID)InParty("7XSAFA")
+!StateCheck("SAFANA",CD_STATE_NOTVALID)InParty("SAFANA")
   Global("SafanaAR0800","AR0800",1)
   RealGlobalTimerExpired("SafanaAR0800TalkTimer","GLOBAL") 
   CombatCounter(0)
@@ -150,7 +150,7 @@ END
 
 // Lord Logan
 IF
-AreaCheck("AR2007")!StateCheck("7XSAFA",CD_STATE_NOTVALID)InParty("7XSAFA")
+AreaCheck("AR2007")!StateCheck("SAFANA",CD_STATE_NOTVALID)InParty("SAFANA")
   Global("SafanaAR2007","AR2007",0)
   CombatCounter(0)
 THEN
@@ -161,7 +161,7 @@ END
 
 IF
 AreaCheck("AR2007")
-!StateCheck("7XSAFA",CD_STATE_NOTVALID)InParty("7XSAFA")
+!StateCheck("SAFANA",CD_STATE_NOTVALID)InParty("SAFANA")
   Global("SafanaAR2007","AR2007",1)
   RealGlobalTimerExpired("SafanaAR2007TalkTimer","GLOBAL") 
   CombatCounter(0)

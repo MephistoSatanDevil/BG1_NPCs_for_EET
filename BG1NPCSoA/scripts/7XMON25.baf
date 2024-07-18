@@ -3,7 +3,7 @@ Dead("yaga01")
 OR(2)
 Dead("Sendai")
 Dead("Abazigal")
-InParty("7XMONT") InMyArea("7XMONT") !StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON") InMyArea("MONTARON") !StateCheck("MONTARON",CD_STATE_NOTVALID)
   Global("7XMONT25MelissanTalk","GLOBAL",0)
   CombatCounter(0)
   !See([ENEMY])
@@ -15,7 +15,7 @@ END
 
 IF
 RealGlobalTimerExpired("7XMONT25MelissanTimer","GLOBAL")
-InParty("7XMONT") InMyArea("7XMONT") !StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON") InMyArea("MONTARON") !StateCheck("MONTARON",CD_STATE_NOTVALID)
   Global("7XMONT25MelissanTalk","GLOBAL",1)
   CombatCounter(0)
   !See([ENEMY])

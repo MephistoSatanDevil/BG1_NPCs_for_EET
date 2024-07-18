@@ -89,7 +89,7 @@ END
 
 // Bridge
 IF
-InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 AreaCheck("ar0500")
   Global("MONTYar0500","AR0500",0)
   CombatCounter(0)
@@ -100,7 +100,7 @@ THEN
 END
 
 IF
-InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 AreaCheck("ar0500")
   Global("MONTYar0500","AR0500",1)
   CombatCounter(0)
@@ -115,7 +115,7 @@ END
 
 // Docks 
 IF
-InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 AreaCheck("ar0300")
   Global("MONTYar0300","AR0300",0)
 CombatCounter(0)
@@ -126,7 +126,7 @@ THEN
 END
 
 IF
-InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 AreaCheck("ar0300")
   Global("MONTYar0300","AR0300",1)
   CombatCounter(0)
@@ -139,7 +139,7 @@ END
 
 // Deril Estate
 IF
-InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 AreaCheck("AR1004")
   Global("MONTYAR1004","AR1004",0)
   CombatCounter(0)
@@ -150,7 +150,7 @@ THEN
 END
 
 IF
-InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 AreaCheck("AR1004")
   Global("MONTYAR1004","AR1004",1)
   CombatCounter(0)
@@ -163,7 +163,7 @@ END
 
 // Copper Coronet
 IF
-InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 AreaCheck("AR0406")
   Global("MONTYar0406","AR0406",0)
   CombatCounter(0)
@@ -174,7 +174,7 @@ THEN
 END
 
 IF
-InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 AreaCheck("AR0406")
   Global("MONTYar0406","AR0406",1)
   CombatCounter(0)
@@ -188,7 +188,7 @@ END
 // Graveyard
 IF
 
-InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 Global("MontiGraveYard","LOCALS",0)
 AreaCheck("ar0800")
 
@@ -200,7 +200,7 @@ END
 // Rep
 IF
 
-InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 ReputationGT(Player1,15)
 Global("MontyTooGoodRep","GLOBAL",0)
 
@@ -211,7 +211,7 @@ END
 
 IF
 
-InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 ReputationLT(Player1,4)
 Global("MontyRepVeryBad","GLOBAL",0)
 
@@ -223,7 +223,7 @@ END
 // Drunk
 IF
 
-InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 CheckStatGT(Myself,50,INTOXICATION)
 Global("MontyDrunkTalk1","GLOBAL",0)
 
@@ -234,7 +234,7 @@ END
 
 // Black Lotus Cake (romance)
 IF
-InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+InParty("MONTARON")!StateCheck("MONTARON",CD_STATE_NOTVALID)
 Global("PCMontyFlirts","GLOBAL",2) 
 Global("MontyRomanceActive","GLOBAL",0)
 Global("MontyBlackLotus","LOCALS",0)

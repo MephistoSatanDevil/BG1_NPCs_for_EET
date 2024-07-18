@@ -1,7 +1,7 @@
 IF 
 
 Global("TranzigE","GLOBAL",1)
-InParty("7XBRAN")
+InParty("BRANWEN")
 
 
 THEN

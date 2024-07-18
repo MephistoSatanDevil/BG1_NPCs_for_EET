@@ -17,7 +17,7 @@ END
 CHAIN IF ~InParty("Minsc")
 See("Minsc")
 !StateCheck("Minsc",CD_STATE_NOTVALID)
-InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)
+InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("KagainMinsc","GLOBAL",0)~ THEN 7XkagaB KagainMinsc_1
 @3
@@ -36,7 +36,7 @@ EXIT
 CHAIN IF ~InParty("Yoshimo")
 See("Yoshimo")
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
-InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)
+InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("KagainYoshimo","GLOBAL",0)~ THEN ~7XkagaB~ KagainYoshimo_1
 @12
@@ -55,7 +55,7 @@ DO ~SetGlobal("KagainYoshimo","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)InParty("Korgan")
+IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)InParty("Korgan")
 !StateCheck("Korgan",CD_STATE_NOTVALID)Global("KagainKorganBanter","GLOBAL",0)~ THEN ~7XkagaB~ KagainKorgan1
 @21
 DO ~SetGlobal("KagainKorganBanter","GLOBAL",1)~
@@ -86,7 +86,7 @@ EXIT
 
 
 CHAIN
-IF ~InParty("Imoen2")InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)
+IF ~InParty("Imoen2")InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)
 !StateCheck("Imoen2",CD_STATE_NOTVALID)Global("KagainImoenBanter","GLOBAL",0)~ THEN ~7XkagaB~ KagainImoenBanter1
 @40
 =
@@ -97,7 +97,7 @@ IF ~InParty("Imoen2")InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)
 == 7XkagaB @44
 =
 @45
-== BIMOEN2 @46 DO ~FaceObject("7Xkaga")~
+== BIMOEN2 @46 DO ~FaceObject("KAGAIN")~
 =
 @47
 == 7XkagaB @48
@@ -113,14 +113,14 @@ IF ~InParty("Imoen2")InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)
 == 7XkagaB @56
 == BIMOEN2 @57
 == 7XkagaB @58
-== BIMOEN2 @59 DO ~ReallyForceSpell("7Xkaga",WIZARD_HOLD_PERSON)
-ReallyForceSpell("7Xkaga",WIZARD_BLINDNESS)
-ReallyForceSpell("7Xkaga",WIZARD_FEEBLEMIND)
+== BIMOEN2 @59 DO ~ReallyForceSpell("KAGAIN",WIZARD_HOLD_PERSON)
+ReallyForceSpell("KAGAIN",WIZARD_BLINDNESS)
+ReallyForceSpell("KAGAIN",WIZARD_FEEBLEMIND)
 ReallyForceSpell("IMOEN",WIZARD_MISLEAD)
 GiveItemCreate("MISC07",PLAYER1,100,0,0)~
 EXIT
 
-CHAIN IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)
 InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("KagainAerie","GLOBAL",0)~ THEN BAERIE KagainAerie_1
@@ -139,7 +139,7 @@ DO ~SetGlobal("KagainAerie","GLOBAL",1)~
 == 7XkagaB @69
 EXIT
 
-CHAIN IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)
 InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)
 See("Aerie")
 CombatCounter(0)
@@ -153,7 +153,7 @@ EXIT
 CHAIN IF ~InParty("Anomen")
 See("Anomen")PartyHasItem("NPSHLD")
 !StateCheck("Anomen",CD_STATE_NOTVALID)
-InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)
+InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("KagainAnomen","GLOBAL",0)~ THEN 7XkagaB KagainAnomen_1
 @70
@@ -169,7 +169,7 @@ Global("KagainAnomen","GLOBAL",0)~ THEN 7XkagaB KagainAnomen_1
 @77
 EXIT
 
-CHAIN IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)
 !StateCheck("Edwin",CD_STATE_NOTVALID)InParty("Edwin")
 CombatCounter(0)
 Global("KagainEdwin","GLOBAL",0)~ THEN BEDWIN KagainEdwin_1
@@ -190,7 +190,7 @@ EXIT
 
 CHAIN IF ~InParty("Jaheira")
 See("Jaheira")!StateCheck("Jaheira",CD_STATE_NOTVALID)
-InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)CombatCounter(0)
+InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)CombatCounter(0)
 Global("KagainJaheira","GLOBAL",0)~ THEN 7XkagaB KagainJaheira_1
 @87
 =
@@ -203,7 +203,7 @@ DO ~SetGlobal("KagainJaheira","GLOBAL",1)~
 == BJAHEIR @92
 EXIT
 
-CHAIN IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)
 !StateCheck("Jan",CD_STATE_NOTVALID)InParty("Jan")
 CombatCounter(0)Global("KagainJan","GLOBAL",0)~ THEN BJAN KagainJan_1
 @93
@@ -218,7 +218,7 @@ DO ~SetGlobal("KagainJan","GLOBAL",1)~
 == BJAN @101
 EXIT
 
-CHAIN IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)
 InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("KagainNalia","GLOBAL",0)~ THEN BNALIA KagainNalia_1
@@ -233,7 +233,7 @@ Global("KagainNalia","GLOBAL",0)~ THEN BNALIA KagainNalia_1
 == BNALIA @108
 EXIT
 
-CHAIN IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)
 InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)
 See("Nalia")
 CombatCounter(0)
@@ -251,7 +251,7 @@ EXIT
 
 CHAIN IF ~InParty("Viconia")
 See("Viconia")!StateCheck("Viconia",CD_STATE_NOTVALID)
-InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)CombatCounter(0)
+InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)CombatCounter(0)
 Global("KagainViconia","GLOBAL",0)~ THEN 7XkagaB KagainViconia_1
 @109
 =
@@ -269,7 +269,7 @@ EXIT
 /////////////////////////
 
 CHAIN
-IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)InParty("Korgan")NumInPartyGT("4")
+IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)InParty("Korgan")NumInPartyGT("4")
 !StateCheck("Korgan",CD_STATE_NOTVALID)Global("KagainKorganBanter","GLOBAL",1)~ THEN ~BKORGAN~ KagainKorgan2
 @116
 DO ~SetGlobal("KagainKorganBanter","GLOBAL",2)~
@@ -295,7 +295,7 @@ EXIT
 
 
 CHAIN
-IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)InParty("Korgan")
+IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)InParty("Korgan")
 !StateCheck("Korgan",CD_STATE_NOTVALID)Global("KagainKorganBanter","GLOBAL",2)~ THEN ~7XkagaB~ KagainKorgan3
 @132
 =
@@ -324,7 +324,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Neera")
-See("Neera")!StateCheck("Neera",CD_STATE_NOTVALID)InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)
+See("Neera")!StateCheck("Neera",CD_STATE_NOTVALID)InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("NeeraKagainTalk","GLOBAL",0)~ THEN ~7XkagaB~ NeeraKagain1
 @214 
@@ -337,7 +337,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Neera")
-See("Neera")!StateCheck("Neera",CD_STATE_NOTVALID)InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)
+See("Neera")!StateCheck("Neera",CD_STATE_NOTVALID)InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("NeeraKagainTalk","GLOBAL",1)~ THEN ~7XkagaB~ NeeraKagain2
 @172 
@@ -351,7 +351,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Rasaad")
-See("Rasaad")!StateCheck("Rasaad",CD_STATE_NOTVALID)InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)
+See("Rasaad")!StateCheck("Rasaad",CD_STATE_NOTVALID)InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("RasaadKagainTalk","GLOBAL",0)~ THEN ~7XkagaB~ RasaadKagain1
 @178 
@@ -363,7 +363,7 @@ EXIT
 
 CHAIN
 IF ~InParty("Wilson")
-See("Wilson")!StateCheck("Wilson",CD_STATE_NOTVALID)InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)
+See("Wilson")!StateCheck("Wilson",CD_STATE_NOTVALID)InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("WilsonKagainTalk","GLOBAL",0)~ THEN ~7XkagaB~ WilsonKagain1
 @182 
@@ -377,7 +377,7 @@ EXIT
 CHAIN
 IF ~InParty("Dorn")
 See("Dorn")!StateCheck("Dorn",CD_STATE_NOTVALID)
-InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)
+InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("DornKagainTalk","GLOBAL",0)~ THEN ~7XkagaB~ DornKagain1
 @207 DO ~SetGlobal("DornKagainTalk","GLOBAL",1)~
@@ -386,7 +386,7 @@ EXIT
 
 CHAIN IF ~InParty("HaerDalis")
 See("HaerDalis")!StateCheck("HaerDalis",CD_STATE_NOTVALID)
-InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)
+InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("KagainHaerDalis","GLOBAL",0)~ THEN 7XkagaB KagainHaerDalis_1
 @209 DO ~SetGlobal("KagainHaerDalis","GLOBAL",1)~
@@ -401,12 +401,12 @@ EXIT
 
 
 INTERJECT_COPY_TRANS CIRCG1 3 KagainCircguard
-== 7XkagaJ IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== 7XkagaJ IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
 @149
 END
 
 INTERJECT_COPY_TRANS KALAH2 7 KagainKALAH2-7
-== 7XkagaJ IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== 7XkagaJ IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
  @150
 =
 @151
@@ -415,7 +415,7 @@ END
 
 
 INTERJECT_COPY_TRANS KALAH2 8 KagainKALAH2-8
-== 7XkagaJ IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== 7XkagaJ IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
  @150
 =
 @151
@@ -423,7 +423,7 @@ INTERJECT_COPY_TRANS KALAH2 8 KagainKALAH2-8
 END
 
 INTERJECT_COPY_TRANS KALAH2 9 KagainKALAH2-9
-== 7XkagaJ IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== 7XkagaJ IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
  @150
 =
 @151
@@ -432,34 +432,34 @@ END
 
 
 INTERJECT_COPY_TRANS RUFPAL2 5 KagainRUFPAL2-5
-== 7XkagaJ IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== 7XkagaJ IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
  @153
 END
 
 
 INTERJECT_COPY_TRANS COPGREET 1 KagainCOPGREET1
-== 7XkagaJ IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== 7XkagaJ IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
  @154
 END
 
 INTERJECT_COPY_TRANS HENDAK 1 KagainHENDAK1
-== 7XkagaJ IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== 7XkagaJ IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
  @155
 END
 
 INTERJECT_COPY_TRANS VICONI 2 KagainVICONI2
-== 7XkagaJ IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== 7XkagaJ IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
  @156
 END
 
 INTERJECT_COPY_TRANS FIRKRA01 9 KagainFIRKRA01-9
-== 7XkagaJ IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== 7XkagaJ IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
 @157
 == FIRKRA01 @158
 END
 
 INTERJECT_COPY_TRANS RENFELD 6 KagainRENFELD6
-== 7XkagaJ IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== 7XkagaJ IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
  @159
 =
 @160
@@ -468,7 +468,7 @@ END
 
 
 INTERJECT_COPY_TRANS SCSARLES 11 KagainSCSARLES11
-== 7XkagaJ IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== 7XkagaJ IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
  @162
 =
 @163
@@ -476,66 +476,66 @@ END
 
 
 INTERJECT_COPY_TRANS COHRVALE 1 KagainCohrvale
-== 7XkagaJ IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== 7XkagaJ IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
 @100
 END
 
 
 INTERJECT_COPY_TRANS NALIA 109 KagainNALIA109
-== 7XkagaJ IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== 7XkagaJ IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
  @164
 END
 
 INTERJECT_COPY_TRANS BMUGG1 0 KagainMugger
-== 7XkagaJ IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== 7XkagaJ IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
 @100
 END
 
 INTERJECT_COPY_TRANS RAELIS 2 ZZTRAELIS2
-== 7XkagaJ IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== 7XkagaJ IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
  @165
 END
 
 INTERJECT_COPY_TRANS RAELIS 76 ZZTRAELIS76
-== 7XkagaJ IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== 7XkagaJ IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
  @166
 END
 
 INTERJECT_COPY_TRANS RAELIS 79 ZZTRAELIS79
-== 7XkagaJ IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== 7XkagaJ IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
  @166
 END
 
 INTERJECT_COPY_TRANS ARAN 51 ZZTARAN51
-== 7XkagaJ IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== 7XkagaJ IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
  @167
 == ARAN @168
 END
 
 INTERJECT_COPY_TRANS PIRFSH01 4 KagainPIRFSH014
-== 7XkagaJ IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== 7XkagaJ IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
  @169
 END
 
 INTERJECT_COPY_TRANS PPINN01 8 KagainPPINN01-8
-== 7XkagaJ IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== 7XkagaJ IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
  @170
-== PPINN01 IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN
+== PPINN01 IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN
  @171
 END
 
 INTERJECT_COPY_TRANS PLAYER1 25 Kagain_Hell
-  == 7XkagaJ IF ~InParty("7Xkaga") !StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @187
+  == 7XkagaJ IF ~InParty("KAGAIN") !StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN @187
 END
 
 INTERJECT_COPY_TRANS GAELAN 26 Kagain_GAELAN_26
-  == 7XkagaJ IF ~InParty("7Xkaga") !StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @193
+  == 7XkagaJ IF ~InParty("KAGAIN") !StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN @193
 END
 
 
 // Tree of Life
 INTERJECT PLAYER1 33 TreeOLifeKagain1
-== PLAYER1 IF ~InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @188
+== PLAYER1 IF ~InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN @188
 END
 ++ @189 EXTERN 7XkagaJ TreeOLifeKagain2
 ++ @190 EXTERN 7XkagaJ TreeOLifeKagain2
@@ -549,12 +549,12 @@ END
 END
 
 INTERJECT_COPY_TRANS PALERN 0 Kagain_PALERN_0
-  == 7XkagaJ IF ~InParty("7Xkaga") !StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @219
+  == 7XkagaJ IF ~InParty("KAGAIN") !StateCheck("KAGAIN",CD_STATE_NOTVALID)~ THEN @219
 END
 
 CHAIN IF ~InParty("Jaheira")
 See("Jaheira")!StateCheck("Jaheira",CD_STATE_NOTVALID)
-InParty("7Xkaga")!StateCheck("7Xkaga",CD_STATE_NOTVALID)CombatCounter(0)
+InParty("KAGAIN")!StateCheck("KAGAIN",CD_STATE_NOTVALID)CombatCounter(0)
 Global("KagainJaheira","GLOBAL",1)~ THEN 7XkagaB KagainJaheira_2
 @220 DO ~SetGlobal("KagainJaheira","GLOBAL",2)~
 == BJAHEIR @221

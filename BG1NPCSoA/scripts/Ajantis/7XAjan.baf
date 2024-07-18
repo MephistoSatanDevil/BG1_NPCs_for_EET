@@ -90,7 +90,7 @@ END
 
 
 IF
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 RealGlobalTimerExpired("AjantisPCTalkTimer","GLOBAL") 
@@ -110,7 +110,7 @@ END
 IF
 PartyRested()
 AreaType(OUTDOOR)
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 RealGlobalTimerExpired("AjantisPCTalkTimer","GLOBAL") 
@@ -125,7 +125,7 @@ END
 
 // Underdark
 IF
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 AreaCheck("AR2200")
 CombatCounter(0) 
 Global("AjantisUnderdarkTalking","AR2200",0)
@@ -136,7 +136,7 @@ THEN
 END
 
 IF
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 AreaCheck("AR2200")
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID)
@@ -154,7 +154,7 @@ IF
 GlobalGT("ShadowFightBodhi","GLOBAL",0) 
 Global("7xAjantisAfterBodhi","GLOBAL",0)
 Dead("c6bodhi")
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 AreaCheck("AR0809")
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID)
@@ -171,7 +171,7 @@ OR(2)
 Global("LadyMaria","GLOBAL",4)
 Global("LadyMaria","GLOBAL",5)
 Global("7xAjantisKeldornQuest","GLOBAL",0)
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 CombatCounter(0) 
@@ -185,7 +185,7 @@ END
 
 // After Underdark
 IF
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 Global("chapter","GLOBAL",%bg2_chapter_6%) 
 CombatCounter(0) 
 Global("AjanAfterUnderdarkTalking","GLOBAL",0)
@@ -196,7 +196,7 @@ THEN
 END
 
 IF
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 Global("chapter","GLOBAL",%bg2_chapter_6%) 
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID)
@@ -211,7 +211,7 @@ END
 
 // Athkatla (quest)
 IF
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 CombatCounter(0) 
@@ -233,7 +233,7 @@ THEN
 END
 
 IF
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 CombatCounter(0) 
@@ -249,7 +249,7 @@ END
 IF
 Global("AjantisQuest","GLOBAL",8)
 GlobalTimerExpired("7xAjantisQuestTimer1","GLOBAL")
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 CombatCounter(0) 
@@ -262,7 +262,7 @@ END
 IF
 Global("AjantisQuest","GLOBAL",10)
 GlobalTimerExpired("7xAjantisQuestTimer2","GLOBAL")
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 CombatCounter(0) 
@@ -275,7 +275,7 @@ END
 IF
 Global("AjantisQuest","GLOBAL",12)
 AreaCheck("AR0300")
-InParty("7XAJAN")!StateCheck("7XAJAN",CD_STATE_NOTVALID)
+InParty("AJANTIS")!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 See("7xKatr")
 CombatCounter(0)
 THEN

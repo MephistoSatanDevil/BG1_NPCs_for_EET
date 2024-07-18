@@ -1,7 +1,7 @@
 
 IF 
 Dead("cefald01")
-!InMyArea("7XFALD")
+!InMyArea("FALDORN")
 Global("CreateFaldornSoA","GLOBAL",0)
 
 THEN
